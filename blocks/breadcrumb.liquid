@@ -1,0 +1,307 @@
+{%- liquid
+  # Only render on product pages
+  unless product
+    echo ''
+    break
+  endunless
+
+  # Get the first collection the product belongs to
+  assign product_collection = product.collections | first
+-%}
+
+<nav
+  class="breadcrumb"
+  data-alignment="{{ block.settings.alignment }}"
+  data-text-size="{{ block.settings.text_size }}"
+  style="
+    --padding-block-start: {{ block.settings.padding-block-start }}px;
+    --padding-block-end: {{ block.settings.padding-block-end }}px;
+  "
+  aria-label="Breadcrumb"
+  {{ block.shopify_attributes }}
+>
+  <ol class="breadcrumb__list">
+    {%- comment -%} Home {%- endcomment -%}
+    <li class="breadcrumb__item">
+      <a href="{{ routes.root_url }}" class="breadcrumb__link">
+        {%- if block.settings.show_home_icon -%}
+          <svg class="breadcrumb__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 6L8 1L14 6V14C14 14.2652 13.8946 14.5196 13.7071 14.7071C13.5196 14.8946 13.2652 15 13 15H3C2.73478 15 2.48043 14.8946 2.29289 14.7071C2.10536 14.5196 2 14.2652 2 14V6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 15V8H10V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        {%- else -%}
+          {{ block.settings.home_text }}
+        {%- endif -%}
+      </a>
+    </li>
+
+    {%- comment -%} Separator {%- endcomment -%}
+    <li class="breadcrumb__separator" aria-hidden="true">
+      {%- case block.settings.separator -%}
+        {%- when 'slash' -%}
+          /
+        {%- when 'arrow' -%}
+          →
+        {%- when 'chevron' -%}
+          ›
+        {%- when 'dot' -%}
+          •
+        {%- else -%}
+          /
+      {%- endcase -%}
+    </li>
+
+    {%- comment -%} Collection {%- endcomment -%}
+    {%- if product_collection -%}
+      <li class="breadcrumb__item">
+        <a href="{{ product_collection.url }}" class="breadcrumb__link">
+          {{ product_collection.title }}
+        </a>
+      </li>
+
+      {%- comment -%} Separator {%- endcomment -%}
+      <li class="breadcrumb__separator" aria-hidden="true">
+        {%- case block.settings.separator -%}
+          {%- when 'slash' -%}
+            /
+          {%- when 'arrow' -%}
+            →
+          {%- when 'chevron' -%}
+            ›
+          {%- when 'dot' -%}
+            •
+          {%- else -%}
+            /
+        {%- endcase -%}
+      </li>
+    {%- endif -%}
+
+    {%- comment -%} Product (current page) {%- endcomment -%}
+    <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">
+      <span class="breadcrumb__text">
+        {{ product.title }}
+      </span>
+    </li>
+  </ol>
+</nav>
+
+{% stylesheet %}
+  .breadcrumb {
+    width: 100%;
+  }
+
+  .breadcrumb__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-block-start: var(--padding-block-start, 12px);
+    padding-block-end: var(--padding-block-end, 12px);
+    color: #282828;
+  }
+
+  .breadcrumb[data-alignment="left"] .breadcrumb__list {
+    justify-content: flex-start;
+  }
+
+  .breadcrumb[data-alignment="center"] .breadcrumb__list {
+    justify-content: center;
+  }
+
+  .breadcrumb[data-alignment="right"] .breadcrumb__list {
+    justify-content: flex-end;
+  }
+
+  .breadcrumb__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .breadcrumb__link {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    letter-spacing: -1px;
+  }
+
+  .breadcrumb__link:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+  }
+
+  .breadcrumb__icon {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+  }
+
+  .breadcrumb__separator {
+    color: rgba(var(--color-foreground), 0.5);
+    user-select: none;
+  }
+
+  .breadcrumb__item--current .breadcrumb__text {
+    color: rgba(var(--color-foreground), 0.7);
+  }
+
+  /* Text sizes */
+  .breadcrumb[data-text-size="small"] {
+    font-size: 0.875rem;
+  }
+
+  .breadcrumb[data-text-size="medium"] {
+    font-size: 1rem;
+  }
+
+  .breadcrumb[data-text-size="large"] {
+    font-size: 1.25rem;
+  }
+
+  .breadcrumb__item.breadcrumb__item--current {
+    color: #808080;
+  }
+
+  /* Mobile optimization */
+  @media screen and (max-width: 749px) {
+    .breadcrumb__list {
+      gap: 0.375rem;
+    }
+
+    .breadcrumb__item--current .breadcrumb__text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 200px;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Product Breadcrumb",
+  "settings": [
+    {
+      "type": "header",
+      "content": "General"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_home_icon",
+      "label": "Show home icon",
+      "default": false,
+      "info": "This is optional"
+    },
+    {
+      "type": "text",
+      "id": "home_text",
+      "label": "Home title",
+      "default": "Impact",
+      "visible_if": "{{ block.settings.show_home_icon == false }}"
+    },
+    {
+      "type": "select",
+      "id": "separator",
+      "label": "Separator",
+      "options": [
+        {
+          "value": "slash",
+          "label": "Slash"
+        },
+        {
+          "value": "arrow",
+          "label": "t:options.arrow"
+        },
+        {
+          "value": "chevron",
+          "label": "t:options.chevron"
+        },
+        {
+          "value": "dot",
+          "label": "Dot"
+        }
+      ],
+      "default": "slash",
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "Text size",
+      "options": [
+        {
+          "value": "small",
+          "label": "t:options.small"
+        },
+        {
+          "value": "medium",
+          "label": "t:options.medium"
+        },
+        {
+          "value": "large",
+          "label": "t:options.large"
+        }
+      ],
+      "default": "small"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "t:settings.alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:options.left"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "right",
+          "label": "t:options.right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Breadcrumb",
+      "category": "t:categories.navigation"
+    }
+  ]
+}
+{% endschema %}

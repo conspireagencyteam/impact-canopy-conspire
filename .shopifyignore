@@ -1,0 +1,26 @@
+# OS generated files #
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Enviroment files #
+src
+node_modules
+.config
+.claude
+.github
+.vscode
+.docs
+.gitignore
+src/**/**/*.json
+package.json
+webpack.config.js
+
+# Other files #
+*.txt
+*.gif
+*.md
+*.lock
