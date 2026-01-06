@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/heading-logo.png",
+    "logo": "shopify://shop_images/impact-canopy-logo.svg",
     "logo_inverse": "",
     "logo_height": 20,
     "logo_height_mobile": 18,
@@ -83,22 +83,22 @@
     "variant_button_width": "equal-width-buttons",
     "button_font_weight_secondary": "default",
     "content_for_index": [],
-     "color_schemes": {
+    "color_schemes": {
       "scheme-1": {
         "settings": {
           "background": "#ffffff",
-          "foreground_heading": "#000000",
-          "foreground": "#000000cf",
-          "primary": "#000000cf",
-          "primary_hover": "#000000",
-          "border": "#0000000f",
+          "foreground_heading": "#2a2a2a",
+          "foreground": "#2a2a2a",
+          "primary": "#490e67",
+          "primary_hover": "#490e67db",
+          "border": "#490e67",
           "shadow": "#000000",
-          "primary_button_background": "#000000",
+          "primary_button_background": "#490e67",
           "primary_button_text": "#ffffff",
-          "primary_button_border": "#000000",
-          "primary_button_hover_background": "#333333",
-          "primary_button_hover_text": "#ffffff",
-          "primary_button_hover_border": "#000000",
+          "primary_button_border": "#490e67",
+          "primary_button_hover_background": "#ffffff",
+          "primary_button_hover_text": "#490e67",
+          "primary_button_hover_border": "#490e67",
           "secondary_button_background": "rgba(0,0,0,0)",
           "secondary_button_text": "#000000",
           "secondary_button_border": "#000000",
@@ -639,7 +639,6 @@
     }
   },
   "platform_customizations": {
-    "custom_css": [
-    ]
+    "custom_css": []
   }
 }
