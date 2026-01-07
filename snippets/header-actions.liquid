@@ -24,6 +24,7 @@
       {% render 'cart-icon-component' %}
     </a>
   {% endif %}
+  {{ pages }}
 </header-actions>
 
 {% stylesheet %}
@@ -218,8 +219,8 @@
   }
 
   .header-actions__action svg {
-    width: var(--icon-size-md);
-    height: var(--icon-size-md);
+    width: var(--icon-size-sm);
+    height: var(--icon-size-sm);
   }
 
   .header-actions__cart-icon {

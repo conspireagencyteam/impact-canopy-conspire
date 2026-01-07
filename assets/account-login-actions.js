@@ -1,1 +1,67 @@
-(()=>{function t(e){return t="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},t(e)}function e(t,e){for(var n=0;n<e.length;n++){var o=e[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(t,c(o.key),o)}}function n(e,n,o){return n=u(n),function(e,n){if(n&&("object"==t(n)||"function"==typeof n))return n;if(void 0!==n)throw new TypeError("Derived constructors may only return object or undefined");return function(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}(e)}(e,r()?Reflect.construct(n,o||[],u(e).constructor):n.apply(e,o))}function o(t){var e="function"==typeof Map?new Map:void 0;return o=function(t){if(null===t||!function(t){try{return-1!==Function.toString.call(t).indexOf("[native code]")}catch(e){return"function"==typeof t}}(t))return t;if("function"!=typeof t)throw new TypeError("Super expression must either be null or a function");if(void 0!==e){if(e.has(t))return e.get(t);e.set(t,n)}function n(){return function(t,e,n){if(r())return Reflect.construct.apply(null,arguments);var o=[null];o.push.apply(o,e);var u=new(t.bind.apply(t,o));return n&&i(u,n.prototype),u}(t,arguments,u(this).constructor)}return n.prototype=Object.create(t.prototype,{constructor:{value:n,enumerable:!1,writable:!0,configurable:!0}}),i(n,t)},o(t)}function r(){try{var t=!Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],function(){}))}catch(t){}return(r=function(){return!!t})()}function i(t,e){return i=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(t,e){return t.__proto__=e,t},i(t,e)}function u(t){return u=Object.setPrototypeOf?Object.getPrototypeOf.bind():function(t){return t.__proto__||Object.getPrototypeOf(t)},u(t)}function c(e){var n=function(e,n){if("object"!=t(e)||!e)return e;var o=e[Symbol.toPrimitive];if(void 0!==o){var r=o.call(e,n||"default");if("object"!=t(r))return r;throw new TypeError("@@toPrimitive must return a primitive value.")}return("string"===n?String:Number)(e)}(e,"string");return"symbol"==t(n)?n:n+""}var f=function(t){function o(){var t,e,r,i;!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,o);for(var u=arguments.length,f=new Array(u),l=0;l<u;l++)f[l]=arguments[l];return t=n(this,o,[].concat(f)),e=t,i=null,(r=c(r="shopLoginButton"))in e?Object.defineProperty(e,r,{value:i,enumerable:!0,configurable:!0,writable:!0}):e[r]=i,t}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),Object.defineProperty(t,"prototype",{writable:!1}),e&&i(t,e)}(o,t),r=o,(u=[{key:"connectedCallback",value:function(){this.shopLoginButton=this.querySelector("shop-login-button"),this.shopLoginButton&&(this.shopLoginButton.setAttribute("full-width","true"),this.shopLoginButton.setAttribute("persist-after-sign-in","true"),this.shopLoginButton.setAttribute("analytics-context","loginWithShopSelfServe"),this.shopLoginButton.setAttribute("flow-version","account-actions-popover"),this.shopLoginButton.setAttribute("return-uri",window.location.href),this.shopLoginButton.addEventListener("completed",function(){window.location.reload()}))}}])&&e(r.prototype,u),f&&e(r,f),Object.defineProperty(r,"prototype",{writable:!1}),r;var r,u,f}(o(HTMLElement));customElements.get("account-login-actions")||customElements.define("account-login-actions",f)})();
+/******/ (() => { // webpackBootstrap
+/*!**********************************************!*\
+  !*** ./src/scripts/account-login-actions.js ***!
+  \**********************************************/
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function _possibleConstructorReturn(t, e) { if (e && ("object" == _typeof(e) || "function" == typeof e)) return e; if (void 0 !== e) throw new TypeError("Derived constructors may only return object or undefined"); return _assertThisInitialized(t); }
+function _assertThisInitialized(e) { if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); return e; }
+function _inherits(t, e) { if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function"); t.prototype = Object.create(e && e.prototype, { constructor: { value: t, writable: !0, configurable: !0 } }), Object.defineProperty(t, "prototype", { writable: !1 }), e && _setPrototypeOf(t, e); }
+function _wrapNativeSuper(t) { var r = "function" == typeof Map ? new Map() : void 0; return _wrapNativeSuper = function _wrapNativeSuper(t) { if (null === t || !_isNativeFunction(t)) return t; if ("function" != typeof t) throw new TypeError("Super expression must either be null or a function"); if (void 0 !== r) { if (r.has(t)) return r.get(t); r.set(t, Wrapper); } function Wrapper() { return _construct(t, arguments, _getPrototypeOf(this).constructor); } return Wrapper.prototype = Object.create(t.prototype, { constructor: { value: Wrapper, enumerable: !1, writable: !0, configurable: !0 } }), _setPrototypeOf(Wrapper, t); }, _wrapNativeSuper(t); }
+function _construct(t, e, r) { if (_isNativeReflectConstruct()) return Reflect.construct.apply(null, arguments); var o = [null]; o.push.apply(o, e); var p = new (t.bind.apply(t, o))(); return r && _setPrototypeOf(p, r.prototype), p; }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function _isNativeFunction(t) { try { return -1 !== Function.toString.call(t).indexOf("[native code]"); } catch (n) { return "function" == typeof t; } }
+function _setPrototypeOf(t, e) { return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) { return t.__proto__ = e, t; }, _setPrototypeOf(t, e); }
+function _getPrototypeOf(t) { return _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) { return t.__proto__ || Object.getPrototypeOf(t); }, _getPrototypeOf(t); }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+/**
+ * A custom element that manages the account login actions.
+ *
+ * @extends {HTMLElement}
+ */
+var AccountLoginActions = /*#__PURE__*/function (_HTMLElement) {
+  function AccountLoginActions() {
+    var _this;
+    _classCallCheck(this, AccountLoginActions);
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+    _this = _callSuper(this, AccountLoginActions, [].concat(args));
+    /**
+     * @type {Element | null}
+     */
+    _defineProperty(_this, "shopLoginButton", null);
+    return _this;
+  }
+  _inherits(AccountLoginActions, _HTMLElement);
+  return _createClass(AccountLoginActions, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      this.shopLoginButton = this.querySelector('shop-login-button');
+      if (this.shopLoginButton) {
+        // We don't have control over the shop-login-button markup, so we need to set additional attributes here
+        this.shopLoginButton.setAttribute('full-width', 'true');
+        this.shopLoginButton.setAttribute('persist-after-sign-in', 'true');
+        // Do this only if New Customer Account is ALWAYS the sign in option (and never Classic Customer Account)
+        this.shopLoginButton.setAttribute('analytics-context', 'loginWithShopSelfServe');
+        this.shopLoginButton.setAttribute('flow-version', 'account-actions-popover');
+        this.shopLoginButton.setAttribute('return-uri', window.location.href);
+
+        // Reload the page after the login is completed, otherwise the page state is incorrect
+        this.shopLoginButton.addEventListener('completed', function () {
+          window.location.reload();
+        });
+      }
+    }
+  }]);
+}(/*#__PURE__*/_wrapNativeSuper(HTMLElement));
+if (!customElements.get('account-login-actions')) {
+  customElements.define('account-login-actions', AccountLoginActions);
+}
+/******/ })()
+;

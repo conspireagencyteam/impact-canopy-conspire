@@ -1,1 +1,797 @@
-(()=>{var e=["oldState","newState"];function t(e){return t="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},t(e)}function n(e,t){var n="undefined"!=typeof Symbol&&e[Symbol.iterator]||e["@@iterator"];if(!n){if(Array.isArray(e)||(n=r(e))||t&&e&&"number"==typeof e.length){n&&(e=n);var o=0,i=function(){};return{s:i,n:function(){return o>=e.length?{done:!0}:{done:!1,value:e[o++]}},e:function(e){throw e},f:i}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var a,u=!0,l=!1;return{s:function(){n=n.call(e)},n:function(){var e=n.next();return u=e.done,e},e:function(e){l=!0,a=e},f:function(){try{u||null==n.return||n.return()}finally{if(l)throw a}}}}function o(e){return function(e){if(Array.isArray(e))return i(e)}(e)||function(e){if("undefined"!=typeof Symbol&&null!=e[Symbol.iterator]||null!=e["@@iterator"])return Array.from(e)}(e)||r(e)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function r(e,t){if(e){if("string"==typeof e)return i(e,t);var n={}.toString.call(e).slice(8,-1);return"Object"===n&&e.constructor&&(n=e.constructor.name),"Map"===n||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?i(e,t):void 0}}function i(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,o=Array(t);n<t;n++)o[n]=e[n];return o}function a(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,d(o.key),o)}}function u(e,n,o){return n=p(n),function(e,n){if(n&&("object"==t(n)||"function"==typeof n))return n;if(void 0!==n)throw new TypeError("Derived constructors may only return object or undefined");return function(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}(e)}(e,c()?Reflect.construct(n,o||[],p(e).constructor):n.apply(e,o))}function l(e){var t="function"==typeof Map?new Map:void 0;return l=function(e){if(null===e||!function(e){try{return-1!==Function.toString.call(e).indexOf("[native code]")}catch(t){return"function"==typeof e}}(e))return e;if("function"!=typeof e)throw new TypeError("Super expression must either be null or a function");if(void 0!==t){if(t.has(e))return t.get(e);t.set(e,n)}function n(){return function(e,t,n){if(c())return Reflect.construct.apply(null,arguments);var o=[null];o.push.apply(o,t);var r=new(e.bind.apply(e,o));return n&&f(r,n.prototype),r}(e,arguments,p(this).constructor)}return n.prototype=Object.create(e.prototype,{constructor:{value:n,enumerable:!1,writable:!0,configurable:!0}}),f(n,e)},l(e)}function c(){try{var e=!Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],function(){}))}catch(e){}return(c=function(){return!!e})()}function f(e,t){return f=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(e,t){return e.__proto__=t,e},f(e,t)}function p(e){return p=Object.setPrototypeOf?Object.getPrototypeOf.bind():function(e){return e.__proto__||Object.getPrototypeOf(e)},p(e)}function s(e,t,n){return(t=d(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function d(e){var n=function(e,n){if("object"!=t(e)||!e)return e;var o=e[Symbol.toPrimitive];if(void 0!==o){var r=o.call(e,n||"default");if("object"!=t(r))return r;throw new TypeError("@@toPrimitive must return a primitive value.")}return("string"===n?String:Number)(e)}(e,"string");return"symbol"==t(n)?n:n+""}var v=function(t){function n(t){var o,r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},i=r.oldState,a=void 0===i?"":i,l=r.newState,c=void 0===l?"":l,f=function(e,t){if(null==e)return{};var n,o,r=function(e,t){if(null==e)return{};var n={};for(var o in e)if({}.hasOwnProperty.call(e,o)){if(-1!==t.indexOf(o))continue;n[o]=e[o]}return n}(e,t);if(Object.getOwnPropertySymbols){var i=Object.getOwnPropertySymbols(e);for(o=0;o<i.length;o++)n=i[o],-1===t.indexOf(n)&&{}.propertyIsEnumerable.call(e,n)&&(r[n]=e[n])}return r}(r,e);return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,n),s(o=u(this,n,[t,f]),"oldState",void 0),s(o,"newState",void 0),o.oldState=String(a||""),o.newState=String(c||""),o}return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),Object.defineProperty(e,"prototype",{writable:!1}),t&&f(e,t)}(n,t),o=n,r&&a(o.prototype,r),i&&a(o,i),Object.defineProperty(o,"prototype",{writable:!1}),o;var o,r,i}(l(Event)),h=new WeakMap;function y(e,t,n){h.set(e,setTimeout(function(){h.has(e)&&e.dispatchEvent(new v("toggle",{cancelable:!1,oldState:t,newState:n}))},0))}var m=globalThis.ShadowRoot||function(){},g=globalThis.HTMLDialogElement||function(){},b=new WeakMap,w=new WeakMap,S=new WeakMap,E=new WeakMap;function T(e){return E.get(e)||"hidden"}var M=new WeakMap;function O(e){return o(e).pop()}function A(e,t){return("auto"===e.popover||"manual"===e.popover||"hint"===e.popover)&&(!!e.isConnected&&((!t||"showing"===T(e))&&(!(!t&&"hidden"!==T(e))&&(!(e instanceof g&&e.hasAttribute("open"))&&document.fullscreenElement!==e))))}function L(e){if(!e)return 0;var t=w.get(document)||new Set,n=S.get(document)||new Set;return n.has(e)?o(n).indexOf(e)+t.size+1:t.has(e)?o(t).indexOf(e)+1:0}function j(e){var t=x(e),n=function(e){for(;e;){var t=e.popoverTargetElement;if(t instanceof HTMLElement)return t;if((e=e.parentElement||k(e))instanceof m&&(e=e.host),e instanceof Document)return}}(e);return L(t)>L(n)?t:n}function P(e){var t,n=S.get(e)||new Set,o=w.get(e)||new Set,r=n.size>0?n:o.size>0?o:null;return r?(t=O(r)).isConnected?t:(r.delete(t),P(e)):null}function H(e){var t,o=n(e||[]);try{for(o.s();!(t=o.n()).done;){var r=t.value;if(r.isConnected)return r;e.delete(r)}}catch(e){o.e(e)}finally{o.f()}return null}function k(e){return"function"==typeof e.getRootNode?e.getRootNode():e.parentNode?k(e.parentNode):e}function x(e){for(;e;){if(e instanceof HTMLElement&&"auto"===e.popover&&"showing"===E.get(e))return e;if((e=e instanceof Element&&e.assignedSlot||e.parentElement||k(e))instanceof m&&(e=e.host),e instanceof Document)return}}function D(e,t){var o,r=new Map,i=0,a=n(t||[]);try{for(a.s();!(o=a.n()).done;){var u=o.value;r.set(u,i),i+=1}}catch(e){a.e(e)}finally{a.f()}r.set(e,i),i+=1;var l=null;return function(t){if(t){for(var n,o=!1,i=null;!o;){if(null===(i=x(t)||null))return;if(!r.has(i))return;"hint"!==e.popover&&"auto"!==i.popover||(o=!0),o||(t=i.parentElement)}n=r.get(i),(null===l||r.get(l)<n)&&(l=i)}}(e.parentElement||k(e)),l}function R(e){return!(e.hidden||e instanceof m)&&((!(e instanceof HTMLButtonElement||e instanceof HTMLInputElement||e instanceof HTMLSelectElement||e instanceof HTMLTextAreaElement||e instanceof HTMLOptGroupElement||e instanceof HTMLOptionElement||e instanceof HTMLFieldSetElement)||!e.disabled)&&(!(e instanceof HTMLInputElement&&"hidden"===e.type)&&(!(e instanceof HTMLAnchorElement&&""===e.href)&&("number"==typeof e.tabIndex&&-1!==e.tabIndex))))}function I(e){var t;null==(t=function(e){if(e.shadowRoot&&!0!==e.shadowRoot.delegatesFocus)return null;var t=e;t.shadowRoot&&(t=t.shadowRoot);var o=t.querySelector("[autofocus]");if(o)return o;var r,i=n(t.querySelectorAll("slot"));try{for(i.s();!(r=i.n()).done;){var a,u=n(r.value.assignedElements({flatten:!0}));try{for(u.s();!(a=u.n()).done;){var l=a.value;if(l.hasAttribute("autofocus"))return l;if(o=l.querySelector("[autofocus]"))return o}}catch(e){u.e(e)}finally{u.f()}}}catch(e){i.e(e)}finally{i.f()}for(var c=e.ownerDocument.createTreeWalker(t,NodeFilter.SHOW_ELEMENT),f=c.currentNode;f;){if(R(f))return f;f=c.nextNode()}}(e))||t.focus()}var C=new WeakMap;function N(e){if(A(e,!1)){var t=e.ownerDocument;if(e.dispatchEvent(new v("beforetoggle",{cancelable:!0,oldState:"closed",newState:"open"}))&&A(e,!1)){var n=!1,o=e.popover,r=null,i=D(e,w.get(t)||new Set),a=D(e,S.get(t)||new Set);if("auto"===o)_(S.get(t)||new Set,n,!0),z(i||t,n,!0),r="auto";if("hint"===o&&(a?(z(a,n,!0),r="hint"):(_(S.get(t)||new Set,n,!0),i?(z(i,n,!0),r="auto"):r="hint")),"auto"===o||"hint"===o){if(o!==e.popover||!A(e,!1))return;P(t)||(n=!0),"auto"===r?(w.has(t)||w.set(t,new Set),w.get(t).add(e)):"hint"===r&&(S.has(t)||S.set(t,new Set),S.get(t).add(e))}C.delete(e);var u=t.activeElement;e.classList.add(":popover-open"),E.set(e,"showing"),b.has(t)||b.set(t,new Set),b.get(t).add(e),G(M.get(e),!0),I(e),n&&u&&"auto"===e.popover&&C.set(e,u),y(e,"closed","open")}}}function W(e){var t,n,o=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(A(e,!0)){var i=e.ownerDocument;if(!["auto","hint"].includes(e.popover)||(z(e,o,r),A(e,!0))){var a=w.get(i)||new Set,u=a.has(e)&&O(a)===e;if(G(M.get(e),!1),M.delete(e),!r||(e.dispatchEvent(new v("beforetoggle",{oldState:"open",newState:"closed"})),u&&O(a)!==e&&z(e,o,r),A(e,!0))){null==(t=b.get(i))||t.delete(e),a.delete(e),null==(n=S.get(i))||n.delete(e),e.classList.remove(":popover-open"),E.set(e,"hidden"),r&&y(e,"open","closed");var l=C.get(e);l&&(C.delete(e),o&&l.focus())}}}}function _(e){for(var t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],o=H(e);o;)W(o,t,n),o=H(e)}function q(e,t,o,r){for(var i=!1,a=!1;i||!a;){a=!0;var u,l=null,c=!1,f=n(t);try{for(f.s();!(u=f.n()).done;){var p=u.value;if(p===e)c=!0;else if(c){l=p;break}}}catch(e){f.e(e)}finally{f.f()}if(!l)return;for(;"showing"===T(l)&&t.size;)W(O(t),o,r);t.has(e)&&O(t)!==e&&(i=!0),i&&(r=!1)}}function z(e,t,n){var o,r,i=e.ownerDocument||e;if(e instanceof Document)return function(e){for(var t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],o=P(e);o;)W(o,t,n),o=P(e)}(i,t,n);(null==(o=S.get(i))?void 0:o.has(e))?q(e,S.get(i),t,n):(_(S.get(i)||new Set,t,n),(null==(r=w.get(i))?void 0:r.has(e))&&q(e,w.get(i),t,n))}var B=new WeakMap;function F(e){if(e.isTrusted){var t=e.composedPath()[0];if(t){var n=t.ownerDocument;if(P(n)){var o=j(t);if(o&&"pointerdown"===e.type)B.set(n,o);else if("pointerup"===e.type){var r=B.get(n)===o;B.delete(n),r&&z(o||n,!1,!0)}}}}}var $=new WeakMap;function G(e){var t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];if(e){$.has(e)||$.set(e,e.getAttribute("aria-expanded"));var n=e.popoverTargetElement;if(n instanceof HTMLElement&&"auto"===n.popover)e.setAttribute("aria-expanded",String(t));else{var o=$.get(e);o?e.setAttribute("aria-expanded",o):e.removeAttribute("aria-expanded")}}}var U=globalThis.ShadowRoot||function(){};function J(e,t,n){var o=e[t];Object.defineProperty(e,t,{value:function(e){return o.call(this,n(e))}})}var K=/(^|[^\\]):popover-open\b/g;function Q(){var e="function"==typeof globalThis.CSSLayerBlockRule;return"\n".concat(e?"@layer popover-polyfill {":"","\n  :where([popover]) {\n    position: fixed;\n    z-index: 2147483647;\n    inset: 0;\n    padding: 0.25em;\n    width: fit-content;\n    height: fit-content;\n    border-width: initial;\n    border-color: initial;\n    border-image: initial;\n    border-style: solid;\n    background-color: canvas;\n    color: canvastext;\n    overflow: auto;\n    margin: auto;\n  }\n\n  :where([popover]:not(.\\:popover-open)) {\n    display: none;\n  }\n\n  :where(dialog[popover].\\:popover-open) {\n    display: block;\n  }\n\n  :where(dialog[popover][open]) {\n    display: revert;\n  }\n\n  :where([anchor].\\:popover-open) {\n    inset: auto;\n  }\n\n  :where([anchor]:popover-open) {\n    inset: auto;\n  }\n\n  @supports not (background-color: canvas) {\n    :where([popover]) {\n      background-color: white;\n      color: black;\n    }\n  }\n\n  @supports (width: -moz-fit-content) {\n    :where([popover]) {\n      width: -moz-fit-content;\n      height: -moz-fit-content;\n    }\n  }\n\n  @supports not (inset: 0) {\n    :where([popover]) {\n      top: 0;\n      left: 0;\n      right: 0;\n      bottom: 0;\n    }\n  }\n").concat(e?"}":"","\n")}var V=null;function X(e){var t=Q();if(null===V)try{(V=new CSSStyleSheet).replaceSync(t)}catch(e){V=!1}if(!1===V){var n=document.createElement("style");n.textContent=t,e instanceof Document?e.head.prepend(n):e.prepend(n)}else e.adoptedStyleSheets=[V].concat(o(e.adoptedStyleSheets))}"undefined"!=typeof HTMLElement&&"object"===t(HTMLElement.prototype)&&"popover"in HTMLElement.prototype||function(){if("undefined"!=typeof window){window.ToggleEvent=window.ToggleEvent||v,J(Document.prototype,"querySelector",a),J(Document.prototype,"querySelectorAll",a),J(Element.prototype,"querySelector",a),J(Element.prototype,"querySelectorAll",a),J(Element.prototype,"matches",a),J(Element.prototype,"closest",a),J(DocumentFragment.prototype,"querySelectorAll",a),Object.defineProperties(HTMLElement.prototype,{popover:{enumerable:!0,configurable:!0,get:function(){if(!this.hasAttribute("popover"))return null;var e=(this.getAttribute("popover")||"").toLowerCase();return""===e||"auto"==e?"auto":"hint"==e?"hint":"manual"},set:function(e){null===e?this.removeAttribute("popover"):this.setAttribute("popover",e)}},showPopover:{enumerable:!0,configurable:!0,value:function(){N(this)}},hidePopover:{enumerable:!0,configurable:!0,value:function(){W(this,!0,!0)}},togglePopover:{enumerable:!0,configurable:!0,value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};return"boolean"==typeof e&&(e={force:e}),"showing"===E.get(this)&&void 0===e.force||!1===e.force?W(this,!0,!0):void 0!==e.force&&!0!==e.force||N(this),"showing"===E.get(this)}}});var e=Element.prototype.attachShadow;e&&Object.defineProperties(Element.prototype,{attachShadow:{enumerable:!0,configurable:!0,writable:!0,value:function(t){var n=e.call(this,t);return X(n),n}}});var t=HTMLElement.prototype.attachInternals;t&&Object.defineProperties(HTMLElement.prototype,{attachInternals:{enumerable:!0,configurable:!0,writable:!0,value:function(){var e=t.call(this);return e.shadowRoot&&X(e.shadowRoot),e}}});var n=new WeakMap;u(HTMLButtonElement),u(HTMLInputElement);var o,r=function(e){if(!e.defaultPrevented){var t=e.composedPath(),n=t[0];if(n instanceof Element&&!(null==n?void 0:n.shadowRoot)){var o=k(n);if(o instanceof U||o instanceof Document){var r=t.find(function(e){var t;return null==(t=e.matches)?void 0:t.call(e,"[popovertargetaction],[popovertarget]")});return r?(function(e){var t=e.popoverTargetElement;if(t instanceof HTMLElement){var n=T(t);"show"===e.popoverTargetAction&&"showing"===n||"hide"===e.popoverTargetAction&&"hidden"===n||("showing"===n?W(t,!0,!0):A(t,!1)&&(M.set(t,e),N(t)))}}(r),void e.preventDefault()):void 0}}}},i=function(e){var t=e.key,n=e.target;e.defaultPrevented||!n||"Escape"!==t&&"Esc"!==t||z(n.ownerDocument,!0,!0)};(o=document).addEventListener("click",r),o.addEventListener("keydown",i),o.addEventListener("pointerdown",F),o.addEventListener("pointerup",F),X(document)}function a(e){return(null==e?void 0:e.includes(":popover-open"))&&(e=e.replace(K,"$1.\\:popover-open")),e}function u(e){Object.defineProperties(e.prototype,{popoverTargetElement:{enumerable:!0,configurable:!0,set:function(e){if(null===e)this.removeAttribute("popovertarget"),n.delete(this);else{if(!(e instanceof Element))throw new TypeError("popoverTargetElement must be an element or null");this.setAttribute("popovertarget",""),n.set(this,e)}},get:function(){if("button"!==this.localName&&"input"!==this.localName)return null;if("input"===this.localName&&"reset"!==this.type&&"image"!==this.type&&"button"!==this.type)return null;if(this.disabled)return null;if(this.form&&"submit"===this.type)return null;var e=n.get(this);if(e&&e.isConnected)return e;if(e&&!e.isConnected)return n.delete(this),null;var t=k(this),o=this.getAttribute("popovertarget");return(t instanceof Document||t instanceof U)&&o&&t.getElementById(o)||null}},popoverTargetAction:{enumerable:!0,configurable:!0,get:function(){var e=(this.getAttribute("popovertargetaction")||"").toLowerCase();return"show"===e||"hide"===e?e:"toggle"},set:function(e){this.setAttribute("popovertargetaction",e)}}})}}()})();
+/******/ (() => { // webpackBootstrap
+/*!*****************************************!*\
+  !*** ./src/scripts/popover-polyfill.js ***!
+  \*****************************************/
+var _excluded = ["oldState", "newState"];
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t.return || t.return(); } finally { if (u) throw o; } } }; }
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _objectWithoutProperties(e, t) { if (null == e) return {}; var o, r, i = _objectWithoutPropertiesLoose(e, t); if (Object.getOwnPropertySymbols) { var n = Object.getOwnPropertySymbols(e); for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]); } return i; }
+function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t = {}; for (var n in r) if ({}.hasOwnProperty.call(r, n)) { if (-1 !== e.indexOf(n)) continue; t[n] = r[n]; } return t; }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function _possibleConstructorReturn(t, e) { if (e && ("object" == _typeof(e) || "function" == typeof e)) return e; if (void 0 !== e) throw new TypeError("Derived constructors may only return object or undefined"); return _assertThisInitialized(t); }
+function _assertThisInitialized(e) { if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); return e; }
+function _inherits(t, e) { if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function"); t.prototype = Object.create(e && e.prototype, { constructor: { value: t, writable: !0, configurable: !0 } }), Object.defineProperty(t, "prototype", { writable: !1 }), e && _setPrototypeOf(t, e); }
+function _wrapNativeSuper(t) { var r = "function" == typeof Map ? new Map() : void 0; return _wrapNativeSuper = function _wrapNativeSuper(t) { if (null === t || !_isNativeFunction(t)) return t; if ("function" != typeof t) throw new TypeError("Super expression must either be null or a function"); if (void 0 !== r) { if (r.has(t)) return r.get(t); r.set(t, Wrapper); } function Wrapper() { return _construct(t, arguments, _getPrototypeOf(this).constructor); } return Wrapper.prototype = Object.create(t.prototype, { constructor: { value: Wrapper, enumerable: !1, writable: !0, configurable: !0 } }), _setPrototypeOf(Wrapper, t); }, _wrapNativeSuper(t); }
+function _construct(t, e, r) { if (_isNativeReflectConstruct()) return Reflect.construct.apply(null, arguments); var o = [null]; o.push.apply(o, e); var p = new (t.bind.apply(t, o))(); return r && _setPrototypeOf(p, r.prototype), p; }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function _isNativeFunction(t) { try { return -1 !== Function.toString.call(t).indexOf("[native code]"); } catch (n) { return "function" == typeof t; } }
+function _setPrototypeOf(t, e) { return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) { return t.__proto__ = e, t; }, _setPrototypeOf(t, e); }
+function _getPrototypeOf(t) { return _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) { return t.__proto__ || Object.getPrototypeOf(t); }, _getPrototypeOf(t); }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+// src/events.ts
+// @ts-nocheck
+
+/**
+ * @fileoverview
+ * - Polyfill for the popover attribute, which is not supported in older Safari versions.
+ *
+ * @see https://popover.oddbird.net/
+ */
+
+var ToggleEvent = /*#__PURE__*/function (_Event) {
+  function ToggleEvent(type) {
+    var _this;
+    var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+      _ref$oldState = _ref.oldState,
+      oldState = _ref$oldState === void 0 ? '' : _ref$oldState,
+      _ref$newState = _ref.newState,
+      newState = _ref$newState === void 0 ? '' : _ref$newState,
+      init = _objectWithoutProperties(_ref, _excluded);
+    _classCallCheck(this, ToggleEvent);
+    _this = _callSuper(this, ToggleEvent, [type, init]);
+    _defineProperty(_this, "oldState", void 0);
+    _defineProperty(_this, "newState", void 0);
+    _this.oldState = String(oldState || '');
+    _this.newState = String(newState || '');
+    return _this;
+  }
+  _inherits(ToggleEvent, _Event);
+  return _createClass(ToggleEvent);
+}(/*#__PURE__*/_wrapNativeSuper(Event));
+var popoverToggleTaskQueue = /* @__PURE__ */new WeakMap();
+function queuePopoverToggleEventTask(element, oldState, newState) {
+  popoverToggleTaskQueue.set(element, setTimeout(function () {
+    if (!popoverToggleTaskQueue.has(element)) return;
+    element.dispatchEvent(new ToggleEvent('toggle', {
+      cancelable: false,
+      oldState: oldState,
+      newState: newState
+    }));
+  }, 0));
+}
+
+// src/popover-helpers.ts
+var ShadowRoot = globalThis.ShadowRoot || function () {};
+var HTMLDialogElement = globalThis.HTMLDialogElement || function () {};
+var topLayerElements = /* @__PURE__ */new WeakMap();
+var autoPopoverList = /* @__PURE__ */new WeakMap();
+var hintPopoverList = /* @__PURE__ */new WeakMap();
+var visibilityState = /* @__PURE__ */new WeakMap();
+function getPopoverVisibilityState(popover) {
+  return visibilityState.get(popover) || 'hidden';
+}
+var popoverInvoker = /* @__PURE__ */new WeakMap();
+function lastSetElement(set) {
+  return _toConsumableArray(set).pop();
+}
+function popoverTargetAttributeActivationBehavior(element) {
+  var popover = element.popoverTargetElement;
+  if (!(popover instanceof HTMLElement)) {
+    return;
+  }
+  var visibility = getPopoverVisibilityState(popover);
+  if (element.popoverTargetAction === 'show' && visibility === 'showing') {
+    return;
+  }
+  if (element.popoverTargetAction === 'hide' && visibility === 'hidden') return;
+  if (visibility === 'showing') {
+    hidePopover(popover, true, true);
+  } else if (checkPopoverValidity(popover, false)) {
+    popoverInvoker.set(popover, element);
+    showPopover(popover);
+  }
+}
+function checkPopoverValidity(element, expectedToBeShowing) {
+  if (element.popover !== 'auto' && element.popover !== 'manual' && element.popover !== 'hint') {
+    return false;
+  }
+  if (!element.isConnected) return false;
+  if (expectedToBeShowing && getPopoverVisibilityState(element) !== 'showing') {
+    return false;
+  }
+  if (!expectedToBeShowing && getPopoverVisibilityState(element) !== 'hidden') {
+    return false;
+  }
+  if (element instanceof HTMLDialogElement && element.hasAttribute('open')) {
+    return false;
+  }
+  if (document.fullscreenElement === element) return false;
+  return true;
+}
+function getStackPosition(popover) {
+  if (!popover) return 0;
+  var autoPopovers = autoPopoverList.get(document) || /* @__PURE__ */new Set();
+  var hintPopovers = hintPopoverList.get(document) || /* @__PURE__ */new Set();
+  if (hintPopovers.has(popover)) {
+    return _toConsumableArray(hintPopovers).indexOf(popover) + autoPopovers.size + 1;
+  }
+  if (autoPopovers.has(popover)) {
+    return _toConsumableArray(autoPopovers).indexOf(popover) + 1;
+  }
+  return 0;
+}
+function topMostClickedPopover(target) {
+  var clickedPopover = nearestInclusiveOpenPopover(target);
+  var invokerPopover = nearestInclusiveTargetPopoverForInvoker(target);
+  if (getStackPosition(clickedPopover) > getStackPosition(invokerPopover)) {
+    return clickedPopover;
+  }
+  return invokerPopover;
+}
+function topmostAutoOrHintPopover(document2) {
+  var topmostPopover;
+  var hintPopovers = hintPopoverList.get(document2) || /* @__PURE__ */new Set();
+  var autoPopovers = autoPopoverList.get(document2) || /* @__PURE__ */new Set();
+  var usedStack = hintPopovers.size > 0 ? hintPopovers : autoPopovers.size > 0 ? autoPopovers : null;
+  if (usedStack) {
+    topmostPopover = lastSetElement(usedStack);
+    if (!topmostPopover.isConnected) {
+      usedStack.delete(topmostPopover);
+      return topmostAutoOrHintPopover(document2);
+    }
+    return topmostPopover;
+  }
+  return null;
+}
+function topMostPopoverInList(list) {
+  var _iterator = _createForOfIteratorHelper(list || []),
+    _step;
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var popover = _step.value;
+      if (!popover.isConnected) {
+        list.delete(popover);
+      } else {
+        return popover;
+      }
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+  return null;
+}
+function getRootNode(node) {
+  if (typeof node.getRootNode === 'function') {
+    return node.getRootNode();
+  }
+  if (node.parentNode) return getRootNode(node.parentNode);
+  return node;
+}
+function nearestInclusiveOpenPopover(node) {
+  while (node) {
+    if (node instanceof HTMLElement && node.popover === 'auto' && visibilityState.get(node) === 'showing') {
+      return node;
+    }
+    node = node instanceof Element && node.assignedSlot || node.parentElement || getRootNode(node);
+    if (node instanceof ShadowRoot) node = node.host;
+    if (node instanceof Document) return;
+  }
+}
+function nearestInclusiveTargetPopoverForInvoker(node) {
+  while (node) {
+    var nodePopover = node.popoverTargetElement;
+    if (nodePopover instanceof HTMLElement) return nodePopover;
+    node = node.parentElement || getRootNode(node);
+    if (node instanceof ShadowRoot) node = node.host;
+    if (node instanceof Document) return;
+  }
+}
+function topMostPopoverAncestor(newPopover, list) {
+  var popoverPositions = /* @__PURE__ */new Map();
+  var i = 0;
+  var _iterator2 = _createForOfIteratorHelper(list || []),
+    _step2;
+  try {
+    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+      var popover = _step2.value;
+      popoverPositions.set(popover, i);
+      i += 1;
+    }
+  } catch (err) {
+    _iterator2.e(err);
+  } finally {
+    _iterator2.f();
+  }
+  popoverPositions.set(newPopover, i);
+  i += 1;
+  var topMostPopoverAncestor2 = null;
+  function checkAncestor(candidate) {
+    if (!candidate) return;
+    var okNesting = false;
+    var candidateAncestor = null;
+    var candidatePosition = null;
+    while (!okNesting) {
+      candidateAncestor = nearestInclusiveOpenPopover(candidate) || null;
+      if (candidateAncestor === null) return;
+      if (!popoverPositions.has(candidateAncestor)) return;
+      if (newPopover.popover === 'hint' || candidateAncestor.popover === 'auto') {
+        okNesting = true;
+      }
+      if (!okNesting) {
+        candidate = candidateAncestor.parentElement;
+      }
+    }
+    candidatePosition = popoverPositions.get(candidateAncestor);
+    if (topMostPopoverAncestor2 === null || popoverPositions.get(topMostPopoverAncestor2) < candidatePosition) {
+      topMostPopoverAncestor2 = candidateAncestor;
+    }
+  }
+  checkAncestor(newPopover.parentElement || getRootNode(newPopover));
+  return topMostPopoverAncestor2;
+}
+function isFocusable(focusTarget) {
+  if (focusTarget.hidden || focusTarget instanceof ShadowRoot) return false;
+  if (focusTarget instanceof HTMLButtonElement || focusTarget instanceof HTMLInputElement || focusTarget instanceof HTMLSelectElement || focusTarget instanceof HTMLTextAreaElement || focusTarget instanceof HTMLOptGroupElement || focusTarget instanceof HTMLOptionElement || focusTarget instanceof HTMLFieldSetElement) {
+    if (focusTarget.disabled) return false;
+  }
+  if (focusTarget instanceof HTMLInputElement && focusTarget.type === 'hidden') {
+    return false;
+  }
+  if (focusTarget instanceof HTMLAnchorElement && focusTarget.href === '') {
+    return false;
+  }
+  return typeof focusTarget.tabIndex === 'number' && focusTarget.tabIndex !== -1;
+}
+function focusDelegate(focusTarget) {
+  if (focusTarget.shadowRoot && focusTarget.shadowRoot.delegatesFocus !== true) {
+    return null;
+  }
+  var whereToLook = focusTarget;
+  if (whereToLook.shadowRoot) {
+    whereToLook = whereToLook.shadowRoot;
+  }
+  var autoFocusDelegate = whereToLook.querySelector('[autofocus]');
+  if (autoFocusDelegate) {
+    return autoFocusDelegate;
+  } else {
+    var slots = whereToLook.querySelectorAll('slot');
+    var _iterator3 = _createForOfIteratorHelper(slots),
+      _step3;
+    try {
+      for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+        var slot = _step3.value;
+        var assignedElements = slot.assignedElements({
+          flatten: true
+        });
+        var _iterator4 = _createForOfIteratorHelper(assignedElements),
+          _step4;
+        try {
+          for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+            var el = _step4.value;
+            if (el.hasAttribute('autofocus')) {
+              return el;
+            } else {
+              autoFocusDelegate = el.querySelector('[autofocus]');
+              if (autoFocusDelegate) {
+                return autoFocusDelegate;
+              }
+            }
+          }
+        } catch (err) {
+          _iterator4.e(err);
+        } finally {
+          _iterator4.f();
+        }
+      }
+    } catch (err) {
+      _iterator3.e(err);
+    } finally {
+      _iterator3.f();
+    }
+  }
+  var walker = focusTarget.ownerDocument.createTreeWalker(whereToLook, NodeFilter.SHOW_ELEMENT);
+  var descendant = walker.currentNode;
+  while (descendant) {
+    if (isFocusable(descendant)) {
+      return descendant;
+    }
+    descendant = walker.nextNode();
+  }
+}
+function popoverFocusingSteps(subject) {
+  var _a;
+  (_a = focusDelegate(subject)) == null ? void 0 : _a.focus();
+}
+var previouslyFocusedElements = /* @__PURE__ */new WeakMap();
+function showPopover(element) {
+  if (!checkPopoverValidity(element, false)) {
+    return;
+  }
+  var document2 = element.ownerDocument;
+  if (!element.dispatchEvent(new ToggleEvent('beforetoggle', {
+    cancelable: true,
+    oldState: 'closed',
+    newState: 'open'
+  }))) {
+    return;
+  }
+  if (!checkPopoverValidity(element, false)) {
+    return;
+  }
+  var shouldRestoreFocus = false;
+  var originalType = element.popover;
+  var stackToAppendTo = null;
+  var autoAncestor = topMostPopoverAncestor(element, autoPopoverList.get(document2) || /* @__PURE__ */new Set());
+  var hintAncestor = topMostPopoverAncestor(element, hintPopoverList.get(document2) || /* @__PURE__ */new Set());
+  if (originalType === 'auto') {
+    closeAllOpenPopoversInList(hintPopoverList.get(document2) || /* @__PURE__ */new Set(), shouldRestoreFocus, true);
+    var ancestor = autoAncestor || document2;
+    hideAllPopoversUntil(ancestor, shouldRestoreFocus, true);
+    stackToAppendTo = 'auto';
+  }
+  if (originalType === 'hint') {
+    if (hintAncestor) {
+      hideAllPopoversUntil(hintAncestor, shouldRestoreFocus, true);
+      stackToAppendTo = 'hint';
+    } else {
+      closeAllOpenPopoversInList(hintPopoverList.get(document2) || /* @__PURE__ */new Set(), shouldRestoreFocus, true);
+      if (autoAncestor) {
+        hideAllPopoversUntil(autoAncestor, shouldRestoreFocus, true);
+        stackToAppendTo = 'auto';
+      } else {
+        stackToAppendTo = 'hint';
+      }
+    }
+  }
+  if (originalType === 'auto' || originalType === 'hint') {
+    if (originalType !== element.popover || !checkPopoverValidity(element, false)) {
+      return;
+    }
+    if (!topmostAutoOrHintPopover(document2)) {
+      shouldRestoreFocus = true;
+    }
+    if (stackToAppendTo === 'auto') {
+      if (!autoPopoverList.has(document2)) {
+        autoPopoverList.set(document2, /* @__PURE__ */new Set());
+      }
+      autoPopoverList.get(document2).add(element);
+    } else if (stackToAppendTo === 'hint') {
+      if (!hintPopoverList.has(document2)) {
+        hintPopoverList.set(document2, /* @__PURE__ */new Set());
+      }
+      hintPopoverList.get(document2).add(element);
+    }
+  }
+  previouslyFocusedElements.delete(element);
+  var originallyFocusedElement = document2.activeElement;
+  element.classList.add(':popover-open');
+  visibilityState.set(element, 'showing');
+  if (!topLayerElements.has(document2)) {
+    topLayerElements.set(document2, /* @__PURE__ */new Set());
+  }
+  topLayerElements.get(document2).add(element);
+  setInvokerAriaExpanded(popoverInvoker.get(element), true);
+  popoverFocusingSteps(element);
+  if (shouldRestoreFocus && originallyFocusedElement && element.popover === 'auto') {
+    previouslyFocusedElements.set(element, originallyFocusedElement);
+  }
+  queuePopoverToggleEventTask(element, 'closed', 'open');
+}
+function hidePopover(element) {
+  var focusPreviousElement = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  var fireEvents = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+  var _a, _b;
+  if (!checkPopoverValidity(element, true)) {
+    return;
+  }
+  var document2 = element.ownerDocument;
+  if (['auto', 'hint'].includes(element.popover)) {
+    hideAllPopoversUntil(element, focusPreviousElement, fireEvents);
+    if (!checkPopoverValidity(element, true)) {
+      return;
+    }
+  }
+  var autoList = autoPopoverList.get(document2) || /* @__PURE__ */new Set();
+  var autoPopoverListContainsElement = autoList.has(element) && lastSetElement(autoList) === element;
+  setInvokerAriaExpanded(popoverInvoker.get(element), false);
+  popoverInvoker.delete(element);
+  if (fireEvents) {
+    element.dispatchEvent(new ToggleEvent('beforetoggle', {
+      oldState: 'open',
+      newState: 'closed'
+    }));
+    if (autoPopoverListContainsElement && lastSetElement(autoList) !== element) {
+      hideAllPopoversUntil(element, focusPreviousElement, fireEvents);
+    }
+    if (!checkPopoverValidity(element, true)) {
+      return;
+    }
+  }
+  (_a = topLayerElements.get(document2)) == null ? void 0 : _a.delete(element);
+  autoList.delete(element);
+  (_b = hintPopoverList.get(document2)) == null ? void 0 : _b.delete(element);
+  element.classList.remove(':popover-open');
+  visibilityState.set(element, 'hidden');
+  if (fireEvents) {
+    queuePopoverToggleEventTask(element, 'open', 'closed');
+  }
+  var previouslyFocusedElement = previouslyFocusedElements.get(element);
+  if (previouslyFocusedElement) {
+    previouslyFocusedElements.delete(element);
+    if (focusPreviousElement) {
+      previouslyFocusedElement.focus();
+    }
+  }
+}
+function closeAllOpenPopovers(document2) {
+  var focusPreviousElement = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  var fireEvents = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+  var popover = topmostAutoOrHintPopover(document2);
+  while (popover) {
+    hidePopover(popover, focusPreviousElement, fireEvents);
+    popover = topmostAutoOrHintPopover(document2);
+  }
+}
+function closeAllOpenPopoversInList(list) {
+  var focusPreviousElement = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  var fireEvents = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+  var popover = topMostPopoverInList(list);
+  while (popover) {
+    hidePopover(popover, focusPreviousElement, fireEvents);
+    popover = topMostPopoverInList(list);
+  }
+}
+function hidePopoverStackUntil(endpoint, set, focusPreviousElement, fireEvents) {
+  var repeatingHide = false;
+  var hasRunOnce = false;
+  while (repeatingHide || !hasRunOnce) {
+    hasRunOnce = true;
+    var lastToHide = null;
+    var foundEndpoint = false;
+    var _iterator5 = _createForOfIteratorHelper(set),
+      _step5;
+    try {
+      for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
+        var popover = _step5.value;
+        if (popover === endpoint) {
+          foundEndpoint = true;
+        } else if (foundEndpoint) {
+          lastToHide = popover;
+          break;
+        }
+      }
+    } catch (err) {
+      _iterator5.e(err);
+    } finally {
+      _iterator5.f();
+    }
+    if (!lastToHide) return;
+    while (getPopoverVisibilityState(lastToHide) === 'showing' && set.size) {
+      hidePopover(lastSetElement(set), focusPreviousElement, fireEvents);
+    }
+    if (set.has(endpoint) && lastSetElement(set) !== endpoint) {
+      repeatingHide = true;
+    }
+    if (repeatingHide) {
+      fireEvents = false;
+    }
+  }
+}
+function hideAllPopoversUntil(endpoint, focusPreviousElement, fireEvents) {
+  var _a, _b;
+  var document2 = endpoint.ownerDocument || endpoint;
+  if (endpoint instanceof Document) {
+    return closeAllOpenPopovers(document2, focusPreviousElement, fireEvents);
+  }
+  if ((_a = hintPopoverList.get(document2)) == null ? void 0 : _a.has(endpoint)) {
+    hidePopoverStackUntil(endpoint, hintPopoverList.get(document2), focusPreviousElement, fireEvents);
+    return;
+  }
+  closeAllOpenPopoversInList(hintPopoverList.get(document2) || /* @__PURE__ */new Set(), focusPreviousElement, fireEvents);
+  if (!((_b = autoPopoverList.get(document2)) == null ? void 0 : _b.has(endpoint))) {
+    return;
+  }
+  hidePopoverStackUntil(endpoint, autoPopoverList.get(document2), focusPreviousElement, fireEvents);
+}
+var popoverPointerDownTargets = /* @__PURE__ */new WeakMap();
+function lightDismissOpenPopovers(event) {
+  if (!event.isTrusted) return;
+  var target = event.composedPath()[0];
+  if (!target) return;
+  var document2 = target.ownerDocument;
+  var topMostPopover = topmostAutoOrHintPopover(document2);
+  if (!topMostPopover) return;
+  var ancestor = topMostClickedPopover(target);
+  if (ancestor && event.type === 'pointerdown') {
+    popoverPointerDownTargets.set(document2, ancestor);
+  } else if (event.type === 'pointerup') {
+    var sameTarget = popoverPointerDownTargets.get(document2) === ancestor;
+    popoverPointerDownTargets.delete(document2);
+    if (sameTarget) {
+      hideAllPopoversUntil(ancestor || document2, false, true);
+    }
+  }
+}
+var initialAriaExpandedValue = /* @__PURE__ */new WeakMap();
+function setInvokerAriaExpanded(el) {
+  var force = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  if (!el) return;
+  if (!initialAriaExpandedValue.has(el)) {
+    initialAriaExpandedValue.set(el, el.getAttribute('aria-expanded'));
+  }
+  var popover = el.popoverTargetElement;
+  if (popover instanceof HTMLElement && popover.popover === 'auto') {
+    el.setAttribute('aria-expanded', String(force));
+  } else {
+    var initialValue = initialAriaExpandedValue.get(el);
+    if (!initialValue) {
+      el.removeAttribute('aria-expanded');
+    } else {
+      el.setAttribute('aria-expanded', initialValue);
+    }
+  }
+}
+
+// src/popover.ts
+var ShadowRoot2 = globalThis.ShadowRoot || function () {};
+function isSupported() {
+  return typeof HTMLElement !== 'undefined' && _typeof(HTMLElement.prototype) === 'object' && 'popover' in HTMLElement.prototype;
+}
+function patchSelectorFn(object, name, mapper) {
+  var original = object[name];
+  Object.defineProperty(object, name, {
+    value: function value(selector) {
+      return original.call(this, mapper(selector));
+    }
+  });
+}
+var nonEscapedPopoverSelector = /(^|[^\\]):popover-open\b/g;
+function hasLayerSupport() {
+  return typeof globalThis.CSSLayerBlockRule === 'function';
+}
+function getStyles() {
+  var useLayer = hasLayerSupport();
+  return "\n".concat(useLayer ? '@layer popover-polyfill {' : '', "\n  :where([popover]) {\n    position: fixed;\n    z-index: 2147483647;\n    inset: 0;\n    padding: 0.25em;\n    width: fit-content;\n    height: fit-content;\n    border-width: initial;\n    border-color: initial;\n    border-image: initial;\n    border-style: solid;\n    background-color: canvas;\n    color: canvastext;\n    overflow: auto;\n    margin: auto;\n  }\n\n  :where([popover]:not(.\\:popover-open)) {\n    display: none;\n  }\n\n  :where(dialog[popover].\\:popover-open) {\n    display: block;\n  }\n\n  :where(dialog[popover][open]) {\n    display: revert;\n  }\n\n  :where([anchor].\\:popover-open) {\n    inset: auto;\n  }\n\n  :where([anchor]:popover-open) {\n    inset: auto;\n  }\n\n  @supports not (background-color: canvas) {\n    :where([popover]) {\n      background-color: white;\n      color: black;\n    }\n  }\n\n  @supports (width: -moz-fit-content) {\n    :where([popover]) {\n      width: -moz-fit-content;\n      height: -moz-fit-content;\n    }\n  }\n\n  @supports not (inset: 0) {\n    :where([popover]) {\n      top: 0;\n      left: 0;\n      right: 0;\n      bottom: 0;\n    }\n  }\n").concat(useLayer ? '}' : '', "\n");
+}
+var popoverStyleSheet = null;
+function injectStyles(root) {
+  var styles = getStyles();
+  if (popoverStyleSheet === null) {
+    try {
+      popoverStyleSheet = new CSSStyleSheet();
+      popoverStyleSheet.replaceSync(styles);
+    } catch (_unused) {
+      popoverStyleSheet = false;
+    }
+  }
+  if (popoverStyleSheet === false) {
+    var sheet = document.createElement('style');
+    sheet.textContent = styles;
+    if (root instanceof Document) {
+      root.head.prepend(sheet);
+    } else {
+      root.prepend(sheet);
+    }
+  } else {
+    root.adoptedStyleSheets = [popoverStyleSheet].concat(_toConsumableArray(root.adoptedStyleSheets));
+  }
+}
+function apply() {
+  if (typeof window === 'undefined') return;
+  window.ToggleEvent = window.ToggleEvent || ToggleEvent;
+  function rewriteSelector(selector) {
+    if (selector == null ? void 0 : selector.includes(':popover-open')) {
+      selector = selector.replace(nonEscapedPopoverSelector, '$1.\\:popover-open');
+    }
+    return selector;
+  }
+  patchSelectorFn(Document.prototype, 'querySelector', rewriteSelector);
+  patchSelectorFn(Document.prototype, 'querySelectorAll', rewriteSelector);
+  patchSelectorFn(Element.prototype, 'querySelector', rewriteSelector);
+  patchSelectorFn(Element.prototype, 'querySelectorAll', rewriteSelector);
+  patchSelectorFn(Element.prototype, 'matches', rewriteSelector);
+  patchSelectorFn(Element.prototype, 'closest', rewriteSelector);
+  patchSelectorFn(DocumentFragment.prototype, 'querySelectorAll', rewriteSelector);
+  Object.defineProperties(HTMLElement.prototype, {
+    popover: {
+      enumerable: true,
+      configurable: true,
+      get: function get() {
+        if (!this.hasAttribute('popover')) return null;
+        var value = (this.getAttribute('popover') || '').toLowerCase();
+        if (value === '' || value == 'auto') return 'auto';
+        if (value == 'hint') return 'hint';
+        return 'manual';
+      },
+      set: function set(value) {
+        if (value === null) {
+          this.removeAttribute('popover');
+        } else {
+          this.setAttribute('popover', value);
+        }
+      }
+    },
+    showPopover: {
+      enumerable: true,
+      configurable: true,
+      value: function value() {
+        var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+        showPopover(this);
+      }
+    },
+    hidePopover: {
+      enumerable: true,
+      configurable: true,
+      value: function value() {
+        hidePopover(this, true, true);
+      }
+    },
+    togglePopover: {
+      enumerable: true,
+      configurable: true,
+      value: function value() {
+        var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+        if (typeof options === 'boolean') {
+          options = {
+            force: options
+          };
+        }
+        if (visibilityState.get(this) === 'showing' && options.force === void 0 || options.force === false) {
+          hidePopover(this, true, true);
+        } else if (options.force === void 0 || options.force === true) {
+          showPopover(this);
+        }
+        return visibilityState.get(this) === 'showing';
+      }
+    }
+  });
+  var originalAttachShadow = Element.prototype.attachShadow;
+  if (originalAttachShadow) {
+    Object.defineProperties(Element.prototype, {
+      attachShadow: {
+        enumerable: true,
+        configurable: true,
+        writable: true,
+        value: function value(options) {
+          var shadowRoot = originalAttachShadow.call(this, options);
+          injectStyles(shadowRoot);
+          return shadowRoot;
+        }
+      }
+    });
+  }
+  var originalAttachInternals = HTMLElement.prototype.attachInternals;
+  if (originalAttachInternals) {
+    Object.defineProperties(HTMLElement.prototype, {
+      attachInternals: {
+        enumerable: true,
+        configurable: true,
+        writable: true,
+        value: function value() {
+          var internals = originalAttachInternals.call(this);
+          if (internals.shadowRoot) {
+            injectStyles(internals.shadowRoot);
+          }
+          return internals;
+        }
+      }
+    });
+  }
+  var popoverTargetAssociatedElements = /* @__PURE__ */new WeakMap();
+  function applyPopoverInvokerElementMixin(ElementClass) {
+    Object.defineProperties(ElementClass.prototype, {
+      popoverTargetElement: {
+        enumerable: true,
+        configurable: true,
+        set: function set(targetElement) {
+          if (targetElement === null) {
+            this.removeAttribute('popovertarget');
+            popoverTargetAssociatedElements.delete(this);
+          } else if (!(targetElement instanceof Element)) {
+            throw new TypeError("popoverTargetElement must be an element or null");
+          } else {
+            this.setAttribute('popovertarget', '');
+            popoverTargetAssociatedElements.set(this, targetElement);
+          }
+        },
+        get: function get() {
+          if (this.localName !== 'button' && this.localName !== 'input') {
+            return null;
+          }
+          if (this.localName === 'input' && this.type !== 'reset' && this.type !== 'image' && this.type !== 'button') {
+            return null;
+          }
+          if (this.disabled) {
+            return null;
+          }
+          if (this.form && this.type === 'submit') {
+            return null;
+          }
+          var targetElement = popoverTargetAssociatedElements.get(this);
+          if (targetElement && targetElement.isConnected) {
+            return targetElement;
+          } else if (targetElement && !targetElement.isConnected) {
+            popoverTargetAssociatedElements.delete(this);
+            return null;
+          }
+          var root = getRootNode(this);
+          var idref = this.getAttribute('popovertarget');
+          if ((root instanceof Document || root instanceof ShadowRoot2) && idref) {
+            return root.getElementById(idref) || null;
+          }
+          return null;
+        }
+      },
+      popoverTargetAction: {
+        enumerable: true,
+        configurable: true,
+        get: function get() {
+          var value = (this.getAttribute('popovertargetaction') || '').toLowerCase();
+          if (value === 'show' || value === 'hide') return value;
+          return 'toggle';
+        },
+        set: function set(value) {
+          this.setAttribute('popovertargetaction', value);
+        }
+      }
+    });
+  }
+  applyPopoverInvokerElementMixin(HTMLButtonElement);
+  applyPopoverInvokerElementMixin(HTMLInputElement);
+  var handleInvokerActivation = function handleInvokerActivation(event) {
+    if (event.defaultPrevented) {
+      return;
+    }
+    var composedPath = event.composedPath();
+    var target = composedPath[0];
+    if (!(target instanceof Element) || (target == null ? void 0 : target.shadowRoot)) {
+      return;
+    }
+    var root = getRootNode(target);
+    if (!(root instanceof ShadowRoot2 || root instanceof Document)) {
+      return;
+    }
+    var invoker = composedPath.find(function (el) {
+      var _a;
+      return (_a = el.matches) == null ? void 0 : _a.call(el, '[popovertargetaction],[popovertarget]');
+    });
+    if (invoker) {
+      popoverTargetAttributeActivationBehavior(invoker);
+      event.preventDefault();
+      return;
+    }
+  };
+  var onKeydown = function onKeydown(event) {
+    var key = event.key;
+    var target = event.target;
+    if (!event.defaultPrevented && target && (key === 'Escape' || key === 'Esc')) {
+      hideAllPopoversUntil(target.ownerDocument, true, true);
+    }
+  };
+  var addEventListeners = function addEventListeners(root) {
+    root.addEventListener('click', handleInvokerActivation);
+    root.addEventListener('keydown', onKeydown);
+    root.addEventListener('pointerdown', lightDismissOpenPopovers);
+    root.addEventListener('pointerup', lightDismissOpenPopovers);
+  };
+  addEventListeners(document);
+  injectStyles(document);
+}
+
+// src/index.ts
+if (!isSupported()) apply();
+/******/ })()
+;

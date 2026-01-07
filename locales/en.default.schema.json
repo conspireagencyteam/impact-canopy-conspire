@@ -22,6 +22,7 @@
     // Theme component category for contact forms, email signups, etc.
     "forms": "Forms",
     "header": "Header",
+    "header_impact": "Impact Header",
     "layout": "Layout",
     "links": "Links",
     "product": "Product",
@@ -309,6 +310,7 @@
     "group": "Group",
     "meta_group": "Meta Group",
     "header": "Header",
+    "header_impact": "Impact Header",
     "heading": "Heading",
     "hero": "Hero",
     "hero_bottom_aligned": "Hero: Bottom aligned",
