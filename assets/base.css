@@ -1257,7 +1257,7 @@ button.shopify-payment-button__button--unbranded {
   font-style: var(--font-paragraph--style);
   font-size: var(--font-h6--size);
   line-height: 1;
-  letter-spacing: -1px;
+  letter-spacing: 0px;
   margin-block: 0;
   transition: color var(--animation-speed) var(--animation-easing), box-shadow var(--animation-speed) var(--animation-easing), background-color var(--animation-speed) var(--animation-easing);
   cursor: pointer;
@@ -4001,86 +4001,6 @@ text-component[shimmer]::after {
     font-size: max(1rem, 100%);
   }
 }
-#appstle-widget-template .appstle_sellingPlan_discountText {
-  display: none !important;
-}
-#appstle-widget-template .widgetSellingPlanWrapper .appstle_input_wrapper.appstle-active-option .appstle-selling-plan-name-wrapper:after {
-  background: #282828;
-}
-#appstle-widget-template .widgetSellingPlanWrapper .appstle_input_wrapper.appstle_onetime_block {
-  height: fit-content !important;
-}
-#appstle-widget-template .widgetSellingPlanWrapper .appstle_input_wrapper.appstle_onetime_block .appstle-cancel-text {
-  display: none;
-}
-#appstle-widget-template .widgetSellingPlanWrapper .appstle_input_wrapper .appstle-selling-plan-detail-wrapper {
-  color: #282828 !important;
-  font-size: 24px;
-  letter-spacing: -0.96px;
-}
-#appstle-widget-template .widgetSellingPlanWrapper .appstle_input_wrapper .appstle_span_wrapper {
-  gap: 5px;
-  flex-direction: row-reverse !important;
-}
-#appstle-widget-template .widgetSellingPlanWrapper .appstle_input_wrapper .appstle_span_wrapper .appstle_sellingPlan_price {
-  color: #e10000;
-}
-#appstle-widget-template .widgetSellingPlanWrapper .appstle_input_wrapper .appstle-selling-plan-name-wrapper {
-  font-size: 18px;
-  color: #252525;
-  letter-spacing: -0.9px;
-  position: relative;
-  padding-left: 30px;
-}
-#appstle-widget-template .widgetSellingPlanWrapper .appstle_input_wrapper .appstle-selling-plan-name-wrapper:before, #appstle-widget-template .widgetSellingPlanWrapper .appstle_input_wrapper .appstle-selling-plan-name-wrapper:after {
-  position: absolute;
-  content: "";
-  border-radius: 100px;
-}
-#appstle-widget-template .widgetSellingPlanWrapper .appstle_input_wrapper .appstle-selling-plan-name-wrapper:before {
-  top: 0;
-  left: 0;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #282828;
-}
-#appstle-widget-template .widgetSellingPlanWrapper .appstle_input_wrapper .appstle-selling-plan-name-wrapper:after {
-  top: 3px;
-  left: 3px;
-  width: 14px;
-  height: 14px;
-  background: transparent;
-}
-#appstle-widget-template .widgetSellingPlanWrapper .appstle_input_wrapper .appstle-cancel-text {
-  font-size: 16px;
-  margin-top: 8px;
-  color: #b1b1b1;
-}
-#appstle-widget-template .widgetSellingPlanWrapper .appstle_input_wrapper input {
-  cursor: pointer;
-}
-#appstle-widget-template .widgetSellingPlanWrapper .appstle_input_wrapper input + label {
-  padding: 20px !important;
-  cursor: pointer;
-}
-#appstle-widget-template .widgetSellingPlanWrapper .appstle_input_wrapper input + label:before {
-  padding: 1px;
-  background: rgba(40, 40, 40, 0.25);
-  border-radius: 16px;
-}
-#appstle-widget-template .widgetSellingPlanWrapper .appstle_input_wrapper input:checked + label:before {
-  padding: 1px;
-  background: #282828;
-}
-#appstle-widget-template .appstle_tooltip {
-  background: #282828;
-  border-radius: 20px !important;
-  left: -12px !important;
-}
-#appstle-widget-template .appstle_tooltip_content {
-  line-height: 1.2;
-}
-
 /* ========================================
    SPACING UTILITIES - Mobile Padding
    ======================================== */
@@ -4121,35 +4041,6 @@ text-component[shimmer]::after {
   padding-inline-start: 1.5em;
   background: url("https://cdn.shopify.com/s/files/1/0900/9990/8889/files/circle-tick.svg") no-repeat left center;
   background-size: 18px;
-}
-
-#judgeme_product_reviews {
-  max-width: 100% !important;
-}
-#judgeme_product_reviews .jm-box.jdgm-review-card__content {
-  background-color: transparent !important;
-}
-#judgeme_product_reviews .jm-box.jdgm-review-card__content .jm-star-rating__font-icon {
-  font-size: 1rem !important;
-}
-
-.jdgm-preview-badge .jdgm-prev-badge__stars {
-  height: 20px;
-}
-.jdgm-preview-badge .jdgm-prev-badge {
-  display: inline-flex !important;
-  align-items: baseline;
-}
-.jdgm-preview-badge .jdgm-prev-badge .jdgm-star {
-  height: 20px !important;
-  width: 20px !important;
-  padding-right: 6px !important;
-  font-size: 14px;
-}
-.jdgm-preview-badge .jdgm-prev-badge__text {
-  position: relative;
-  top: 1px;
-  line-height: 1;
 }
 
 .heading-no-space .metafield-rich_text_field * {
