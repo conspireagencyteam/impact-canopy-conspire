@@ -367,7 +367,7 @@
           style="{{ style | strip }}"
         {%- endif -%}
       >
-        <div class="header__columns spacing-style">
+        <div class="header__columns header__columns-impact spacing-style">
           {{ content }}
         </div>
       </div>
@@ -656,6 +656,12 @@
   /* Single column layout if there are no columns within */
   .header__columns:not(:has(.header__column)) {
     grid-template-columns: 1fr;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .header__columns.header__columns-impact {
+      grid-template-columns: auto;
+    }
   }
 
   /* Check for hover support to avoid unnecessary expensive recalculations when tapping on mobile */

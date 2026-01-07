@@ -9,7 +9,7 @@
 {%- enddoc -%}
 
 {% if style == 'block' %}
-  <div class="mobile:hidden">
+  <div class="mobile:hidden desktop-search-main">
   {% render 'predictive-search-desktop-header',
     input_id: 'cmdk-input',
     search_test_id: 'search-component--desktop-header',
@@ -40,6 +40,36 @@
     --search-border-width: var(--style-border-width-inputs);
 
     display: flex;
+  }
+
+  .desktop-search-main {
+    max-width: 685px;
+    width: 100%;
+  }
+
+  .desktop-search-main .predictive-search-form__header {
+    border-radius: 6px;
+    overflow: hidden;
+    height: 44px;
+  }
+
+  .desktop-search-main .predictive-search-form__header .predictive-search-form__header-inner-desktop {
+    background: #ffffff;
+    color: #490E67;
+    border-radius: 0;
+  }
+
+  .desktop-search-main .predictive-search-form__header .search-input,.desktop-search-main .predictive-search-form__header .predictive-search__icon {
+    color: inherit;
+  }
+  .desktop-search-main .predictive-search-form__header .search-input::placeholder {
+    color: #717171;
+  }
+  .desktop-search-main .predictive-search-form__header .button{
+    background-color: #ee7623;
+    letter-spacing: -0.28px;
+    text-transform: uppercase;
+    border-radius: 0; 
   }
 
   .header__column--center .search-action {

@@ -54,6 +54,9 @@
       </div>
     {% endif %}
   {% else %}
+    {% if block_settings.menu_type == 'menubar' %}
+      {% render 'header-menubar' %}
+    {% else %}
     <header-menu
       ref="headerMenu"
       class="header-menu mobile:hidden"
@@ -71,6 +74,7 @@
         fetchpriority="low"
       ></script>
     </header-menu>
+    {% endif %}
 {% endcase %}
 
 {% stylesheet %}
