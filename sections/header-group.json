@@ -72,7 +72,7 @@
           "settings": {
             "menu": "main-menu-2026",
             "color_scheme": "",
-            "menu_type": "default",
+            "menu_type": "menubar",
             "type_font_primary_size": "0.875rem",
             "menu_font_style": "inverse",
             "type_font_primary_link": "body",
