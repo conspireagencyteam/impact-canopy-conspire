@@ -314,7 +314,11 @@
   {% for row in rows %}
     {% liquid
       assign scheme = 'color_scheme_' | append: row
-      assign class = 'header__row header__row--[row] color-[row_scheme] section section--full-width-margin section--[section-width]' | replace: '[row]', row | replace: '[row_scheme]', section.settings[scheme] | replace: '[section-width]', section.settings.section_width
+      assign class_contain = ' '
+      if section.settings.header_contain
+      assign class_contain = ' header-contain'
+      endif
+      assign class = 'header__row header__row--[row] color-[row_scheme] section section--full-width-margin section--[section-width]' | replace: '[row]', row | replace: '[row_scheme]', section.settings[scheme] | replace: '[section-width]', section.settings.section_width | append: class_contain
 
       case row
         when 'top'
@@ -518,6 +522,19 @@
 
     /* will default to bg from its color scheme unless --header-bg-color is transparent */
     background-color: var(--header-bg-color, var(--color-background));
+  }
+
+  @media screen and (min-width: 1024px){
+    .header__row.header-contain {
+      background-color: transparent;
+    }
+
+    .header__row.header-contain .header__columns-impact {
+      background-color: var(--header-bg-color, var(--color-background));
+      padding-left: 24px;
+      padding-right: 24px;
+      border-radius: 16px;
+    }
   }
 
   .header__row--top:not(.divider--page-width),
@@ -1050,6 +1067,12 @@
           "label": "t:options.full"
         }
       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "header_contain",
+      "label": "Contain header?",
+      "default": false
     },
     {
       "type": "select",
