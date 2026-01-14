@@ -1894,10 +1894,10 @@
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "custom",
-                "font": "var(--font-body--family)",
+                "font": "var(--font-subheading--family)",
                 "font_size": "1.5rem",
                 "line_height": "normal",
-                "letter_spacing": "loose",
+                "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
                 "color": "custom",
@@ -2225,22 +2225,22 @@
             "custom_class": ""
           },
           "blocks": {
-            "text_86emKz": {
+            "text_wfxcFy": {
               "type": "text",
-              "name": "t:names.heading",
+              "name": "t:names.text",
               "settings": {
-                "text": "<h2>ABOUT IMPACT CANOPY USA</h2>",
+                "text": "<p>#1 Canopy Manufacturer in North America</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "h2",
-                "font": "var(--font-body--family)",
+                "type_preset": "custom",
+                "font": "var(--font-subheading--family)",
                 "font_size": "1rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
-                "case": "none",
+                "case": "uppercase",
                 "wrap": "pretty",
-                "color": "var(--color-primary)",
+                "color": "var(--color-foreground)",
                 "custom_color": "#000000",
                 "use_mobile_typography": false,
                 "font_size_mobile": "1rem",
@@ -2262,22 +2262,22 @@
               },
               "blocks": {}
             },
-            "text_wfxcFy": {
+            "text_86emKz": {
               "type": "text",
-              "name": "t:names.text",
+              "name": "t:names.heading",
               "settings": {
-                "text": "<p>#1 Canopy Manufacturer in North America</p>",
+                "text": "<h2>ABOUT IMPACT CANOPY USA</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "rte",
+                "type_preset": "h2",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "color": "var(--color-foreground)",
+                "color": "var(--color-primary)",
                 "custom_color": "#000000",
                 "use_mobile_typography": false,
                 "font_size_mobile": "1rem",
@@ -2421,8 +2421,8 @@
             }
           },
           "block_order": [
-            "text_86emKz",
             "text_wfxcFy",
+            "text_86emKz",
             "group_pfK9NE"
           ]
         }
@@ -2818,7 +2818,7 @@
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "custom",
-                "font": "var(--font-body--family)",
+                "font": "var(--font-subheading--family)",
                 "font_size": "1rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
