@@ -1968,6 +1968,7 @@
         "team_grid_MaUJFh": {
           "type": "team-grid",
           "name": "Team Grid",
+          "disabled": true,
           "settings": {
             "team_members": [
               "mike-ohirko",
@@ -2682,6 +2683,7 @@
       "block_order": [
         "group_TNFcrY"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -2978,6 +2980,7 @@
       "block_order": [
         "group_PcbRQY"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -3414,6 +3417,7 @@
       "block_order": [
         "group_8NYxmm"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -4146,6 +4150,7 @@
       "block_order": [
         "group_cGTbPP"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -4613,6 +4618,7 @@
       "block_order": [
         "group_BgCw7j"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -5212,6 +5218,7 @@
         "group_pEgpgU",
         "group_iJmnhf"
       ],
+      "disabled": true,
       "name": "t:names.multicolumn",
       "settings": {
         "content_direction": "row",
