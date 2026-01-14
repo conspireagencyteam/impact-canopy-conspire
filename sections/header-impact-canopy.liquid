@@ -504,17 +504,31 @@
   }
 
   .header[data-sticky-state] {
-    transition: opacity var(--animation-speed) var(--animation-easing);
+    transition: transform var(--animation-speed) var(--ease-out-quad), opacity var(--animation-speed) var(--ease-out-quad);
     opacity: 1;
+    transform: translateY(0);
   }
 
   .header[data-sticky-state='active'] {
     view-transition-name: sticky-header;
+    animation: sticky-header-slide-in 300ms var(--ease-out-quad) forwards;
   }
 
   .header[data-sticky-state='idle'],
   .header[data-sticky-state='active'][data-animating] {
+    transform: translateY(-100%);
     opacity: 0;
+  }
+
+  @keyframes sticky-header-slide-in {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   .header__row {

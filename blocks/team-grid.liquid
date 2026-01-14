@@ -1,0 +1,466 @@
+{%- liquid
+  assign metaobject_list = block.settings.team_members
+-%}
+
+{% stylesheet %}
+  .team-grid {
+    width: 100%;
+  }
+
+  .team-grid__items {
+    display: grid;
+    gap: var(--gap, 24px);
+    grid-template-columns: repeat(var(--columns-mobile, 1), 1fr);
+  }
+
+  /* Desktop: Use configured columns */
+  @media screen and (min-width: 750px) {
+    .team-grid__items {
+      grid-template-columns: repeat(var(--columns-desktop, 3), 1fr);
+    }
+  }
+
+  /* Tablet: Auto-adjust for medium screens */
+  @media screen and (min-width: 750px) and (max-width: 989px) {
+    .team-grid__items--columns-4,
+    .team-grid__items--columns-5,
+    .team-grid__items--columns-6 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .team-grid__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--item-gap, 12px);
+  }
+
+  .team-member {
+    display: flex;
+    flex-direction: column;
+    gap: var(--member-gap, 12px);
+    text-align: var(--text-align, center);
+  }
+
+  .team-member__image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .team-member__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: var(--image-ratio, 1);
+  }
+
+  .team-member__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .team-member__name {
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .team-member__title {
+    margin: 0;
+    opacity: 0.8;
+  }
+
+  .team-member__description {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+{% endstylesheet %}
+
+{%- if metaobject_list != blank -%}
+  <div
+    class="team-grid spacing-style border-style{% if block.settings.inherit_color_scheme == false %} color-{{ block.settings.color_scheme }}{% endif %}"
+    style="
+      --columns-desktop: {{ block.settings.columns_desktop }};
+      --columns-mobile: {{ block.settings.columns_mobile }};
+      --gap: {{ block.settings.gap }}px;
+      --item-gap: {{ block.settings.item_gap }}px;
+      --member-gap: {{ block.settings.member_gap }}px;
+      --text-align: {{ block.settings.text_alignment }};
+      --image-ratio: {{ block.settings.image_ratio }};
+      {% render 'spacing-style', settings: block.settings %}
+      {% render 'border-override', settings: block.settings %}
+    "
+    {{ block.shopify_attributes }}
+  >
+
+    {{ metaobject_list.value }}
+    <div class="team-grid__items team-grid__items--columns-{{ block.settings.columns_desktop }}">
+      {%- for item in metaobject_list -%}
+        <div class="team-grid__item">
+          {% content_for 'block', type: '_team', id: 'staticteam', item: item %}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+{%- else -%}
+  <div class="team-grid spacing-style" style="{% render 'spacing-style', settings: block.settings %}" {{ block.shopify_attributes }}>
+    <p style="text-align: center; padding: 2rem; opacity: 0.6;">
+      Please select team members in the block settings
+    </p>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Team Grid",
+  "tag": null,
+  "class": "team-grid-block",
+  "blocks": [
+    {
+      "type": "text"
+    },
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "settings": [
+    {
+      "type": "metaobject_list",
+      "metaobject_type": "team",
+      "id": "team_members",
+      "label": "Team Members",
+      "info": "Select team members from your metaobject entries"
+    },
+    {
+      "type": "header",
+      "content": "Grid Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns (desktop)",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3,
+      "info": "Number of columns to display on desktop"
+    },
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "label": "Columns (mobile)",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 1,
+      "info": "Number of columns to display on mobile"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap between items",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 24,
+      "info": "Space between team member cards"
+    },
+    {
+      "type": "range",
+      "id": "member_gap",
+      "label": "Gap inside member card",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 12,
+      "info": "Space between image and content within each card"
+    },
+    {
+      "type": "header",
+      "content": "Member Card Style"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image aspect ratio",
+      "options": [
+        {
+          "value": "1",
+          "label": "Square (1:1)"
+        },
+        {
+          "value": "0.8",
+          "label": "Portrait (4:5)"
+        },
+        {
+          "value": "1.25",
+          "label": "Landscape (5:4)"
+        },
+        {
+          "value": "1.5",
+          "label": "Wide (3:2)"
+        },
+        {
+          "value": "auto",
+          "label": "Original"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "name_preset",
+      "label": "Name typography",
+      "options": [
+        {
+          "value": "h3",
+          "label": "Heading 3"
+        },
+        {
+          "value": "h4",
+          "label": "Heading 4"
+        },
+        {
+          "value": "h5",
+          "label": "Heading 5"
+        },
+        {
+          "value": "h6",
+          "label": "Heading 6"
+        }
+      ],
+      "default": "h4"
+    },
+    {
+      "type": "select",
+      "id": "title_preset",
+      "label": "Job title typography",
+      "options": [
+        {
+          "value": "paragraph",
+          "label": "Paragraph"
+        },
+        {
+          "value": "h5",
+          "label": "Heading 5"
+        },
+        {
+          "value": "h6",
+          "label": "Heading 6"
+        }
+      ],
+      "default": "paragraph"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "checkbox",
+      "id": "inherit_color_scheme",
+      "label": "t:settings.inherit_color_scheme",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "scheme-1",
+      "visible_if": "{{ block.settings.inherit_color_scheme == false }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.borders"
+    },
+    {
+      "type": "select",
+      "id": "border",
+      "label": "t:settings.style",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:options.none"
+        },
+        {
+          "value": "solid",
+          "label": "t:options.solid"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:settings.thickness",
+      "default": 1,
+      "visible_if": "{{ block.settings.border != 'none' }}"
+    },
+    {
+      "type": "range",
+      "id": "border_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "t:settings.opacity",
+      "default": 100,
+      "visible_if": "{{ block.settings.border != 'none' }}"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "t:settings.border_radius",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:content.1_mobile_padding"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_mobile_padding",
+      "label": "t:settings.1_use_mobile_padding",
+      "default": false,
+      "info": "t:info.1_use_mobile_padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start-mobile",
+      "label": "t:settings.1_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.use_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end-mobile",
+      "label": "t:settings.1_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.use_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start-mobile",
+      "label": "t:settings.1_left_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.use_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end-mobile",
+      "label": "t:settings.1_right_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.use_mobile_padding == true }}"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Team Grid",
+      "category": "Content",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our Team</p>",
+            "type_preset": "h2"
+          }
+        }
+      },
+      "block_order": ["heading"]
+    }
+  ]
+}
+{% endschema %}

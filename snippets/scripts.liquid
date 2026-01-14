@@ -281,4 +281,17 @@
       name: '{{ template }}',
     },
   };
+
+  // Global variables for shipping estimator
+  window.theme = {
+    moneyFormat: {{ shop.money_format | json }},
+    localeRootUrl: '{{ routes.root_url }}'
+  };
+
+  window.languages = {
+    shippingEstimatorNoResults: {{ 'cart.shipping_estimator.no_results_title' | t | json }},
+    shippingEstimatorOneResult: {{ 'cart.shipping_estimator.one_result_title' | t | json }},
+    shippingEstimatorMultipleResults: {{ 'cart.shipping_estimator.multiple_results_title' | t | json }},
+    shippingEstimatorErrors: {{ 'cart.shipping_estimator.errors' | t | json }}
+  };
 </script>

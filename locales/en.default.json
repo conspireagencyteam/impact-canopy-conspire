@@ -310,6 +310,24 @@
     "blog_post_date": "Date",
     "blog_post_description": "An excerpt of your blog post's content"
   },
+  "cart": {
+    "shipping_estimator": {
+      "title": "Estimate shipping",
+      "country": "Country",
+      "province": "Province",
+      "zip_code": "Zip code",
+      "estimate": "Estimate",
+      "no_results_title": "No shipping could be found for your address.",
+      "one_result_title": "There is one shipping rate for your address:",
+      "multiple_results_title": "There are {{count}} shipping rates for your address:",
+      "errors": "There are some errors:"
+    }
+  },
+  "product": {
+    "general": {
+      "estimate_shipping": "Estimate shipping"
+    }
+  },
   "products": {
     "product": {
       "add_to_cart": "Add to cart",
