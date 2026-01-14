@@ -1982,7 +1982,7 @@
             ],
             "columns_desktop": 4,
             "columns_mobile": 1,
-            "gap": 24,
+            "gap": 50,
             "member_gap": 12,
             "image_ratio": "1",
             "text_alignment": "center",
