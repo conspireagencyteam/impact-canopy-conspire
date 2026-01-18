@@ -450,6 +450,43 @@
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground-heading)",
+            "custom_color": "#000000",
+            "use_mobile_typography": false,
+            "font_size_mobile": "1rem",
+            "line_height_mobile": "normal",
+            "letter_spacing_mobile": "normal",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "use_mobile_padding": false,
+            "padding-block-start-mobile": 0,
+            "padding-block-end-mobile": 0,
+            "padding-inline-start-mobile": 0,
+            "padding-inline-end-mobile": 0,
+            "custom_class": ""
+          },
+          "blocks": {}
+        },
+        "text_DedmNt": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>From major brands to local organizations, Impact Canopy products are chosen for their reliability, quality, and professional presentation.</p>",
+            "width": "fit-content",
+            "max_width": "wide",
+            "alignment": "left",
             "type_preset": "rte",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
@@ -481,7 +518,8 @@
         }
       },
       "block_order": [
-        "text_WLpfwP"
+        "text_WLpfwP",
+        "text_DedmNt"
       ],
       "name": "t:names.custom_section",
       "settings": {
