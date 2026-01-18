@@ -423,7 +423,7 @@
       "settings": {
         "icons_style": "arrow",
         "slideshow_controls_style": "dots",
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-3",
         "autoplay": false,
         "autoplay_speed": 4,
         "section_width": "page-width",
@@ -497,7 +497,7 @@
         "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
-        "color_scheme": "",
+        "color_scheme": "scheme-3",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
