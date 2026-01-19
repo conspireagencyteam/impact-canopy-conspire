@@ -317,7 +317,7 @@
         "desktop_media_position": "left",
         "equal_columns": false,
         "limit_details_width": false,
-        "gap": 12,
+        "gap": 24,
         "color_scheme": "scheme-3",
         "padding-block-start": 36,
         "padding-block-end": 36,
