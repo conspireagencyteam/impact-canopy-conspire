@@ -251,6 +251,9 @@
           ]
         }
       },
+      "custom_css": [
+        "@media screen and (min-width: 1024px) {.header__row.header-contain {background-color: #EEF0F2; }}"
+      ],
       "settings": {
         "logo_position": "left",
         "menu_position": "left",
