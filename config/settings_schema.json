@@ -385,10 +385,7 @@
           "primary_button_border": "primary_button_border",
           "secondary_button": "secondary_button_background",
           "on_secondary_button": "secondary_button_text",
-          "secondary_button_border": "secondary_button_border",
-          "tertiary_button": "tertiary_button_background",
-          "on_tertiary_button": "tertiary_button_text",
-          "tertiary_button_border": "tertiary_button_border"
+          "secondary_button_border": "secondary_button_border"
         }
       }
     ]

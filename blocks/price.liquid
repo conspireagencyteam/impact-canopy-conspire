@@ -48,7 +48,8 @@
   {% render 'price',
     show_unit_price: true,
     product_resource: product_resource,
-    show_sale_price_first: block_settings.show_sale_price_first
+    show_sale_price_first: block_settings.show_sale_price_first,
+    show_price_min: block_settings.show_price_min
   %}
 
   {% if block_settings.show_tax_info %}
@@ -129,6 +130,13 @@
       "type": "checkbox",
       "id": "show_tax_info",
       "label": "t:settings.show_tax_info",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price_min",
+      "label": "Show minimum price",
+      "info": "Display 'From' followed by the minimum price for products with multiple variants",
       "default": false
     },
     {

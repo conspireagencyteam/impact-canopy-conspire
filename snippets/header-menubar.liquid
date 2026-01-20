@@ -17,7 +17,7 @@
 
 <script src="{{ 'dialog.js' | asset_url }}" type="module"></script>
 
-<dialog-component id="menu-modal" class="menu-modal mobile:hidden" {{ block.shopify_attributes }}>
+<dialog-component id="menu-modal" class="menu-modal mobile:hidden" ref="headerMenu" {{ block.shopify_attributes }}>
   <button class="button button-unstyled menu-modal__button" aria-label="Open menu" on:click="/showDialog" ref="triggerButton">
     {{ 'icon-menubar.svg' | inline_asset_content }}
     <span class="menu-modal__button-text">Shop All</span>

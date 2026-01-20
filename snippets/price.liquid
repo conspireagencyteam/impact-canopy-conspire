@@ -10,9 +10,20 @@
 {%- liquid
   assign show_unit_price = show_unit_price | default: false
   assign show_sale_price_first = show_sale_price_first | default: false
+  assign show_price_min = show_price_min | default: false
   assign selected_variant = product_resource.selected_or_first_available_variant
-  assign price = selected_variant.price
-  assign compare_at_price = selected_variant.compare_at_price
+
+  # Determine if we should show minimum price with "From" prefix
+  assign use_price_min = show_price_min
+
+  # Set price values based on whether we're showing min price or selected variant price
+  if use_price_min
+    assign price = product_resource.price_min
+    assign compare_at_price = product_resource.compare_at_price_min
+  else
+    assign price = selected_variant.price
+    assign compare_at_price = selected_variant.compare_at_price
+  endif
 
   assign show_compare_price = false
   if compare_at_price > price
@@ -38,6 +49,14 @@
   else
     assign price = price | money
     assign compare_at_price = compare_at_price | money
+  endif
+
+  # Add "From" prefix when showing minimum price
+  if use_price_min
+    assign price = 'From ' | append: price
+    if show_compare_price
+      assign compare_at_price = 'From ' | append: compare_at_price
+    endif
   endif
 -%}
 
