@@ -18,6 +18,7 @@
     {%- render 'gap-style', value: section.settings.gap -%}
   "
 >
+  {% content_for 'blocks' %}
   {% content_for 'block', id: 'static-blog-title', type: '_featured-blog-posts-title' %}
 
   {% if section.settings.blog != blank and section.settings.blog.articles_count > 0 %}
@@ -73,6 +74,9 @@
   },
   "class": "featured-blog-posts",
   "blocks": [
+    {
+      "type": "@theme"
+    },
     {
       "type": "_featured-blog-posts-title"
     },
