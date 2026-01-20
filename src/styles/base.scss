@@ -1321,6 +1321,7 @@ results-list[initialized] {
 /* Buttons */
 .button,
 .button-secondary,
+.button-tertiary,
 button.shopify-payment-button__button--unbranded {
   --text-align: center;
   display: grid;
@@ -1353,7 +1354,13 @@ button.shopify-payment-button__button--unbranded {
   border-radius: var(--style-border-radius-buttons-primary);
 }
 
-.button:not(.button-secondary, .button-unstyled) {
+.button-tertiary {
+  font-family: var(--button-font-family-tertiary);
+  text-transform: var(--button-text-case-tertiary);
+  border-radius: var(--style-border-radius-buttons-tertiary);
+}
+
+.button:not(.button-secondary, .button-tertiary, .button-unstyled) {
   outline-color: var(--button-background-color);
 }
 
@@ -1391,6 +1398,7 @@ input:not(:placeholder-shown)::placeholder {
 
 .button[aria-disabled='true'],
 .button-secondary[aria-disabled='true'],
+.button-tertiary[aria-disabled='true'],
 .button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -1422,6 +1430,21 @@ button.shopify-payment-button__button--unbranded:hover:not([disabled]) {
   --button-color: var(--color-secondary-button-hover-text);
   --button-background-color: var(--color-secondary-button-hover-background);
   --button-border-color: var(--color-secondary-button-hover-border);
+}
+
+.button-tertiary {
+  --button-color: var(--color-tertiary-button-text);
+  --button-background-color: var(--color-tertiary-button-background);
+  --button-border-color: var(--color-tertiary-button-border);
+  --button-border-width: var(--style-border-width-tertiary);
+  backdrop-filter: blur(var(--tertiary-button-blur));
+  -webkit-backdrop-filter: blur(var(--tertiary-button-blur));
+}
+
+.button-tertiary:hover {
+  --button-color: var(--color-tertiary-button-hover-text);
+  --button-background-color: var(--color-tertiary-button-hover-background);
+  --button-border-color: var(--color-tertiary-button-hover-border);
 }
 
 /* Needed to override the default Shopify styles */

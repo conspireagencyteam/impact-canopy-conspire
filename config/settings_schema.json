@@ -206,6 +206,52 @@
           },
           {
             "type": "header",
+            "content": "Tertiary button"
+          },
+          {
+            "type": "color",
+            "id": "tertiary_button_background",
+            "label": "t:settings.background",
+            "default": "#FFFFFF40",
+            "alpha": true
+          },
+          {
+            "type": "color",
+            "id": "tertiary_button_text",
+            "label": "t:settings.text",
+            "default": "#FFFFFF",
+            "alpha": true
+          },
+          {
+            "type": "color",
+            "id": "tertiary_button_border",
+            "label": "t:settings.borders",
+            "default": "#FFFFFF00",
+            "alpha": true
+          },
+          {
+            "type": "color",
+            "id": "tertiary_button_hover_background",
+            "label": "t:settings.hover_background",
+            "default": "#FFFFFF59",
+            "alpha": true
+          },
+          {
+            "type": "color",
+            "id": "tertiary_button_hover_text",
+            "label": "t:settings.hover_text",
+            "default": "#FFFFFF",
+            "alpha": true
+          },
+          {
+            "type": "color",
+            "id": "tertiary_button_hover_border",
+            "label": "t:settings.hover_borders",
+            "default": "#FFFFFF00",
+            "alpha": true
+          },
+          {
+            "type": "header",
             "content": "t:names.inputs"
           },
           {
@@ -339,7 +385,10 @@
           "primary_button_border": "primary_button_border",
           "secondary_button": "secondary_button_background",
           "on_secondary_button": "secondary_button_text",
-          "secondary_button_border": "secondary_button_border"
+          "secondary_button_border": "secondary_button_border",
+          "tertiary_button": "tertiary_button_background",
+          "on_tertiary_button": "tertiary_button_text",
+          "tertiary_button_border": "tertiary_button_border"
         }
       }
     ]
@@ -1645,6 +1694,72 @@
           }
         ],
         "default": "default"
+      },
+      {
+        "type": "header",
+        "content": "Tertiary button"
+      },
+      {
+        "type": "range",
+        "id": "tertiary_button_border_width",
+        "min": 0,
+        "max": 4,
+        "step": 1,
+        "unit": "px",
+        "label": "t:settings.border_width",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "button_border_radius_tertiary",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:settings.border_radius",
+        "default": 100
+      },
+      {
+        "type": "select",
+        "id": "type_font_button_tertiary",
+        "label": "t:settings.font",
+        "options": [
+          {
+            "value": "body",
+            "label": "t:options.body"
+          },
+          {
+            "value": "accent",
+            "label": "t:options.accent"
+          }
+        ],
+        "default": "body"
+      },
+      {
+        "type": "select",
+        "id": "button_text_case_tertiary",
+        "label": "t:settings.button_text_case",
+        "options": [
+          {
+            "value": "default",
+            "label": "t:options.default"
+          },
+          {
+            "value": "uppercase",
+            "label": "t:options.uppercase"
+          }
+        ],
+        "default": "default"
+      },
+      {
+        "type": "range",
+        "id": "tertiary_button_blur",
+        "min": 0,
+        "max": 30,
+        "step": 0.5,
+        "unit": "px",
+        "label": "Backdrop blur",
+        "default": 12.5
       },
       {
         "type": "header",
