@@ -5,6 +5,9 @@
   @param {string} [icon_style] - { 'arrow' | 'chevron' } The style of the icon, defaults to 'arrow'.
   @param {string} [icon_shape] - { 'none' | 'circle' | 'square' } The shape of the icon background, defaults to 'none'.
   @param {string} [icon_size] - { 'small' | 'medium' | 'large' } The size of the icon, defaults to 'medium'.
+  @param {string} [arrow_style_type] - The arrow style type, 'default' or 'custom'.
+  @param {color} [arrow_background_color] - The background color of the arrow (when custom).
+  @param {color} [arrow_color] - The icon color of the arrow (when custom).
 
   @example
   {%- render 'slideshow-arrow', action: 'previous' -%}
@@ -22,6 +25,17 @@
   if icon_style contains 'large'
     assign icon_size = 'large'
   endif
+
+  # Build custom inline styles if arrow_style_type is custom
+  assign custom_styles = ''
+  if arrow_style_type == 'custom'
+    if arrow_color != blank
+      assign custom_styles = custom_styles | append: 'color: ' | append: arrow_color | append: ';'
+    endif
+    if arrow_background_color != blank and shape != 'none'
+      assign custom_styles = custom_styles | append: 'background-color: ' | append: arrow_background_color | append: ';'
+    endif
+  endif
 -%}
 
 <button
@@ -33,6 +47,9 @@
     button button-unstyled button-unstyled--transparent
     {% if action == 'previous' %} flip-x{% endif %}
   "
+  {% if custom_styles != blank %}
+    style="{{ custom_styles }}"
+  {% endif %}
   {% # theme-check-disable %}
   aria-label="{{ 'accessibility.slideshow_' | append: action | t }}"
   {% # theme-check-enable %}

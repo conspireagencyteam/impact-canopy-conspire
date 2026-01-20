@@ -7,6 +7,10 @@
   @param {string} [icon_style] - The style of the icon, defaults to 'arrow'
   @param {string} [icon_shape] - The shape of the icon background (none, circle, square), defaults to 'none'
   @param {string} [arrows_position] - { 'left' | 'center' | 'right' } The position of the arrows, defaults to 'center'
+  @param {string} [arrow_style_type] - The arrow style type, 'default' or 'custom'
+  @param {string} [arrow_shape] - The shape of the arrow background (none, circle, square) when custom
+  @param {color} [arrow_background_color] - The background color of the arrow (when custom)
+  @param {color} [arrow_color] - The icon color of the arrow (when custom)
 
   @example
   {%- render 'slideshow-arrows' -%}
@@ -16,6 +20,12 @@
   if arrows_position == null
     assign arrows_position = 'center'
   endif
+
+  # Use custom shape if arrow_style_type is custom, otherwise use default icon_shape
+  assign effective_shape = icon_shape
+  if arrow_style_type == 'custom'
+    assign effective_shape = arrow_shape
+  endif
 -%}
 
 <slideshow-arrows
@@ -24,6 +34,20 @@
     class="{{ class }}"
   {% endif %}
 >
-  {%- render 'slideshow-arrow', action: 'previous', icon_style: icon_style, icon_shape: icon_shape -%}
-  {%- render 'slideshow-arrow', action: 'next', icon_style: icon_style, icon_shape: icon_shape -%}
+  {%- render 'slideshow-arrow',
+    action: 'previous',
+    icon_style: icon_style,
+    icon_shape: effective_shape,
+    arrow_style_type: arrow_style_type,
+    arrow_background_color: arrow_background_color,
+    arrow_color: arrow_color
+  -%}
+  {%- render 'slideshow-arrow',
+    action: 'next',
+    icon_style: icon_style,
+    icon_shape: effective_shape,
+    arrow_style_type: arrow_style_type,
+    arrow_background_color: arrow_background_color,
+    arrow_color: arrow_color
+  -%}
 </slideshow-arrows>

@@ -1,1 +1,1030 @@
-(()=>{"use strict";var e={5560:(e,t,n)=>{function r(e){return r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},r(e)}function o(e,t){return function(e){if(Array.isArray(e))return e}(e)||function(e,t){var n=null==e?null:"undefined"!=typeof Symbol&&e[Symbol.iterator]||e["@@iterator"];if(null!=n){var r,o,i,a,u=[],c=!0,l=!1;try{if(i=(n=n.call(e)).next,0===t){if(Object(n)!==n)return;c=!1}else for(;!(c=(r=i.call(n)).done)&&(u.push(r.value),u.length!==t);c=!0);}catch(e){l=!0,o=e}finally{try{if(!c&&null!=n.return&&(a=n.return(),Object(a)!==a))return}finally{if(l)throw o}}return u}}(e,t)||a(e,t)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function i(e,t){var n="undefined"!=typeof Symbol&&e[Symbol.iterator]||e["@@iterator"];if(!n){if(Array.isArray(e)||(n=a(e))||t&&e&&"number"==typeof e.length){n&&(e=n);var r=0,o=function(){};return{s:o,n:function(){return r>=e.length?{done:!0}:{done:!1,value:e[r++]}},e:function(e){throw e},f:o}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var i,u=!0,c=!1;return{s:function(){n=n.call(e)},n:function(){var e=n.next();return u=e.done,e},e:function(e){c=!0,i=e},f:function(){try{u||null==n.return||n.return()}finally{if(c)throw i}}}}function a(e,t){if(e){if("string"==typeof e)return u(e,t);var n={}.toString.call(e).slice(8,-1);return"Object"===n&&e.constructor&&(n=e.constructor.name),"Map"===n||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?u(e,t):void 0}}function u(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,r=Array(t);n<t;n++)r[n]=e[n];return r}function c(e,t,n,r){var o=l(M(1&r?e.prototype:e),t,n);return 2&r&&"function"==typeof o?function(e){return o.apply(n,e)}:o}function l(){return l="undefined"!=typeof Reflect&&Reflect.get?Reflect.get.bind():function(e,t,n){var r=function(e,t){for(;!{}.hasOwnProperty.call(e,t)&&null!==(e=M(e)););return e}(e,t);if(r){var o=Object.getOwnPropertyDescriptor(r,t);return o.get?o.get.call(arguments.length<3?e:n):o.value}},l.apply(null,arguments)}function s(e,t,n){f(e,t),t.set(e,n)}function f(e,t){if(t.has(e))throw new TypeError("Cannot initialize the same private elements twice on an object")}function d(e,t,n){return e.set(p(e,t),n),n}function h(e,t){return e.get(p(e,t))}function p(e,t,n){if("function"==typeof e?e===t:e.has(t))return arguments.length<3?t:n;throw new TypeError("Private element is not present on this object")}function m(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function y(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,g(r.key),r)}}function v(e,t,n){return t&&y(e.prototype,t),n&&y(e,n),Object.defineProperty(e,"prototype",{writable:!1}),e}function g(e){var t=function(e,t){if("object"!=r(e)||!e)return e;var n=e[Symbol.toPrimitive];if(void 0!==n){var o=n.call(e,t||"default");if("object"!=r(o))return o;throw new TypeError("@@toPrimitive must return a primitive value.")}return("string"===t?String:Number)(e)}(e,"string");return"symbol"==r(t)?t:t+""}function b(e,t,n){return t=M(t),function(e,t){if(t&&("object"==r(t)||"function"==typeof t))return t;if(void 0!==t)throw new TypeError("Derived constructors may only return object or undefined");return w(e)}(e,O()?Reflect.construct(t,n||[],M(e).constructor):t.apply(e,n))}function w(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}function S(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),Object.defineProperty(e,"prototype",{writable:!1}),t&&A(e,t)}function E(e){var t="function"==typeof Map?new Map:void 0;return E=function(e){if(null===e||!function(e){try{return-1!==Function.toString.call(e).indexOf("[native code]")}catch(t){return"function"==typeof e}}(e))return e;if("function"!=typeof e)throw new TypeError("Super expression must either be null or a function");if(void 0!==t){if(t.has(e))return t.get(e);t.set(e,n)}function n(){return function(e,t,n){if(O())return Reflect.construct.apply(null,arguments);var r=[null];r.push.apply(r,t);var o=new(e.bind.apply(e,r));return n&&A(o,n.prototype),o}(e,arguments,M(this).constructor)}return n.prototype=Object.create(e.prototype,{constructor:{value:n,enumerable:!1,writable:!0,configurable:!0}}),A(n,e)},E(e)}function O(){try{var e=!Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],function(){}))}catch(e){}return(O=function(){return!!e})()}function A(e,t){return A=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(e,t){return e.__proto__=t,e},A(e,t)}function M(e){return M=Object.setPrototypeOf?Object.getPrototypeOf.bind():function(e){return e.__proto__||Object.getPrototypeOf(e)},M(e)}n.d(t,{ig:()=>F});var P=function(e){function t(){return m(this,t),b(this,t,arguments)}return S(t,e),v(t,[{key:"connectedCallback",value:function(){if(!this.shadowRoot){var e=this.querySelector(':scope > template[shadowrootmode="open"]');if(!(e instanceof HTMLTemplateElement))return;this.attachShadow({mode:"open"}).append(e.content.cloneNode(!0))}}}])}(E(HTMLElement)),k=new WeakMap,T=function(e){function t(e){var n;return m(this,t),s(n=b(this,t,[function(t){if(h(k,w(n)))return e(t,w(n));d(k,w(n),!0)}]),k,!1),n}return S(t,e),v(t,[{key:"disconnect",value:function(){d(k,this,!1),c(t,"disconnect",this,3)([])}}])}(E(ResizeObserver)),I=function(e){function t(e){var n;return m(this,t),(n=b(this,t,["overflowMinimum",{bubbles:!0}])).detail={minimumReached:e},n}return S(t,e),v(t)}(E(Event)),L=new WeakSet,j=new WeakMap,q=new WeakMap,R=new WeakMap,x=new WeakMap,C=new WeakMap,H=new WeakMap,_=new WeakMap,W=function(e){function t(){var e,n,r;m(this,t);for(var a=arguments.length,u=new Array(a),c=0;c<a;c++)u[c]=arguments[c];return e=b(this,t,[].concat(u)),f(n=e,r=L),r.add(n),s(e,j,!1),s(e,q,{width:null,height:null}),s(e,R,function(t){if(!h(j,e)){var n,r=null,a=null,u=!1,c=i(t.entries());try{for(c.s();!(n=c.n()).done;){var l=o(n.value,2)[1];if(!(l instanceof ResizeObserverEntry))break;u=!0,r=Math.round(l.contentRect.width),a=Math.round(l.contentRect.height)}}catch(e){c.e(e)}finally{c.f()}if(u){if(!r||!a||r===h(q,e).width&&a===h(q,e).height)return;d(q,e,{width:Math.round(r),height:Math.round(a)})}d(j,e,!0),e.schedule(function(){h(x,e).call(e),d(j,e,!1)})}}),s(e,x,function(t){var n,r,a=h(C,e),u=a.defaultSlot,c=a.overflowSlot,l=a.moreSlot,s=a.list,f=a.placeholder;h(H,e).disconnect(),h(_,e).disconnect();var m=(null!==(n=null===(r=e.firstElementChild)||void 0===r?void 0:r.getBoundingClientRect())&&void 0!==n?n:{}).height;m&&(s.style.height="".concat(m,"px")),s.style.setProperty("overflow","hidden"),p(L,e,N).call(e);var y=u.assignedElements();l.hidden=!0,f.hidden=!0;var v=s.getBoundingClientRect();d(q,e,{width:Math.round(v.width),height:Math.round(v.height)});var g=function(){return y.filter(function(e){return e.getBoundingClientRect().top<=v.top})},b=g();if(b.length!==y.length||t){if(l.style.setProperty("order","-1"),l.hidden=!1,l.style.setProperty("height","".concat(m,"px")),t&&t.style.setProperty("order","-1"),b=g(),l.style.removeProperty("order"),t&&t.style.removeProperty("order"),t){var w=b.indexOf(t);-1!==w&&(b.splice(w,1),b.push(t))}l.style.setProperty("height","auto")}var S,E=y.filter(function(e){return!b.includes(e)}),O=o(E,1)[0],A=E.length>0,M=O?O.clientWidth:0,P=i(y);try{for(P.s();!(S=P.n()).done;){var k=S.value;k.slot=E.includes(k)?c.name:u.name}}catch(e){P.e(e)}finally{P.f()}l.hidden=!A,A&&(f.style.width="".concat(M,"px"),f.hidden=!1),s.style.setProperty("counter-reset","overflow-count ".concat(E.length)),e.style.setProperty("--overflow-count","".concat(E.length)),s.style.removeProperty("overflow"),A&&p(L,e,B).call(e,b),h(H,e).observe(e),h(_,e).observe(e,{childList:!0})}),s(e,C,void 0),s(e,H,new T(h(R,e))),s(e,_,new MutationObserver(h(R,e))),e}return S(t,e),v(t,[{key:"attributeChangedCallback",value:function(e,t,n){"disabled"===e&&("true"===n?p(L,this,z).call(this):h(x,this).call(this))}},{key:"connectedCallback",value:function(){var e=this;if(c(t,"connectedCallback",this,3)([]),this.hasAttribute("defer")){var n=function(){e.removeAttribute("defer"),p(L,e,D).call(e)},r=this.schedule;("function"==typeof window.requestIdleCallback?window.requestIdleCallback:setTimeout)(function(){return r(n)})}else this.shadowRoot?p(L,this,D).call(this):setTimeout(function(){p(L,e,D).call(e)},0)}},{key:"disconnectedCallback",value:function(){h(H,this).disconnect()}},{key:"schedule",get:function(){var e;return"function"==typeof(null===(e=Theme)||void 0===e||null===(e=e.utilities)||void 0===e||null===(e=e.scheduler)||void 0===e?void 0:e.schedule)?Theme.utilities.scheduler.schedule:function(e){return requestAnimationFrame(function(){return setTimeout(e,0)})}}},{key:"minimumItems",get:function(){var e=this.getAttribute("minimum-items");return e?parseInt(e,10):null}},{key:"overflowSlot",get:function(){return h(C,this).overflowSlot}},{key:"defaultSlot",get:function(){return h(C,this).defaultSlot}},{key:"showAll",value:function(){var e=h(C,this).placeholder;e.style.setProperty("width","0"),e.style.setProperty("display","none"),this.setAttribute("disabled","true")}}],[{key:"observedAttributes",get:function(){return["disabled","minimum-items"]}}])}(P);function D(){var e=this,t=this.shadowRoot;if(!t)throw new Error("Missing shadow root");var n=t.querySelector("slot:not([name])"),r=t.querySelector('slot[name="overflow"]'),o=t.querySelector('slot[name="more"]'),i=t.querySelector('[part="overflow"]'),a=t.querySelector('[part="list"]'),u=t.querySelector('[part="placeholder"]');if(!(n instanceof HTMLSlotElement&&r instanceof HTMLSlotElement&&o instanceof HTMLSlotElement&&i instanceof HTMLElement&&a instanceof HTMLUListElement&&u instanceof HTMLLIElement))throw new Error("Invalid element types in <OverflowList />");d(C,this,{defaultSlot:n,overflowSlot:r,moreSlot:o,overflow:i,list:a,placeholder:u}),this.addEventListener("reflow",function(t){h(x,e).call(e,t.detail.lastVisibleElement)}),h(x,this).call(this)}function N(){var e,t=h(C,this),n=t.defaultSlot,r=i(t.overflowSlot.assignedElements());try{for(r.s();!(e=r.n()).done;){e.value.slot=n.name}}catch(e){r.e(e)}finally{r.f()}}function z(){var e=h(C,this).list;h(_,this).disconnect(),h(H,this).disconnect(),p(L,this,N).call(this),e.style.removeProperty("height"),this.style.setProperty("--overflow-count","0")}function B(e){if(null!==this.minimumItems){var t=e.length<this.minimumItems;t?this.setAttribute("minimum-reached",""):this.removeAttribute("minimum-reached"),this.dispatchEvent(new I(t))}}function U(){var e=document.querySelector("header-component");if(e instanceof HTMLElement){var t=e.offsetHeight,n=function(){var e,t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:document.querySelector("#header-component"),n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:document.querySelector("#header-group");if(!n)return 0;for(var r=0,o=n.children,i=0;i<o.length;i++){var a=o[i];a!==t&&a instanceof HTMLElement&&(r+=a.offsetHeight)}return t instanceof HTMLElement&&t.hasAttribute("transparent")&&null!==(e=t.parentElement)&&void 0!==e&&e.nextElementSibling?r+t.offsetHeight:r}(e);document.body.style.setProperty("--header-height","".concat(t,"px")),document.body.style.setProperty("--header-group-height","".concat(n,"px"))}}function F(){U(),function(){var e,t=document.querySelector("#header-component"),n=document.querySelector("#header-group"),r=null==n?void 0:n.querySelector(".header-section");if(r&&null!=t&&t.hasAttribute("transparent")){var o=(null===(e=r.nextElementSibling)||void 0===e?void 0:e.classList.contains("shopify-section"))?"0":"1";document.body.style.setProperty("--transparent-header-offset-boolean",o)}else document.body.style.setProperty("--transparent-header-offset-boolean","0")}()}customElements.get("overflow-list")||customElements.define("overflow-list",W),F()}},t={};function n(r){var o=t[r];if(void 0!==o)return o.exports;var i=t[r]={exports:{}};return e[r](i,i.exports,n),i.exports}n.d=(e,t)=>{for(var r in t)n.o(t,r)&&!n.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},n.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t);var r,o=n(5560);function i(e,t){var n="undefined"!=typeof Symbol&&e[Symbol.iterator]||e["@@iterator"];if(!n){if(Array.isArray(e)||(n=function(e,t){if(e){if("string"==typeof e)return a(e,t);var n={}.toString.call(e).slice(8,-1);return"Object"===n&&e.constructor&&(n=e.constructor.name),"Map"===n||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?a(e,t):void 0}}(e))||t&&e&&"number"==typeof e.length){n&&(e=n);var r=0,o=function(){};return{s:o,n:function(){return r>=e.length?{done:!0}:{done:!1,value:e[r++]}},e:function(e){throw e},f:o}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var i,u=!0,c=!1;return{s:function(){n=n.call(e)},n:function(){var e=n.next();return u=e.done,e},e:function(e){c=!0,i=e},f:function(){try{u||null==n.return||n.return()}finally{if(c)throw i}}}}function a(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,r=Array(t);n<t;n++)r[n]=e[n];return r}document.addEventListener("shopify:block:select",function(e){if(e.target instanceof HTMLElement){if(document.querySelectorAll("product-card[data-no-navigation]").forEach(function(e){e instanceof HTMLElement&&e.removeAttribute("data-no-navigation")}),"PRODUCT-CARD"===e.target.tagName){var t=e.target.closest(".shopify-section");if(t)t.querySelectorAll("product-card").forEach(function(e){e instanceof HTMLElement&&e.setAttribute("data-no-navigation","true")})}var n=e.target.closest("slideshow-slide");if(n){var r=n.closest("slideshow-component");if(r){var o,i,a=Array.from(null!==(o=null===(i=n.parentElement)||void 0===i?void 0:i.children)&&void 0!==o?o:[]).indexOf(n);-1!==a&&(r.pause(),r.select(a))}}}}),document.addEventListener("shopify:block:deselect",function(e){if(e.target instanceof HTMLElement){"PRODUCT-CARD"===e.target.tagName&&e.target.removeAttribute("data-no-navigation");var t=e.target.closest("slideshow-component");t&&t.resume()}}),document.addEventListener("shopify:section:load",function(e){e.target instanceof HTMLElement&&e.target.classList.contains("shopify-section-group-header-group")&&(0,o.ig)()}),document.addEventListener("shopify:section:unload",function(e){e.target instanceof HTMLElement&&e.target.classList.contains("shopify-section-group-header-group")&&setTimeout(function(){(0,o.ig)()},500)}),window.addEventListener("beforeunload",function(e){sessionStorage.setItem("editor-page-unloading","true")});var u=/iPad|iPhone|iPod/.test(navigator.userAgent);null!==(r=window.Shopify)&&void 0!==r&&r.designMode&&!u&&function(){var e="editor-save-state";var t,n=[{name:"account-popover",selector:".account-popover",matches:function(e){return e.matches(this.selector)},isOpen:function(e){return null!=e.getAttribute("open")},open:function(e){return e.setAttribute("open","")}},{name:"account-drawer",selector:".account-drawer",matches:function(e){return!!e.closest(this.selector)},isOpen:function(e){return null!=e.getAttribute("open")},open:function(e){return e.showDialog()}},{name:"localization-dropdown",selector:"dropdown-localization-component",matches:function(e){return!!e.closest(this.selector)},isOpen:function(e){return"true"===e.getAttribute("aria-expanded")},open:function(e){return e.showPanel()}},{name:"search-modal",selector:".search-modal",matches:function(e){return!!e.closest(this.selector)},isOpen:function(e){return null!=e.getAttribute("open")},open:function(e){return e.showDialog()}},{name:"cart-drawer",selector:"cart-drawer-component",matches:function(e){return!!e.closest(this.selector)},isOpen:function(e){return null!=e.getAttribute("open")},open:function(e){e.open()}},{name:"header-drawer",selector:"header-drawer",matches:function(e){return!!e.closest(this.selector)},isOpen:function(e){return null!=e.getAttribute("open")},open:function(e){e.open(),e.refs.details.setAttribute("open","")}},{name:"local-pickup-modal",selector:".pickup-location__dialog",matches:function(e){return e.matches(this.selector)},isOpen:function(e){return null!=e.getAttribute("open")},open:function(e){e.closest("dialog-component").toggleDialog()}},{name:"quick-add-modal",getInstanceId:function(e){var t;return null===(t=e.querySelector("product-price"))||void 0===t||null===(t=t.dataset)||void 0===t?void 0:t.productId},selector:".quick-add-modal",matches:function(e){return e.matches(this.selector)},isOpen:function(e){return null!=e.getAttribute("open")},open:function(e,t){var n=document.querySelector('product-form-component[data-product-id="'.concat(t,'"] .quick-add__button--choose'));null==n||n.click()}},{name:"floating-panel-component",getInstanceId:function(e){return e.id},selector:".facets__panel",matches:function(e){return e.matches(this.selector)},isOpen:function(e){return null!=e.getAttribute("open")},open:function(e,t){var n;return null===(n=document.querySelector("#".concat(t)))||void 0===n?void 0:n.setAttribute("open","")}},{name:"facets-panel",selector:".facets--drawer",matches:function(e){return e.matches(this.selector)},isOpen:function(e){return null!=e.getAttribute("open")},open:function(e){return null==e?void 0:e.setAttribute("open","")}}];(t="true"===sessionStorage.getItem("editor-page-unloading"))&&sessionStorage.removeItem("editor-page-unloading"),t?Object.keys(sessionStorage).forEach(function(t){t.startsWith(e)&&sessionStorage.removeItem(t)}):n.forEach(function(t){var n=document.querySelector(t.selector);if(n){var r=function(t){var n=sessionStorage.getItem("".concat(e,"-").concat(t));return n?JSON.parse(n):null}(t.name),o=null==r?void 0:r.isOpen,i=null==r?void 0:r.instanceId;o&&setTimeout(function(){t.open(n,i)})}});var r=function(t){var r,o=n.find(function(e){return e.matches(t)});if(o){var i=o.isOpen(t),a=null===(r=o.getInstanceId)||void 0===r?void 0:r.call(o,t);!function(t,n,r){sessionStorage.setItem("".concat(e,"-").concat(t),JSON.stringify({isOpen:n,instanceId:r}))}(o.name,i,a)}},o=["open","aria-expanded"];new MutationObserver(function(e){var t,n=i(e);try{for(n.s();!(t=n.n()).done;){var a=t.value;if("attributes"===a.type&&a.attributeName&&o.includes(a.attributeName)){var u=a.target;r(u)}}}catch(e){n.e(e)}finally{n.f()}}).observe(document.body,{childList:!0,attributes:!0,attributeFilter:o,subtree:!0})}()})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/scripts/critical.js":
+/*!*********************************!*\
+  !*** ./src/scripts/critical.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   DeclarativeShadowElement: () => (/* binding */ DeclarativeShadowElement),
+/* harmony export */   OverflowList: () => (/* binding */ OverflowList),
+/* harmony export */   OverflowMinimumEvent: () => (/* binding */ OverflowMinimumEvent),
+/* harmony export */   ReflowEvent: () => (/* binding */ ReflowEvent),
+/* harmony export */   ResizeNotifier: () => (/* binding */ ResizeNotifier),
+/* harmony export */   calculateHeaderGroupHeight: () => (/* binding */ calculateHeaderGroupHeight),
+/* harmony export */   updateAllHeaderCustomProperties: () => (/* binding */ updateAllHeaderCustomProperties)
+/* harmony export */ });
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t.return || t.return(); } finally { if (u) throw o; } } }; }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _classPrivateMethodInitSpec(e, a) { _checkPrivateRedeclaration(e, a), a.add(e); }
+function _superPropGet(t, o, e, r) { var p = _get(_getPrototypeOf(1 & r ? t.prototype : t), o, e); return 2 & r && "function" == typeof p ? function (t) { return p.apply(e, t); } : p; }
+function _get() { return _get = "undefined" != typeof Reflect && Reflect.get ? Reflect.get.bind() : function (e, t, r) { var p = _superPropBase(e, t); if (p) { var n = Object.getOwnPropertyDescriptor(p, t); return n.get ? n.get.call(arguments.length < 3 ? e : r) : n.value; } }, _get.apply(null, arguments); }
+function _superPropBase(t, o) { for (; !{}.hasOwnProperty.call(t, o) && null !== (t = _getPrototypeOf(t));); return t; }
+function _classPrivateFieldInitSpec(e, t, a) { _checkPrivateRedeclaration(e, t), t.set(e, a); }
+function _checkPrivateRedeclaration(e, t) { if (t.has(e)) throw new TypeError("Cannot initialize the same private elements twice on an object"); }
+function _classPrivateFieldSet(s, a, r) { return s.set(_assertClassBrand(s, a), r), r; }
+function _classPrivateFieldGet(s, a) { return s.get(_assertClassBrand(s, a)); }
+function _assertClassBrand(e, t, n) { if ("function" == typeof e ? e === t : e.has(t)) return arguments.length < 3 ? t : n; throw new TypeError("Private element is not present on this object"); }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function _possibleConstructorReturn(t, e) { if (e && ("object" == _typeof(e) || "function" == typeof e)) return e; if (void 0 !== e) throw new TypeError("Derived constructors may only return object or undefined"); return _assertThisInitialized(t); }
+function _assertThisInitialized(e) { if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); return e; }
+function _inherits(t, e) { if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function"); t.prototype = Object.create(e && e.prototype, { constructor: { value: t, writable: !0, configurable: !0 } }), Object.defineProperty(t, "prototype", { writable: !1 }), e && _setPrototypeOf(t, e); }
+function _wrapNativeSuper(t) { var r = "function" == typeof Map ? new Map() : void 0; return _wrapNativeSuper = function _wrapNativeSuper(t) { if (null === t || !_isNativeFunction(t)) return t; if ("function" != typeof t) throw new TypeError("Super expression must either be null or a function"); if (void 0 !== r) { if (r.has(t)) return r.get(t); r.set(t, Wrapper); } function Wrapper() { return _construct(t, arguments, _getPrototypeOf(this).constructor); } return Wrapper.prototype = Object.create(t.prototype, { constructor: { value: Wrapper, enumerable: !1, writable: !0, configurable: !0 } }), _setPrototypeOf(Wrapper, t); }, _wrapNativeSuper(t); }
+function _construct(t, e, r) { if (_isNativeReflectConstruct()) return Reflect.construct.apply(null, arguments); var o = [null]; o.push.apply(o, e); var p = new (t.bind.apply(t, o))(); return r && _setPrototypeOf(p, r.prototype), p; }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function _isNativeFunction(t) { try { return -1 !== Function.toString.call(t).indexOf("[native code]"); } catch (n) { return "function" == typeof t; } }
+function _setPrototypeOf(t, e) { return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) { return t.__proto__ = e, t; }, _setPrototypeOf(t, e); }
+function _getPrototypeOf(t) { return _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) { return t.__proto__ || Object.getPrototypeOf(t); }, _getPrototypeOf(t); }
+/*
+ * Declarative shadow DOM is only initialized on the initial render of the page.
+ * If the component is mounted after the browser finishes the initial render,
+ * the shadow root needs to be manually hydrated.
+ */
+var DeclarativeShadowElement = /*#__PURE__*/function (_HTMLElement) {
+  function DeclarativeShadowElement() {
+    _classCallCheck(this, DeclarativeShadowElement);
+    return _callSuper(this, DeclarativeShadowElement, arguments);
+  }
+  _inherits(DeclarativeShadowElement, _HTMLElement);
+  return _createClass(DeclarativeShadowElement, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      if (!this.shadowRoot) {
+        var template = this.querySelector(':scope > template[shadowrootmode="open"]');
+        if (!(template instanceof HTMLTemplateElement)) return;
+        var shadow = this.attachShadow({
+          mode: 'open'
+        });
+        shadow.append(template.content.cloneNode(true));
+      }
+    }
+  }]);
+}(/*#__PURE__*/_wrapNativeSuper(HTMLElement));
+
+/**
+ * A custom ResizeObserver that only calls the callback when the element is resized.
+ * By default the ResizeObserver callback is called when the element is first observed.
+ */
+var _initialized = /*#__PURE__*/new WeakMap();
+var ResizeNotifier = /*#__PURE__*/function (_ResizeObserver) {
+  /**
+   * @param {ResizeObserverCallback} callback
+   */
+  function ResizeNotifier(callback) {
+    var _this;
+    _classCallCheck(this, ResizeNotifier);
+    _this = _callSuper(this, ResizeNotifier, [function (entries) {
+      if (_classPrivateFieldGet(_initialized, _assertThisInitialized(_this))) return callback(entries, _assertThisInitialized(_this));
+      _classPrivateFieldSet(_initialized, _assertThisInitialized(_this), true);
+    }]);
+    _classPrivateFieldInitSpec(_this, _initialized, false);
+    return _this;
+  }
+  _inherits(ResizeNotifier, _ResizeObserver);
+  return _createClass(ResizeNotifier, [{
+    key: "disconnect",
+    value: function disconnect() {
+      _classPrivateFieldSet(_initialized, this, false);
+      _superPropGet(ResizeNotifier, "disconnect", this, 3)([]);
+    }
+  }]);
+}(/*#__PURE__*/_wrapNativeSuper(ResizeObserver));
+
+/**
+ * Event class for overflow minimum items updates
+ * @extends {Event}
+ */
+var OverflowMinimumEvent = /*#__PURE__*/function (_Event) {
+  /**
+   * Creates a new OverflowMinimumEvent
+   * @param {boolean} minimumReached - Whether the minimum number of visible items has been reached
+   */
+  function OverflowMinimumEvent(minimumReached) {
+    var _this2;
+    _classCallCheck(this, OverflowMinimumEvent);
+    _this2 = _callSuper(this, OverflowMinimumEvent, ['overflowMinimum', {
+      bubbles: true
+    }]);
+    _this2.detail = {
+      minimumReached: minimumReached
+    };
+    return _this2;
+  }
+  _inherits(OverflowMinimumEvent, _Event);
+  return _createClass(OverflowMinimumEvent);
+}(/*#__PURE__*/_wrapNativeSuper(Event));
+var ReflowEvent = /*#__PURE__*/function (_Event2) {
+  /**
+   * @param {HTMLElement} lastVisibleElement - The element to move to the last visible position
+   */
+  function ReflowEvent(lastVisibleElement) {
+    var _this3;
+    _classCallCheck(this, ReflowEvent);
+    _this3 = _callSuper(this, ReflowEvent, ['reflow', {
+      bubbles: true
+    }]);
+    _this3.detail = {
+      lastVisibleElement: lastVisibleElement
+    };
+    return _this3;
+  }
+  _inherits(ReflowEvent, _Event2);
+  return _createClass(ReflowEvent);
+}(/*#__PURE__*/_wrapNativeSuper(Event));
+
+/**
+ * A custom element that wraps a list of items and moves them to an overflow slot when they don't fit.
+ * This component is used in the header section, it needs to be render-blocking to avoid layout shifts.
+ * @attr {string | null} minimum-items When set, the element enters a 'minimum-reached' state when visible items are at or below this number.
+ * @example
+ * <overflow-list minimum-items="2">
+ *   <!-- list items -->
+ * </overflow-list>
+ */
+var _OverflowList_brand = /*#__PURE__*/new WeakSet();
+var _scheduled = /*#__PURE__*/new WeakMap();
+var _lastDimensions = /*#__PURE__*/new WeakMap();
+var _handleChange = /*#__PURE__*/new WeakMap();
+var _reflowItems = /*#__PURE__*/new WeakMap();
+var _refs = /*#__PURE__*/new WeakMap();
+var _resizeObserver = /*#__PURE__*/new WeakMap();
+var _mutationObserver = /*#__PURE__*/new WeakMap();
+var OverflowList = /*#__PURE__*/function (_DeclarativeShadowEle) {
+  function OverflowList() {
+    var _this4;
+    _classCallCheck(this, OverflowList);
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+    _this4 = _callSuper(this, OverflowList, [].concat(args));
+    /**
+     * Initialize the element
+     */
+    _classPrivateMethodInitSpec(_this4, _OverflowList_brand);
+    _classPrivateFieldInitSpec(_this4, _scheduled, false);
+    /**
+     * @type {{width: number | null, height: number | null}}
+     */
+    _classPrivateFieldInitSpec(_this4, _lastDimensions, {
+      width: null,
+      height: null
+    });
+    /**
+     * @type {ResizeObserverCallback & MutationCallback}
+     */
+    _classPrivateFieldInitSpec(_this4, _handleChange, function (event) {
+      if (_classPrivateFieldGet(_scheduled, _this4)) return;
+      var width = null;
+      var height = null;
+      var isResize = false;
+      var _iterator = _createForOfIteratorHelper(event.entries()),
+        _step;
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var _step$value = _slicedToArray(_step.value, 2),
+            entry = _step$value[1];
+          if (!(entry instanceof ResizeObserverEntry)) break;
+          // There should only be one entry
+          isResize = true;
+          width = Math.round(entry.contentRect.width);
+          height = Math.round(entry.contentRect.height);
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+      if (isResize) {
+        if (!width || !height || width === _classPrivateFieldGet(_lastDimensions, _this4).width && height === _classPrivateFieldGet(_lastDimensions, _this4).height) {
+          // Skip reflow if dimensions are 0 or the same as the last reflow
+          return;
+        }
+        _classPrivateFieldSet(_lastDimensions, _this4, {
+          width: Math.round(width),
+          height: Math.round(height)
+        });
+      }
+      _classPrivateFieldSet(_scheduled, _this4, true);
+      _this4.schedule(function () {
+        _classPrivateFieldGet(_reflowItems, _this4).call(_this4);
+        _classPrivateFieldSet(_scheduled, _this4, false);
+      });
+    });
+    /**
+     * Reflow items based on available space within the list.
+     * @param {HTMLElement} [lastVisibleElement] Optional element to place in last visible position
+     */
+    _classPrivateFieldInitSpec(_this4, _reflowItems, function (lastVisibleElement) {
+      var _this4$firstElementCh, _this4$firstElementCh2;
+      var _classPrivateFieldGet2 = _classPrivateFieldGet(_refs, _this4),
+        defaultSlot = _classPrivateFieldGet2.defaultSlot,
+        overflowSlot = _classPrivateFieldGet2.overflowSlot,
+        moreSlot = _classPrivateFieldGet2.moreSlot,
+        list = _classPrivateFieldGet2.list,
+        placeholder = _classPrivateFieldGet2.placeholder;
+      _classPrivateFieldGet(_resizeObserver, _this4).disconnect();
+      _classPrivateFieldGet(_mutationObserver, _this4).disconnect();
+
+      // Avoid layout shifts while reflowing the list
+      var _ref = (_this4$firstElementCh = (_this4$firstElementCh2 = _this4.firstElementChild) === null || _this4$firstElementCh2 === void 0 ? void 0 : _this4$firstElementCh2.getBoundingClientRect()) !== null && _this4$firstElementCh !== void 0 ? _this4$firstElementCh : {},
+        height = _ref.height;
+      if (height) list.style.height = "".concat(height, "px");
+      list.style.setProperty('overflow', 'hidden');
+
+      // Move all elements to the default slot so we can check which ones overflow
+      _assertClassBrand(_OverflowList_brand, _this4, _moveItemsToDefaultSlot).call(_this4);
+      var elements = defaultSlot.assignedElements();
+
+      // Make sure the "More" item and placeholder are hidden
+      moreSlot.hidden = true;
+      placeholder.hidden = true;
+
+      // First, check if all the items fit
+      var rootRect = list.getBoundingClientRect();
+
+      // Store the initial dimensions for comparison later
+      _classPrivateFieldSet(_lastDimensions, _this4, {
+        width: Math.round(rootRect.width),
+        height: Math.round(rootRect.height)
+      });
+      var getVisibleElements = function getVisibleElements() {
+        return elements.filter(function (el) {
+          return el.getBoundingClientRect().top <= rootRect.top;
+        });
+      };
+      var visibleElements = getVisibleElements();
+
+      // If not all items fit or we have a lastVisibleElement, let's calculate with "More" button
+      if (visibleElements.length !== elements.length || lastVisibleElement) {
+        // Putting the "More" item (and lastVisibleElement, if provided) at the start of the list lets us see which items will fit on the same row
+        moreSlot.style.setProperty('order', '-1');
+        moreSlot.hidden = false;
+        moreSlot.style.setProperty('height', "".concat(height, "px"));
+        if (lastVisibleElement) {
+          lastVisibleElement.style.setProperty('order', '-1');
+        }
+
+        // Recalculate the visible elements
+        visibleElements = getVisibleElements();
+
+        // Reset the order
+        moreSlot.style.removeProperty('order');
+        if (lastVisibleElement) {
+          lastVisibleElement.style.removeProperty('order');
+        }
+
+        // If we have a lastVisibleElement, ensure it's in the last visible position
+        if (lastVisibleElement) {
+          var visibleIndex = visibleElements.indexOf(lastVisibleElement);
+          if (visibleIndex !== -1) {
+            // Remove lastVisibleElement from its current position
+            visibleElements.splice(visibleIndex, 1);
+            // Add it to the end of visible elements
+            visibleElements.push(lastVisibleElement);
+          }
+        }
+        moreSlot.style.setProperty('height', 'auto');
+      }
+      var overflowingElements = elements.filter(function (element) {
+        return !visibleElements.includes(element);
+      });
+      var _overflowingElements = _slicedToArray(overflowingElements, 1),
+        firstOverflowingElement = _overflowingElements[0];
+      var hasOverflow = overflowingElements.length > 0;
+      var placeholderWidth = firstOverflowingElement ? firstOverflowingElement.clientWidth : 0;
+
+      // Move the elements to the correct slot
+      var _iterator2 = _createForOfIteratorHelper(elements),
+        _step2;
+      try {
+        for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+          var element = _step2.value;
+          element.slot = overflowingElements.includes(element) ? overflowSlot.name : defaultSlot.name;
+        }
+
+        // If there are overflowing elements
+        // Show more button and placeholder if needed
+      } catch (err) {
+        _iterator2.e(err);
+      } finally {
+        _iterator2.f();
+      }
+      moreSlot.hidden = !hasOverflow;
+      if (hasOverflow) {
+        // Set the width and height of the placeholder so the list can grow if there is space
+        placeholder.style.width = "".concat(placeholderWidth, "px");
+        placeholder.hidden = false;
+      }
+      list.style.setProperty('counter-reset', "overflow-count ".concat(overflowingElements.length));
+      _this4.style.setProperty('--overflow-count', "".concat(overflowingElements.length));
+      list.style.removeProperty('overflow');
+
+      // Check if the minimum-reached state should be updated
+      hasOverflow && _assertClassBrand(_OverflowList_brand, _this4, _updateMinimumReached).call(_this4, visibleElements);
+
+      // Observe the list for changes in size
+      _classPrivateFieldGet(_resizeObserver, _this4).observe(_this4);
+      _classPrivateFieldGet(_mutationObserver, _this4).observe(_this4, {
+        childList: true
+      });
+    });
+    /**
+     * @type {{
+     *   defaultSlot: HTMLSlotElement;
+     *   overflowSlot: HTMLSlotElement;
+     *   moreSlot: HTMLSlotElement;
+     *   overflow: HTMLElement;
+     *   list: HTMLUListElement;
+     *   placeholder: HTMLLIElement;
+     * }}
+     */
+    _classPrivateFieldInitSpec(_this4, _refs, void 0);
+    /**
+     * @type {ResizeObserver}
+     */
+    _classPrivateFieldInitSpec(_this4, _resizeObserver, new ResizeNotifier(_classPrivateFieldGet(_handleChange, _this4)));
+    /**
+     * @type {MutationObserver}
+     */
+    _classPrivateFieldInitSpec(_this4, _mutationObserver, new MutationObserver(_classPrivateFieldGet(_handleChange, _this4)));
+    return _this4;
+  }
+  _inherits(OverflowList, _DeclarativeShadowEle);
+  return _createClass(OverflowList, [{
+    key: "attributeChangedCallback",
+    value:
+    /**
+     * @param {string} name
+     * @param {string} oldValue
+     * @param {string} newValue
+     */
+    function attributeChangedCallback(name, oldValue, newValue) {
+      if (name === 'disabled') {
+        if (newValue === 'true') {
+          _assertClassBrand(_OverflowList_brand, this, _reset).call(this);
+        } else {
+          _classPrivateFieldGet(_reflowItems, this).call(this);
+        }
+      }
+    }
+  }, {
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      var _this5 = this;
+      _superPropGet(OverflowList, "connectedCallback", this, 3)([]);
+      if (this.hasAttribute('defer')) {
+        var deferredReflow = function deferredReflow() {
+          // Remove attribute first to change layout before calculating the actual size
+          _this5.removeAttribute('defer');
+          _assertClassBrand(_OverflowList_brand, _this5, _initialize).call(_this5);
+        };
+        var schedule = this.schedule;
+        var requestIdleCallback = typeof window.requestIdleCallback === 'function' ? window.requestIdleCallback : setTimeout;
+        requestIdleCallback(function () {
+          return schedule(deferredReflow);
+        });
+      } else if (this.shadowRoot) {
+        _assertClassBrand(_OverflowList_brand, this, _initialize).call(this);
+      } else {
+        // Not all element children has been parsed yet, try again in the next tick
+        // <overflow-list> is a special case as critical.js can execute before DOMContentLoaded
+        setTimeout(function () {
+          _assertClassBrand(_OverflowList_brand, _this5, _initialize).call(_this5);
+        }, 0);
+      }
+    }
+  }, {
+    key: "disconnectedCallback",
+    value: function disconnectedCallback() {
+      _classPrivateFieldGet(_resizeObserver, this).disconnect();
+    }
+  }, {
+    key: "schedule",
+    get: function get() {
+      var _Theme;
+      return typeof ((_Theme = Theme) === null || _Theme === void 0 || (_Theme = _Theme.utilities) === null || _Theme === void 0 || (_Theme = _Theme.scheduler) === null || _Theme === void 0 ? void 0 : _Theme.schedule) === 'function' ? Theme.utilities.scheduler.schedule : /** @param {FrameRequestCallback} callback */function (callback) {
+        return requestAnimationFrame(function () {
+          return setTimeout(callback, 0);
+        });
+      };
+    }
+  }, {
+    key: "minimumItems",
+    get:
+    /**
+     * Get the minimum number of items before changing the minimum-reached state
+     * @returns {number | null}
+     */
+    function get() {
+      var value = this.getAttribute('minimum-items');
+      return value ? parseInt(value, 10) : null;
+    }
+  }, {
+    key: "overflowSlot",
+    get: function get() {
+      var _classPrivateFieldGet3 = _classPrivateFieldGet(_refs, this),
+        overflowSlot = _classPrivateFieldGet3.overflowSlot;
+      return overflowSlot;
+    }
+  }, {
+    key: "defaultSlot",
+    get: function get() {
+      var _classPrivateFieldGet4 = _classPrivateFieldGet(_refs, this),
+        defaultSlot = _classPrivateFieldGet4.defaultSlot;
+      return defaultSlot;
+    }
+  }, {
+    key: "showAll",
+    value:
+    /**
+     * Show all items in the list.
+     */
+    function showAll() {
+      var _classPrivateFieldGet5 = _classPrivateFieldGet(_refs, this),
+        placeholder = _classPrivateFieldGet5.placeholder;
+      placeholder.style.setProperty('width', '0');
+      placeholder.style.setProperty('display', 'none');
+      this.setAttribute('disabled', 'true');
+    }
+  }], [{
+    key: "observedAttributes",
+    get: function get() {
+      return ['disabled', 'minimum-items'];
+    }
+  }]);
+}(DeclarativeShadowElement);
+function _initialize() {
+  var _this6 = this;
+  var shadowRoot = this.shadowRoot;
+  if (!shadowRoot) throw new Error('Missing shadow root');
+  var defaultSlot = shadowRoot.querySelector('slot:not([name])');
+  var overflowSlot = shadowRoot.querySelector('slot[name="overflow"]');
+  var moreSlot = shadowRoot.querySelector('slot[name="more"]');
+  var overflow = shadowRoot.querySelector('[part="overflow"]');
+  var list = shadowRoot.querySelector('[part="list"]');
+  var placeholder = shadowRoot.querySelector('[part="placeholder"]');
+  if (!(defaultSlot instanceof HTMLSlotElement) || !(overflowSlot instanceof HTMLSlotElement) || !(moreSlot instanceof HTMLSlotElement) || !(overflow instanceof HTMLElement) || !(list instanceof HTMLUListElement) || !(placeholder instanceof HTMLLIElement)) {
+    throw new Error('Invalid element types in <OverflowList />');
+  }
+  _classPrivateFieldSet(_refs, this, {
+    defaultSlot: defaultSlot,
+    overflowSlot: overflowSlot,
+    moreSlot: moreSlot,
+    overflow: overflow,
+    list: list,
+    placeholder: placeholder
+  });
+
+  // Add event listener for reflow requests
+  this.addEventListener('reflow', /** @param {ReflowEvent} event */function (event) {
+    _classPrivateFieldGet(_reflowItems, _this6).call(_this6, event.detail.lastVisibleElement);
+  });
+  _classPrivateFieldGet(_reflowItems, this).call(this);
+}
+/**
+ * Move all items to the default slot.
+ */
+function _moveItemsToDefaultSlot() {
+  var _classPrivateFieldGet6 = _classPrivateFieldGet(_refs, this),
+    defaultSlot = _classPrivateFieldGet6.defaultSlot,
+    overflowSlot = _classPrivateFieldGet6.overflowSlot;
+  var _iterator3 = _createForOfIteratorHelper(overflowSlot.assignedElements()),
+    _step3;
+  try {
+    for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+      var element = _step3.value;
+      element.slot = defaultSlot.name;
+    }
+  } catch (err) {
+    _iterator3.e(err);
+  } finally {
+    _iterator3.f();
+  }
+}
+/**
+ * Reset the list to its initial state and disconnect the observers.
+ */
+function _reset() {
+  var _classPrivateFieldGet7 = _classPrivateFieldGet(_refs, this),
+    list = _classPrivateFieldGet7.list;
+  _classPrivateFieldGet(_mutationObserver, this).disconnect();
+  _classPrivateFieldGet(_resizeObserver, this).disconnect();
+  _assertClassBrand(_OverflowList_brand, this, _moveItemsToDefaultSlot).call(this);
+  list.style.removeProperty('height');
+  this.style.setProperty('--overflow-count', '0');
+}
+/**
+ * Sets the minimum-reached attribute and dispatches a custom event based on visible elements count
+ * @param {Element[]} visibleElements - The currently visible elements
+ */
+function _updateMinimumReached(visibleElements) {
+  if (this.minimumItems !== null) {
+    var minimumReached = visibleElements.length < this.minimumItems;
+    if (minimumReached) {
+      this.setAttribute('minimum-reached', '');
+    } else {
+      this.removeAttribute('minimum-reached');
+    }
+    this.dispatchEvent(new OverflowMinimumEvent(minimumReached));
+  }
+}
+if (!customElements.get('overflow-list')) {
+  customElements.define('overflow-list', OverflowList);
+}
+
+// Function to calculate total height of header group children
+function calculateHeaderGroupHeight() {
+  var _header$parentElement;
+  var header = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.querySelector('#header-component');
+  var headerGroup = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : document.querySelector('#header-group');
+  if (!headerGroup) return 0;
+  var totalHeight = 0;
+  var children = headerGroup.children;
+  for (var i = 0; i < children.length; i++) {
+    var element = children[i];
+    if (element === header || !(element instanceof HTMLElement)) continue;
+    totalHeight += element.offsetHeight;
+  }
+
+  // If the header is transparent and has a sibling section, add the height of the header to the total height
+  if (header instanceof HTMLElement && header.hasAttribute('transparent') && (_header$parentElement = header.parentElement) !== null && _header$parentElement !== void 0 && _header$parentElement.nextElementSibling) {
+    return totalHeight + header.offsetHeight;
+  }
+  return totalHeight;
+}
+
+/**
+ * Initialize and maintain header height CSS variables.
+ * This is critical for preventing layout shifts during page load.
+ * There is a `ResizeObserver` and `MutationObserver` that kicks in post hydration in header.js
+ * Note: header-group uses display: contents, so we must observe all children.
+ */
+function updateHeaderHeights() {
+  var header = document.querySelector('header-component');
+
+  // Early exit if no header - nothing to do
+  if (!(header instanceof HTMLElement)) return;
+
+  // Calculate initial height(s
+  var headerHeight = header.offsetHeight;
+  var headerGroupHeight = calculateHeaderGroupHeight(header);
+  document.body.style.setProperty('--header-height', "".concat(headerHeight, "px"));
+  document.body.style.setProperty('--header-group-height', "".concat(headerGroupHeight, "px"));
+}
+
+/**
+ * Updates CSS custom properties for transparent header offset calculation
+ * Avoids expensive :has() selectors
+ */
+function updateTransparentHeaderOffset() {
+  var _hasHeaderSection$nex;
+  var header = document.querySelector('#header-component');
+  var headerGroup = document.querySelector('#header-group');
+  var hasHeaderSection = headerGroup === null || headerGroup === void 0 ? void 0 : headerGroup.querySelector('.header-section');
+  if (!hasHeaderSection || !(header !== null && header !== void 0 && header.hasAttribute('transparent'))) {
+    document.body.style.setProperty('--transparent-header-offset-boolean', '0');
+    return;
+  }
+  var hasImmediateSection = (_hasHeaderSection$nex = hasHeaderSection.nextElementSibling) === null || _hasHeaderSection$nex === void 0 ? void 0 : _hasHeaderSection$nex.classList.contains('shopify-section');
+  var shouldApplyOffset = !hasImmediateSection ? '1' : '0';
+  document.body.style.setProperty('--transparent-header-offset-boolean', shouldApplyOffset);
+}
+function updateAllHeaderCustomProperties() {
+  updateHeaderHeights();
+  updateTransparentHeaderOffset();
+}
+
+// Run both functions on page load
+updateAllHeaderCustomProperties();
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
+(() => {
+/*!*************************************!*\
+  !*** ./src/scripts/theme-editor.js ***!
+  \*************************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _theme_critical__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @theme/critical */ "./src/scripts/critical.js");
+var _window$Shopify;
+function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t.return || t.return(); } finally { if (u) throw o; } } }; }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+// Theme editor specific logic
+
+
+/**
+ * @param {Event} event
+ */
+document.addEventListener('shopify:block:select', function (event) {
+  if (event.target instanceof HTMLElement) {
+    // Check if the selected element is specifically a product-card block itself
+    // Not a child block within the product card
+
+    // First, remove data-no-navigation from any previously selected product cards
+    document.querySelectorAll('product-card[data-no-navigation]').forEach(function (card) {
+      if (card instanceof HTMLElement) {
+        card.removeAttribute('data-no-navigation');
+      }
+    });
+    if (event.target.tagName === 'PRODUCT-CARD') {
+      var section = event.target.closest('.shopify-section');
+      if (section) {
+        var productCardsInSection = section.querySelectorAll('product-card');
+        productCardsInSection.forEach(function (card) {
+          if (card instanceof HTMLElement) {
+            card.setAttribute('data-no-navigation', 'true');
+          }
+        });
+      }
+    }
+    var slide = event.target.closest('slideshow-slide');
+    if (slide) {
+      /** @type {import('./slideshow').Slideshow | null} */
+      var slideshow = slide.closest('slideshow-component');
+      if (slideshow) {
+        var _slide$parentElement$, _slide$parentElement;
+        var index = Array.from((_slide$parentElement$ = (_slide$parentElement = slide.parentElement) === null || _slide$parentElement === void 0 ? void 0 : _slide$parentElement.children) !== null && _slide$parentElement$ !== void 0 ? _slide$parentElement$ : []).indexOf(slide);
+        if (index !== -1) {
+          // Pause autoplay
+          slideshow.pause();
+          slideshow.select(index);
+        }
+      }
+    }
+  }
+});
+document.addEventListener('shopify:block:deselect', function (event) {
+  if (event.target instanceof HTMLElement) {
+    // Remove data-no-navigation when product card is deselected
+    if (event.target.tagName === 'PRODUCT-CARD') {
+      event.target.removeAttribute('data-no-navigation');
+    }
+
+    /** @type {import('./slideshow').Slideshow | null} */
+    var slideshow = event.target.closest('slideshow-component');
+    if (slideshow) {
+      // Resume playback
+      slideshow.resume();
+    }
+  }
+});
+document.addEventListener('shopify:section:load', function (event) {
+  if (event.target instanceof HTMLElement && event.target.classList.contains('shopify-section-group-header-group')) {
+    (0,_theme_critical__WEBPACK_IMPORTED_MODULE_0__.updateAllHeaderCustomProperties)();
+  }
+});
+document.addEventListener('shopify:section:unload', function (event) {
+  if (event.target instanceof HTMLElement && event.target.classList.contains('shopify-section-group-header-group')) {
+    setTimeout(function () {
+      (0,_theme_critical__WEBPACK_IMPORTED_MODULE_0__.updateAllHeaderCustomProperties)();
+    }, 500);
+  }
+});
+
+/**
+ * When in the theme editor, it can be frustrating to be tweaking the design of features that are implemented as a dialog
+ * or any sort of overlay, because the theme editor will refresh the page and close the dialog.
+ *
+ * This script is used to save the state of these features and restore it when the page is refreshed, to make things a little more seamless.
+ */
+
+// Detect when page is about to unload
+// This helps distinguish between theme editor refreshes (which don't trigger beforeunload)
+// and actual navigation (which does trigger beforeunload)
+window.addEventListener('beforeunload', function (event) {
+  // Set a flag to indicate that an actual unload is happening (not just a refresh)
+  sessionStorage.setItem('editor-page-unloading', 'true');
+});
+
+// Check if the device is iOS as Safari on iOS doesn't support the beforeunload event
+var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+if ((_window$Shopify = window.Shopify) !== null && _window$Shopify !== void 0 && _window$Shopify.designMode && !isIOS) {
+  // Skip editor state management on iOS devices
+  (function editorStateManager() {
+    var EDITOR_PREFIX = 'editor-save-state';
+
+    /**
+     * Check if the page just unloaded (actual navigation) vs a refresh
+     * @returns {boolean}
+     */
+    function wasPageUnloading() {
+      var unloading = sessionStorage.getItem('editor-page-unloading') === 'true';
+      // Clear the flag after checking
+      if (unloading) {
+        sessionStorage.removeItem('editor-page-unloading');
+      }
+      return unloading;
+    }
+
+    /**
+     * Clear all saved editor states
+     */
+    function clearAllEditorStates() {
+      var keys = Object.keys(sessionStorage);
+      keys.forEach(function (key) {
+        if (key.startsWith(EDITOR_PREFIX)) {
+          sessionStorage.removeItem(key);
+        }
+      });
+    }
+
+    /**
+     * @param {string} name
+     */
+    function getEditorState(name) {
+      var state = sessionStorage.getItem("".concat(EDITOR_PREFIX, "-").concat(name));
+      return state ? JSON.parse(state) : null;
+    }
+
+    /**
+     * @param {string} name
+     * @param {boolean} isOpen
+     * @param {string | undefined} instanceId
+     */
+    function saveEditorState(name, isOpen, instanceId) {
+      sessionStorage.setItem("".concat(EDITOR_PREFIX, "-").concat(name), JSON.stringify({
+        isOpen: isOpen,
+        instanceId: instanceId
+      }));
+    }
+
+    /** @type {{name: string, selector: string, matches: (el: Element) => boolean, isOpen: (el: Element) => boolean, open: (el: Element, instanceId?: string) => void, getInstanceId?: (el: Element) => string | undefined}[]} */
+    var features = [{
+      name: 'account-popover',
+      selector: '.account-popover',
+      matches: function matches(el) {
+        return el.matches(this.selector);
+      },
+      isOpen: function isOpen(el) {
+        return el.getAttribute('open') != null;
+      },
+      open: function open(el) {
+        return el.setAttribute('open', '');
+      }
+    }, {
+      name: 'account-drawer',
+      selector: '.account-drawer',
+      matches: function matches(el) {
+        return !!el.closest(this.selector);
+      },
+      isOpen: function isOpen(el) {
+        return el.getAttribute('open') != null;
+      },
+      // @ts-ignore
+      open: function open(el) {
+        return el.showDialog();
+      }
+    }, {
+      name: 'localization-dropdown',
+      selector: 'dropdown-localization-component',
+      matches: function matches(el) {
+        return !!el.closest(this.selector);
+      },
+      isOpen: function isOpen(el) {
+        return el.getAttribute('aria-expanded') === 'true';
+      },
+      // @ts-ignore
+      open: function open(el) {
+        return el.showPanel();
+      }
+    }, {
+      name: 'search-modal',
+      selector: '.search-modal',
+      matches: function matches(el) {
+        return !!el.closest(this.selector);
+      },
+      isOpen: function isOpen(el) {
+        return el.getAttribute('open') != null;
+      },
+      // @ts-ignore
+      open: function open(el) {
+        return el.showDialog();
+      }
+    }, {
+      name: 'cart-drawer',
+      selector: 'cart-drawer-component',
+      matches: function matches(el) {
+        return !!el.closest(this.selector);
+      },
+      isOpen: function isOpen(el) {
+        return el.getAttribute('open') != null;
+      },
+      open: function open(el) {
+        // @ts-ignore
+        el.open();
+      }
+    }, {
+      name: 'header-drawer',
+      selector: 'header-drawer',
+      matches: function matches(el) {
+        return !!el.closest(this.selector);
+      },
+      isOpen: function isOpen(el) {
+        return el.getAttribute('open') != null;
+      },
+      open: function open(el) {
+        // @ts-ignore
+        el.open();
+        // @ts-ignore
+        el.refs.details.setAttribute('open', '');
+      }
+    }, {
+      name: 'local-pickup-modal',
+      selector: '.pickup-location__dialog',
+      matches: function matches(el) {
+        return el.matches(this.selector);
+      },
+      isOpen: function isOpen(el) {
+        return el.getAttribute('open') != null;
+      },
+      open: function open(el) {
+        // @ts-ignore
+        el.closest('dialog-component').toggleDialog();
+      }
+    }, {
+      name: 'quick-add-modal',
+      getInstanceId: function getInstanceId(el) {
+        var _el$querySelector;
+        // @ts-ignore
+        return (_el$querySelector = el.querySelector('product-price')) === null || _el$querySelector === void 0 || (_el$querySelector = _el$querySelector.dataset) === null || _el$querySelector === void 0 ? void 0 : _el$querySelector.productId;
+      },
+      selector: '.quick-add-modal',
+      matches: function matches(el) {
+        return el.matches(this.selector);
+      },
+      isOpen: function isOpen(el) {
+        return el.getAttribute('open') != null;
+      },
+      open: function open(el, instanceId) {
+        var button = document.querySelector("product-form-component[data-product-id=\"".concat(instanceId, "\"] .quick-add__button--choose"));
+
+        // @ts-ignore
+        button === null || button === void 0 || button.click();
+      }
+    }, {
+      name: 'floating-panel-component',
+      getInstanceId: function getInstanceId(el) {
+        return el.id;
+      },
+      selector: '.facets__panel',
+      matches: function matches(el) {
+        return el.matches(this.selector);
+      },
+      isOpen: function isOpen(el) {
+        return el.getAttribute('open') != null;
+      },
+      open: function open(el, instanceId) {
+        var _document$querySelect;
+        return (_document$querySelect = document.querySelector("#".concat(instanceId))) === null || _document$querySelect === void 0 ? void 0 : _document$querySelect.setAttribute('open', '');
+      }
+    }, {
+      name: 'facets-panel',
+      selector: '.facets--drawer',
+      matches: function matches(el) {
+        return el.matches(this.selector);
+      },
+      isOpen: function isOpen(el) {
+        return el.getAttribute('open') != null;
+      },
+      open: function open(el) {
+        return el === null || el === void 0 ? void 0 : el.setAttribute('open', '');
+      }
+    }];
+
+    // On page load, restore the state of the features
+    // Skip restoration if the page just unloaded (actual navigation happened)
+    if (wasPageUnloading()) {
+      // Clear all saved states since we navigated away
+      clearAllEditorStates();
+    } else {
+      features.forEach(function (feature) {
+        var el = document.querySelector(feature.selector);
+        if (!el) return;
+        var state = getEditorState(feature.name);
+        var shouldBeOpen = state === null || state === void 0 ? void 0 : state.isOpen;
+        var instanceId = state === null || state === void 0 ? void 0 : state.instanceId;
+        if (shouldBeOpen) {
+          // Prevents race condition with the open methods not always being available immediately
+          setTimeout(function () {
+            feature.open(el, instanceId);
+          });
+        }
+      });
+    }
+
+    /** @param {Element} el */
+    var update = function update(el) {
+      var _feature$getInstanceI;
+      var feature = features.find(function (f) {
+        return f.matches(el);
+      });
+      if (!feature) return;
+      var isOpen = feature.isOpen(el);
+      var instanceId = (_feature$getInstanceI = feature.getInstanceId) === null || _feature$getInstanceI === void 0 ? void 0 : _feature$getInstanceI.call(feature, el);
+      saveEditorState(feature.name, isOpen, instanceId);
+    };
+    var trackedAttributes = ['open', 'aria-expanded'];
+
+    // Track state changes via attribute changes
+    var observer = new MutationObserver(function (list) {
+      var _iterator = _createForOfIteratorHelper(list),
+        _step;
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var mutation = _step.value;
+          if (mutation.type === 'attributes' && mutation.attributeName && trackedAttributes.includes(mutation.attributeName)) {
+            var element = /** @type {Element} */mutation.target;
+            update(element);
+          }
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+    });
+    observer.observe(document.body, {
+      childList: true,
+      attributes: true,
+      attributeFilter: trackedAttributes,
+      subtree: true
+    });
+  })();
+}
+})();
+
+/******/ })()
+;

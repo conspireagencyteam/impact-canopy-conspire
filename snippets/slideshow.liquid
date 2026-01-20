@@ -19,6 +19,10 @@
   @param {string} [slideshow_arrows] - a custom slideshow-arrows component to render instead of the default
   @param {string} [icon_style] - The style of the icon, defaults to 'arrow'
   @param {string} [arrows_position] - The position of the arrows, defaults to 'bottom'
+  @param {string} [arrow_style_type] - The arrow style type, 'default' or 'custom'
+  @param {string} [arrow_shape] - The shape of the arrow background (none, circle, square)
+  @param {color} [arrow_background_color] - The background color of the arrow (when custom)
+  @param {color} [arrow_color] - The icon color of the arrow (when custom)
   @param {string} [attributes] - Additional attributes to add to the slideshow component
   @param {boolean} [header] - The title of the slideshow
 
@@ -55,7 +59,14 @@
   {% endif %}
   <slideshow-container ref="slideshowContainer">
     {% if show_arrows and disabled != true %}
-      {% render 'slideshow-arrows', icon_style: icon_style, arrows_position: arrows_position %}
+      {% render 'slideshow-arrows',
+        icon_style: icon_style,
+        arrows_position: arrows_position,
+        arrow_style_type: arrow_style_type,
+        arrow_shape: arrow_shape,
+        arrow_background_color: arrow_background_color,
+        arrow_color: arrow_color
+      %}
     {% endif %}
     {% if slideshow_arrows and disabled != true %}
       {{ slideshow_arrows }}

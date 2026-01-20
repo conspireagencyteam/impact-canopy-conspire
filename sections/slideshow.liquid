@@ -39,6 +39,10 @@
     controls: controls,
     show_arrows: show_arrows,
     icon_style: section.settings.icons_style,
+    arrow_style_type: section.settings.arrow_style_type,
+    arrow_shape: section.settings.arrow_shape,
+    arrow_background_color: section.settings.arrow_background_color,
+    arrow_color: section.settings.arrow_color,
     autoplay: section.settings.autoplay,
     autoplay_speed: section.settings.autoplay_speed,
     slides: slides,
@@ -126,6 +130,58 @@
         }
       ],
       "default": "arrows_large"
+    },
+    {
+      "type": "select",
+      "id": "arrow_style_type",
+      "label": "Arrow style",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "custom",
+          "label": "Custom"
+        }
+      ],
+      "default": "default",
+      "visible_if": "{{ section.settings.icons_style != 'none' }}"
+    },
+    {
+      "type": "select",
+      "id": "arrow_shape",
+      "label": "Arrow shape",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "circle",
+          "label": "Round"
+        },
+        {
+          "value": "square",
+          "label": "Square"
+        }
+      ],
+      "default": "circle",
+      "visible_if": "{{ section.settings.arrow_style_type == 'custom' and section.settings.icons_style != 'none' }}"
+    },
+    {
+      "type": "color",
+      "id": "arrow_background_color",
+      "label": "Arrow background color",
+      "default": "#ffffff",
+      "visible_if": "{{ section.settings.arrow_style_type == 'custom' and section.settings.icons_style != 'none' and section.settings.arrow_shape != 'none' }}"
+    },
+    {
+      "type": "color",
+      "id": "arrow_color",
+      "label": "Arrow color",
+      "default": "#000000",
+      "visible_if": "{{ section.settings.arrow_style_type == 'custom' and section.settings.icons_style != 'none' }}"
     },
     {
       "type": "select",

@@ -4397,3 +4397,10 @@ text-component {
 .heading-no-space .metafield-rich_text_field *{
   margin: 0 !important;
 }
+
+.itatic-orange {
+  b, strong, em {
+    font-style: normal;
+    color: #EE7623;
+  }
+}
