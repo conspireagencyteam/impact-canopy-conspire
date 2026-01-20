@@ -4217,7 +4217,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h2>Planning a <strong>large</strong> or <strong>complex</strong> order?</h2>",
+                        "text": "<h2>Planning a <strong>large </strong>or <strong>complex</strong> <strong>order?</strong></h2>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
