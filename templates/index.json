@@ -464,6 +464,10 @@
       "name": "t:names.slideshow",
       "settings": {
         "icons_style": "arrow",
+        "arrow_style_type": "custom",
+        "arrow_shape": "circle",
+        "arrow_background_color": "#ffffff",
+        "arrow_color": "#490e67",
         "slideshow_controls_style": "dots",
         "color_scheme": "scheme-3",
         "autoplay": false,
@@ -4246,7 +4250,7 @@
                         "padding-block-end-mobile": 0,
                         "padding-inline-start-mobile": 0,
                         "padding-inline-end-mobile": 0,
-                        "custom_class": "itatic-orange"
+                        "custom_class": ""
                       },
                       "blocks": {}
                     },
