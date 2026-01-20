@@ -217,7 +217,10 @@
                     "font_size_mobile": 14,
                     "show_underline": false,
                     "underline_thickness": 1,
-                    "underline_offset": 2
+                    "underline_offset": 2,
+                    "icon": "none",
+                    "icon_size": 20,
+                    "icon_position": "left"
                   },
                   "blocks": {}
                 }
@@ -439,7 +442,10 @@
                     "font_size_mobile": 14,
                     "show_underline": false,
                     "underline_thickness": 1,
-                    "underline_offset": 2
+                    "underline_offset": 2,
+                    "icon": "none",
+                    "icon_size": 20,
+                    "icon_position": "left"
                   },
                   "blocks": {}
                 }
@@ -2193,7 +2199,10 @@
                 "font_size_mobile": 14,
                 "show_underline": false,
                 "underline_thickness": 1,
-                "underline_offset": 2
+                "underline_offset": 2,
+                "icon": "arrow",
+                "icon_size": 20,
+                "icon_position": "right"
               },
               "blocks": {}
             }
@@ -2555,7 +2564,10 @@
                 "font_size_mobile": 14,
                 "show_underline": false,
                 "underline_thickness": 1,
-                "underline_offset": 2
+                "underline_offset": 2,
+                "icon": "arrow",
+                "icon_size": 20,
+                "icon_position": "right"
               },
               "blocks": {}
             }
@@ -2932,7 +2944,7 @@
                     "label": "Shop now",
                     "link": "shopify://collections/all",
                     "open_in_new_tab": false,
-                    "style_class": "button",
+                    "style_class": "button-tertiary",
                     "button_size": "default",
                     "width": "fit-content",
                     "custom_width": 100,
@@ -2944,7 +2956,10 @@
                     "font_size_mobile": 14,
                     "show_underline": false,
                     "underline_thickness": 1,
-                    "underline_offset": 2
+                    "underline_offset": 2,
+                    "icon": "arrow",
+                    "icon_size": 20,
+                    "icon_position": "right"
                   },
                   "blocks": {}
                 }
@@ -3688,7 +3703,10 @@
                 "font_size_mobile": 14,
                 "show_underline": false,
                 "underline_thickness": 1,
-                "underline_offset": 2
+                "underline_offset": 2,
+                "icon": "arrow",
+                "icon_size": 20,
+                "icon_position": "right"
               },
               "blocks": {}
             }
@@ -4317,7 +4335,10 @@
                     "font_size_mobile": 14,
                     "show_underline": false,
                     "underline_thickness": 1,
-                    "underline_offset": 2
+                    "underline_offset": 2,
+                    "icon": "none",
+                    "icon_size": 20,
+                    "icon_position": "left"
                   },
                   "blocks": {}
                 }
@@ -4980,7 +5001,10 @@
                 "font_size_mobile": 14,
                 "show_underline": false,
                 "underline_thickness": 1,
-                "underline_offset": 2
+                "underline_offset": 2,
+                "icon": "none",
+                "icon_size": 20,
+                "icon_position": "left"
               },
               "blocks": {}
             }
@@ -5259,7 +5283,7 @@
                     "label": "Build Your Setup",
                     "link": "shopify://collections/all",
                     "open_in_new_tab": false,
-                    "style_class": "button",
+                    "style_class": "button-tertiary",
                     "button_size": "default",
                     "width": "fit-content",
                     "custom_width": 100,
@@ -5271,7 +5295,10 @@
                     "font_size_mobile": 14,
                     "show_underline": false,
                     "underline_thickness": 1,
-                    "underline_offset": 2
+                    "underline_offset": 2,
+                    "icon": "arrow",
+                    "icon_size": 20,
+                    "icon_position": "right"
                   },
                   "blocks": {}
                 }
