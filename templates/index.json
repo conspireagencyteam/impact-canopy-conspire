@@ -573,7 +573,7 @@
           "name": "Logo group",
           "settings": {
             "content_direction": "row",
-            "vertical_on_mobile": false,
+            "vertical_on_mobile": true,
             "reverse_on_mobile": false,
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
@@ -2755,11 +2755,11 @@
             "padding-block-end": 32,
             "padding-inline-start": 32,
             "padding-inline-end": 32,
-            "use_mobile_padding": false,
-            "padding-block-start-mobile": 0,
-            "padding-block-end-mobile": 0,
-            "padding-inline-start-mobile": 0,
-            "padding-inline-end-mobile": 0,
+            "use_mobile_padding": true,
+            "padding-block-start-mobile": 15,
+            "padding-block-end-mobile": 15,
+            "padding-inline-start-mobile": 15,
+            "padding-inline-end-mobile": 15,
             "custom_class": ""
           },
           "blocks": {
@@ -4032,7 +4032,7 @@
       "settings": {
         "blog": "news",
         "layout_type": "grid",
-        "carousel_on_mobile": false,
+        "carousel_on_mobile": true,
         "post_limit": 3,
         "columns": 3,
         "mobile_columns": "2",
@@ -4096,11 +4096,11 @@
             "padding-block-end": 32,
             "padding-inline-start": 32,
             "padding-inline-end": 32,
-            "use_mobile_padding": false,
-            "padding-block-start-mobile": 0,
-            "padding-block-end-mobile": 0,
-            "padding-inline-start-mobile": 0,
-            "padding-inline-end-mobile": 0,
+            "use_mobile_padding": true,
+            "padding-block-start-mobile": 15,
+            "padding-block-end-mobile": 15,
+            "padding-inline-start-mobile": 15,
+            "padding-inline-end-mobile": 15,
             "custom_class": ""
           },
           "blocks": {
@@ -5094,11 +5094,11 @@
             "padding-block-end": 32,
             "padding-inline-start": 32,
             "padding-inline-end": 32,
-            "use_mobile_padding": false,
-            "padding-block-start-mobile": 0,
-            "padding-block-end-mobile": 0,
-            "padding-inline-start-mobile": 0,
-            "padding-inline-end-mobile": 0,
+            "use_mobile_padding": true,
+            "padding-block-start-mobile": 15,
+            "padding-block-end-mobile": 15,
+            "padding-inline-start-mobile": 15,
+            "padding-inline-end-mobile": 15,
             "custom_class": ""
           },
           "blocks": {

@@ -20,7 +20,7 @@
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
-            "reverse_on_mobile": true,
+            "reverse_on_mobile": false,
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "flex-start",
             "align_baseline": false,
@@ -53,11 +53,11 @@
             "padding-block-end": 32,
             "padding-inline-start": 32,
             "padding-inline-end": 32,
-            "use_mobile_padding": false,
-            "padding-block-start-mobile": 0,
-            "padding-block-end-mobile": 0,
-            "padding-inline-start-mobile": 0,
-            "padding-inline-end-mobile": 0,
+            "use_mobile_padding": true,
+            "padding-block-start-mobile": 15,
+            "padding-block-end-mobile": 15,
+            "padding-inline-start-mobile": 15,
+            "padding-inline-end-mobile": 15,
             "custom_class": ""
           },
           "blocks": {
@@ -211,7 +211,10 @@
                         "font_size_mobile": 14,
                         "show_underline": false,
                         "underline_thickness": 1,
-                        "underline_offset": 2
+                        "underline_offset": 2,
+                        "icon": "none",
+                        "icon_size": 20,
+                        "icon_position": "left"
                       },
                       "blocks": {}
                     }
@@ -232,7 +235,7 @@
               "settings": {
                 "content_direction": "row",
                 "vertical_on_mobile": true,
-                "reverse_on_mobile": true,
+                "reverse_on_mobile": false,
                 "horizontal_alignment": "flex-start",
                 "vertical_alignment": "flex-start",
                 "align_baseline": false,
