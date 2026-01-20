@@ -4213,11 +4213,11 @@
                       },
                       "blocks": {}
                     },
-                    "text_XLWQWm": {
+                    "text_Xyk6TL": {
                       "type": "text",
-                      "name": "t:names.heading",
+                      "name": "t:names.text",
                       "settings": {
-                        "text": "<h2>Planning a <strong>large </strong>or <strong>complex</strong> <strong>order?</strong></h2>",
+                        "text": "<h2>Planning a <strong>large </strong>or <strong>complex</strong> order?</h2>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -4246,7 +4246,7 @@
                         "padding-block-end-mobile": 0,
                         "padding-inline-start-mobile": 0,
                         "padding-inline-end-mobile": 0,
-                        "custom_class": "itatic-orange"
+                        "custom_class": ""
                       },
                       "blocks": {}
                     },
@@ -4290,7 +4290,7 @@
                   },
                   "block_order": [
                     "text_fdRpAV",
-                    "text_XLWQWm",
+                    "text_Xyk6TL",
                     "text_KbPCJK"
                   ]
                 },
