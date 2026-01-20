@@ -88,6 +88,17 @@
       min-height: 100vh;
     }
   }
+
+  /* Custom arrow margins on desktop */
+  @media screen and (min-width: 750px) {
+    .slideshow-control--custom.slideshow-control--previous {
+      margin-left: 15px;
+    }
+
+    .slideshow-control--custom.slideshow-control--next {
+      margin-right: 15px;
+    }
+  }
 {% endstylesheet %}
 
 {% schema %}

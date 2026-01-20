@@ -15,16 +15,26 @@
   assign font_mobile = block_settings.font_mobile | default: 'default'
   assign font_size_desktop = block_settings.font_size_desktop
   assign font_size_mobile = block_settings.font_size_mobile
-  
+
   # Underline variables
   assign show_underline = block_settings.show_underline | default: false
   assign underline_thickness = block_settings.underline_thickness | default: 1
   assign underline_offset = block_settings.underline_offset | default: 2
   assign button_size = block_settings.button_size | default: "default"
-  
+
+  # Icon variables
+  assign icon = block_settings.icon | default: 'none'
+  assign icon_image = block_settings.icon_image
+  assign icon_size = block_settings.icon_size | default: 20
+  assign icon_position = block_settings.icon_position | default: 'left'
+  assign has_icon = false
+  if icon != 'none' or icon_image != blank
+    assign has_icon = true
+  endif
+
   # Build custom style string
   assign custom_style = ''
-  
+
   # Add typography styles
   if font_desktop != 'default'
     assign custom_style = custom_style | append: '--font-family-override-desktop: var(--font-' | append: font_desktop | append: '); '
@@ -32,14 +42,14 @@
       assign custom_style = custom_style | append: '--font-size-override-desktop: ' | append: font_size_desktop | append: 'px; '
     endif
   endif
-  
+
   if font_mobile != 'default'
     assign custom_style = custom_style | append: '--font-family-override-mobile: var(--font-' | append: font_mobile | append: '); '
     if font_size_mobile
       assign custom_style = custom_style | append: '--font-size-override-mobile: ' | append: font_size_mobile | append: 'px; '
     endif
   endif
-  
+
   # Add underline styles
   if show_underline and block_settings.style_class == 'link'
     assign custom_style = custom_style | append: '--underline-thickness: ' | append: underline_thickness | append: 'px; '
@@ -60,6 +70,7 @@
     button--{{ button_size }}
     {{ block_settings.style_class }}--{{ block.id }}
     {% if show_underline and block_settings.style_class == 'link' %}link--underline{% endif %}
+    {% if has_icon %}button--has-icon button--icon-{{ icon_position }}{% endif %}
   "
   style="{% render 'size-style', settings: block_settings %}{{ custom_style }}"
   {%- if block_settings.open_in_new_tab -%}
@@ -68,10 +79,49 @@
   {%- endif -%}
   {{ block.shopify_attributes }}
 >
-  {{ block_settings.label }}
+  {%- if has_icon and icon_position == 'left' -%}
+    {% render 'icon-or-image',
+      icon: icon,
+      image_upload: icon_image,
+      width: icon_size,
+      class_name: 'button__icon'
+    %}
+  {%- endif -%}
+  <span class="button__label">{{ block_settings.label }}</span>
+  {%- if has_icon and icon_position == 'right' -%}
+    {% render 'icon-or-image',
+      icon: icon,
+      image_upload: icon_image,
+      width: icon_size,
+      class_name: 'button__icon'
+    %}
+  {%- endif -%}
 </a>
 
 {% stylesheet %}
+  /* Button with icon styles */
+  .button--has-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .button__icon {
+    flex-shrink: 0;
+    color: currentColor;
+    fill: currentColor;
+  }
+
+  .button__icon svg {
+    display: block;
+    color: inherit;
+    fill: currentColor;
+  }
+
+  .button__label {
+    flex-shrink: 0;
+  }
+
   /* Base link styles */
   .link {
     text-decoration: none;
@@ -153,12 +203,14 @@
   }
   /* Button size variants */
   .button--small,
-  .button-secondary--small {
+  .button-secondary--small,
+  .button-tertiary--small {
     padding-block: 0.75rem;
   }
 
   .button--large,
-  .button-secondary--large {
+  .button-secondary--large,
+  .button-tertiary--large {
     padding-block: 1.5rem;
     padding-inline: 3rem;
   }

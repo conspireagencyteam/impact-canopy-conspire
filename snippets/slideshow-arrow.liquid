@@ -44,6 +44,7 @@
     {% if icon_size %} slideshow-control--{{ icon_size }}{% endif %}
     {% if shape != 'none' %} slideshow-control--shape-{{ shape }}{% endif %}
     slideshow-control--style-{{ style }}
+    {% if arrow_style_type == 'custom' %} slideshow-control--custom{% endif %}
     button button-unstyled button-unstyled--transparent
     {% if action == 'previous' %} flip-x{% endif %}
   "
