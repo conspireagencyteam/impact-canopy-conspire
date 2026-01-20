@@ -15,8 +15,9 @@
         "slide_wiL4dw": {
           "type": "_slide",
           "settings": {
-            "media_type_1": "image",
+            "media_type_1": "video",
             "image_1": "shopify://shop_images/IMPACT_CANOPY_-_REFRESH_-_STYLE_2_-_CANOPY.jpg",
+            "video_1": "shopify://files/videos/Impact-Canopy-Gatorade-2.mp4",
             "image_1_mobile": "shopify://shop_images/IMPACT_CANOPY_-_1000X1000_-_CANOPY.jpg",
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -233,23 +234,26 @@
             "group_PyMtpL"
           ]
         },
-        "slide_R944Q8": {
+        "slide_Ctq3VA": {
           "type": "_slide",
           "settings": {
-            "media_type_1": "image",
+            "media_type_1": "video",
+            "image_1": "shopify://shop_images/IMPACT_CANOPY_-_REFRESH_-_STYLE_2_-_CANOPY.jpg",
+            "video_1": "shopify://files/videos/Impact-Canopy-Gatorade-2.mp4",
+            "image_1_mobile": "shopify://shop_images/IMPACT_CANOPY_-_1000X1000_-_CANOPY.jpg",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
             "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-end",
             "gap": 12,
             "inherit_color_scheme": true,
             "color_scheme": "",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
+            "toggle_overlay": true,
+            "overlay_color": "#000000d1",
+            "overlay_style": "gradient",
             "gradient_direction": "to top",
             "padding-block-start": 0,
             "padding-block-end": 0,
@@ -262,7 +266,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "group_mUJjAM": {
+            "group_KYWqki": {
               "type": "group",
               "settings": {
                 "content_direction": "column",
@@ -271,11 +275,11 @@
                 "horizontal_alignment": "flex-start",
                 "vertical_alignment": "center",
                 "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center",
+                "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 12,
                 "width": "custom",
-                "custom_width": 50,
+                "custom_width": 60,
                 "width_mobile": "custom",
                 "custom_width_mobile": 85,
                 "height": "fit",
@@ -298,8 +302,8 @@
                 "placeholder": "",
                 "padding-block-start": 48,
                 "padding-block-end": 48,
-                "padding-inline-start": 48,
-                "padding-inline-end": 48,
+                "padding-inline-start": 60,
+                "padding-inline-end": 60,
                 "use_mobile_padding": false,
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
@@ -308,16 +312,53 @@
                 "custom_class": ""
               },
               "blocks": {
-                "text_9RnWD7": {
+                "text_DcxMgr": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>Designed for professional use, from single setups to large-scale events</p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-accent--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "uppercase",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "custom_color": "#000000",
+                    "use_mobile_typography": false,
+                    "font_size_mobile": "1rem",
+                    "line_height_mobile": "normal",
+                    "letter_spacing_mobile": "normal",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "use_mobile_padding": false,
+                    "padding-block-start-mobile": 0,
+                    "padding-block-end-mobile": 0,
+                    "padding-inline-start-mobile": 0,
+                    "padding-inline-end-mobile": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
+                "text_rwyeVp": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2>Bestsellers</h2>",
-                    "width": "fit-content",
-                    "max_width": "normal",
+                    "text": "<h2>Custom canopies built to perform in real conditions</h2>",
+                    "width": "100%",
+                    "max_width": "none",
                     "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
+                    "type_preset": "custom",
+                    "font": "var(--font-heading--family)",
+                    "font_size": "3rem",
                     "line_height": "normal",
                     "letter_spacing": "normal",
                     "case": "none",
@@ -344,16 +385,16 @@
                   },
                   "blocks": {}
                 },
-                "text_L9aH9r": {
+                "text_VTdB9H": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Discover the bestsellers that have captured the hearts of our customers with their perfect blend of functionality and style.</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
+                    "text": "<p>Explore durable, custom-branded canopies and accessories built for reliability, visibility, and long-term use across industries and events.</p>",
+                    "width": "100%",
+                    "max_width": "none",
                     "alignment": "left",
-                    "type_preset": "rte",
+                    "type_preset": "custom",
                     "font": "var(--font-body--family)",
-                    "font_size": "1rem",
+                    "font_size": "1.5rem",
                     "line_height": "normal",
                     "letter_spacing": "normal",
                     "case": "none",
@@ -380,7 +421,7 @@
                   },
                   "blocks": {}
                 },
-                "button_wYapAV": {
+                "button_GiQPfj": {
                   "type": "button",
                   "settings": {
                     "label": "Shop now",
@@ -404,20 +445,21 @@
                 }
               },
               "block_order": [
-                "text_9RnWD7",
-                "text_L9aH9r",
-                "button_wYapAV"
+                "text_DcxMgr",
+                "text_rwyeVp",
+                "text_VTdB9H",
+                "button_GiQPfj"
               ]
             }
           },
           "block_order": [
-            "group_mUJjAM"
+            "group_KYWqki"
           ]
         }
       },
       "block_order": [
         "slide_wiL4dw",
-        "slide_R944Q8"
+        "slide_Ctq3VA"
       ],
       "name": "t:names.slideshow",
       "settings": {
