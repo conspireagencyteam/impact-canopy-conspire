@@ -159,7 +159,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h2>Still searching? <strong>Find products fast</strong> or get help.</h2>",
+                        "text": "<h2>Still searching? <em>Find products fast</em> or get help.</h2>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
