@@ -130,7 +130,7 @@
                 "text_VFEpKB": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2>Custom canopies built to perform in real conditions</h2>",
+                    "text": "<h2><strong>Custom canopies</strong> built to perform in <strong>real conditions</strong></h2>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -352,7 +352,7 @@
                 "text_rwyeVp": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2>Custom canopies built to perform in real conditions</h2>",
+                    "text": "<h2><strong>Custom canopies</strong> built to perform in <strong>real conditions</strong></h2>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -4217,7 +4217,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h2>Planning a large or complex order?</h2>",
+                        "text": "<h2>Planning a <strong>large</strong> or <strong>complex</strong> order?</h2>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
