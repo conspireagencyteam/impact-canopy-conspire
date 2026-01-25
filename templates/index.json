@@ -2992,7 +2992,7 @@
                 "show_sale_price_first": true,
                 "show_installments": false,
                 "show_tax_info": false,
-                "show_price_min": false,
+                "show_price_min": true,
                 "type_preset": "h6",
                 "width": "100%",
                 "alignment": "center",
