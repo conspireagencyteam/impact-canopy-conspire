@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "slideshow_nxaAK6": {
@@ -6098,7 +6107,7 @@
             "color_scheme": "",
             "background_media": "image",
             "video_position": "cover",
-            "background_image": "shopify://shop_images/call_impact-canopy.png",
+            "background_image": "shopify://shop_images/team-photo.png",
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
