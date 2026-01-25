@@ -475,6 +475,11 @@
         "arrow_background_color": "#ffffff",
         "arrow_color": "#490e67",
         "slideshow_controls_style": "dots",
+        "dot_style_type": "default",
+        "dot_background_color": "#ffffff",
+        "dot_active_background_color": "#000000",
+        "dot_border_color": "#000000",
+        "dot_active_border_color": "#000000",
         "color_scheme": "scheme-3",
         "autoplay": false,
         "autoplay_speed": 4,
@@ -6046,6 +6051,32 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0
+              },
+              "blocks": {}
+            },
+            "blog-post-button": {
+              "type": "button",
+              "static": true,
+              "settings": {
+                "label": "Read More",
+                "link": "",
+                "open_in_new_tab": false,
+                "style_class": "link",
+                "button_size": "default",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100,
+                "font_desktop": "default",
+                "font_size_desktop": 16,
+                "font_mobile": "default",
+                "font_size_mobile": 14,
+                "show_underline": false,
+                "underline_thickness": 1,
+                "underline_offset": 2,
+                "icon": "none",
+                "icon_size": 20,
+                "icon_position": "left"
               },
               "blocks": {}
             }
