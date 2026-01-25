@@ -362,7 +362,7 @@
                       "type": "_meta-text",
                       "static": true,
                       "settings": {
-                        "text": "{{ closest.product.metafields.custom.key_benefits | metafield_tag: field: 'benefit' }}",
+                        "text": "",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
