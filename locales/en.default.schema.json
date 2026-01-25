@@ -822,6 +822,8 @@
     "default": "Default",
     "default_logo": "Default logo",
     "desktop_height": "Desktop height",
+    "desktop_pagination": "Desktop pagination",
+    "desktop_position": "Desktop position",
     "direction": "Direction",
     // Button appearance for email signup form
     "display": "Display",

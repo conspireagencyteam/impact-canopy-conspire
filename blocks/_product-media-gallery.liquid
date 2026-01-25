@@ -169,11 +169,11 @@
       "type": "range",
       "id": "thumbnail_width",
       "label": "t:settings.width_desktop",
-      "min": 44,
-      "max": 72,
+      "min": 40,
+      "max": 90,
       "step": 1,
       "unit": "px",
-      "default": 64,
+      "default": 80,
       "visible_if": "{{ block.settings.slideshow_controls_style == 'thumbnails' }}"
     },
     {
@@ -185,6 +185,17 @@
       "step": 1,
       "unit": "px",
       "default": 0,
+      "visible_if": "{{ block.settings.slideshow_controls_style == 'thumbnails' or block.settings.slideshow_mobile_controls_style == 'thumbnails' }}"
+    },
+    {
+      "type": "range",
+      "id": "thumbnail_gap",
+      "label": "Gap between slideshow and thumbnails",
+      "min": 0,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "default": 16,
       "visible_if": "{{ block.settings.slideshow_controls_style == 'thumbnails' or block.settings.slideshow_mobile_controls_style == 'thumbnails' }}"
     },
     {

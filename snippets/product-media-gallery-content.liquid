@@ -315,7 +315,7 @@
         media-gallery--extend
       {% endif %}
     "
-    style="{% render 'spacing-style', settings: block_settings %} --thumbnail-width: {{ block_settings.thumbnail_width }}px; --media-radius: {{ block_settings.media_radius }}px;{% if block_settings.icons_style contains 'large' %} --slideshow-icon-padding: 0px;{% endif %}--image-gap: {{ block_settings.image_gap }}px;{% unless block_settings.aspect_ratio == 'adapt' %} --gallery-aspect-ratio: {{ block_settings.aspect_ratio }};{% endunless %}"
+    style="{% render 'spacing-style', settings: block_settings %} --thumbnail-width: {{ block_settings.thumbnail_width }}px; --thumbnail-gap: {{ block_settings.thumbnail_gap | default: 16 }}px; --thumbnail-radius: {{ block_settings.thumbnail_radius | default: 0 }}px; --media-radius: {{ block_settings.media_radius }}px;{% if block_settings.icons_style contains 'large' %} --slideshow-icon-padding: 0px;{% endif %}--image-gap: {{ block_settings.image_gap }}px;{% unless block_settings.aspect_ratio == 'adapt' %} --gallery-aspect-ratio: {{ block_settings.aspect_ratio }};{% endunless %}"
     data-presentation="{{ media_presentation }}"
     {{ block_shopify_attributes }}
   >
@@ -596,6 +596,32 @@
 {% endif %}
 
 {% stylesheet %}
+  /* Product Media Gallery Thumbnail Sizing */
+  media-gallery .slideshow-controls__thumbnails .slideshow-control {
+    width: var(--thumbnail-width, 64px);
+  }
+
+  /* Product Media Gallery Thumbnail Radius - separate from media radius */
+  media-gallery .slideshow-controls__thumbnails .slideshow-control,
+  media-gallery .slideshow-controls__thumbnails .slideshow-control img {
+    border-radius: var(--thumbnail-radius, 0px);
+  }
+
+  /* Gap between slideshow and thumbnails - bottom position */
+  media-gallery slideshow-controls[thumbnails][pagination-position="center"]:not([controls-on-media]) {
+    margin-top: var(--thumbnail-gap, 16px);
+  }
+
+  /* Gap between slideshow and thumbnails - left position (gap on right side of thumbnails) */
+  media-gallery slideshow-controls[thumbnails][pagination-position="left"]:not([controls-on-media]) .slideshow-controls__thumbnails {
+    padding-inline-end: var(--thumbnail-gap, 16px);
+  }
+
+  /* Gap between slideshow and thumbnails - right position (gap on left side of thumbnails) */
+  media-gallery slideshow-controls[thumbnails][pagination-position="right"]:not([controls-on-media]) .slideshow-controls__thumbnails {
+    padding-inline-start: var(--thumbnail-gap, 16px);
+  }
+
   .dialog-zoomed-gallery {
     cursor: zoom-out;
   }
