@@ -7018,7 +7018,7 @@
               "type": "button",
               "name": "t:names.button",
               "settings": {
-                "label": "Contact us",
+                "label": "Contact Service",
                 "link": "shopify://collections/all",
                 "open_in_new_tab": false,
                 "style_class": "button",
