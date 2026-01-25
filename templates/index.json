@@ -6071,7 +6071,7 @@
                 "font_size_desktop": 16,
                 "font_mobile": "default",
                 "font_size_mobile": 14,
-                "show_underline": false,
+                "show_underline": true,
                 "underline_thickness": 1,
                 "underline_offset": 2,
                 "icon": "none",
