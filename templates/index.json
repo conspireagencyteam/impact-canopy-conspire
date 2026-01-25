@@ -4922,8 +4922,8 @@
                   "type": "button",
                   "name": "t:names.button",
                   "settings": {
-                    "label": "Shop now",
-                    "link": "shopify://collections/all",
+                    "label": "Shop Accessories",
+                    "link": "shopify://collections/canopy-accessories",
                     "open_in_new_tab": false,
                     "style_class": "button-tertiary",
                     "button_size": "default",
@@ -4952,7 +4952,7 @@
             },
             "group_xHMwt7": {
               "type": "group",
-              "name": "Product Cards",
+              "name": "Collection Cards",
               "settings": {
                 "content_direction": "row",
                 "vertical_on_mobile": true,
@@ -4997,57 +4997,30 @@
                 "custom_class": ""
               },
               "blocks": {
-                "product_card_9awqmz": {
-                  "type": "product-card",
-                  "name": "t:names.product_card",
+                "collection_card_rV4bGN": {
+                  "type": "collection-card",
+                  "name": "t:names.collection_card",
                   "settings": {
-                    "product": "10x10-restaurants-branded-canopy-starter-vendor-kits",
-                    "product_card_gap": 10,
+                    "collection": "custom-wing-flags",
+                    "placement": "below_image",
+                    "horizontal_alignment": "center",
+                    "vertical_alignment": "center",
+                    "collection_card_gap": 8,
                     "inherit_color_scheme": false,
-                    "color_scheme": "scheme-1",
+                    "color_scheme": "scheme-0b89a542-75f7-4dfb-95f3-38a06a9e9784",
                     "border": "none",
                     "border_width": 1,
                     "border_opacity": 100,
-                    "border_radius": 10,
-                    "padding-block-start": 24,
-                    "padding-block-end": 24,
-                    "padding-inline-start": 24,
-                    "padding-inline-end": 24,
-                    "use_mobile_padding": false,
-                    "padding-block-start-mobile": 0,
-                    "padding-block-end-mobile": 0,
-                    "padding-inline-start-mobile": 0,
-                    "padding-inline-end-mobile": 0
+                    "border_radius": 10
                   },
                   "blocks": {
-                    "product_card_gallery_MqxzmP": {
-                      "type": "_product-card-gallery",
+                    "collection_title_XQPKph": {
+                      "type": "collection-title",
                       "settings": {
-                        "image_ratio": "adapt",
-                        "border": "none",
-                        "border_width": 1,
-                        "border_opacity": 100,
-                        "border_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0,
-                        "use_mobile_padding": false,
-                        "padding-block-start-mobile": 0,
-                        "padding-block-end-mobile": 0,
-                        "padding-inline-start-mobile": 0,
-                        "padding-inline-end-mobile": 0
-                      },
-                      "blocks": {}
-                    },
-                    "product_title_PmCHiK": {
-                      "type": "product-title",
-                      "name": "t:names.product_title",
-                      "settings": {
-                        "width": "100%",
+                        "width": "fit-content",
                         "max_width": "normal",
-                        "alignment": "center",
-                        "type_preset": "rte",
+                        "alignment": "left",
+                        "type_preset": "h4",
                         "font": "var(--font-body--family)",
                         "font_size": "1rem",
                         "line_height": "normal",
@@ -5062,8 +5035,8 @@
                         "background": false,
                         "background_color": "#00000026",
                         "corner_radius": 0,
-                        "padding-block-start": 4,
-                        "padding-block-end": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 24,
                         "padding-inline-start": 0,
                         "padding-inline-end": 0,
                         "use_mobile_padding": false,
@@ -5074,93 +5047,51 @@
                       },
                       "blocks": {}
                     },
-                    "price_BhFC3p": {
-                      "type": "price",
-                      "name": "t:names.product_price",
+                    "collection-card-image": {
+                      "type": "_collection-card-image",
+                      "static": true,
                       "settings": {
-                        "show_sale_price_first": true,
-                        "show_installments": false,
-                        "show_tax_info": false,
-                        "show_price_min": false,
-                        "type_preset": "h6",
-                        "width": "100%",
-                        "alignment": "center",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "color": "var(--color-primary)",
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0,
-                        "use_mobile_padding": false,
-                        "padding-block-start-mobile": 0,
-                        "padding-block-end-mobile": 0,
-                        "padding-inline-start-mobile": 0,
-                        "padding-inline-end-mobile": 0
+                        "image_ratio": "portrait",
+                        "toggle_overlay": false,
+                        "overlay_color": "#00000026",
+                        "overlay_style": "solid",
+                        "gradient_direction": "to top",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_radius": 0
                       },
                       "blocks": {}
                     }
                   },
                   "block_order": [
-                    "product_card_gallery_MqxzmP",
-                    "product_title_PmCHiK",
-                    "price_BhFC3p"
+                    "collection_title_XQPKph"
                   ]
                 },
-                "product_card_LA9DPz": {
-                  "type": "product-card",
-                  "name": "t:names.product_card",
+                "collection_card_7WXGqq": {
+                  "type": "collection-card",
+                  "name": "t:names.collection_card",
                   "settings": {
-                    "product": "10x10-restaurants-branded-canopy-starter-vendor-kits",
-                    "product_card_gap": 10,
+                    "collection": "signs-banners",
+                    "placement": "below_image",
+                    "horizontal_alignment": "center",
+                    "vertical_alignment": "center",
+                    "collection_card_gap": 8,
                     "inherit_color_scheme": false,
-                    "color_scheme": "scheme-1",
+                    "color_scheme": "scheme-0b89a542-75f7-4dfb-95f3-38a06a9e9784",
                     "border": "none",
                     "border_width": 1,
                     "border_opacity": 100,
-                    "border_radius": 10,
-                    "padding-block-start": 24,
-                    "padding-block-end": 24,
-                    "padding-inline-start": 24,
-                    "padding-inline-end": 24,
-                    "use_mobile_padding": false,
-                    "padding-block-start-mobile": 0,
-                    "padding-block-end-mobile": 0,
-                    "padding-inline-start-mobile": 0,
-                    "padding-inline-end-mobile": 0
+                    "border_radius": 10
                   },
                   "blocks": {
-                    "product_card_gallery_z7tPKw": {
-                      "type": "_product-card-gallery",
+                    "collection_title_P7LXXh": {
+                      "type": "collection-title",
                       "settings": {
-                        "image_ratio": "adapt",
-                        "border": "none",
-                        "border_width": 1,
-                        "border_opacity": 100,
-                        "border_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0,
-                        "use_mobile_padding": false,
-                        "padding-block-start-mobile": 0,
-                        "padding-block-end-mobile": 0,
-                        "padding-inline-start-mobile": 0,
-                        "padding-inline-end-mobile": 0
-                      },
-                      "blocks": {}
-                    },
-                    "product_title_e7cN6P": {
-                      "type": "product-title",
-                      "name": "t:names.product_title",
-                      "settings": {
-                        "width": "100%",
+                        "width": "fit-content",
                         "max_width": "normal",
-                        "alignment": "center",
-                        "type_preset": "rte",
+                        "alignment": "left",
+                        "type_preset": "h4",
                         "font": "var(--font-body--family)",
                         "font_size": "1rem",
                         "line_height": "normal",
@@ -5175,8 +5106,8 @@
                         "background": false,
                         "background_color": "#00000026",
                         "corner_radius": 0,
-                        "padding-block-start": 4,
-                        "padding-block-end": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 24,
                         "padding-inline-start": 0,
                         "padding-inline-end": 0,
                         "use_mobile_padding": false,
@@ -5187,93 +5118,51 @@
                       },
                       "blocks": {}
                     },
-                    "price_cPHfhM": {
-                      "type": "price",
-                      "name": "t:names.product_price",
+                    "collection-card-image": {
+                      "type": "_collection-card-image",
+                      "static": true,
                       "settings": {
-                        "show_sale_price_first": true,
-                        "show_installments": false,
-                        "show_tax_info": false,
-                        "show_price_min": false,
-                        "type_preset": "h6",
-                        "width": "100%",
-                        "alignment": "center",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "color": "var(--color-primary)",
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0,
-                        "use_mobile_padding": false,
-                        "padding-block-start-mobile": 0,
-                        "padding-block-end-mobile": 0,
-                        "padding-inline-start-mobile": 0,
-                        "padding-inline-end-mobile": 0
+                        "image_ratio": "portrait",
+                        "toggle_overlay": false,
+                        "overlay_color": "#00000026",
+                        "overlay_style": "solid",
+                        "gradient_direction": "to top",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_radius": 0
                       },
                       "blocks": {}
                     }
                   },
                   "block_order": [
-                    "product_card_gallery_z7tPKw",
-                    "product_title_e7cN6P",
-                    "price_cPHfhM"
+                    "collection_title_P7LXXh"
                   ]
                 },
-                "product_card_APViwd": {
-                  "type": "product-card",
-                  "name": "t:names.product_card",
+                "collection_card_atJghC": {
+                  "type": "collection-card",
+                  "name": "t:names.collection_card",
                   "settings": {
-                    "product": "10x10-restaurants-branded-canopy-starter-vendor-kits",
-                    "product_card_gap": 10,
+                    "collection": "bungee-chairs",
+                    "placement": "below_image",
+                    "horizontal_alignment": "center",
+                    "vertical_alignment": "center",
+                    "collection_card_gap": 8,
                     "inherit_color_scheme": false,
-                    "color_scheme": "scheme-1",
+                    "color_scheme": "scheme-0b89a542-75f7-4dfb-95f3-38a06a9e9784",
                     "border": "none",
                     "border_width": 1,
                     "border_opacity": 100,
-                    "border_radius": 10,
-                    "padding-block-start": 24,
-                    "padding-block-end": 24,
-                    "padding-inline-start": 24,
-                    "padding-inline-end": 24,
-                    "use_mobile_padding": false,
-                    "padding-block-start-mobile": 0,
-                    "padding-block-end-mobile": 0,
-                    "padding-inline-start-mobile": 0,
-                    "padding-inline-end-mobile": 0
+                    "border_radius": 10
                   },
                   "blocks": {
-                    "product_card_gallery_XPBXdd": {
-                      "type": "_product-card-gallery",
+                    "collection_title_7mhCxV": {
+                      "type": "collection-title",
                       "settings": {
-                        "image_ratio": "adapt",
-                        "border": "none",
-                        "border_width": 1,
-                        "border_opacity": 100,
-                        "border_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0,
-                        "use_mobile_padding": false,
-                        "padding-block-start-mobile": 0,
-                        "padding-block-end-mobile": 0,
-                        "padding-inline-start-mobile": 0,
-                        "padding-inline-end-mobile": 0
-                      },
-                      "blocks": {}
-                    },
-                    "product_title_KY4hkU": {
-                      "type": "product-title",
-                      "name": "t:names.product_title",
-                      "settings": {
-                        "width": "100%",
+                        "width": "fit-content",
                         "max_width": "normal",
-                        "alignment": "center",
-                        "type_preset": "rte",
+                        "alignment": "left",
+                        "type_preset": "h4",
                         "font": "var(--font-body--family)",
                         "font_size": "1rem",
                         "line_height": "normal",
@@ -5288,8 +5177,8 @@
                         "background": false,
                         "background_color": "#00000026",
                         "corner_radius": 0,
-                        "padding-block-start": 4,
-                        "padding-block-end": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 24,
                         "padding-inline-start": 0,
                         "padding-inline-end": 0,
                         "use_mobile_padding": false,
@@ -5300,93 +5189,51 @@
                       },
                       "blocks": {}
                     },
-                    "price_9Kn6Ng": {
-                      "type": "price",
-                      "name": "t:names.product_price",
+                    "collection-card-image": {
+                      "type": "_collection-card-image",
+                      "static": true,
                       "settings": {
-                        "show_sale_price_first": true,
-                        "show_installments": false,
-                        "show_tax_info": false,
-                        "show_price_min": false,
-                        "type_preset": "h6",
-                        "width": "100%",
-                        "alignment": "center",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "color": "var(--color-primary)",
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0,
-                        "use_mobile_padding": false,
-                        "padding-block-start-mobile": 0,
-                        "padding-block-end-mobile": 0,
-                        "padding-inline-start-mobile": 0,
-                        "padding-inline-end-mobile": 0
+                        "image_ratio": "portrait",
+                        "toggle_overlay": false,
+                        "overlay_color": "#00000026",
+                        "overlay_style": "solid",
+                        "gradient_direction": "to top",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_radius": 0
                       },
                       "blocks": {}
                     }
                   },
                   "block_order": [
-                    "product_card_gallery_XPBXdd",
-                    "product_title_KY4hkU",
-                    "price_9Kn6Ng"
+                    "collection_title_7mhCxV"
                   ]
                 },
-                "product_card_xeJ8dw": {
-                  "type": "product-card",
-                  "name": "t:names.product_card",
+                "collection_card_LLVkBn": {
+                  "type": "collection-card",
+                  "name": "t:names.collection_card",
                   "settings": {
-                    "product": "10x10-restaurants-branded-canopy-starter-vendor-kits",
-                    "product_card_gap": 10,
+                    "collection": "custom-table-covers",
+                    "placement": "below_image",
+                    "horizontal_alignment": "center",
+                    "vertical_alignment": "center",
+                    "collection_card_gap": 8,
                     "inherit_color_scheme": false,
-                    "color_scheme": "scheme-1",
+                    "color_scheme": "scheme-0b89a542-75f7-4dfb-95f3-38a06a9e9784",
                     "border": "none",
                     "border_width": 1,
                     "border_opacity": 100,
-                    "border_radius": 10,
-                    "padding-block-start": 24,
-                    "padding-block-end": 24,
-                    "padding-inline-start": 24,
-                    "padding-inline-end": 24,
-                    "use_mobile_padding": false,
-                    "padding-block-start-mobile": 0,
-                    "padding-block-end-mobile": 0,
-                    "padding-inline-start-mobile": 0,
-                    "padding-inline-end-mobile": 0
+                    "border_radius": 10
                   },
                   "blocks": {
-                    "product_card_gallery_wCXBqC": {
-                      "type": "_product-card-gallery",
+                    "collection_title_FzXnFG": {
+                      "type": "collection-title",
                       "settings": {
-                        "image_ratio": "adapt",
-                        "border": "none",
-                        "border_width": 1,
-                        "border_opacity": 100,
-                        "border_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0,
-                        "use_mobile_padding": false,
-                        "padding-block-start-mobile": 0,
-                        "padding-block-end-mobile": 0,
-                        "padding-inline-start-mobile": 0,
-                        "padding-inline-end-mobile": 0
-                      },
-                      "blocks": {}
-                    },
-                    "product_title_RaVHPN": {
-                      "type": "product-title",
-                      "name": "t:names.product_title",
-                      "settings": {
-                        "width": "100%",
+                        "width": "fit-content",
                         "max_width": "normal",
-                        "alignment": "center",
-                        "type_preset": "rte",
+                        "alignment": "left",
+                        "type_preset": "h4",
                         "font": "var(--font-body--family)",
                         "font_size": "1rem",
                         "line_height": "normal",
@@ -5401,8 +5248,8 @@
                         "background": false,
                         "background_color": "#00000026",
                         "corner_radius": 0,
-                        "padding-block-start": 4,
-                        "padding-block-end": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 24,
                         "padding-inline-start": 0,
                         "padding-inline-end": 0,
                         "use_mobile_padding": false,
@@ -5413,48 +5260,33 @@
                       },
                       "blocks": {}
                     },
-                    "price_PBwrV9": {
-                      "type": "price",
-                      "name": "t:names.product_price",
+                    "collection-card-image": {
+                      "type": "_collection-card-image",
+                      "static": true,
                       "settings": {
-                        "show_sale_price_first": true,
-                        "show_installments": false,
-                        "show_tax_info": false,
-                        "show_price_min": false,
-                        "type_preset": "h6",
-                        "width": "100%",
-                        "alignment": "center",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "color": "var(--color-primary)",
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0,
-                        "use_mobile_padding": false,
-                        "padding-block-start-mobile": 0,
-                        "padding-block-end-mobile": 0,
-                        "padding-inline-start-mobile": 0,
-                        "padding-inline-end-mobile": 0
+                        "image_ratio": "portrait",
+                        "toggle_overlay": false,
+                        "overlay_color": "#00000026",
+                        "overlay_style": "solid",
+                        "gradient_direction": "to top",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_radius": 0
                       },
                       "blocks": {}
                     }
                   },
                   "block_order": [
-                    "product_card_gallery_wCXBqC",
-                    "product_title_RaVHPN",
-                    "price_PBwrV9"
+                    "collection_title_FzXnFG"
                   ]
                 }
               },
               "block_order": [
-                "product_card_9awqmz",
-                "product_card_LA9DPz",
-                "product_card_APViwd",
-                "product_card_xeJ8dw"
+                "collection_card_rV4bGN",
+                "collection_card_7WXGqq",
+                "collection_card_atJghC",
+                "collection_card_LLVkBn"
               ]
             }
           },
