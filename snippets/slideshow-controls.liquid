@@ -14,6 +14,11 @@
   @param {string} [aspect_ratio] - The aspect ratio of thumbnails, if applicable. defaults to 'adapt'
   @param {string} [class] - Additional classes to apply to the controls
   @param {boolean} [secondary] - Whether the controls are secondary
+  @param {string} [dot_style_type] - { 'default' | 'custom' } The dot style type
+  @param {color} [dot_background_color] - Background color of inactive dots (custom style)
+  @param {color} [dot_active_background_color] - Background color of active dot (custom style)
+  @param {color} [dot_border_color] - Border color of inactive dots (custom style)
+  @param {color} [dot_active_border_color] - Border color of active dot (custom style)
 
   @example
   {%- render 'slideshow-controls', style: 'dots', item_count: 10 -%}
@@ -152,7 +157,17 @@
         <span ref="current">1</span><span class="slash">/</span>{{ item_count -}}
       </div>
     {% when 'dots' %}
-      <ol class="slideshow-controls__{{ style }}">
+      <ol
+        class="slideshow-controls__{{ style }}{% if dot_style_type == 'custom' %} slideshow-controls__dots--custom{% endif %}"
+        {% if dot_style_type == 'custom' %}
+          style="
+            --dot-bg-color: {{ dot_background_color }};
+            --dot-active-bg-color: {{ dot_active_background_color }};
+            --dot-border-color: {{ dot_border_color }};
+            --dot-active-border-color: {{ dot_active_border_color }};
+          "
+        {% endif %}
+      >
         {% for i in (1..item_count) %}
           <li>
             <button
