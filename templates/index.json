@@ -6059,7 +6059,7 @@
               "static": true,
               "settings": {
                 "label": "Read More",
-                "link": "",
+                "link": "{{ closest.article.url }}",
                 "open_in_new_tab": false,
                 "style_class": "link",
                 "button_size": "default",
