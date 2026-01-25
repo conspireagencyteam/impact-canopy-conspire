@@ -1,0 +1,100 @@
+{%- doc -%}
+  A marquee item block that acts as a single column/item in the marquee.
+  Accepts group blocks as children.
+
+  @parent marquee-blur
+{%- enddoc -%}
+
+{%- capture children %}
+  {% content_for 'blocks' %}
+{% endcapture %}
+
+{% assign block_settings = block.settings %}
+
+<div
+  class="marquee-item"
+  style="
+    --item-gap: {{ block_settings.gap }}px;
+    --item-alignment: {{ block_settings.alignment }};
+  "
+  {{ block.shopify_attributes }}
+>
+  {{- children -}}
+</div>
+
+{% stylesheet %}
+  .marquee-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--item-gap, 12px);
+    align-items: var(--item-alignment, center);
+    justify-content: center;
+    flex-shrink: 0;
+    height: 100%;
+  }
+
+  /* Ensure all items in the row have equal height */
+  .marquee-blur__repeated-items {
+    align-items: stretch;
+  }
+
+  .marquee-item > * {
+    height: 100%;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Marquee Item",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "group"
+    },
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "settings": [
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap between elements",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marquee Item",
+      "category": "t:categories.layout"
+    }
+  ]
+}
+{% endschema %}

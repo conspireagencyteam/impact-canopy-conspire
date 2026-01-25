@@ -1,0 +1,499 @@
+<script
+  src="{{ 'marquee-blur.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+
+{% assign block_settings = block.settings %}
+{% assign gap_between_elements = block_settings.gap_between_elements %}
+
+<marquee-blur-component
+  class="
+    marquee-blur
+    spacing-style
+    gap-style
+    {% if block_settings.inherit_color_scheme == false %}color-{{ block_settings.color_scheme }}{% endif %}
+  "
+  style="
+    {%- render 'spacing-style', settings: block_settings %};
+    {% render 'gap-style', value: gap_between_elements, name: 'marquee-gap' %}
+    --marquee-direction: {{ block_settings.movement_direction }};
+    --blur-width: {{ block_settings.blur_width }}%;
+    --blur-intensity: {{ block_settings.blur_intensity }}px;
+    --columns-desktop: {{ block_settings.columns_desktop }};
+    --columns-mobile: {{ block_settings.columns_mobile }};
+    {%- if block_settings.transparent_background == true -%}background-color: transparent;{%- endif -%}
+  "
+  data-speed-factor="{{ block_settings.speed_factor }}"
+  data-movement-direction="{{ block_settings.movement_direction }}"
+  data-columns-desktop="{{ block_settings.columns_desktop }}"
+  data-columns-mobile="{{ block_settings.columns_mobile }}"
+>
+  <div class="marquee-blur__blur-overlay marquee-blur__blur-overlay--left"></div>
+  <div class="marquee-blur__blur-overlay marquee-blur__blur-overlay--right"></div>
+
+  <div
+    class="marquee-blur__wrapper"
+    ref="wrapper"
+  >
+    <div
+      class="marquee-blur__content"
+      ref="content"
+    >
+      <div
+        class="marquee-blur__repeated-items"
+        ref="marqueeItems"
+      >
+        {% content_for 'blocks' %}
+      </div>
+    </div>
+  </div>
+</marquee-blur-component>
+
+{% stylesheet %}
+  marquee-blur-component {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--color-background);
+    position: relative;
+  }
+
+  .marquee-blur__blur-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: var(--blur-width, 15%);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .marquee-blur__blur-overlay--left {
+    left: 0;
+    background: linear-gradient(
+      to right,
+      var(--color-background, #fff) 0%,
+      transparent 100%
+    );
+  }
+
+  .marquee-blur__blur-overlay--right {
+    right: 0;
+    background: linear-gradient(
+      to left,
+      var(--color-background, #fff) 0%,
+      transparent 100%
+    );
+  }
+
+  .marquee-blur__wrapper {
+    display: flex;
+    gap: var(--marquee-gap);
+    width: fit-content;
+    white-space: nowrap;
+  }
+
+  .marquee-blur__content {
+    min-width: 100vw;
+    display: flex;
+    gap: var(--marquee-gap);
+  }
+
+  .marquee-blur__content :is(p, h1, h2, h3, h4, h5, h6) {
+    white-space: nowrap;
+  }
+
+  .marquee-blur__repeated-items {
+    display: flex;
+    gap: var(--marquee-gap);
+    align-items: center;
+    min-width: 100vw;
+  }
+
+  /* Each item takes equal width based on columns */
+  .marquee-blur__repeated-items > .marquee-item {
+    flex: 0 0 calc((100vw - (var(--columns-mobile, 3) - 1) * var(--marquee-gap, 48px)) / var(--columns-mobile, 3));
+    max-width: calc((100vw - (var(--columns-mobile, 3) - 1) * var(--marquee-gap, 48px)) / var(--columns-mobile, 3));
+  }
+
+  @media screen and (min-width: 750px) {
+    .marquee-blur__repeated-items > .marquee-item {
+      flex: 0 0 calc((100vw - (var(--columns-desktop, 8) - 1) * var(--marquee-gap, 48px)) / var(--columns-desktop, 8));
+      max-width: calc((100vw - (var(--columns-desktop, 8) - 1) * var(--marquee-gap, 48px)) / var(--columns-desktop, 8));
+    }
+  }
+
+  .marquee-blur__repeated-items > * {
+    align-content: center;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    marquee-blur-component:not([data-disabled]) .marquee-blur__wrapper {
+      animation: marquee-blur-motion var(--marquee-speed) linear infinite var(--marquee-direction);
+    }
+  }
+
+  @keyframes marquee-blur-motion {
+    to {
+      transform: translate3d(calc(-50% - (var(--marquee-gap) / 2)), 0, 0);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Marquee with Blur",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "_marquee-item"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Columns"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns (desktop)",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 8,
+      "info": "Number of items visible at once on desktop"
+    },
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "label": "Columns (mobile)",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3,
+      "info": "Number of items visible at once on mobile"
+    },
+    {
+      "type": "header",
+      "content": "t:content.motion"
+    },
+    {
+      "type": "select",
+      "id": "movement_direction",
+      "label": "t:settings.motion_direction",
+      "options": [
+        {
+          "value": "reverse",
+          "label": "t:options.forward"
+        },
+        {
+          "value": "normal",
+          "label": "t:options.reverse"
+        }
+      ],
+      "default": "reverse"
+    },
+    {
+      "type": "range",
+      "id": "speed_factor",
+      "label": "Speed",
+      "info": "Lower is faster",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "default": 25
+    },
+    {
+      "type": "header",
+      "content": "Blur Effect"
+    },
+    {
+      "type": "range",
+      "id": "blur_width",
+      "label": "Blur width",
+      "info": "Width of the blur overlay on each side",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "unit": "%",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "blur_intensity",
+      "label": "Blur intensity",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "checkbox",
+      "id": "inherit_color_scheme",
+      "label": "t:settings.inherit_color_scheme",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "scheme-1",
+      "visible_if": "{{ block.settings.inherit_color_scheme == false }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "transparent_background",
+      "label": "t:settings.transparent_background",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "gap_between_elements",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "t:content.1_mobile_padding"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_mobile_padding",
+      "label": "t:settings.1_use_mobile_padding",
+      "default": false,
+      "info": "t:info.1_use_mobile_padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start-mobile",
+      "label": "t:settings.1_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.use_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end-mobile",
+      "label": "t:settings.1_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.use_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start-mobile",
+      "label": "t:settings.1_left_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.use_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end-mobile",
+      "label": "t:settings.1_right_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.use_mobile_padding == true }}"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marquee with Blur",
+      "category": "t:categories.decorative",
+      "blocks": {
+        "item1": {
+          "type": "_marquee-item",
+          "blocks": {
+            "group1": {
+              "type": "group",
+              "blocks": {
+                "text1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Item 1</p>"
+                  }
+                }
+              },
+              "block_order": ["text1"]
+            }
+          },
+          "block_order": ["group1"]
+        },
+        "item2": {
+          "type": "_marquee-item",
+          "blocks": {
+            "group2": {
+              "type": "group",
+              "blocks": {
+                "text2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Item 2</p>"
+                  }
+                }
+              },
+              "block_order": ["text2"]
+            }
+          },
+          "block_order": ["group2"]
+        },
+        "item3": {
+          "type": "_marquee-item",
+          "blocks": {
+            "group3": {
+              "type": "group",
+              "blocks": {
+                "text3": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Item 3</p>"
+                  }
+                }
+              },
+              "block_order": ["text3"]
+            }
+          },
+          "block_order": ["group3"]
+        },
+        "item4": {
+          "type": "_marquee-item",
+          "blocks": {
+            "group4": {
+              "type": "group",
+              "blocks": {
+                "text4": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Item 4</p>"
+                  }
+                }
+              },
+              "block_order": ["text4"]
+            }
+          },
+          "block_order": ["group4"]
+        },
+        "item5": {
+          "type": "_marquee-item",
+          "blocks": {
+            "group5": {
+              "type": "group",
+              "blocks": {
+                "text5": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Item 5</p>"
+                  }
+                }
+              },
+              "block_order": ["text5"]
+            }
+          },
+          "block_order": ["group5"]
+        },
+        "item6": {
+          "type": "_marquee-item",
+          "blocks": {
+            "group6": {
+              "type": "group",
+              "blocks": {
+                "text6": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Item 6</p>"
+                  }
+                }
+              },
+              "block_order": ["text6"]
+            }
+          },
+          "block_order": ["group6"]
+        },
+        "item7": {
+          "type": "_marquee-item",
+          "blocks": {
+            "group7": {
+              "type": "group",
+              "blocks": {
+                "text7": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Item 7</p>"
+                  }
+                }
+              },
+              "block_order": ["text7"]
+            }
+          },
+          "block_order": ["group7"]
+        },
+        "item8": {
+          "type": "_marquee-item",
+          "blocks": {
+            "group8": {
+              "type": "group",
+              "blocks": {
+                "text8": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Item 8</p>"
+                  }
+                }
+              },
+              "block_order": ["text8"]
+            }
+          },
+          "block_order": ["group8"]
+        }
+      },
+      "block_order": ["item1", "item2", "item3", "item4", "item5", "item6", "item7", "item8"]
+    }
+  ]
+}
+{% endschema %}
