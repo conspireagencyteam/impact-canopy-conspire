@@ -787,7 +787,7 @@
               "settings": {
                 "heading": "Complete your purchase",
                 "heading_preset": "h5",
-                "max_products": 2,
+                "max_products": 10,
                 "gap": 0,
                 "button_text": "Add",
                 "button_style": "button-secondary",
