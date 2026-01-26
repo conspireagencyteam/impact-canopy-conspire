@@ -5267,7 +5267,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "View All Projects",
-                "link": "shopify://collections/all",
+                "link": "{{ closest.blog.url }}",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "button_size": "default",
