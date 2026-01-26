@@ -6623,8 +6623,8 @@
               "name": "t:names.button",
               "settings": {
                 "label": "Download Full Spec Sheet",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
+                "link": "https://cdn.shopify.com/s/files/1/0260/9522/2843/files/18_FT_AIR_DANCER.pdf?v=1768928335",
+                "open_in_new_tab": true,
                 "style_class": "button",
                 "button_size": "default",
                 "width": "fit-content",
@@ -6638,7 +6638,7 @@
                 "show_underline": false,
                 "underline_thickness": 1,
                 "underline_offset": 2,
-                "icon": "arrow",
+                "icon": "pdf",
                 "icon_size": 20,
                 "icon_position": "right"
               },
