@@ -474,6 +474,46 @@
               },
               "blocks": {}
             },
+            "static_form_field_7DEbKB": {
+              "type": "_static-form-field",
+              "name": "Static Form Field",
+              "settings": {
+                "show_file_upload": true,
+                "file_upload_label": "Upload file",
+                "file_upload_tooltip": "You can upload your file here",
+                "file_button_text": "Choose file",
+                "file_upload_name": "file_upload",
+                "file_upload_accept": ".pdf,.jpg,.jpeg,.png,.gif",
+                "show_textarea": true,
+                "textarea_label": "Comments about design",
+                "textarea_placeholder": "Enter your design comments here...",
+                "textarea_name": "design_comments",
+                "textarea_rows": 5,
+                "textarea_required": false,
+                "show_checkbox": true,
+                "checkbox_label": "I have an event",
+                "checkbox_name": "has_event",
+                "checkbox_required": false
+              },
+              "blocks": {}
+            },
+            "divider_ephR9K": {
+              "type": "_divider",
+              "name": "t:names.divider",
+              "settings": {
+                "thickness": 1,
+                "corner_radius": "square",
+                "width_percent": 100,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "use_mobile_padding": false,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
+              },
+              "blocks": {}
+            },
             "group_ph4zJ9": {
               "type": "group",
               "name": "Price Wrapper",
@@ -599,6 +639,23 @@
                 "text_Qh3wif",
                 "price_3pRmPQ"
               ]
+            },
+            "divider_LA6KwY": {
+              "type": "_divider",
+              "name": "t:names.divider",
+              "settings": {
+                "thickness": 1,
+                "corner_radius": "square",
+                "width_percent": 100,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "use_mobile_padding": false,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
+              },
+              "blocks": {}
             },
             "buy_buttons_eYQEYi": {
               "type": "buy-buttons",
@@ -1392,7 +1449,10 @@
             "metaobject_pdp_PF8hVT",
             "divider_VJhene",
             "variant_picker_R3rGDr",
+            "static_form_field_7DEbKB",
+            "divider_ephR9K",
             "group_ph4zJ9",
+            "divider_LA6KwY",
             "buy_buttons_eYQEYi",
             "cross_sell_NaXebJ",
             "accordion_QBrT7f"
