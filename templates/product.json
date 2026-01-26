@@ -1169,6 +1169,7 @@
                             },
                             "accelerated-quote": {
                               "type": "_quote-form-button",
+                              "disabled": true,
                               "static": true,
                               "settings": {
                                 "button_type": "popup",
