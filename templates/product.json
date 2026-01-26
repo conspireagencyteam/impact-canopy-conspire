@@ -677,7 +677,7 @@
                     "text_R9rqVL": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Our goal is for every customer to be totally satisfied with their purchase. If this isn't the case, let us know and we'll do our best to work with you to make it right.</p>",
+                        "text": "{{ closest.product.metafields.custom.canopy_top | metafield_tag }}",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -727,7 +727,7 @@
                     "text_qhUCbV": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
+                        "text": "{{ closest.product.metafields.custom.canopy_frame | metafield_tag }}",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -768,7 +768,7 @@
                 "accordion_row_qrgHAp": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Manufacturing",
+                    "heading": "9' Wing Flag",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -777,7 +777,7 @@
                     "text_Mypi3r": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
+                        "text": "{{ closest.product.metafields.custom[\"9_wing_flag\"] | metafield_tag }}",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -814,12 +814,114 @@
                   "block_order": [
                     "text_Mypi3r"
                   ]
+                },
+                "accordion_row_kNVRDH": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Table Cover",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_GDPjcY": {
+                      "type": "text",
+                      "settings": {
+                        "text": "{{ closest.product.metafields.custom.table_cover | metafield_tag }}",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "custom_color": "#000000",
+                        "use_mobile_typography": false,
+                        "font_size_mobile": "1rem",
+                        "line_height_mobile": "normal",
+                        "letter_spacing_mobile": "normal",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0,
+                        "use_mobile_padding": false,
+                        "padding-block-start-mobile": 0,
+                        "padding-block-end-mobile": 0,
+                        "padding-inline-start-mobile": 0,
+                        "padding-inline-end-mobile": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_GDPjcY"
+                  ]
+                },
+                "accordion_row_gTWTFa": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Black Wall",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_Npfkf3": {
+                      "type": "text",
+                      "settings": {
+                        "text": "{{ closest.product.metafields.custom.black_wall_options | metafield_tag }}",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "custom_color": "#000000",
+                        "use_mobile_typography": false,
+                        "font_size_mobile": "1rem",
+                        "line_height_mobile": "normal",
+                        "letter_spacing_mobile": "normal",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0,
+                        "use_mobile_padding": false,
+                        "padding-block-start-mobile": 0,
+                        "padding-block-end-mobile": 0,
+                        "padding-inline-start-mobile": 0,
+                        "padding-inline-end-mobile": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_Npfkf3"
+                  ]
                 }
               },
               "block_order": [
                 "accordion_row_jMQB9i",
                 "accordion_row_3d6xzJ",
-                "accordion_row_qrgHAp"
+                "accordion_row_qrgHAp",
+                "accordion_row_kNVRDH",
+                "accordion_row_gTWTFa"
               ]
             }
           },
