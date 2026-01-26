@@ -1,0 +1,272 @@
+{%- doc -%}
+  Cross-sell block that displays products from the metafield custom.product_accessories.
+  Each product card has: image, title/price group, and buy button.
+{%- enddoc -%}
+
+{% liquid
+  assign block_settings = block.settings
+  assign accessories = closest.product.metafields.custom.product_accessories.value
+%}
+
+{% if accessories != blank and accessories.size > 0 %}
+  <div
+    class="cross-sell cross-sell--{{ block.id }} spacing-style"
+    style="{% render 'spacing-style', settings: block_settings %}"
+    {{ block.shopify_attributes }}
+  >
+    {% if block_settings.heading != blank %}
+      <div class="cross-sell__heading {{ block_settings.heading_preset }}">
+        {{ block_settings.heading }}
+      </div>
+    {% endif %}
+
+    <div class="cross-sell__products" style="gap: {{ block_settings.gap }}px;">
+      {% for accessory_product in accessories limit: block_settings.max_products %}
+        <div class="cross-sell__product-card">
+          {% content_for 'block', id: 'buybuttonstatic', type: '_product-card-group' %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+{% stylesheet %}
+  .cross-sell {
+    width: 100%;
+  }
+
+  .cross-sell__heading {
+    margin-bottom: 1rem;
+  }
+
+  .cross-sell__products {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cross-sell__product-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgb(var(--color-border-rgb) / var(--opacity-border));
+  }
+
+  .cross-sell__product-card:last-child {
+    border-bottom: none;
+  }
+
+  .cross-sell__image-link {
+    flex-shrink: 0;
+  }
+
+  .cross-sell__image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  .cross-sell__image-placeholder {
+    width: 80px;
+    height: 80px;
+    background: rgb(var(--color-foreground-rgb) / 0.1);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cross-sell__image-placeholder svg {
+    width: 50%;
+    height: 50%;
+    opacity: 0.5;
+  }
+
+  .cross-sell__info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cross-sell__title {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-foreground);
+    text-decoration: none;
+    margin-bottom: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .cross-sell__title:hover {
+    text-decoration: underline;
+  }
+
+  .cross-sell__price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+  }
+
+  .cross-sell__compare-price {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+
+  .cross-sell__current-price {
+    font-weight: 600;
+  }
+
+  .cross-sell__action {
+    flex-shrink: 0;
+  }
+
+  .cross-sell__form {
+    margin: 0;
+  }
+
+  .cross-sell__add-button {
+    padding: 8px 16px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .cross-sell__add-button--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Cross Sell",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Complete your purchase"
+    },
+    {
+      "type": "select",
+      "id": "heading_preset",
+      "label": "Heading style",
+      "options": [
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h5"
+    },
+    {
+      "type": "range",
+      "id": "max_products",
+      "label": "Maximum products",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap between products",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Add"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        {
+          "value": "button",
+          "label": "Primary"
+        },
+        {
+          "value": "button-secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "button-tertiary",
+          "label": "Tertiary"
+        }
+      ],
+      "default": "button-secondary"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "Left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "Right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cross Sell",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}
