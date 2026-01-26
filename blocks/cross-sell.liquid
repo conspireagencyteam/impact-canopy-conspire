@@ -14,16 +14,12 @@
     style="{% render 'spacing-style', settings: block_settings %}"
     {{ block.shopify_attributes }}
   >
-    {% if block_settings.heading != blank %}
-      <div class="cross-sell__heading {{ block_settings.heading_preset }}">
-        {{ block_settings.heading }}
-      </div>
-    {% endif %}
+    {% content_for 'block', id: 'textstatic', type: 'text' %}
 
     <div class="cross-sell__products" style="gap: {{ block_settings.gap }}px;">
       {% for accessory_product in accessories limit: block_settings.max_products %}
         <div class="cross-sell__product-card">
-          {% content_for 'block', id: 'buybuttonstatic', type: '_product-card-group' %}
+          {% content_for 'block', id: 'buybuttonstatic', type: '_product-card-group', closest.product: accessory_product %}
         </div>
       {% endfor %}
     </div>
@@ -48,8 +44,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 12px 0;
-    border-bottom: 1px solid rgb(var(--color-border-rgb) / var(--opacity-border));
+    padding:0 0 12px;
   }
 
   .cross-sell__product-card:last-child {
