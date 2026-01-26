@@ -2064,6 +2064,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   opacity: 0.4;
   text-decoration-line: line-through;
   text-decoration-thickness: 1.5px;
+  font-weight: 400;
 }
 
 .card-gallery {
@@ -2542,7 +2543,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
 
 /* Quantity selector */
 .quantity-selector {
-  --quantity-selector-width: 200px;
+  --quantity-selector-width: 124px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -4073,4 +4074,13 @@ text-component[shimmer]::after {
 .itatic-orange b, .itatic-orange strong, .itatic-orange em {
   font-style: normal;
   color: #EE7623;
+}
+
+.list-check ul {
+  list-style: none;
+  padding-left: 0;
+}
+.list-check ul li::before {
+  content: "✓";
+  margin-right: 6px;
 }

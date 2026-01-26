@@ -7,6 +7,7 @@
   @param {object} children - The children of the product card
   @param {object} [block] - The block object
   @param {number} [product_card_gap] - The gap between the product card children (overrides block settings)
+  @param {string} [layout_orientation] - Layout orientation: 'vertical' or 'horizontal'
 {%- enddoc -%}
 
 {% assign block_settings = block.settings %}
@@ -33,6 +34,7 @@
 
   assign product_card_id = 'product-card-link-' | append: block.id | append: '-' | append: product.id
   assign product_card_gap_value = product_card_gap | default: block_settings.product_card_gap
+  assign layout_orientation_value = layout_orientation | default: block_settings.layout_orientation | default: 'column'
 
   # Logic to determine which variant URL to use (matching swatch selection logic)
   assign variant_to_link = product.selected_or_first_available_variant
@@ -125,7 +127,7 @@
     class="
       product-card__content
       layout-panel-flex
-      layout-panel-flex--column
+      layout-panel-flex--{{ layout_orientation_value }}
       product-grid__card
       spacing-style
       border-style

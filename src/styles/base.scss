@@ -4427,3 +4427,14 @@ text-component {
     color: #EE7623;
   }
 }
+
+.list-check ul {
+  list-style: none;
+  padding-left: 0;
+  li {
+    &::before {
+      content: '✓';
+      margin-right: 6px;
+    }
+  }
+}

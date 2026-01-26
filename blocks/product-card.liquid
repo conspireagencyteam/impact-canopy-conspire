@@ -6,7 +6,7 @@
   {% content_for 'blocks', closest.product: product %}
 {% endcapture %}
 
-{% render 'product-card', children: children, product: product %}
+{% render 'product-card', children: children, product: product, layout_orientation: block.settings.layout_orientation %}
 
 {% schema %}
 {
@@ -49,6 +49,22 @@
       "type": "product",
       "id": "product",
       "label": "t:settings.product"
+    },
+    {
+      "type": "select",
+      "id": "layout_orientation",
+      "label": "Layout orientation",
+      "options": [
+        {
+          "value": "column",
+          "label": "Vertical"
+        },
+        {
+          "value": "row",
+          "label": "Horizontal"
+        }
+      ],
+      "default": "column"
     },
     {
       "type": "range",
