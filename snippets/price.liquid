@@ -5,6 +5,14 @@
   @param {product} product_resource - The product to render
   @param {boolean} [show_unit_price] - Whether to show the unit price
   @param {boolean} [show_sale_price_first] - Whether to show the sale price first
+  @param {boolean} [show_save_value] - Whether to show the save value badge
+  @param {string} [save_value_type] - Type of save value: 'percent' or 'amount'
+  @param {string} [save_value_position] - Position of save badge: 'before' or 'after'
+  @param {number} [save_badge_border_radius] - Border radius for save badge
+  @param {string} [save_badge_background] - Background color for save badge
+  @param {string} [save_badge_text_color] - Text color for save badge
+  @param {string} [save_badge_text_transform] - Text transform for save badge
+  @param {boolean} [show_only_save_value] - Hide price and only show save badge
 {%- enddoc -%}
 
 {%- liquid
@@ -13,22 +21,55 @@
   assign show_price_min = show_price_min | default: false
   assign selected_variant = product_resource.selected_or_first_available_variant
 
+  # Save badge defaults
+  assign show_save_value = show_save_value | default: false
+  assign save_value_type = save_value_type | default: 'percent'
+  assign save_value_position = save_value_position | default: 'after'
+  assign save_badge_border_radius = save_badge_border_radius | default: 4
+  assign save_badge_background = save_badge_background | default: '#dc2626'
+  assign save_badge_text_color = save_badge_text_color | default: '#ffffff'
+  assign save_badge_text_transform = save_badge_text_transform | default: 'none'
+  assign show_only_save_value = show_only_save_value | default: false
+
   # Determine if we should show minimum price with "From" prefix
   assign use_price_min = show_price_min
 
   # Set price values based on whether we're showing min price or selected variant price
   if use_price_min
-    assign price = product_resource.price_min
-    assign compare_at_price = product_resource.compare_at_price_min
+    assign price_raw = product_resource.price_min
+    assign compare_at_price_raw = product_resource.compare_at_price_min
   else
-    assign price = selected_variant.price
-    assign compare_at_price = selected_variant.compare_at_price
+    assign price_raw = selected_variant.price
+    assign compare_at_price_raw = selected_variant.compare_at_price
   endif
 
   assign show_compare_price = false
-  if compare_at_price > price
+  if compare_at_price_raw > price_raw
     assign show_compare_price = true
   endif
+
+  # Calculate save value before formatting prices
+  assign save_value_text = ''
+  if show_save_value and show_compare_price
+    assign save_amount = compare_at_price_raw | minus: price_raw
+    if save_value_type == 'percent'
+      assign save_percent = save_amount | times: 100.0 | divided_by: compare_at_price_raw | round
+      assign save_value_text = 'Save ' | append: save_percent | append: '%'
+    else
+      assign save_amount_formatted = save_amount | money
+      assign save_value_text = 'Save ' | append: save_amount_formatted
+    endif
+  endif
+
+  # Determine if we should hide prices
+  assign hide_prices = false
+  if show_only_save_value and show_compare_price and show_save_value
+    assign hide_prices = true
+  endif
+
+  # Now format the prices for display
+  assign price = price_raw
+  assign compare_at_price = compare_at_price_raw
 
   if product_resource == blank
     assign price = 1999
@@ -60,29 +101,53 @@
   endif
 -%}
 
+{%- capture save_badge -%}
+  {%- if show_save_value and show_compare_price and save_value_text != '' -%}
+    <span class="save-badge" style="
+      display: inline-block;
+      padding: 0.25em 0.5em;
+      border-radius: {{ save_badge_border_radius }}px;
+      background-color: {{ save_badge_background }};
+      color: {{ save_badge_text_color }};
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: {{ save_badge_text_transform }};
+      margin-inline: 0.5em;
+      white-space: nowrap;
+    ">{{ save_value_text }}</span>
+  {%- endif -%}
+{%- endcapture -%}
+
 <div ref="priceContainer">
-  {% if show_sale_price_first == false and show_compare_price %}
-    <span role="group">
-      <span class="visually-hidden">{{ 'content.price_regular' | t }}&nbsp;</span>
-      <span class="compare-at-price">{{- compare_at_price -}}</span>
-    </span>
-  {% endif %}
+  {% if save_value_position == 'before' %}{{ save_badge }}{% endif %}
 
-  {% if show_compare_price %}
-    <span role="group">
-      <span class="visually-hidden">{{ 'content.price_sale' | t }}&nbsp;</span>
+  {% unless hide_prices %}
+    {% if show_sale_price_first == false and show_compare_price %}
+      <span role="group">
+        <span class="visually-hidden">{{ 'content.price_regular' | t }}&nbsp;</span>
+        <span class="compare-at-price">{{- compare_at_price -}}</span>
+      </span>
+    {% endif %}
+
+    {% if show_compare_price %}
+      <span role="group">
+        <span class="visually-hidden">{{ 'content.price_sale' | t }}&nbsp;</span>
+        <span class="price">{{ price | default: '&nbsp;' }}</span>
+      </span>
+    {% else %}
       <span class="price">{{ price | default: '&nbsp;' }}</span>
-    </span>
-  {% else %}
-    <span class="price">{{ price | default: '&nbsp;' }}</span>
-  {% endif %}
+    {% endif %}
 
-  {% if show_sale_price_first == true and show_compare_price %}
-    <span role="group">
-      <span class="visually-hidden">{{ 'content.price_regular' | t }}&nbsp;</span>
-      <span class="compare-at-price">{{- compare_at_price -}}</span>
-    </span>
-  {% endif %}
+    {% if show_sale_price_first == true and show_compare_price %}
+      <span role="group">
+        <span class="visually-hidden">{{ 'content.price_regular' | t }}&nbsp;</span>
+        <span class="compare-at-price">{{- compare_at_price -}}</span>
+      </span>
+    {% endif %}
+  {% endunless %}
+
+  {% if save_value_position == 'after' %}{{ save_badge }}{% endif %}
+
   {%- if selected_variant.unit_price and show_unit_price %}
     {%- liquid
       if product.handle == closest.product.handle and settings.currency_code_enabled_product_pages

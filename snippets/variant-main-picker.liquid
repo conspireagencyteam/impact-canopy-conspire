@@ -148,7 +148,7 @@
           %}
 
           <div class="variant-option variant-option--dropdowns">
-            <label for="Option-{{ block.id }}-{{ forloop.index0 }}">{{ product_option.name | escape }}</label>
+            <label for="Option-{{ block.id }}-{{ forloop.index0 }}"><b>{{ product_option.name | escape }}</b></label>
             <div
               class="variant-option__select-wrapper"
               style="
@@ -222,6 +222,12 @@
     --options-border-radius: var(--variant-picker-button-radius);
     --options-border-width: var(--variant-picker-button-border-width);
     --variant-option-padding-inline: var(--padding-md);
+  }
+
+  .variant-option label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing:  -0.26px;
   }
 
   .variant-option--swatches {

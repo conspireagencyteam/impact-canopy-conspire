@@ -49,7 +49,15 @@
     show_unit_price: true,
     product_resource: product_resource,
     show_sale_price_first: block_settings.show_sale_price_first,
-    show_price_min: block_settings.show_price_min
+    show_price_min: block_settings.show_price_min,
+    show_save_value: block_settings.show_save_value,
+    save_value_type: block_settings.save_value_type,
+    save_value_position: block_settings.save_value_position,
+    save_badge_border_radius: block_settings.save_badge_border_radius,
+    save_badge_background: block_settings.save_badge_background,
+    save_badge_text_color: block_settings.save_badge_text_color,
+    save_badge_text_transform: block_settings.save_badge_text_transform,
+    show_only_save_value: block_settings.show_only_save_value
   %}
 
   {% if block_settings.show_tax_info %}
@@ -138,6 +146,101 @@
       "label": "Show minimum price",
       "info": "Display 'From' followed by the minimum price for products with multiple variants",
       "default": false
+    },
+    {
+      "type": "header",
+      "content": "Save Badge"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_save_value",
+      "label": "Show save value",
+      "info": "Display save amount or percentage when product is on sale",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_only_save_value",
+      "label": "Show only save value",
+      "info": "Hide price and only show the save badge when product is on sale",
+      "default": false,
+      "visible_if": "{{ block.settings.show_save_value == true }}"
+    },
+    {
+      "type": "select",
+      "id": "save_value_type",
+      "label": "Save value type",
+      "options": [
+        {
+          "value": "percent",
+          "label": "Percent (Save 10%)"
+        },
+        {
+          "value": "amount",
+          "label": "Amount (Save $10)"
+        }
+      ],
+      "default": "percent",
+      "visible_if": "{{ block.settings.show_save_value == true }}"
+    },
+    {
+      "type": "select",
+      "id": "save_value_position",
+      "label": "Save badge position",
+      "options": [
+        {
+          "value": "before",
+          "label": "Before price"
+        },
+        {
+          "value": "after",
+          "label": "After price"
+        }
+      ],
+      "default": "after",
+      "visible_if": "{{ block.settings.show_save_value == true }}"
+    },
+    {
+      "type": "range",
+      "id": "save_badge_border_radius",
+      "label": "Save badge border radius",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 4,
+      "visible_if": "{{ block.settings.show_save_value == true }}"
+    },
+    {
+      "type": "color",
+      "id": "save_badge_background",
+      "label": "Save badge background",
+      "default": "#dc2626",
+      "visible_if": "{{ block.settings.show_save_value == true }}"
+    },
+    {
+      "type": "color",
+      "id": "save_badge_text_color",
+      "label": "Save badge text color",
+      "default": "#ffffff",
+      "visible_if": "{{ block.settings.show_save_value == true }}"
+    },
+    {
+      "type": "select",
+      "id": "save_badge_text_transform",
+      "label": "Save badge text transform",
+      "options": [
+        {
+          "value": "none",
+          "label": "Default"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        }
+      ],
+      "default": "none",
+      "visible_if": "{{ block.settings.show_save_value == true }}"
     },
     {
       "type": "header",

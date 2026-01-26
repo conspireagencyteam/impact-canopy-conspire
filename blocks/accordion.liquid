@@ -24,22 +24,26 @@
   }
 
   .accordion accordion-custom:not(:last-child) {
-    margin-bottom: 1.2rem;
     display: block;
   }
   .accordion--dividers accordion-custom details{
-    border-radius: 1rem;
-    border: 1px solid var(--color-border);
+    border-radius: 0;
+    border-top: 1px solid #ccc;
+  }
+
+  .accordion accordion-custom:last-child details {
+    display: block;
+    border-bottom: 1px solid #ccc;
   }
 
   .accordion--dividers accordion-custom details summary {
-    padding: 1.5rem;
-    letter-spacing: -1.44px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .accordion--dividers accordion-custom details .details-content {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
   }
 
   /* When accordion borders are not set, show fallback borders */
