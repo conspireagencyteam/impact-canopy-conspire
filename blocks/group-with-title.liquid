@@ -1,4 +1,11 @@
 {% style %}
+  .group-block-{{ block.id }} {
+    position: relative;
+    overflow: visible !important;
+  }
+  .group-block-{{ block.id }} .group-block-content {
+    position: initial;
+  }
   .group-title-{{ block.id }} {
     position: absolute;
     top: {{ block.settings.group_title_top }}%;
@@ -7,14 +14,12 @@
     z-index: 10;
   }
 {% endstyle %}
-
-{{  }}
 {%- capture children %}
   <div class="group-title-{{ block.id }}">{% content_for 'block',id: 'statictitlegroup', type: 'text' %}</div>
   {% content_for 'blocks' %}
 {% endcapture %}
 
-{% render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
+{% render 'group-title', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
  
 {% schema %}
 {
