@@ -63,7 +63,7 @@
 
   # Determine if we should hide prices
   assign hide_prices = false
-  if show_only_save_value and show_compare_price and show_save_value
+  if show_only_save_value
     assign hide_prices = true
   endif
 
@@ -105,7 +105,7 @@
   {%- if show_save_value and show_compare_price and save_value_text != '' -%}
     <span class="save-badge" style="
       display: inline-block;
-      padding: 0.25em 0.5em;
+      padding: 4px 12px;
       border-radius: {{ save_badge_border_radius }}px;
       background-color: {{ save_badge_background }};
       color: {{ save_badge_text_color }};
