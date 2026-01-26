@@ -432,7 +432,7 @@
           "input_background": "#ffffff",
           "input_text_color": "#490e67",
           "input_border_color": "#490e67",
-          "input_hover_background": "#490e67db",
+          "input_hover_background": "#fafafa",
           "variant_background_color": "#ffffff",
           "variant_text_color": "#490e67",
           "variant_border_color": "#490e67db",
