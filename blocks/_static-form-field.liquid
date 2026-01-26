@@ -1,0 +1,456 @@
+{%- doc -%}
+  Static form field block with file upload, textarea, and checkbox.
+  - File upload: Modern button style with tooltip
+  - Textarea: For design comments
+  - Checkbox: For event acknowledgment
+{%- enddoc -%}
+
+{% assign block_settings = block.settings %}
+
+<div class="static-form-field static-form-field--{{ block.id }}" {{ block.shopify_attributes }}>
+
+  {% if block_settings.show_file_upload %}
+    <div class="static-form-field__group static-form-field__file-upload">
+      <label class="static-form-field__label">
+        {{ block_settings.file_upload_label }}
+        <span class="static-form-field__tooltip">
+          <svg class="static-form-field__tooltip-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 7V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="8" cy="5" r="0.75" fill="currentColor"/>
+          </svg>
+          <span class="static-form-field__tooltip-text">{{ block_settings.file_upload_tooltip }}</span>
+        </span>
+      </label>
+      <div class="static-form-field__file-wrapper">
+        <input
+          type="file"
+          id="file-upload-{{ block.id }}"
+          name="{{ block_settings.file_upload_name }}"
+          class="static-form-field__file-input"
+          {% if block_settings.file_upload_accept != blank %}accept="{{ block_settings.file_upload_accept }}"{% endif %}
+        >
+        <button type="button" class="static-form-field__file-button button-secondary" data-file-trigger="{{ block.id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none">
+            <path d="M6.58333 13.25V8.25M6.58333 8.25L4.08333 9.91667M6.58333 8.25L9.08333 9.91667M7.41667 0.750724C7.33709 0.75 7.24773 0.75 7.1456 0.75H3.41683C2.48341 0.75 2.01635 0.75 1.65983 0.931656C1.34623 1.09144 1.09144 1.34623 0.931656 1.65983C0.75 2.01635 0.75 2.48341 0.75 3.41683V13.0835C0.75 14.0169 0.75 14.4834 0.931656 14.8399C1.09144 15.1535 1.34623 15.4087 1.65983 15.5685C2.01601 15.75 2.4825 15.75 3.41412 15.75L9.75258 15.75C10.6842 15.75 11.15 15.75 11.5062 15.5685C11.8198 15.4087 12.0754 15.1535 12.2352 14.8399C12.4167 14.4837 12.4167 14.0179 12.4167 13.0863V6.0214C12.4167 5.91913 12.4166 5.82967 12.4159 5.75M7.41667 0.750724C7.6547 0.752891 7.80528 0.761538 7.94904 0.79605C8.1191 0.836878 8.28154 0.904387 8.43066 0.995768C8.59881 1.0988 8.74318 1.24318 9.03125 1.53125L11.6358 4.13582C11.9241 4.42407 12.0674 4.5678 12.1705 4.73599C12.2618 4.88512 12.3295 5.04771 12.3703 5.21777C12.4048 5.36147 12.4136 5.51209 12.4159 5.75M7.41667 0.750724V3.08333C7.41667 4.01675 7.41667 4.48314 7.59832 4.83966C7.75811 5.15326 8.01289 5.40873 8.3265 5.56852C8.68267 5.75 9.14917 5.75 10.0808 5.75H12.4159M12.4159 5.75H12.4168" stroke="#490E67" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="static-form-field__file-button-text" data-default-text="{{ block_settings.file_button_text }}">{{ block_settings.file_button_text }}</span>
+        </button>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if block_settings.show_textarea %}
+    <div class="static-form-field__group static-form-field__textarea-group">
+      <label class="static-form-field__label" for="textarea-{{ block.id }}">
+        {{ block_settings.textarea_label }}
+        {% if block_settings.textarea_required %}<span class="static-form-field__required">*</span>{% endif %}
+      </label>
+      <textarea
+        id="textarea-{{ block.id }}"
+        name="{{ block_settings.textarea_name }}"
+        class="static-form-field__textarea"
+        rows="{{ block_settings.textarea_rows }}"
+        placeholder="{{ block_settings.textarea_placeholder }}"
+        {% if block_settings.textarea_required %}required{% endif %}
+      ></textarea>
+    </div>
+  {% endif %}
+
+  {% if block_settings.show_checkbox %}
+    <div class="static-form-field__group static-form-field__checkbox-group">
+      <label class="static-form-field__checkbox-label">
+        <input
+          type="checkbox"
+          id="checkbox-{{ block.id }}"
+          name="{{ block_settings.checkbox_name }}"
+          class="static-form-field__checkbox-input"
+          {% if block_settings.checkbox_required %}required{% endif %}
+        >
+        <span class="static-form-field__checkbox-custom"></span>
+        <span class="static-form-field__checkbox-text">{{ block_settings.checkbox_label }}</span>
+        {% if block_settings.checkbox_required %}<span class="static-form-field__required">*</span>{% endif %}
+      </label>
+    </div>
+  {% endif %}
+
+</div>
+
+<script>
+  (function() {
+    const blockId = '{{ block.id }}';
+    const fileInput = document.getElementById('file-upload-' + blockId);
+    const fileButton = document.querySelector('[data-file-trigger="' + blockId + '"]');
+    const fileButtonText = fileButton ? fileButton.querySelector('.static-form-field__file-button-text') : null;
+
+    if (fileButton && fileInput) {
+      fileButton.addEventListener('click', function() {
+        fileInput.click();
+      });
+
+      fileInput.addEventListener('change', function() {
+        if (fileInput.files && fileInput.files.length > 0) {
+          const fileName = fileInput.files[0].name;
+          if (fileButtonText) {
+            fileButtonText.textContent = fileName;
+            fileButton.classList.add('static-form-field__file-button--has-file');
+          }
+        } else {
+          if (fileButtonText) {
+            fileButtonText.textContent = fileButtonText.dataset.defaultText;
+            fileButton.classList.remove('static-form-field__file-button--has-file');
+          }
+        }
+      });
+    }
+  })();
+</script>
+
+{% stylesheet %}
+  .static-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .static-form-field__group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-xs);
+  }
+
+  .static-form-field__label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--padding-2xs);
+    font-family: var(--font-body--family);
+    font-size: var(--font-paragraph--size);
+    font-weight: 500;
+    color: var(--color-foreground);
+  }
+
+  .static-form-field__required {
+    color: var(--color-error, #dc3545);
+  }
+
+  /* Tooltip */
+  .static-form-field__tooltip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: help;
+  }
+
+  .static-form-field__tooltip-icon {
+    opacity: 0.6;
+    transition: opacity var(--animation-speed) ease;
+  }
+
+  .static-form-field__tooltip:hover .static-form-field__tooltip-icon {
+    opacity: 1;
+  }
+
+  .static-form-field__tooltip-text {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: var(--padding-xs) var(--padding-sm);
+    background-color: var(--color-foreground);
+    color: var(--color-background);
+    font-size: 0.75rem;
+    font-weight: 400;
+    white-space: nowrap;
+    border-radius: var(--style-border-radius-inputs);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--animation-speed) ease, visibility var(--animation-speed) ease;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .static-form-field__tooltip-text::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--color-foreground);
+  }
+
+  .static-form-field__tooltip:hover .static-form-field__tooltip-text {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* File Upload */
+  .static-form-field__file-input {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  .static-form-field__file-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--padding-sm);
+    position: relative;
+  }
+
+  .static-form-field__file-button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--padding-xs);
+    cursor: pointer;
+  }
+
+  .static-form-field__file-button--has-file {
+    background-color: var(--button-background-color);
+    color: var(--button-color);
+  }
+
+  .static-form-field__file-button--has-file:hover {
+    background-color: var(--button-background-color-hover);
+    color: var(--button-color-hover);
+  }
+
+  /* Textarea */
+  .static-form-field__textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: var(--input-padding);
+    border-radius: var(--style-border-radius-inputs);
+    border: none;
+    box-shadow: var(--input-box-shadow);
+    background-color: var(--color-input-background);
+    color: var(--color-input-text);
+    font-family: var(--font-body--family);
+    font-size: var(--font-paragraph--size);
+    resize: vertical;
+    transition: box-shadow var(--animation-speed) ease, background-color var(--animation-speed) ease;
+    outline: none;
+  }
+
+  .static-form-field__textarea:focus,
+  .static-form-field__textarea:hover {
+    box-shadow: var(--input-box-shadow-focus);
+    background-color: var(--color-input-hover-background);
+  }
+
+  .static-form-field__textarea::placeholder {
+    color: rgb(var(--color-input-text-rgb) / var(--opacity-60));
+  }
+
+  /* Checkbox */
+  .static-form-field__checkbox-label {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: var(--padding-xs);
+    cursor: pointer;
+    font-family: var(--font-body--family);
+    font-size: var(--font-paragraph--size);
+    color: var(--color-foreground);
+    position: relative;
+  }
+
+  .static-form-field__checkbox-input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: var(--input-box-shadow);
+    background-color: var(--color-input-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--animation-speed) ease, box-shadow var(--animation-speed) ease;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .static-form-field__checkbox-input::after {
+    content: '';
+    width: 6px;
+    height: 10px;
+    border: solid #490e67;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg) scale(0);
+    transition: transform var(--animation-speed) ease;
+  }
+
+  .static-form-field__checkbox-input:checked {
+    background-color: var(--button-background-color);
+  }
+
+  .static-form-field__checkbox-input:checked::after {
+    transform: translatey(-2px) rotate(45deg) scale(1);
+  }
+
+  .static-form-field__checkbox-input:focus {
+    box-shadow: var(--input-box-shadow-focus);
+  }
+
+  .static-form-field__checkbox-input:hover {
+    box-shadow: var(--input-box-shadow-focus);
+  }
+
+  /* Hide the custom span since we style the input directly */
+  .static-form-field__checkbox-custom {
+    display: none;
+  }
+
+  .static-form-field__checkbox-text {
+    line-height: 1.4;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Static Form Field",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "File Upload"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_file_upload",
+      "label": "Show file upload",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "file_upload_label",
+      "label": "Label",
+      "default": "Upload file",
+      "visible_if": "{{ block.settings.show_file_upload }}"
+    },
+    {
+      "type": "text",
+      "id": "file_upload_tooltip",
+      "label": "Tooltip text",
+      "default": "You can upload your file here",
+      "visible_if": "{{ block.settings.show_file_upload }}"
+    },
+    {
+      "type": "text",
+      "id": "file_button_text",
+      "label": "Button text",
+      "default": "Choose file",
+      "visible_if": "{{ block.settings.show_file_upload }}"
+    },
+    {
+      "type": "text",
+      "id": "file_upload_name",
+      "label": "Field name",
+      "default": "file_upload",
+      "visible_if": "{{ block.settings.show_file_upload }}"
+    },
+    {
+      "type": "text",
+      "id": "file_upload_accept",
+      "label": "Accepted file types",
+      "default": ".pdf,.jpg,.jpeg,.png,.gif",
+      "info": "Comma separated file extensions",
+      "visible_if": "{{ block.settings.show_file_upload }}"
+    },
+    {
+      "type": "header",
+      "content": "Textarea"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_textarea",
+      "label": "Show textarea",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "textarea_label",
+      "label": "Label",
+      "default": "Comments about design",
+      "visible_if": "{{ block.settings.show_textarea }}"
+    },
+    {
+      "type": "text",
+      "id": "textarea_placeholder",
+      "label": "Placeholder",
+      "default": "Enter your design comments here...",
+      "visible_if": "{{ block.settings.show_textarea }}"
+    },
+    {
+      "type": "text",
+      "id": "textarea_name",
+      "label": "Field name",
+      "default": "design_comments",
+      "visible_if": "{{ block.settings.show_textarea }}"
+    },
+    {
+      "type": "range",
+      "id": "textarea_rows",
+      "label": "Rows",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "visible_if": "{{ block.settings.show_textarea }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "textarea_required",
+      "label": "Required",
+      "default": false,
+      "visible_if": "{{ block.settings.show_textarea }}"
+    },
+    {
+      "type": "header",
+      "content": "Checkbox"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_checkbox",
+      "label": "Show checkbox",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "checkbox_label",
+      "label": "Label",
+      "default": "I have an event",
+      "visible_if": "{{ block.settings.show_checkbox }}"
+    },
+    {
+      "type": "text",
+      "id": "checkbox_name",
+      "label": "Field name",
+      "default": "has_event",
+      "visible_if": "{{ block.settings.show_checkbox }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "checkbox_required",
+      "label": "Required",
+      "default": false,
+      "visible_if": "{{ block.settings.show_checkbox }}"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Static Form Field",
+      "category": "Forms"
+    }
+  ]
+}
+{% endschema %}

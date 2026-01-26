@@ -4471,7 +4471,121 @@ text-component {
 .custom-quote-form form {
   display: flex;
   flex-direction: column;
-  gap: var(--padding-sm);
+  gap: var(--padding-xs);
+}
+
+/* Desktop two-column layout using CSS Grid */
+@media screen and (min-width: 750px) {
+  .custom-quote-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--padding-sm) var(--padding-md);
+    align-items: start;
+  }
+
+  /* Hidden inputs and scripts - collapse */
+  .custom-quote-form form > input[type="hidden"],
+  .custom-quote-form form > script {
+    position: absolute;
+    visibility: hidden;
+    grid-column: 1 / -1;
+    height: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* First label (Sales Rep) - full width */
+  .custom-quote-form form > label[for="selectyourrep"] {
+    grid-column: 1 / -1;
+  }
+
+  /* First select (Sales Rep) - full width */
+  .custom-quote-form form > select#Web_Form_Rep__c {
+    grid-column: 1 / -1;
+  }
+
+  /* Labels for left column (First Name, Email, Postal Code, Company) */
+  .custom-quote-form form > label[for="first_name"],
+  .custom-quote-form form > label[for="email"],
+  .custom-quote-form form > label[for="zip"],
+  .custom-quote-form form > label[for="company"] {
+    grid-column: 1;
+  }
+
+  /* Inputs for left column */
+  .custom-quote-form form > input#first_name,
+  .custom-quote-form form > input#email,
+  .custom-quote-form form > input#Zip_Postal_Code__c,
+  .custom-quote-form form > input#company {
+    grid-column: 1;
+  }
+
+  /* Labels for right column (Last Name, Phone, Quantity, Business Type) */
+  .custom-quote-form form > label[for="last_name"],
+  .custom-quote-form form > label[for="phone"],
+  .custom-quote-form form > label[for="quantity"],
+  .custom-quote-form form > label[for="business"] {
+    grid-column: 2;
+  }
+
+  /* Inputs for right column */
+  .custom-quote-form form > input#last_name,
+  .custom-quote-form form > input#phone,
+  .custom-quote-form form > input[id="00NRp0000000S17"],
+  .custom-quote-form form > input[id="00N4U000008Fzqc"] {
+    grid-column: 2;
+  }
+
+  /* Position pairs in same rows */
+  /* Row 1: First Name / Last Name labels */
+  .custom-quote-form form > label[for="first_name"] { grid-row: 3; }
+  .custom-quote-form form > label[for="last_name"] { grid-row: 3; }
+  
+  /* Row 2: First Name / Last Name inputs */
+  .custom-quote-form form > input#first_name { grid-row: 4; }
+  .custom-quote-form form > input#last_name { grid-row: 4; }
+  
+  /* Row 3: Email / Phone labels */
+  .custom-quote-form form > label[for="email"] { grid-row: 5; }
+  .custom-quote-form form > label[for="phone"] { grid-row: 5; }
+  
+  /* Row 4: Email / Phone inputs */
+  .custom-quote-form form > input#email { grid-row: 6; }
+  .custom-quote-form form > input#phone { grid-row: 6; }
+  
+  /* Row 5: Postal Code / Quantity labels */
+  .custom-quote-form form > label[for="zip"] { grid-row: 7; }
+  .custom-quote-form form > label[for="quantity"] { grid-row: 7; }
+  
+  /* Row 6: Postal Code / Quantity inputs */
+  .custom-quote-form form > input#Zip_Postal_Code__c { grid-row: 8; }
+  .custom-quote-form form > input[id="00NRp0000000S17"] { grid-row: 8; }
+  
+  /* Row 7: Company / Business Type labels */
+  .custom-quote-form form > label[for="company"] { grid-row: 9; }
+  .custom-quote-form form > label[for="business"] { grid-row: 9; }
+  
+  /* Row 8: Company / Business Type inputs */
+  .custom-quote-form form > input#company { grid-row: 10; }
+  .custom-quote-form form > input[id="00N4U000008Fzqc"] { grid-row: 10; }
+
+  /* reCAPTCHA - full width */
+  .custom-quote-form form > .g-recaptcha {
+    grid-column: 1 / -1;
+    grid-row: 11;
+  }
+
+  /* Error message - full width */
+  .custom-quote-form form > #captchaError {
+    grid-column: 1 / -1;
+    grid-row: 12;
+  }
+
+  /* Submit button - full width */
+  .custom-quote-form form > input[type="submit"] {
+    grid-column: 1 / -1;
+    grid-row: 13;
+  }
 }
 
 .custom-quote-form label {
