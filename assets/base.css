@@ -4118,6 +4118,7 @@ text-component[shimmer]::after {
   display: flex;
   flex-direction: column;
   gap: var(--padding-xs);
+  margin: 1px;
 }
 
 /* Desktop two-column layout using CSS Grid */
