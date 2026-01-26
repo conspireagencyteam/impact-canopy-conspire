@@ -2543,7 +2543,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
 
 /* Quantity selector */
 .quantity-selector {
-  --quantity-selector-width: 124px;
+  --quantity-selector-width: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -3482,7 +3482,7 @@ slideshow-component[autoplay] slideshow-controls {
   border-radius: var(--media-radius);
 }
 .slideshow-controls__thumbnails .slideshow-control:is([aria-selected=true]) {
-  border: var(--style-border-width) solid #282828;
+  border: var(--style-border-width) solid #490E67;
 }
 
 .slideshow-controls__thumbnail {
@@ -4083,4 +4083,148 @@ text-component[shimmer]::after {
 .list-check ul li::before {
   content: "✓";
   margin-right: 6px;
+}
+
+/* Quote Form Dialog (Third-party Salesforce form) */
+.contact-form-button-popup__dialog {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.contact-form-button-popup__dialog[open] {
+  display: flex;
+}
+
+.contact-form-button-popup__dialog .close-button {
+  position: absolute;
+  top: var(--padding-sm);
+  right: var(--padding-sm);
+  z-index: 10;
+}
+
+.contact-form-button-popup__heading {
+  flex-shrink: 0;
+}
+
+.custom-quote-form {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+.custom-quote-form form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-sm);
+}
+
+.custom-quote-form label {
+  display: block;
+  font-family: var(--font-body--family);
+  font-size: var(--font-paragraph--size);
+  color: var(--color-foreground);
+  margin-bottom: var(--padding-2xs);
+  font-weight: 500;
+}
+
+.custom-quote-form input[type=text],
+.custom-quote-form input[type=email],
+.custom-quote-form input[type=tel],
+.custom-quote-form input[type=number],
+.custom-quote-form textarea,
+.custom-quote-form select {
+  width: 100%;
+  padding: var(--input-padding);
+  border-radius: var(--style-border-radius-inputs);
+  border: none;
+  box-shadow: var(--input-box-shadow);
+  background-color: var(--color-input-background);
+  color: var(--color-input-text);
+  font-family: var(--font-body--family);
+  font-size: var(--font-paragraph--size);
+  transition: box-shadow var(--animation-speed) ease, background-color var(--animation-speed) ease;
+  outline: none;
+}
+.custom-quote-form input[type=text]:focus, .custom-quote-form input[type=text]:hover,
+.custom-quote-form input[type=email]:focus,
+.custom-quote-form input[type=email]:hover,
+.custom-quote-form input[type=tel]:focus,
+.custom-quote-form input[type=tel]:hover,
+.custom-quote-form input[type=number]:focus,
+.custom-quote-form input[type=number]:hover,
+.custom-quote-form textarea:focus,
+.custom-quote-form textarea:hover,
+.custom-quote-form select:focus,
+.custom-quote-form select:hover {
+  box-shadow: var(--input-box-shadow-focus);
+  background-color: var(--color-input-hover-background);
+}
+.custom-quote-form input[type=text]::placeholder,
+.custom-quote-form input[type=email]::placeholder,
+.custom-quote-form input[type=tel]::placeholder,
+.custom-quote-form input[type=number]::placeholder,
+.custom-quote-form textarea::placeholder,
+.custom-quote-form select::placeholder {
+  color: rgb(var(--color-input-text-rgb)/var(--opacity-60));
+}
+
+.custom-quote-form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--padding-md) center;
+  padding-right: var(--padding-2xl);
+  cursor: pointer;
+}
+
+.custom-quote-form input[type=submit],
+.custom-quote-form button[type=submit],
+.custom-quote-form #submitBtn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: var(--button-padding-block) var(--button-padding-inline);
+  background-color: var(--button-background-color);
+  color: var(--button-color);
+  border: none;
+  border-radius: var(--style-border-radius-buttons-primary);
+  font-family: var(--font-paragraph--family);
+  font-size: var(--font-h6--size);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--animation-speed) var(--animation-easing), color var(--animation-speed) var(--animation-easing);
+  margin-top: var(--padding-md);
+  -webkit-appearance: none;
+  appearance: none;
+}
+.custom-quote-form input[type=submit]:hover:not(:disabled),
+.custom-quote-form button[type=submit]:hover:not(:disabled),
+.custom-quote-form #submitBtn:hover:not(:disabled) {
+  background-color: var(--button-background-color-hover);
+  color: var(--button-color-hover);
+}
+.custom-quote-form input[type=submit]:disabled,
+.custom-quote-form button[type=submit]:disabled,
+.custom-quote-form #submitBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* reCAPTCHA styling */
+.custom-quote-form .g-recaptcha {
+  margin-block: var(--padding-sm);
+}
+
+/* Hide br tags used for spacing in the form */
+.custom-quote-form br {
+  display: none;
+}
+
+/* Error message styling */
+.custom-quote-form #captchaError {
+  font-size: var(--font-paragraph--size);
+  margin-top: var(--padding-xs);
 }

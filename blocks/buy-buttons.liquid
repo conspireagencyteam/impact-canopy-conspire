@@ -141,9 +141,17 @@
             can_add_to_cart: can_add_to_cart,
             form_obj: form
           %}
+
         </div>
       {%- endform -%}
     </product-form-component>
+
+    {% if template == 'product' %}
+      {% content_for 'block',
+        type: '_quote-form-button',
+        id: 'accelerated-quote'
+      %}
+    {% endif %}
   {%- else -%}
     <div class="product-form-buttons">
       <button
