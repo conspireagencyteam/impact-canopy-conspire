@@ -528,6 +528,12 @@
               },
               "blocks": {}
             },
+            "uploadly_file_upload_app_block_M7kmj7": {
+              "type": "shopify://apps/uploadly-file-upload/blocks/app-block/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
+              "settings": {
+                "featured_product": "{{closest.product}}"
+              }
+            },
             "static_form_field_7DEbKB": {
               "type": "_static-form-field",
               "name": "Static Form Field",
@@ -1556,6 +1562,7 @@
             "metaobject_pdp_PF8hVT",
             "divider_VJhene",
             "variant_picker_R3rGDr",
+            "uploadly_file_upload_app_block_M7kmj7",
             "static_form_field_7DEbKB",
             "divider_ephR9K",
             "group_ph4zJ9",
