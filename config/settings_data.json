@@ -86,6 +86,13 @@
     "variant_button_width": "equal-width-buttons",
     "button_font_weight_secondary": "default",
     "content_for_index": [],
+    "blocks": {
+      "2187360915322861293": {
+        "type": "shopify://apps/uploadly-file-upload/blocks/app-embed/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
@@ -114,7 +121,7 @@
           "tertiary_button_hover_background": "#ffffff59",
           "tertiary_button_hover_text": "#ffffff",
           "tertiary_button_hover_border": "rgba(0,0,0,0)",
-          "input_background": "#FFFFFF",
+          "input_background": "#ffffff",
           "input_text_color": "#490e67",
           "input_border_color": "#cccccc",
           "input_hover_background": "#ffffffdb",
