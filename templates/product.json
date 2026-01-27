@@ -3521,7 +3521,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>12-15 days vs 3-6 weeks from overseas</p>",
+                    "text": "<p>10-15 days vs 3-6 weeks from overseas</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
