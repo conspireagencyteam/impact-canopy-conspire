@@ -284,6 +284,13 @@ class ProductFormComponent extends Component {
 
     const formData = new FormData(form);
 
+    // Dispatch event to allow external scripts to add cart properties
+    const propertiesEvent = new CustomEvent('cart:add-properties', {
+      bubbles: true,
+      detail: { formData }
+    });
+    this.dispatchEvent(propertiesEvent);
+
     const cartItemsComponents = document.querySelectorAll('cart-items-component');
     let cartItemComponentsSectionIds = [];
     cartItemsComponents.forEach((item) => {

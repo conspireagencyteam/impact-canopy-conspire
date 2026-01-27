@@ -2,7 +2,7 @@
   Static form field block with file upload, textarea, and checkbox.
   - File upload: Modern button style with tooltip
   - Textarea: For design comments
-  - Checkbox: For event acknowledgment
+  - Checkbox: For event acknowledgment with calendar toggle
 {%- enddoc -%}
 
 {% assign block_settings = block.settings %}
@@ -26,8 +26,8 @@
         <input
           type="file"
           id="file-upload-{{ block.id }}"
-          name="{{ block_settings.file_upload_name }}"
           class="static-form-field__file-input"
+          data-cart-property-file="{{ block_settings.file_upload_name }}"
           {% if block_settings.file_upload_accept != blank %}accept="{{ block_settings.file_upload_accept }}"{% endif %}
         >
         <button type="button" class="static-form-field__file-button button-secondary" data-file-trigger="{{ block.id }}">
@@ -48,8 +48,8 @@
       </label>
       <textarea
         id="textarea-{{ block.id }}"
-        name="{{ block_settings.textarea_name }}"
         class="static-form-field__textarea"
+        data-cart-property="{{ block_settings.textarea_name }}"
         rows="{{ block_settings.textarea_rows }}"
         placeholder="{{ block_settings.textarea_placeholder }}"
         {% if block_settings.textarea_required %}required{% endif %}
@@ -63,14 +63,28 @@
         <input
           type="checkbox"
           id="checkbox-{{ block.id }}"
-          name="{{ block_settings.checkbox_name }}"
           class="static-form-field__checkbox-input"
+          data-calendar-toggle="{{ block.id }}"
           {% if block_settings.checkbox_required %}required{% endif %}
         >
         <span class="static-form-field__checkbox-custom"></span>
         <span class="static-form-field__checkbox-text">{{ block_settings.checkbox_label }}</span>
         {% if block_settings.checkbox_required %}<span class="static-form-field__required">*</span>{% endif %}
       </label>
+
+      <div class="static-form-field__calendar-group" id="calendar-group-{{ block.id }}" style="display: none;">
+        <label class="static-form-field__label" for="event-date-{{ block.id }}">
+          {{ block_settings.calendar_label }}
+          {% if block_settings.calendar_required %}<span class="static-form-field__required">*</span>{% endif %}
+        </label>
+        <input
+          type="date"
+          id="event-date-{{ block.id }}"
+          class="static-form-field__date-input"
+          data-cart-property="{{ block_settings.calendar_name }}"
+          disabled
+        >
+      </div>
     </div>
   {% endif %}
 
@@ -100,6 +114,30 @@
             fileButtonText.textContent = fileButtonText.dataset.defaultText;
             fileButton.classList.remove('static-form-field__file-button--has-file');
           }
+        }
+      });
+    }
+
+    // Checkbox to calendar toggle
+    const checkbox = document.querySelector('[data-calendar-toggle="' + blockId + '"]');
+    const calendarGroup = document.getElementById('calendar-group-' + blockId);
+    const dateInput = document.getElementById('event-date-' + blockId);
+
+    if (checkbox && calendarGroup && dateInput) {
+      const isRequired = '{{ block_settings.calendar_required }}' === 'true';
+      
+      checkbox.addEventListener('change', function() {
+        if (this.checked) {
+          calendarGroup.style.display = 'flex';
+          dateInput.disabled = false;
+          if (isRequired) {
+            dateInput.setAttribute('required', 'required');
+          }
+        } else {
+          calendarGroup.style.display = 'none';
+          dateInput.disabled = true;
+          dateInput.value = '';
+          dateInput.removeAttribute('required');
         }
       });
     }
@@ -313,7 +351,49 @@
   .static-form-field__checkbox-text {
     line-height: 1.4;
   }
+
+  /* Calendar/Date Input */
+  .static-form-field__calendar-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-xs);
+    margin-top: var(--padding-sm);
+    padding-left: 28px;
+  }
+
+  .static-form-field__date-input {
+    width: 100%;
+    max-width: 300px;
+    padding: var(--input-padding);
+    border-radius: var(--style-border-radius-inputs);
+    border: none;
+    box-shadow: var(--input-box-shadow);
+    background-color: var(--color-input-background);
+    color: var(--color-input-text);
+    font-family: var(--font-body--family);
+    font-size: var(--font-paragraph--size);
+    transition: box-shadow var(--animation-speed) ease, background-color var(--animation-speed) ease;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .static-form-field__date-input:focus,
+  .static-form-field__date-input:hover {
+    box-shadow: var(--input-box-shadow-focus);
+    background-color: var(--color-input-hover-background);
+  }
+
+  .static-form-field__date-input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity var(--animation-speed) ease;
+  }
+
+  .static-form-field__date-input:hover::-webkit-calendar-picker-indicator {
+    opacity: 1;
+  }
 {% endstylesheet %}
+
 
 {% schema %}
 {
@@ -443,6 +523,32 @@
       "id": "checkbox_required",
       "label": "Required",
       "default": false,
+      "visible_if": "{{ block.settings.show_checkbox }}"
+    },
+    {
+      "type": "header",
+      "content": "Event Date (Calendar)"
+    },
+    {
+      "type": "text",
+      "id": "calendar_label",
+      "label": "Label",
+      "default": "Event Date",
+      "visible_if": "{{ block.settings.show_checkbox }}"
+    },
+    {
+      "type": "text",
+      "id": "calendar_name",
+      "label": "Property name (for cart)",
+      "default": "Event Date",
+      "info": "This will appear in cart and checkout as a line item property",
+      "visible_if": "{{ block.settings.show_checkbox }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "calendar_required",
+      "label": "Required when checkbox checked",
+      "default": true,
       "visible_if": "{{ block.settings.show_checkbox }}"
     }
   ],

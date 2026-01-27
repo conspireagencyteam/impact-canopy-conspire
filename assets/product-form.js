@@ -3322,6 +3322,15 @@ var ProductFormComponent = /*#__PURE__*/function (_Component2) {
         }
       }
       var formData = new FormData(form);
+
+      // Dispatch event to allow external scripts to add cart properties
+      var propertiesEvent = new CustomEvent('cart:add-properties', {
+        bubbles: true,
+        detail: {
+          formData: formData
+        }
+      });
+      this.dispatchEvent(propertiesEvent);
       var cartItemsComponents = document.querySelectorAll('cart-items-component');
       var cartItemComponentsSectionIds = [];
       cartItemsComponents.forEach(function (item) {
