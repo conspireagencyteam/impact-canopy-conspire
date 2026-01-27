@@ -538,7 +538,7 @@
               "type": "_static-form-field",
               "name": "Static Form Field",
               "settings": {
-                "show_file_upload": true,
+                "show_file_upload": false,
                 "file_upload_label": "Upload file",
                 "file_upload_tooltip": "You can upload your file here",
                 "file_button_text": "Choose file",
