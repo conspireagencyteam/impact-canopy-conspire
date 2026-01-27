@@ -639,7 +639,7 @@
                   "blocks": {}
                 },
                 "accelerated-quote": {
-                  "type": "_quote-form-button",
+                  "type": "quote-form-button",
                   "static": true,
                   "settings": {
                     "button_type": "popup",

@@ -750,7 +750,7 @@
                   "blocks": {}
                 },
                 "accelerated-quote": {
-                  "type": "_quote-form-button",
+                  "type": "quote-form-button",
                   "static": true,
                   "settings": {
                     "button_type": "popup",
@@ -1168,7 +1168,7 @@
                               "blocks": {}
                             },
                             "accelerated-quote": {
-                              "type": "_quote-form-button",
+                              "type": "quote-form-button",
                               "disabled": true,
                               "static": true,
                               "settings": {
