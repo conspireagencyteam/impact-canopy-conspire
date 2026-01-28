@@ -57,6 +57,9 @@
   endif
 %}
 
+{% assign link = link | default: fallback_link %}
+{% assign label =  fallback_label | default: block_settings.label %}
+
 <a
   {% if link == blank %}
     role="link"
@@ -87,7 +90,7 @@
       class_name: 'button__icon'
     %}
   {%- endif -%}
-  <span class="button__label">{{ block_settings.label }}</span>
+  <span class="button__label">{{ label }}</span>
   {%- if has_icon and icon_position == 'right' -%}
     {% render 'icon-or-image',
       icon: icon,
