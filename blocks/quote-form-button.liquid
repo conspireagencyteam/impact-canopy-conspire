@@ -1,6 +1,6 @@
 {% assign block_settings = block.settings %}
 
-{% if settings.sales_code != blank %}
+{% if block_settings.liquid_code != blank %}
 
   {% if block_settings.button_type == 'popup' %}
     <script
@@ -105,7 +105,7 @@
           {{ block_settings.popup_heading }}
         </h2>
         <div class="custom-quote-form">
-          {{ settings.sales_code }} 
+          {{ block_settings.liquid_code }} 
         </div>
         
         <button
@@ -302,6 +302,11 @@
       "id": "link",
       "label": "t:settings.link",
       "visible_if": "{{ block.settings.button_type == 'default' }}"
+    },
+    {
+      "type": "liquid",
+      "id": "liquid_code",
+      "label": "Form Code"
     },
     {
       "type": "checkbox",
