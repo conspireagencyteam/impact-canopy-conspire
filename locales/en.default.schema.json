@@ -960,6 +960,8 @@
     "overlay_color": "Overlay color",
     "overlay_opacity": "Overlay opacity",
     "overlay_style": "Overlay style",
+    "overlay_gradient": "Overlay gradient",
+    "gradient_height": "Gradient height",
     "padding": "Padding",
     "padding_bottom": "Padding bottom",
     "padding_horizontal": "Padding horizontal",

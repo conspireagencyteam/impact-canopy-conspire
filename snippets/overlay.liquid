@@ -1,12 +1,21 @@
 {%- doc -%}
   Renders a full-bleed overlay.
 
-  @param {object} settings - Block or section settings, expecting `overlay_color`, `overlay_style`, and `gradient_direction`.
+  @param {object} settings - Block or section settings, expecting `overlay_color`, `overlay_style`, `gradient_direction`, and optionally `overlay_gradient`.
   @param {string} [layer] - The z-index layer for the overlay, defaults to `var(--layer-flat)`.
 
   @example
   {% render 'overlay', settings: section.settings, layer: 'var(--layer-raised)' %}
 {%- enddoc -%}
+
+{%- liquid
+  assign overlay_bg = settings.overlay_color | default: 'rgb(0 0 0 / var(--opacity-25))'
+  if settings.overlay_style == 'gradient'
+    if settings.overlay_gradient != blank
+      assign overlay_bg = settings.overlay_gradient
+    endif
+  endif
+-%}
 
 <div
   class="overlay overlay--{{ settings.overlay_style | default: 'gradient' }}"
@@ -16,6 +25,7 @@
     --overlay-color--end: {{ settings.overlay_color | color_modify: 'alpha', 0 | default: 'rgb(0 0 0 / 0)' }};
     --overlay-direction: {{ settings.gradient_direction | default: 'to top' }};
     --overlay-gradient-height: {{ settings.gradient_height | default: 100 }}%;
+    --overlay-gradient-bg: {{ overlay_bg }};
     {%- if settings.border_radius %} --overlay-border-radius: {{ settings.border_radius | default: '0' }}px;{% endif -%}
   "
 ></div>
@@ -34,6 +44,6 @@
   }
 
   .overlay--gradient {
-    background: linear-gradient(var(--overlay-direction), var(--overlay-color) 0%, var(--overlay-color--end) var(--overlay-gradient-height, 100%));
+    background: var(--overlay-gradient-bg);
   }
 {% endstylesheet %}
