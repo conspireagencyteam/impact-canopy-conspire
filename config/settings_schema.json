@@ -2415,5 +2415,15 @@
         "default": "equal-width-buttons"
       }
     ]
+  },
+  {
+    "name": "Sales Button",
+    "settings": [
+      {
+        "type": "liquid",
+        "id": "sales_code",
+        "label": "Sales Form"
+      }
+    ]
   }
 ]
