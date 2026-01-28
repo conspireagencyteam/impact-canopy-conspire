@@ -4360,3 +4360,17 @@ text-component[shimmer]::after {
   font-size: var(--font-paragraph--size);
   margin-top: var(--padding-xs);
 }
+
+@media screen and (min-width: 1024px) {
+  .header-icon-group:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    pointer-events: none;
+  }
+}

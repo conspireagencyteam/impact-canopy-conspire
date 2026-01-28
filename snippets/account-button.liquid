@@ -17,7 +17,7 @@
     popovertargetaction="{{ popover_action | default: 'toggle' }}"
   {%- endif -%}
   ref="trigger"
-  {{ attributes }}
+  {{ attributes }} 
 >
   {%- if customer.has_avatar? -%}
     {{ customer | avatar }}
@@ -42,6 +42,7 @@
     >
       {{- 'icon-account.svg' | inline_asset_content -}} 
     </span>
+    <span>Login</span>
   {%- endif -%}
 </{{ tag }}>
 

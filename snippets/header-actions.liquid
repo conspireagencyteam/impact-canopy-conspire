@@ -199,6 +199,9 @@
       justify-self: flex-end;
       margin-right: 15px;
     }
+    @media screen and (min-width: 1024px) {
+      gap: 32px;
+    }
   }
 
   .header__column--right header-actions {
@@ -211,6 +214,31 @@
     cursor: pointer;
     display: flex;
     justify-content: center;
+  }
+
+  .account-button.header-actions__action {
+    flex-wrap: nowrap;
+    align-items: center;
+    width: max-content;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.28px;
+    gap: 10px;
+    position: relative;
+    @media screen and (min-width: 1024px){
+      &:after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 12px;
+        right: -16px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #fff;
+        pointer-events: none;
+      }
+    } 
   }
 
   .header-actions__action .svg-wrapper {
