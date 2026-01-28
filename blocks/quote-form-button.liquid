@@ -1,6 +1,6 @@
 {% assign block_settings = block.settings %}
 
-{% if shop.metafields.custom.sales_quote != blank %}
+{% if settings.sales_code != blank %}
 
   {% if block_settings.button_type == 'popup' %}
     <script
@@ -104,9 +104,8 @@
         >
           {{ block_settings.popup_heading }}
         </h2>
-
         <div class="custom-quote-form">
-          {{ shop.metafields.custom.sales_quote.value }}
+          {{ settings.sales_code }} 
         </div>
         
         <button
