@@ -100,9 +100,9 @@
             "border_opacity": 100,
             "border_radius": 0,
             "toggle_overlay": false,
-            "overlay_color": "#00000026",
             "overlay_style": "solid",
-            "gradient_direction": "to top",
+            "overlay_color": "#00000026",
+            "overlay_gradient": "",
             "link": "",
             "open_in_new_tab": false,
             "placeholder": "",
@@ -115,7 +115,7 @@
             "padding-block-end-mobile": 0,
             "padding-inline-start-mobile": 0,
             "padding-inline-end-mobile": 0,
-            "custom_class": ""
+            "custom_class": "header-icons-group"
           },
           "blocks": {
             "group_KMgBQn": {
@@ -147,9 +147,9 @@
                 "border_opacity": 100,
                 "border_radius": 0,
                 "toggle_overlay": false,
-                "overlay_color": "#00000026",
                 "overlay_style": "solid",
-                "gradient_direction": "to top",
+                "overlay_color": "#00000026",
+                "overlay_gradient": "",
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
@@ -162,7 +162,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "header-icon-group"
               },
               "blocks": {
                 "icon_zgDgUN": {
@@ -210,9 +210,9 @@
                 "border_opacity": 100,
                 "border_radius": 0,
                 "toggle_overlay": false,
-                "overlay_color": "#00000026",
                 "overlay_style": "solid",
-                "gradient_direction": "to top",
+                "overlay_color": "#00000026",
+                "overlay_gradient": "",
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
@@ -225,7 +225,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "header-icon-group"
               },
               "blocks": {
                 "icon_7bxU7T": {
