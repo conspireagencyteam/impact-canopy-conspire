@@ -15,6 +15,7 @@
     --overlay-color: {{ settings.overlay_color | default: 'rgb(0 0 0 / var(--opacity-25))' }};
     --overlay-color--end: {{ settings.overlay_color | color_modify: 'alpha', 0 | default: 'rgb(0 0 0 / 0)' }};
     --overlay-direction: {{ settings.gradient_direction | default: 'to top' }};
+    --overlay-gradient-height: {{ settings.gradient_height | default: 100 }}%;
     {%- if settings.border_radius %} --overlay-border-radius: {{ settings.border_radius | default: '0' }}px;{% endif -%}
   "
 ></div>
@@ -33,6 +34,6 @@
   }
 
   .overlay--gradient {
-    background: linear-gradient(var(--overlay-direction), var(--overlay-color), var(--overlay-color--end));
+    background: linear-gradient(var(--overlay-direction), var(--overlay-color) 0%, var(--overlay-color--end) var(--overlay-gradient-height, 100%));
   }
 {% endstylesheet %}

@@ -483,6 +483,17 @@
       "visible_if": "{{ block.settings.toggle_overlay and block.settings.overlay_style == 'gradient' }}"
     },
     {
+      "type": "range",
+      "id": "gradient_height",
+      "label": "t:settings.gradient_height",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100,
+      "visible_if": "{{ block.settings.toggle_overlay and block.settings.overlay_style == 'gradient' }}"
+    },
+    {
       "type": "header",
       "content": "t:content.padding"
     },
