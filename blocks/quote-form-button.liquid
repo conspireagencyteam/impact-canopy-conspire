@@ -1,129 +1,126 @@
 {% assign block_settings = block.settings %}
 
-{% if block_settings.liquid_code != blank %}
+{% if block_settings.button_type == 'popup' %}
+  <script
+    src="{{ 'dialog.js' | asset_url }}"
+    type="module"
+  ></script>
 
-  {% if block_settings.button_type == 'popup' %}
-    <script
-      src="{{ 'dialog.js' | asset_url }}"
-      type="module"
-    ></script>
+  {% liquid
+    # Typography variables
+    assign font_desktop = block_settings.font_desktop | default: 'default'
+    assign font_mobile = block_settings.font_mobile | default: 'default'
+    assign font_size_desktop = block_settings.font_size_desktop
+    assign font_size_mobile = block_settings.font_size_mobile
 
-    {% liquid
-      # Typography variables
-      assign font_desktop = block_settings.font_desktop | default: 'default'
-      assign font_mobile = block_settings.font_mobile | default: 'default'
-      assign font_size_desktop = block_settings.font_size_desktop
-      assign font_size_mobile = block_settings.font_size_mobile
+    # Underline variables
+    assign show_underline = block_settings.show_underline | default: false
+    assign underline_thickness = block_settings.underline_thickness | default: 1
+    assign underline_offset = block_settings.underline_offset | default: 2
+    assign button_size = block_settings.button_size | default: "default"
 
-      # Underline variables
-      assign show_underline = block_settings.show_underline | default: false
-      assign underline_thickness = block_settings.underline_thickness | default: 1
-      assign underline_offset = block_settings.underline_offset | default: 2
-      assign button_size = block_settings.button_size | default: "default"
+    # Icon variables
+    assign icon = block_settings.icon | default: 'none'
+    assign icon_image = block_settings.icon_image
+    assign icon_size = block_settings.icon_size | default: 20
+    assign icon_position = block_settings.icon_position | default: 'left'
+    assign has_icon = false
+    if icon != 'none' or icon_image != blank
+      assign has_icon = true
+    endif
 
-      # Icon variables
-      assign icon = block_settings.icon | default: 'none'
-      assign icon_image = block_settings.icon_image
-      assign icon_size = block_settings.icon_size | default: 20
-      assign icon_position = block_settings.icon_position | default: 'left'
-      assign has_icon = false
-      if icon != 'none' or icon_image != blank
-        assign has_icon = true
+    # Build custom style string
+    assign custom_style = ''
+
+    # Add typography styles
+    if font_desktop != 'default'
+      assign custom_style = custom_style | append: '--font-family-override-desktop: var(--font-' | append: font_desktop | append: '); '
+      if font_size_desktop
+        assign custom_style = custom_style | append: '--font-size-override-desktop: ' | append: font_size_desktop | append: 'px; '
       endif
+    endif
 
-      # Build custom style string
-      assign custom_style = ''
-
-      # Add typography styles
-      if font_desktop != 'default'
-        assign custom_style = custom_style | append: '--font-family-override-desktop: var(--font-' | append: font_desktop | append: '); '
-        if font_size_desktop
-          assign custom_style = custom_style | append: '--font-size-override-desktop: ' | append: font_size_desktop | append: 'px; '
-        endif
+    if font_mobile != 'default'
+      assign custom_style = custom_style | append: '--font-family-override-mobile: var(--font-' | append: font_mobile | append: '); '
+      if font_size_mobile
+        assign custom_style = custom_style | append: '--font-size-override-mobile: ' | append: font_size_mobile | append: 'px; '
       endif
+    endif
 
-      if font_mobile != 'default'
-        assign custom_style = custom_style | append: '--font-family-override-mobile: var(--font-' | append: font_mobile | append: '); '
-        if font_size_mobile
-          assign custom_style = custom_style | append: '--font-size-override-mobile: ' | append: font_size_mobile | append: 'px; '
-        endif
-      endif
-
-      # Add underline styles
-      if show_underline and block_settings.style_class == 'link'
-        assign custom_style = custom_style | append: '--underline-thickness: ' | append: underline_thickness | append: 'px; '
-        assign custom_style = custom_style | append: '--underline-offset: ' | append: underline_offset | append: 'px; '
-      endif
-    %}
-    <dialog-component
-      class="contact-form-button-popup quote-form-button-popup"
-      {{ block.shopify_attributes }}
+    # Add underline styles
+    if show_underline and block_settings.style_class == 'link'
+      assign custom_style = custom_style | append: '--underline-thickness: ' | append: underline_thickness | append: 'px; '
+      assign custom_style = custom_style | append: '--underline-offset: ' | append: underline_offset | append: 'px; '
+    endif
+  %}
+  <dialog-component
+    class="contact-form-button-popup quote-form-button-popup"
+    {{ block.shopify_attributes }}
+  >
+    <button
+      type="button"
+      on:click="/showDialog"
+      class="
+        size-style
+        {{ block_settings.style_class }}
+        button--{{ button_size }}
+        {{ block_settings.style_class }}--{{ block.id }}
+        {% if show_underline and block_settings.style_class == 'link' %}link--underline{% endif %}
+        {% if has_icon %}button--has-icon button--icon-{{ icon_position }}{% endif %}
+      "
+      style="{% render 'size-style', settings: block_settings %}{{ custom_style }}"
     >
-      <button
-        type="button"
-        on:click="/showDialog"
-        class="
-          size-style
-          {{ block_settings.style_class }}
-          button--{{ button_size }}
-          {{ block_settings.style_class }}--{{ block.id }}
-          {% if show_underline and block_settings.style_class == 'link' %}link--underline{% endif %}
-          {% if has_icon %}button--has-icon button--icon-{{ icon_position }}{% endif %}
-        "
-        style="{% render 'size-style', settings: block_settings %}{{ custom_style }}"
-      >
-        {%- if has_icon and icon_position == 'left' -%}
-          {% render 'icon-or-image',
-            icon: icon,
-            image_upload: icon_image,
-            width: icon_size,
-            class_name: 'button__icon'
-          %}
-        {%- endif -%}
-        <span class="button__label">{{ block_settings.label }}</span>
-        {%- if has_icon and icon_position == 'right' -%}
-          {% render 'icon-or-image',
-            icon: icon,
-            image_upload: icon_image,
-            width: icon_size,
-            class_name: 'button__icon'
-          %}
-        {%- endif -%}
-      </button>
+      {%- if has_icon and icon_position == 'left' -%}
+        {% render 'icon-or-image',
+          icon: icon,
+          image_upload: icon_image,
+          width: icon_size,
+          class_name: 'button__icon'
+        %}
+      {%- endif -%}
+      <span class="button__label">{{ block_settings.label }}</span>
+      {%- if has_icon and icon_position == 'right' -%}
+        {% render 'icon-or-image',
+          icon: icon,
+          image_upload: icon_image,
+          width: icon_size,
+          class_name: 'button__icon'
+        %}
+      {%- endif -%}
+    </button>
 
-      <dialog
-        ref="dialog"
-        class="contact-form-button-popup__dialog dialog-modal color-{{ settings.popover_color_scheme }}{% if block_settings.popup_behavior == 'drawer' %} contact-form-button-popup__dialog--drawer dialog-drawer{% endif %}"
-        scroll-lock
-        aria-labelledby="contact-form-dialog-heading-{{ block.id }}"
+    <dialog
+      ref="dialog"
+      class="contact-form-button-popup__dialog dialog-modal color-{{ settings.popover_color_scheme }}{% if block_settings.popup_behavior == 'drawer' %} contact-form-button-popup__dialog--drawer dialog-drawer{% endif %}"
+      scroll-lock
+      aria-labelledby="contact-form-dialog-heading-{{ block.id }}"
+    >
+      <h2
+        id="contact-form-dialog-heading-{{ block.id }}"
+        class="contact-form-button-popup__heading h3"
       >
-        <h2
-          id="contact-form-dialog-heading-{{ block.id }}"
-          class="contact-form-button-popup__heading h3"
-        >
-          {{ block_settings.popup_heading }}
-        </h2>
-        <div class="custom-quote-form custom-quote-form-wo-recaptcha">
-          {% if block_settings.settinngs.custom_liquid %}
-            {{ block_settings.liquid_code }}
-          {% else %}
-            {{ shop.metafields.custom.sales_quote }}
-          {% endif %} 
-        </div>
-        
-        <button
-          ref="closeButton"
-          on:click="/closeDialog"
-          class="button button-unstyled close-button contact-form-button-popup__close"
-          aria-label="{{ 'accessibility.close_dialog' | t }}"
-        >
-          {{- 'icon-close.svg' | inline_asset_content -}}
-        </button>
-      </dialog>
-    </dialog-component>
-  {% else %}
-    {% render 'button', link: block_settings.link %}
-  {% endif %}
+        {{ block_settings.popup_heading }}
+      </h2>
+      <div class="custom-quote-form custom-quote-form-wo-recaptcha">
+        {% if block_settings.settinngs.custom_liquid %}
+          {{ block_settings.liquid_code }}
+        {% else %}
+          {{ shop.metafields.custom.sales_quote }}
+        {% endif %} 
+      </div>
+      
+      <button
+        ref="closeButton"
+        on:click="/closeDialog"
+        class="button button-unstyled close-button contact-form-button-popup__close"
+        aria-label="{{ 'accessibility.close_dialog' | t }}"
+      >
+        {{- 'icon-close.svg' | inline_asset_content -}}
+      </button>
+    </dialog>
+  </dialog-component>
+{% else %}
+  {% render 'button', link: block_settings.link %}
 {% endif %}
 
 {% stylesheet %}
