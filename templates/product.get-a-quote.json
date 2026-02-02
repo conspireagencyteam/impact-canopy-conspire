@@ -514,15 +514,7 @@
             "quote_form_gE9wNH": {
               "type": "_quote-form",
               "name": "Quote Form",
-              "settings": {
-                "return_url": "",
-                "product_info": "10x10 Custom Canopy with frame selection",
-                "division": "United States",
-                "lead_source": "Web Store",
-                "submit_label": "Get A Quote",
-                "margin_top": 0,
-                "margin_bottom": 0
-              },
+              "settings": {},
               "blocks": {}
             },
             "cross_sell_NaXebJ": {
@@ -999,7 +991,7 @@
                       "settings": {
                         "text": "{{ closest.product.description }}",
                         "width": "100%",
-                        "max_width": "normal",
+                        "max_width": "none",
                         "alignment": "left",
                         "type_preset": "rte",
                         "font": "var(--font-body--family)",
