@@ -4221,7 +4221,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h2>Accessorize your Setup</h2>",
+                        "text": "<h2>Complete your setup</h2>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
