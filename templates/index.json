@@ -4380,7 +4380,7 @@
                   "type": "collection-card",
                   "name": "t:names.collection_card",
                   "settings": {
-                    "collection": "custom-wing-flags",
+                    "collection": "custom-flags",
                     "placement": "below_image",
                     "horizontal_alignment": "center",
                     "vertical_alignment": "center",
