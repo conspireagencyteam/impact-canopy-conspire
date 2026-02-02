@@ -119,9 +119,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 48,
         "padding-block-end": 48,
-        "use_mobile_padding": false,
-        "padding-block-start-mobile": 0,
-        "padding-block-end-mobile": 0
+        "use_mobile_padding": true,
+        "padding-block-start-mobile": 15,
+        "padding-block-end-mobile": 15
       }
     },
     "main": {
