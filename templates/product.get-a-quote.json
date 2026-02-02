@@ -16,7 +16,7 @@
           "type": "breadcrumb",
           "name": "Product Breadcrumb",
           "settings": {
-            "show_home_icon": false,
+            "show_home_icon": true,
             "home_text": "Home",
             "separator": "chevron",
             "text_size": "small",
