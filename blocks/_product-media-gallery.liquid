@@ -166,6 +166,23 @@
       "visible_if": "{{ block.settings.slideshow_controls_style == 'thumbnails' }}"
     },
     {
+      "type": "select",
+      "id": "thumbnail_position_mobile",
+      "label": "Mobile position",
+      "options": [
+        {
+          "value": "top",
+          "label": "t:options.top"
+        },
+        {
+          "value": "bottom",
+          "label": "t:options.bottom"
+        }
+      ],
+      "default": "bottom",
+      "visible_if": "{{ block.settings.slideshow_mobile_controls_style == 'thumbnails' }}"
+    },
+    {
       "type": "range",
       "id": "thumbnail_width",
       "label": "t:settings.width_desktop",

@@ -29,10 +29,13 @@
 </div>
 
 {% stylesheet %}
-  /* Clear padding on mobile, if not full-width */
+  /* Apply mobile padding on mobile */
   @media screen and (max-width: 749px) {
     .product-information.section--page-width .product-details > .group-block {
-      padding-inline: 0;
+      padding-block-start: var(--mobile-padding-block-start, 0);
+      padding-block-end: var(--mobile-padding-block-end, 0);
+      padding-inline-start: var(--mobile-padding-inline-start, 0);
+      padding-inline-end: var(--mobile-padding-inline-end, 0);
     }
   }
 
@@ -136,6 +139,9 @@
     },
     {
       "type": "_static-form-field"
+    },
+    {
+      "type": "_quote-form"
     }
   ],
   "tag": null,

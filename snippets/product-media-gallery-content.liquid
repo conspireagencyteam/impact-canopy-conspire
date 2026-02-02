@@ -88,6 +88,13 @@
     assign pagination_position = 'center'
   endif
 
+  # Mobile thumbnail position
+  if block_settings.slideshow_mobile_controls_style == 'thumbnails'
+    assign mobile_pagination_position = block_settings.thumbnail_position_mobile | default: 'bottom'
+  else
+    assign mobile_pagination_position = 'center'
+  endif
+
   assign icons_position = 'center'
 
   # Put the icons on the opposite side of the pagination controls
@@ -384,7 +391,7 @@
             item_count: sorted_media.size,
             thumbnails: sorted_media,
             controls_on_media: mobile_controls_on_media,
-            pagination_position: 'center',
+            pagination_position: mobile_pagination_position,
             aspect_ratio: block_settings.aspect_ratio,
             thumbnail_radius: block_settings.thumbnail_radius
           -%}
@@ -740,6 +747,16 @@
     .media-gallery__mobile-controls[thumbnails] .slideshow-controls__thumbnail {
       width: var(--thumbnail-width);
       height: auto;
+    }
+
+    /* Mobile thumbnail position - top */
+    .media-gallery__mobile-controls[thumbnails][pagination-position='top'] {
+      order: -1;
+    }
+
+    /* Mobile thumbnail position - bottom (default) */
+    .media-gallery__mobile-controls[thumbnails][pagination-position='bottom'] {
+      order: 1;
     }
   }
 

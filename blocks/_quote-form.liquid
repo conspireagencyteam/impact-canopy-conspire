@@ -1,0 +1,202 @@
+{% assign block_settings = block.settings %}
+
+<div
+  class="custom-quote-form"
+  style="{% render 'spacing-style', settings: block_settings %}"
+  {{ block.shopify_attributes }}
+>
+  <!-- RECAPTCHA CODE - 1 of 2 -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    function timestamp() {
+      var response = document.getElementById("g-recaptcha-response");
+      if (response == null || response.value.trim() == "") {
+        var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);
+        elems["ts"] = JSON.stringify(new Date().getTime());
+        document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems);
+      }
+    }
+    setInterval(timestamp, 500);
+  </script>
+  <!-- End Recaptcha Code -->
+
+  <form id="myWebToLeadForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DU0000000YU2Y" method="POST">
+    <!-- Hidden Salesforce Fields -->
+    <input type="hidden" name="oid" value="00DU0000000YU2Y">
+    <input type="hidden" name="retURL" value="{{ block_settings.return_url | default: 'https://impactcanopy.com/pages/thank-you' }}">
+
+    <!-- Hidden Field for Comments - use to add product, URLs and order info from Shopify -->
+    <input type="hidden" name="00NU0000004hksn" value="{{ block_settings.product_info | default: '10x10 Custom Canopy with frame selection' }}">
+
+    <!-- Hidden Field for Division -->
+    <input type="hidden" name="00NU0000005TqQh" value="{{ block_settings.division | default: 'United States' }}">
+
+    <!-- Hidden Field for Lead Source -->
+    <input type="hidden" name="00N0P0000066L3M" value="{{ block_settings.lead_source | default: 'Web Store' }}">
+
+    <!-- Form Fields -->
+    <label for="selectyourrep">Have you worked with us before? Select Your Sales Rep</label>
+    <select id="Web_Form_Rep__c" name="Web_Form_Rep__c" title="Select Your Sales Rep">
+      <option value="">--New Customer--</option>
+      <option value="Anne Bohl">Anne Bohl</option>
+      <option value="Aaron Harvey">Aaron Harvey</option>
+      <option value="Patrick Wheelan">Patrick Wheelan (Food Service)</option>
+      <option value="Don Puerling">Don Puerling (Baseball/Softball)</option>
+      <option value="Joe Delucia">Joe Delucia (Field Sports)</option>
+      <option value="Justin Petty">Justin Petty (Motorsports)</option>
+      <option value="Keith Townson">Keith Townson (Soccer)</option>
+      <option value="Luis Curiel">Luis Curiel (Soccer)</option>
+      <option value="Michelle Goerss">Michelle Goerss</option>
+      <option value="Mike Ohirko">Mike Ohirko</option>
+      <option value="Nancy Van Echten">Nancy Van Echten</option>
+      <option value="Rachel Hart">Rachel Hart</option>
+      <option value="Mike Smith">Mike Smith (Motorsports-Karting)</option>
+    </select>
+
+    <label for="first_name">First Name</label>
+    <input id="first_name" maxlength="40" name="first_name" size="20" type="text">
+
+    <label for="last_name">Last Name</label>
+    <input id="last_name" maxlength="80" name="last_name" size="20" type="text">
+
+    <label for="email">Email</label>
+    <input id="email" maxlength="80" name="email" size="20" type="text" required>
+
+    <label for="phone">Phone</label>
+    <input id="phone" maxlength="40" name="phone" size="20" type="text">
+
+    <label for="zip">Postal Code*</label>
+    <input id="Zip_Postal_Code__c" maxlength="10" name="Zip_Postal_Code__c" size="20" type="text">
+
+    <label for="quantity">Quantity</label>
+    <input id="00NRp0000000S17" name="00NRp0000000S17" size="20" type="text">
+
+    <label for="company">Company</label>
+    <input id="company" maxlength="40" name="company" size="20" type="text">
+
+    <!-- Open Ended Field for Collecting Custom Input about order -->
+    <label for="00NU0000003s27Z">How Can we Help You?</label>
+    <textarea id="00NU0000003s27Z" name="00NU0000003s27Z" rows="3" type="text" wrap="soft"></textarea>
+
+    <!-- RECAPTCHA CODE 2 of 2 -->
+    <script>
+      function onSubmit(token) {
+        document.getElementById("myWebToLeadForm").submit();
+      }
+    </script>
+    <input type="hidden" name="captcha_settings" value='{"keyname":"RecaptchaBadgev2","fallback":"true","orgId":"00DU0000000YU2Y","ts":""}'>
+
+    <div class="g-recaptcha"
+      data-sitekey="6LdaMQQrAAAAACBI8mdCNlC2szstRqJxUb8xyKLK"
+      data-callback="onCaptchaSuccess"
+      data-expired-callback="onCaptchaExpired">
+    </div>
+
+    <!-- Visible Error Message -->
+    <p id="captchaError" style="color: red; display: none;">Please confirm you're not a robot before submitting.</p>
+
+    <!-- Submit Button (starts disabled) -->
+    <input type="submit" id="submitBtn" name="submit" value="{{ block_settings.submit_label | default: 'Get A Quote' }}" disabled>
+    <!-- End Recaptcha Code -->
+  </form>
+
+  <!-- JavaScript to Control reCAPTCHA Behavior -->
+  <script>
+    function onCaptchaSuccess() {
+      document.getElementById("submitBtn").disabled = false;
+      document.getElementById("captchaError").style.display = "none";
+    }
+    function onCaptchaExpired() {
+      document.getElementById("submitBtn").disabled = true;
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("myWebToLeadForm");
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          const response = grecaptcha.getResponse();
+          if (!response) {
+            e.preventDefault();
+            document.getElementById("captchaError").style.display = "block";
+            document.getElementById("submitBtn").disabled = true;
+          }
+        });
+      }
+    });
+  </script>
+  <!-- END RECAPTCHA CODE -->
+</div>
+
+{% schema %}
+{
+  "name": "Quote Form",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Form Settings"
+    },
+    {
+      "type": "text",
+      "id": "return_url",
+      "label": "Return URL",
+      "default": "https://impactcanopy.com/pages/thank-you",
+      "info": "URL to redirect after form submission"
+    },
+    {
+      "type": "text",
+      "id": "product_info",
+      "label": "Product Info",
+      "default": "10x10 Custom Canopy with frame selection",
+      "info": "Default product info for the hidden field"
+    },
+    {
+      "type": "text",
+      "id": "division",
+      "label": "Division",
+      "default": "United States"
+    },
+    {
+      "type": "text",
+      "id": "lead_source",
+      "label": "Lead Source",
+      "default": "Web Store"
+    },
+    {
+      "type": "text",
+      "id": "submit_label",
+      "label": "Submit Button Label",
+      "default": "Get A Quote"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "t:settings.margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "t:settings.margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quote Form",
+      "category": "t:categories.forms"
+    }
+  ]
+}
+{% endschema %}

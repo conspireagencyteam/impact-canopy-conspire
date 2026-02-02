@@ -49,6 +49,11 @@
   else
     assign scroll_mode = 'horizontal'
   endif
+
+  # For mobile top/bottom positions, ensure horizontal scroll mode
+  if pagination_position == 'top' or pagination_position == 'bottom'
+    assign scroll_mode = 'horizontal'
+  endif
 -%}
 
 <slideshow-controls

@@ -55,7 +55,6 @@
         assign custom_style = custom_style | append: '--underline-offset: ' | append: underline_offset | append: 'px; '
       endif
     %}
-
     <dialog-component
       class="contact-form-button-popup quote-form-button-popup"
       {{ block.shopify_attributes }}
@@ -104,8 +103,12 @@
         >
           {{ block_settings.popup_heading }}
         </h2>
-        <div class="custom-quote-form">
-          {{ block_settings.liquid_code }} 
+        <div class="custom-quote-form custom-quote-form-wo-recaptcha">
+          {% if block_settings.settinngs.custom_liquid %}
+            {{ block_settings.liquid_code }}
+          {% else %}
+            {{ shop.metafields.custom.sales_quote }}
+          {% endif %} 
         </div>
         
         <button
@@ -304,9 +307,15 @@
       "visible_if": "{{ block.settings.button_type == 'default' }}"
     },
     {
+      "type": "checkbox",
+      "id": "custom_liquid",
+      "label": "Use custom liquid?"
+    },
+    {
       "type": "liquid",
       "id": "liquid_code",
-      "label": "Form Code"
+      "label": "Form Code",
+      "visible_if": "{{ block.settings.custom_liquid }}"
     },
     {
       "type": "checkbox",
