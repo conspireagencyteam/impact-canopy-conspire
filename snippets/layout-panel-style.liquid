@@ -28,6 +28,9 @@
 --flex-direction: {{ settings.content_direction | default: 'column' }}; --flex-wrap: nowrap; --flex-wrap-mobile: wrap;
 
 {% render 'gap-style', value: settings.gap %}
+{%- if settings.gap_mobile != blank -%}
+  --gap-mobile: {{ settings.gap_mobile }}px;
+{%- endif -%}
 
 --horizontal-alignment: {{ horizontal_alignment }}; --vertical-alignment: {{ vertical_alignment }};
 --vertical-alignment-mobile: {{ vertical_alignment_mobile }};

@@ -29,13 +29,17 @@
 </div>
 
 {% stylesheet %}
-  /* Apply mobile padding on mobile */
+  /* Apply mobile padding and gap on mobile */
   @media screen and (max-width: 749px) {
     .product-information.section--page-width .product-details > .group-block {
       padding-block-start: var(--mobile-padding-block-start, 0);
       padding-block-end: var(--mobile-padding-block-end, 0);
       padding-inline-start: var(--mobile-padding-inline-start, 0);
       padding-inline-end: var(--mobile-padding-inline-end, 0);
+    }
+
+    .product-details > .group-block > .group-block-content {
+      gap: var(--gap-mobile, var(--gap));
     }
   }
 
@@ -257,6 +261,16 @@
       "type": "range",
       "id": "gap",
       "label": "t:settings.gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "gap_mobile",
+      "label": "Mobile gap",
       "min": 0,
       "max": 100,
       "step": 1,

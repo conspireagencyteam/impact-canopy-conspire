@@ -2424,6 +2424,11 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
       flex: 0 0 fit-content;
     }
   }
+
+  /* Mobile gap support */
+  .layout-panel-flex {
+    gap: var(--gap-mobile, var(--gap));
+  }
 }
 
 @media (min-width: 750px) {
@@ -3496,6 +3501,46 @@ slideshow-component:has(slideshow-controls[thumbnails]) {
   }
 }
 
+/* Mobile thumbnail position - top/bottom */
+@media screen and (max-width: 749px) {
+  media-gallery[data-mobile-thumbnail-position='top'] slideshow-component:has(slideshow-controls[thumbnails]),
+  media-gallery[data-mobile-thumbnail-position='bottom'] slideshow-component:has(slideshow-controls[thumbnails]) {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template: none !important;
+
+    slideshow-controls[thumbnails] {
+      height: auto !important;
+      min-height: auto !important;
+      width: 100%;
+    }
+
+    slideshow-controls[thumbnails] .slideshow-controls__thumbnails {
+      flex-direction: row !important;
+    }
+
+    slideshow-container {
+      order: 0;
+    }
+  }
+
+  media-gallery[data-mobile-thumbnail-position='top'] slideshow-component:has(slideshow-controls[thumbnails]) {
+    slideshow-controls[thumbnails] {
+      order: -1;
+      margin-bottom: var(--thumbnail-gap, 16px);
+      margin-top: 0;
+    }
+  }
+
+  media-gallery[data-mobile-thumbnail-position='bottom'] slideshow-component:has(slideshow-controls[thumbnails]) {
+    slideshow-controls[thumbnails] {
+      order: 1;
+      margin-top: var(--thumbnail-gap, 16px);
+      margin-bottom: 0;
+    }
+  }
+}
+
 slideshow-controls[thumbnails]:is([pagination-position='right'], [pagination-position='left']) {
   display: flex;
   flex-direction: column;
@@ -4480,7 +4525,7 @@ text-component {
 
 /* Desktop two-column layout using CSS Grid */
 @media screen and (min-width: 750px) {
-  .custom-quote-form form {
+  .custom-quote-form:not(.custom-quote-form-pdp) form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--padding-sm) var(--padding-md);
@@ -4488,8 +4533,8 @@ text-component {
   }
 
   /* Hidden inputs and scripts - collapse */
-  .custom-quote-form form > input[type="hidden"],
-  .custom-quote-form form > script {
+  .custom-quote-form:not(.custom-quote-form-pdp) form > input[type="hidden"],
+  .custom-quote-form:not(.custom-quote-form-pdp) form > script {
     position: absolute;
     visibility: hidden;
     grid-column: 1 / -1;
@@ -4499,94 +4544,94 @@ text-component {
   }
 
   /* First label (Sales Rep) - full width */
-  .custom-quote-form form > label[for="selectyourrep"] {
+  .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="selectyourrep"] {
     grid-column: 1 / -1;
   }
 
   /* First select (Sales Rep) - full width */
-  .custom-quote-form form > select#Web_Form_Rep__c {
+  .custom-quote-form:not(.custom-quote-form-pdp) form > select#Web_Form_Rep__c {
     grid-column: 1 / -1;
   }
 
   /* Labels for left column (First Name, Email, Postal Code, Company) */
-  .custom-quote-form form > label[for="first_name"],
-  .custom-quote-form form > label[for="email"],
-  .custom-quote-form form > label[for="zip"],
-  .custom-quote-form form > label[for="company"] {
+  .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="first_name"],
+  .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="email"],
+  .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="zip"],
+  .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="company"] {
     grid-column: 1;
   }
 
   /* Inputs for left column */
-  .custom-quote-form form > input#first_name,
-  .custom-quote-form form > input#email,
-  .custom-quote-form form > input#Zip_Postal_Code__c,
-  .custom-quote-form form > input#company {
+  .custom-quote-form:not(.custom-quote-form-pdp) form > input#first_name,
+  .custom-quote-form:not(.custom-quote-form-pdp) form > input#email,
+  .custom-quote-form:not(.custom-quote-form-pdp) form > input#Zip_Postal_Code__c,
+  .custom-quote-form:not(.custom-quote-form-pdp) form > input#company {
     grid-column: 1;
   }
 
   /* Labels for right column (Last Name, Phone, Quantity, Business Type) */
-  .custom-quote-form form > label[for="last_name"],
-  .custom-quote-form form > label[for="phone"],
-  .custom-quote-form form > label[for="quantity"],
-  .custom-quote-form form > label[for="business"] {
+  .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="last_name"],
+  .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="phone"],
+  .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="quantity"],
+  .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="business"] {
     grid-column: 2;
   }
 
   /* Inputs for right column */
-  .custom-quote-form form > input#last_name,
-  .custom-quote-form form > input#phone,
-  .custom-quote-form form > input[id="00NRp0000000S17"],
-  .custom-quote-form form > input[id="00N4U000008Fzqc"] {
+  .custom-quote-form:not(.custom-quote-form-pdp) form > input#last_name,
+  .custom-quote-form:not(.custom-quote-form-pdp) form > input#phone,
+  .custom-quote-form:not(.custom-quote-form-pdp) form > input[id="00NRp0000000S17"],
+  .custom-quote-form:not(.custom-quote-form-pdp) form > input[id="00N4U000008Fzqc"] {
     grid-column: 2;
   }
 
   /* Position pairs in same rows */
   /* Row 1: First Name / Last Name labels */
-  .custom-quote-form form > label[for="first_name"] { grid-row: 3; }
-  .custom-quote-form form > label[for="last_name"] { grid-row: 3; }
-  
+  .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="first_name"] { grid-row: 3; }
+  .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="last_name"] { grid-row: 3; }
+
   /* Row 2: First Name / Last Name inputs */
-  .custom-quote-form form > input#first_name { grid-row: 4; }
-  .custom-quote-form form > input#last_name { grid-row: 4; }
-  
+  .custom-quote-form:not(.custom-quote-form-pdp) form > input#first_name { grid-row: 4; }
+  .custom-quote-form:not(.custom-quote-form-pdp) form > input#last_name { grid-row: 4; }
+
   /* Row 3: Email / Phone labels */
-  .custom-quote-form form > label[for="email"] { grid-row: 5; }
-  .custom-quote-form form > label[for="phone"] { grid-row: 5; }
-  
+  .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="email"] { grid-row: 5; }
+  .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="phone"] { grid-row: 5; }
+
   /* Row 4: Email / Phone inputs */
-  .custom-quote-form form > input#email { grid-row: 6; }
-  .custom-quote-form form > input#phone { grid-row: 6; }
-  
+  .custom-quote-form:not(.custom-quote-form-pdp) form > input#email { grid-row: 6; }
+  .custom-quote-form:not(.custom-quote-form-pdp) form > input#phone { grid-row: 6; }
+
   /* Row 5: Postal Code / Quantity labels */
-  .custom-quote-form form > label[for="zip"] { grid-row: 7; }
-  .custom-quote-form form > label[for="quantity"] { grid-row: 7; }
-  
+  .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="zip"] { grid-row: 7; }
+  .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="quantity"] { grid-row: 7; }
+
   /* Row 6: Postal Code / Quantity inputs */
-  .custom-quote-form form > input#Zip_Postal_Code__c { grid-row: 8; }
-  .custom-quote-form form > input[id="00NRp0000000S17"] { grid-row: 8; }
-  
+  .custom-quote-form:not(.custom-quote-form-pdp) form > input#Zip_Postal_Code__c { grid-row: 8; }
+  .custom-quote-form:not(.custom-quote-form-pdp) form > input[id="00NRp0000000S17"] { grid-row: 8; }
+
   /* Row 7: Company / Business Type labels */
-  .custom-quote-form form > label[for="company"] { grid-row: 9; }
-  .custom-quote-form form > label[for="business"] { grid-row: 9; }
-  
+  .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="company"] { grid-row: 9; }
+  .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="business"] { grid-row: 9; }
+
   /* Row 8: Company / Business Type inputs */
-  .custom-quote-form form > input#company { grid-row: 10; }
-  .custom-quote-form form > input[id="00N4U000008Fzqc"] { grid-row: 10; }
+  .custom-quote-form:not(.custom-quote-form-pdp) form > input#company { grid-row: 10; }
+  .custom-quote-form:not(.custom-quote-form-pdp) form > input[id="00N4U000008Fzqc"] { grid-row: 10; }
 
   /* reCAPTCHA - full width */
-  .custom-quote-form form > .g-recaptcha {
+  .custom-quote-form:not(.custom-quote-form-pdp) form > .g-recaptcha {
     grid-column: 1 / -1;
     grid-row: 11;
   }
 
   /* Error message - full width */
-  .custom-quote-form form > #captchaError {
+  .custom-quote-form:not(.custom-quote-form-pdp) form > #captchaError {
     grid-column: 1 / -1;
     grid-row: 12;
   }
 
   /* Submit button - full width */
-  .custom-quote-form form > input[type="submit"] {
+  .custom-quote-form:not(.custom-quote-form-pdp) form > input[type="submit"] {
     grid-column: 1 / -1;
     grid-row: 13;
   }
@@ -4649,7 +4694,7 @@ text-component {
   padding: var(--button-padding-block) var(--button-padding-inline);
   background-color: var(--button-background-color);
   color: var(--button-color);
-  border: none;
+  border: 1px solid var(--color-input-border);
   border-radius: var(--style-border-radius-buttons-primary);
   font-family: var(--font-paragraph--family);
   font-size: var(--font-h6--size);
@@ -4688,6 +4733,31 @@ text-component {
   margin-top: var(--padding-xs);
 }
 
+/* PDP Quote Form - Single column grid layout */
+.custom-quote-form-pdp form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--padding-xs);
+}
+
+.custom-quote-form-pdp form > input[type="hidden"],
+.custom-quote-form-pdp form > script {
+  position: absolute;
+  visibility: hidden;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-quote-form-pdp form > label,
+.custom-quote-form-pdp form > input,
+.custom-quote-form-pdp form > select,
+.custom-quote-form-pdp form > textarea,
+.custom-quote-form-pdp form > .g-recaptcha,
+.custom-quote-form-pdp form > #captchaError,
+.custom-quote-form-pdp form > input[type="submit"] {
+  grid-column: 1;
+}
 
 .header-icon-group {
   @media screen and (min-width: 1024px){
