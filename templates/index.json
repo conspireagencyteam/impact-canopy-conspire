@@ -4593,7 +4593,7 @@
                   "type": "collection-card",
                   "name": "t:names.collection_card",
                   "settings": {
-                    "collection": "bungee-chairs",
+                    "collection": "custom-signs-banners",
                     "placement": "below_image",
                     "horizontal_alignment": "center",
                     "vertical_alignment": "center",
