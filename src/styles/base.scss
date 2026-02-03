@@ -2319,7 +2319,12 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   width: var(--size-style-width-mobile, var(--size-style-width));
   height: var(--size-style-height-mobile, var(--size-style-height));
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 750px) and (max-width: 1250px) {
+    width: var(--size-style-width-tablet, var(--size-style-width));
+    height: var(--size-style-height);
+  }
+
+  @media screen and (min-width: 1251px) {
     width: var(--size-style-width);
     height: var(--size-style-height);
   }

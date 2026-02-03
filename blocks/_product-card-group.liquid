@@ -214,7 +214,39 @@
       "unit": "%",
       "default": 100,
       "visible_if": "{{ block.settings.width == 'custom' }}"
+    },    {
+      "type": "select",
+      "id": "width_tablet",
+      "label": "Tablet width",
+      "info": "Width for tablet devices (768px-1250px)",
+      "options": [
+        {
+          "value": "fit-content",
+          "label": "t:options.fit_content"
+        },
+        {
+          "value": "fill",
+          "label": "t:options.fill"
+        },
+        {
+          "value": "custom",
+          "label": "t:options.custom"
+        }
+      ],
+      "default": "fill"
     },
+    {
+      "type": "range",
+      "id": "custom_width_tablet",
+      "label": "t:settings.custom_width",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 100,
+      "visible_if": "{{ block.settings.width_tablet == 'custom' }}"
+    },
+
     {
       "type": "select",
       "id": "width_mobile",
