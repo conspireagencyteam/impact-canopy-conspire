@@ -55,7 +55,8 @@
                   {% assign link_obj = link.object %}
                   <li class="sub-item">
                     <a class="link" href="{{ link.url }}">
-                      {{ link_obj.featured_image | image_url: width: 100 | image_tag }}
+                      {% assign feat_image = link_obj.metafields.custom.menu_image | default: link_obj.featured_image %}
+                      {{ feat_image | image_url: width: 100 | image_tag }}
                       <span class="link-title">{{ link.title }}</span>
                     </a>
                   </li>
@@ -70,9 +71,11 @@
                 {% assign meta_point = meta_item.accessories_points %}
                 {% assign meta_link = meta_item.accessories_link.value %}
               <div class="menu-detail-meta">
+                {% if meta_image != blank %}
                 <div class="image-wrapper">
                   {{ meta_image | image_url: width: 100 | image_tag }}
                 </div>
+                {% endif %}
                 <div class="detail">
                   <span class="title">{{ meta_title }}</span>
                   <div class="point">
