@@ -16,6 +16,16 @@
           "type": "breadcrumb",
           "name": "Product Breadcrumb",
           "settings": {
+            "custom_collections": [
+              "canopies",
+              "canopy-accessories",
+              "custom-flags",
+              "custom-signs-banners",
+              "custom-chairs-tables-umbrellas",
+              "carports-sheds-more-for-storage-galore",
+              "flag-accessories",
+              "replacement-parts"
+            ],
             "show_home_icon": true,
             "home_text": "Home",
             "separator": "chevron",
