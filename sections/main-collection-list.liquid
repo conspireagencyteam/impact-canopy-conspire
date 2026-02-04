@@ -35,11 +35,17 @@
   {% endif %}
 
   {% capture list_items %}
+    {%- comment %}<locksmith:f1ec>{% endcomment -%}
+      {%- assign locksmith_60a8_forloop__size = 0 %}{% for collection in section_collections limit: max_items %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: collection, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_60a8_forloop__size = locksmith_60a8_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_60a8_forloop__index = nil -%}
+    {%- comment %}</locksmith:f1ec>{% endcomment -%}
     {% for collection in section_collections limit: max_items %}
+      {%- comment %}<locksmith:ead4>{% endcomment -%}
+        {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_60a8_forloop__index == nil %}{% assign locksmith_60a8_forloop__index = 1 %}{% assign locksmith_60a8_forloop__index0 = 0 %}{% else %}{% assign locksmith_60a8_forloop__index = locksmith_60a8_forloop__index | plus: 1 %}{% assign locksmith_60a8_forloop__index0 = locksmith_60a8_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_60a8_forloop__index == 1 %}{% assign locksmith_60a8_forloop__first = true %}{% else %}{% assign locksmith_60a8_forloop__first = false %}{% endif %}{% if locksmith_60a8_forloop__index == locksmith_60a8_forloop__size %}{% assign locksmith_60a8_forloop__last = true %}{% else %}{% assign locksmith_60a8_forloop__last = false %}{% endif %}{% assign locksmith_60a8_forloop__rindex = locksmith_60a8_forloop__size | minus: locksmith_60a8_forloop__index | minus: 1 %}{% assign locksmith_60a8_forloop__rindex0 = locksmith_60a8_forloop__size | minus: locksmith_60a8_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+      {%- comment %}</locksmith:ead4>{% endcomment -%}
       <div class="resource-list__item">
         {% content_for 'block', type: '_collection-card', id: 'static-collection-card', closest.collection: collection %}
       </div>
-      {% unless forloop.last %}
+      {% unless locksmith_60a8_forloop__last %}
         <!--@list/split-->
       {% endunless %}
     {% endfor %}

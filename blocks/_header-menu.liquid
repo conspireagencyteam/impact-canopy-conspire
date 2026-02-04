@@ -36,6 +36,9 @@
             role="list"
           >
             {% for link in block_settings.menu.links %}
+              {%- comment %}<locksmith:b5ed>{% endcomment -%}
+                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: block_settings.menu, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+              {%- comment %}</locksmith:b5ed>{% endcomment -%}
               <li>
                 <a
                   href="{{ link.url }}"
