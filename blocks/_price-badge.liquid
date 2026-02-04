@@ -60,10 +60,10 @@
     assign save_amount = compare_at_price_raw | minus: price_raw
     if block_settings.save_value_type == 'percent'
       assign save_percent = save_amount | times: 100.0 | divided_by: compare_at_price_raw | round
-      assign save_value_text = block_settings.save_prefix | append: save_percent | append: '%'
+      assign save_value_text = block_settings.save_prefix | append: ' ' | append: save_percent | append: '%'
     else
       assign save_amount_formatted = save_amount | money
-      assign save_value_text = block_settings.save_prefix | append: save_amount_formatted
+      assign save_value_text = block_settings.save_prefix | append: ' ' | append: save_amount_formatted
     endif
   endif
 -%}
@@ -79,6 +79,7 @@
   "
   {{ block.shopify_attributes }}
 >
+  {% if save_value_text == blank or save_value_text == '' %}<div class="block-hidden"></div>{% endif %}
   <div ref="badgeContainer">
     {% if show_compare_price and save_value_text != '' %}
       <span class="save-badge" style="
