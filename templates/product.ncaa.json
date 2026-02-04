@@ -744,7 +744,6 @@
                 },
                 "accelerated-quote": {
                   "type": "quote-form-button",
-                  "disabled": true,
                   "static": true,
                   "settings": {
                     "button_type": "popup",
