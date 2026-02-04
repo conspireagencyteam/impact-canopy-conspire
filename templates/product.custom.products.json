@@ -12,10 +12,20 @@
     "section_gJxWX4": {
       "type": "section",
       "blocks": {
-        "breadcrumb_iaPiCy": {
+        "breadcrumb_UEGQBi": {
           "type": "breadcrumb",
           "name": "Product Breadcrumb",
           "settings": {
+            "custom_collections": [
+              "canopies",
+              "canopy-accessories",
+              "custom-flags",
+              "custom-signs-banners",
+              "custom-chairs-tables-umbrellas",
+              "carports-sheds-more-for-storage-galore",
+              "flag-accessories",
+              "replacement-parts"
+            ],
             "show_home_icon": true,
             "home_text": "Home",
             "separator": "chevron",
@@ -28,7 +38,7 @@
         }
       },
       "block_order": [
-        "breadcrumb_iaPiCy"
+        "breadcrumb_UEGQBi"
       ],
       "name": "t:names.custom_section",
       "settings": {
