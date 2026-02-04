@@ -27,7 +27,7 @@
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
-            "color": "var(--color-foreground-heading)",
+            "color": "var(--color-primary)",
             "custom_color": "#000000",
             "use_mobile_typography": false,
             "font_size_mobile": "1rem",
