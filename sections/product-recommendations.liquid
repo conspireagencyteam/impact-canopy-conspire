@@ -78,11 +78,17 @@
         endif
       %}
       {% capture list_items %}
+        {%- comment %}<locksmith:86df>{% endcomment -%}
+          {%- assign locksmith_3249_forloop__size = 0 %}{% for product in products limit: section.settings.max_products %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_3249_forloop__size = locksmith_3249_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_3249_forloop__index = nil -%}
+        {%- comment %}</locksmith:86df>{% endcomment -%}
         {% for product in products limit: section.settings.max_products %}
+          {%- comment %}<locksmith:b115>{% endcomment -%}
+            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_3249_forloop__index == nil %}{% assign locksmith_3249_forloop__index = 1 %}{% assign locksmith_3249_forloop__index0 = 0 %}{% else %}{% assign locksmith_3249_forloop__index = locksmith_3249_forloop__index | plus: 1 %}{% assign locksmith_3249_forloop__index0 = locksmith_3249_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_3249_forloop__index == 1 %}{% assign locksmith_3249_forloop__first = true %}{% else %}{% assign locksmith_3249_forloop__first = false %}{% endif %}{% if locksmith_3249_forloop__index == locksmith_3249_forloop__size %}{% assign locksmith_3249_forloop__last = true %}{% else %}{% assign locksmith_3249_forloop__last = false %}{% endif %}{% assign locksmith_3249_forloop__rindex = locksmith_3249_forloop__size | minus: locksmith_3249_forloop__index | minus: 1 %}{% assign locksmith_3249_forloop__rindex0 = locksmith_3249_forloop__size | minus: locksmith_3249_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+          {%- comment %}</locksmith:b115>{% endcomment -%}
           <div class="resource-list__item">
             {% content_for 'block', type: '_product-card', id: 'static-product-card', closest.product: product %}
           </div>
-          {% unless forloop.last %}
+          {% unless locksmith_3249_forloop__last %}
             <!--@list/split-->
           {% endunless %}
         {% endfor %}
