@@ -284,6 +284,7 @@
             },
             "staticproduct-card-hover": {
               "type": "_product-card-hover",
+              "disabled": true,
               "static": true,
               "settings": {
                 "product_card_gap": 16,
