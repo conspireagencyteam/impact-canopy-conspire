@@ -498,8 +498,8 @@
         "border_radius": 16,
         "padding-block-start": 24,
         "padding-block-end": 0,
-        "use_mobile_padding": false,
-        "padding-block-start-mobile": 0,
+        "use_mobile_padding": true,
+        "padding-block-start-mobile": 24,
         "padding-block-end-mobile": 0,
         "padding-inline-start-mobile": 0,
         "padding-inline-end-mobile": 0
@@ -1336,9 +1336,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 72,
         "padding-block-end": 36,
-        "use_mobile_padding": false,
-        "padding-block-start-mobile": 0,
-        "padding-block-end-mobile": 0
+        "use_mobile_padding": true,
+        "padding-block-start-mobile": 36,
+        "padding-block-end-mobile": 18
       }
     },
     "section_pBK8ft": {
@@ -2130,9 +2130,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 36,
         "padding-block-end": 36,
-        "use_mobile_padding": false,
-        "padding-block-start-mobile": 0,
-        "padding-block-end-mobile": 0
+        "use_mobile_padding": true,
+        "padding-block-start-mobile": 18,
+        "padding-block-end-mobile": 18
       }
     },
     "product_list_Bf68TB": {
@@ -2493,7 +2493,7 @@
       "settings": {
         "collection": "custom-canopies",
         "layout_type": "grid",
-        "carousel_on_mobile": false,
+        "carousel_on_mobile": true,
         "max_products": 6,
         "columns": 6,
         "mobile_columns": "2",
@@ -2508,9 +2508,9 @@
         "color_scheme": "scheme-3",
         "padding-block-start": 36,
         "padding-block-end": 36,
-        "use_mobile_padding": false,
-        "padding-block-start-mobile": 0,
-        "padding-block-end-mobile": 0,
+        "use_mobile_padding": true,
+        "padding-block-start-mobile": 18,
+        "padding-block-end-mobile": 18,
         "padding-inline-start-mobile": 0,
         "padding-inline-end-mobile": 0
       }
@@ -2556,7 +2556,7 @@
             "open_in_new_tab": false,
             "placeholder": "",
             "padding-block-start": 0,
-            "padding-block-end": 0,
+            "padding-block-end": 12,
             "padding-inline-start": 0,
             "padding-inline-end": 0,
             "use_mobile_padding": false,
@@ -4156,7 +4156,7 @@
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 24,
+        "gap": 12,
         "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
@@ -4172,11 +4172,11 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 48,
-        "padding-block-end": 48,
-        "use_mobile_padding": false,
-        "padding-block-start-mobile": 0,
-        "padding-block-end-mobile": 0
+        "padding-block-start": 36,
+        "padding-block-end": 36,
+        "use_mobile_padding": true,
+        "padding-block-start-mobile": 18,
+        "padding-block-end-mobile": 18
       }
     },
     "section_L3Gxpk": {
@@ -4823,9 +4823,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 36,
         "padding-block-end": 36,
-        "use_mobile_padding": false,
-        "padding-block-start-mobile": 0,
-        "padding-block-end-mobile": 0
+        "use_mobile_padding": true,
+        "padding-block-start-mobile": 18,
+        "padding-block-end-mobile": 18
       }
     },
     "product_list_9CYyh7": {
@@ -5186,7 +5186,7 @@
       "settings": {
         "collection": "instant-canopy-tops",
         "layout_type": "grid",
-        "carousel_on_mobile": false,
+        "carousel_on_mobile": true,
         "max_products": 6,
         "columns": 6,
         "mobile_columns": "2",
@@ -5194,16 +5194,16 @@
         "columns_gap": 8,
         "rows_gap": 24,
         "icons_style": "arrow",
-        "icons_shape": "none",
+        "icons_shape": "circle",
         "section_width": "page-width",
         "horizontal_alignment": "flex-start",
         "gap": 28,
         "color_scheme": "scheme-3",
         "padding-block-start": 36,
         "padding-block-end": 36,
-        "use_mobile_padding": false,
-        "padding-block-start-mobile": 0,
-        "padding-block-end-mobile": 0,
+        "use_mobile_padding": true,
+        "padding-block-start-mobile": 18,
+        "padding-block-end-mobile": 18,
         "padding-inline-start-mobile": 0,
         "padding-inline-end-mobile": 0
       }
@@ -5473,11 +5473,11 @@
             "padding-block-end": 24,
             "padding-inline-start": 24,
             "padding-inline-end": 24,
-            "use_mobile_padding": false,
-            "padding-block-start-mobile": 0,
-            "padding-block-end-mobile": 0,
-            "padding-inline-start-mobile": 0,
-            "padding-inline-end-mobile": 0
+            "use_mobile_padding": true,
+            "padding-block-start-mobile": 10,
+            "padding-block-end-mobile": 10,
+            "padding-inline-start-mobile": 10,
+            "padding-inline-end-mobile": 10
           },
           "blocks": {
             "image": {
@@ -5618,9 +5618,9 @@
         "color_scheme": "scheme-3",
         "padding-block-start": 36,
         "padding-block-end": 36,
-        "use_mobile_padding": false,
-        "padding-block-start-mobile": 0,
-        "padding-block-end-mobile": 0,
+        "use_mobile_padding": true,
+        "padding-block-start-mobile": 18,
+        "padding-block-end-mobile": 18,
         "padding-inline-start-mobile": 0,
         "padding-inline-end-mobile": 0
       }
@@ -6512,9 +6512,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 36,
         "padding-block-end": 36,
-        "use_mobile_padding": false,
-        "padding-block-start-mobile": 0,
-        "padding-block-end-mobile": 0
+        "use_mobile_padding": true,
+        "padding-block-start-mobile": 18,
+        "padding-block-end-mobile": 18
       }
     },
     "section_dDxBjY": {
@@ -6674,7 +6674,7 @@
                 "custom_width_tablet": 100,
                 "width_mobile": "fill",
                 "custom_width_mobile": 100,
-                "height": "fit",
+                "height": "fill",
                 "custom_height": 100,
                 "inherit_color_scheme": true,
                 "color_scheme": "",
@@ -7158,9 +7158,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 36,
         "padding-block-end": 36,
-        "use_mobile_padding": false,
-        "padding-block-start-mobile": 0,
-        "padding-block-end-mobile": 0
+        "use_mobile_padding": true,
+        "padding-block-start-mobile": 18,
+        "padding-block-end-mobile": 18
       }
     },
     "product_list_4cH68g": {
