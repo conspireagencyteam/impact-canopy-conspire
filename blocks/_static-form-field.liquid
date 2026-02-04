@@ -397,55 +397,9 @@
 
 {% schema %}
 {
-  "name": "Static Form Field",
+  "name": "Design Comments",
   "tag": null,
   "settings": [
-    {
-      "type": "header",
-      "content": "File Upload"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_file_upload",
-      "label": "Show file upload",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "file_upload_label",
-      "label": "Label",
-      "default": "Upload file",
-      "visible_if": "{{ block.settings.show_file_upload }}"
-    },
-    {
-      "type": "text",
-      "id": "file_upload_tooltip",
-      "label": "Tooltip text",
-      "default": "You can upload your file here",
-      "visible_if": "{{ block.settings.show_file_upload }}"
-    },
-    {
-      "type": "text",
-      "id": "file_button_text",
-      "label": "Button text",
-      "default": "Choose file",
-      "visible_if": "{{ block.settings.show_file_upload }}"
-    },
-    {
-      "type": "text",
-      "id": "file_upload_name",
-      "label": "Field name",
-      "default": "file_upload",
-      "visible_if": "{{ block.settings.show_file_upload }}"
-    },
-    {
-      "type": "text",
-      "id": "file_upload_accept",
-      "label": "Accepted file types",
-      "default": ".pdf,.jpg,.jpeg,.png,.gif",
-      "info": "Comma separated file extensions",
-      "visible_if": "{{ block.settings.show_file_upload }}"
-    },
     {
       "type": "header",
       "content": "Textarea"
@@ -554,7 +508,7 @@
   ],
   "presets": [
     {
-      "name": "Static Form Field",
+      "name": "Design Comments",
       "category": "Forms"
     }
   ]
