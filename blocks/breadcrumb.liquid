@@ -6,9 +6,21 @@
   endunless
 
   # Get the first collection the product belongs to
-  assign product_collection = product.collections | first
+  assign product_collection = collections['all']
 -%}
 
+{% assign collections_to_show = block.settings.custom_collections %}
+{% assign product_cols = product.collections %}
+{% for col2 in product_cols %}
+  {% for col in collections_to_show  %}
+    {% if col2 == col %}
+      {% assign product_collection = col %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% comment %} {{ product_collection.title }} {% endcomment %}
 <nav
   class="breadcrumb"
   data-alignment="{{ block.settings.alignment }}"
@@ -55,7 +67,8 @@
     {%- if product_collection -%}
       <li class="breadcrumb__item">
         <a href="{{ product_collection.url }}" class="breadcrumb__link">
-          {{ product_collection.title }}
+          {% assign col_title = 'All products' | default: product_collection.title %}
+          {{ col_title }}
         </a>
       </li>
 
@@ -79,7 +92,7 @@
     {%- comment -%} Product (current page) {%- endcomment -%}
     <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">
       <span class="breadcrumb__text">
-        {{ product.title }}
+        {{ product.title | truncatewords: 10 }}
       </span>
     </li>
   </ol>
