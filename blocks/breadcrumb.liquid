@@ -20,7 +20,6 @@
   {% endfor %}
 {% endfor %}
 
-{% comment %} {{ product_collection.title }} {% endcomment %}
 <nav
   class="breadcrumb"
   data-alignment="{{ block.settings.alignment }}"
@@ -67,8 +66,12 @@
     {%- if product_collection -%}
       <li class="breadcrumb__item">
         <a href="{{ product_collection.url }}" class="breadcrumb__link">
-          {% assign col_title = 'All products' | default: product_collection.title %}
-          {{ col_title }}
+          {% assign col_title = product_collection.title %}
+          {% if col_title == 'Products' or col_title == 'products' %}
+            {{ col_title |prepend: 'All ' }}
+          {% else %}
+            {{ col_title }}
+          {% endif %}
         </a>
       </li>
 
