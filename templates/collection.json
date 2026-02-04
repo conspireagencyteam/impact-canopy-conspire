@@ -56,7 +56,7 @@
             "text": "{{ closest.collection.description }}",
             "width": "100%",
             "max_width": "none",
-            "alignment": "center",
+            "alignment": "left",
             "type_preset": "rte",
             "font": "var(--font-primary--family)",
             "font_size": "",
