@@ -139,7 +139,7 @@
                 "show_price_min": false,
                 "save_prefix": "Save",
                 "save_value_type": "percent",
-                "save_badge_border_radius": 4,
+                "save_badge_border_radius": 30,
                 "save_badge_padding_block": 4,
                 "save_badge_padding_inline": 12,
                 "save_badge_font_size": 12,
