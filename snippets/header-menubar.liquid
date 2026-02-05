@@ -71,7 +71,9 @@
                   <li class="sub-item">
                     <a class="link" href="{{ link.url }}">
                       {% assign feat_image = link_obj.metafields.custom.menu_image | default: link_obj.featured_image %}
-                      {{ feat_image | image_url: width: 100 | image_tag }}
+                      {% if feat_image != blank %}
+                      {{ feat_image | image_url: width: 100, height: 100 | image_tag }}
+                      {% endif %}
                       <span class="link-title">{{ link.title }}</span>
                     </a>
                   </li>
@@ -97,12 +99,14 @@
                     {{ meta_point | metafield_tag }}
                   </div>
                 </div>
+                {% if meta_link.url != blank and meta_link.text != blank %}
                 <div class="link">
                   <a class="button" href="{{ meta_link.url }}">
                     {{ meta_link.text }}
                     {{ 'icon-arrow.svg' | inline_asset_content }} 
                   </a>
                 </div>
+                {% endif %}
               </div>
               {% endif %}
             </div>
