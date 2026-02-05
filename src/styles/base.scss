@@ -4495,6 +4495,9 @@ text-component {
 .block-hidden:has(.block-hidden) {
   display: none;
 }
+.section:has(.section-hidden) {
+  display: none;
+}
 
 /* Quote Form Dialog (Third-party Salesforce form) */
 .contact-form-button-popup__dialog {
