@@ -12,7 +12,13 @@
 {% assign collections_to_show = block.settings.custom_collections %}
 {% assign product_cols = product.collections %}
 {% for col2 in product_cols %}
+  {%- comment %}<locksmith:28ab>{% endcomment -%}
+    {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: col2, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+  {%- comment %}</locksmith:28ab>{% endcomment -%}
   {% for col in collections_to_show  %}
+    {%- comment %}<locksmith:df94>{% endcomment -%}
+      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: col, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+    {%- comment %}</locksmith:df94>{% endcomment -%}
     {% if col2 == col %}
       {% assign product_collection = col %}
       {% break %}
