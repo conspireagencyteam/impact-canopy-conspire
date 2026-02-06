@@ -25,7 +25,13 @@
   {% capture list_items %}
     {% if section.settings.collection != blank and shop.products_count != 0 %}
       {% paginate section.settings.collection.products by max_items %}
+        {%- comment %}<locksmith:a04c>{% endcomment -%}
+          {%- assign locksmith_b9eb_forloop__size = 0 %}{% for product in section.settings.collection.products limit: max_items %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: section.settings.collection, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_b9eb_forloop__size = locksmith_b9eb_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_b9eb_forloop__index = nil -%}
+        {%- comment %}</locksmith:a04c>{% endcomment -%}
         {% for product in section.settings.collection.products limit: max_items %}
+          {%- comment %}<locksmith:a26a>{% endcomment -%}
+            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: section.settings.collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_b9eb_forloop__index == nil %}{% assign locksmith_b9eb_forloop__index = 1 %}{% assign locksmith_b9eb_forloop__index0 = 0 %}{% else %}{% assign locksmith_b9eb_forloop__index = locksmith_b9eb_forloop__index | plus: 1 %}{% assign locksmith_b9eb_forloop__index0 = locksmith_b9eb_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_b9eb_forloop__index == 1 %}{% assign locksmith_b9eb_forloop__first = true %}{% else %}{% assign locksmith_b9eb_forloop__first = false %}{% endif %}{% if locksmith_b9eb_forloop__index == locksmith_b9eb_forloop__size %}{% assign locksmith_b9eb_forloop__last = true %}{% else %}{% assign locksmith_b9eb_forloop__last = false %}{% endif %}{% assign locksmith_b9eb_forloop__rindex = locksmith_b9eb_forloop__size | minus: locksmith_b9eb_forloop__index | minus: 1 %}{% assign locksmith_b9eb_forloop__rindex0 = locksmith_b9eb_forloop__size | minus: locksmith_b9eb_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+          {%- comment %}</locksmith:a26a>{% endcomment -%}
           <div
             class="resource-list__item"
           >
@@ -34,7 +40,7 @@
             {% # theme-check-enable UniqueStaticBlockId %}
           </div>
 
-          {% unless forloop.last %}
+          {% unless locksmith_b9eb_forloop__last %}
             <!--@list/split-->
           {% endunless %}
         {% endfor %}
