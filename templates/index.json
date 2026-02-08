@@ -2315,7 +2315,7 @@
                 "label": "Shop by Size",
                 "link": "{{ closest.collection.url }}",
                 "open_in_new_tab": false,
-                "style_class": "button-secondary",
+                "style_class": "button",
                 "button_size": "default",
                 "width": "fit-content",
                 "custom_width": 100,
