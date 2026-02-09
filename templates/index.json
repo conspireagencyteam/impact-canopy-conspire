@@ -5474,10 +5474,10 @@
             "padding-inline-start": 24,
             "padding-inline-end": 24,
             "use_mobile_padding": true,
-            "padding-block-start-mobile": 10,
-            "padding-block-end-mobile": 10,
-            "padding-inline-start-mobile": 10,
-            "padding-inline-end-mobile": 10
+            "padding-block-start-mobile": 15,
+            "padding-block-end-mobile": 20,
+            "padding-inline-start-mobile": 15,
+            "padding-inline-end-mobile": 15
           },
           "blocks": {
             "image": {
