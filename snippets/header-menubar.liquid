@@ -20,7 +20,7 @@
 <dialog-component id="menu-modal" class="menu-modal mobile:hidden" ref="headerMenu" {{ block.shopify_attributes }}>
   <button class="button button-unstyled menu-modal__button" aria-label="Open menu" on:click="/showDialog" ref="triggerButton">
     {{ 'icon-menubar.svg' | inline_asset_content }}
-    <span class="menu-modal__button-text">Shop All</span>
+    <span class="menu-modal__button-text">Catalog</span>
   </button>
 
   <dialog ref="dialog" on:click="/closeDialogOnClickOutside" on:keydown="/closeDialogOnEscapePress" class="menu-modal__content dialog-modal color-scheme-1" scroll-lock aria-labelledby="menu-modal-heading">
