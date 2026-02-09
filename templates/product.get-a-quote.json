@@ -8000,7 +8000,7 @@
                   "type": "_meta-button",
                   "static": true,
                   "settings": {
-                    "label": "Download Product Design",
+                    "label": "Download Template",
                     "link": "",
                     "open_in_new_tab": false,
                     "style_class": "button-tertiary",
