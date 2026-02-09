@@ -10,7 +10,7 @@
       {% if spec_sheet != blank %}
         {% for spec_item in spec_sheet %}
           {% assign spec_item_file = spec_item.file | file_url %}
-          {% assign fallback_label = spec_item.title | append: ' spec sheet' %}
+          {% assign fallback_label = 'Download full spec sheet' %}
           {% content_for 'block', id: 'fileGroupMeta', type: '_meta-group-product-detail', item: spec_item, fallback_link: spec_item_file, fallback_label: fallback_label %}
         {% endfor %}
       {% endif %}
