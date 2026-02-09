@@ -9809,6 +9809,7 @@
         "group_dhBwEp",
         "group_wwcRJ6"
       ],
+      "disabled": true,
       "name": "Block",
       "settings": {
         "content_direction": "column",
