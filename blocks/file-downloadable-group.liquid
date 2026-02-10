@@ -1,11 +1,14 @@
 {%- capture children %}
-  {% assign design_file = product.metafields.custom.product_design %}
-  {% assign design_template = design_file | file_url %}
+  {% assign design_sheet = product.metafields.custom.design_template.value %}
   {% assign spec_sheet = product.metafields.custom.spec_sheet.value %}
-  {% if design_file != blank or spec_sheet != blank %}
+  {% if design_sheet != blank or spec_sheet != blank %}
     <div class="block-detail-product-download">
-      {% if design_file != blank %}
-        {% content_for 'block', id: 'fileGroup', type: '_meta-group-product-detail', fallback_link: design_template %}
+      {% if design_sheet != blank %}
+        {% for design_item in design_sheet %}
+          {% assign design_item_file = design_item.file | file_url %}
+          {% assign fallback_label = 'Download Product Design' %}
+          {% content_for 'block', id: 'fileGroupDesign', type: '_meta-group-product-detail', item: design_item, fallback_link: design_item_file, fallback_label: fallback_label %}
+        {%  endfor %}
       {% endif %}
       {% if spec_sheet != blank %}
         {% for spec_item in spec_sheet %}
