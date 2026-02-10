@@ -7301,7 +7301,7 @@
             "custom_class": ""
           },
           "blocks": {
-            "fileGroup": {
+            "fileGroupDesign": {
               "type": "_meta-group-product-detail",
               "static": true,
               "settings": {
@@ -7331,7 +7331,7 @@
                 "border": "none",
                 "border_width": 1,
                 "border_opacity": 100,
-                "border_radius": 10,
+                "border_radius": 0,
                 "toggle_overlay": false,
                 "overlay_style": "solid",
                 "overlay_color": "#00000026",
@@ -7339,15 +7339,15 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
-                "padding-block-start": 24,
-                "padding-block-end": 24,
-                "padding-inline-start": 24,
-                "padding-inline-end": 24,
-                "use_mobile_padding": true,
-                "padding-block-start-mobile": 15,
-                "padding-block-end-mobile": 15,
-                "padding-inline-start-mobile": 15,
-                "padding-inline-end-mobile": 15,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "use_mobile_padding": false,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0,
                 "custom_class": ""
               },
               "blocks": {
@@ -7355,11 +7355,11 @@
                   "type": "_meta-title",
                   "static": true,
                   "settings": {
-                    "text": "<p>Product Design Template</p>",
+                    "text": "",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "paragraph",
+                    "type_preset": "rte",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -7386,7 +7386,7 @@
                   "type": "_meta-button",
                   "static": true,
                   "settings": {
-                    "label": "Download Template",
+                    "label": "Shop now",
                     "link": "",
                     "open_in_new_tab": false,
                     "style_class": "button-tertiary",
