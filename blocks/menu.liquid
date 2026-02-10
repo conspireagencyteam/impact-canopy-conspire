@@ -36,7 +36,7 @@
       "
       {{ block.shopify_attributes }}
     >
-      <summary class="menu__heading{% if heading == blank %} menu__heading--empty{% endif %} {{ block_settings.heading_preset }}">
+      <summary class="menu__heading{% if heading == blank %} menu__heading--empty{% endif %} {{ block_settings.heading_preset }}" style="{% if block_settings.heading_color != blank %}color: {{ block_settings.heading_color }};{% endif %}{% if block_settings.heading_font_size != 16 %} font-size: {{ block_settings.heading_font_size }}px;{% endif %}">
         <span class="menu__heading__default">{{ heading }}</span>
         <span class="menu__heading__accordion">
           {{ heading | default: menu.title }}
@@ -57,7 +57,7 @@
                 {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: menu, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
               {%- comment %}</locksmith:338f>{% endcomment -%}
               <li class="menu__item {{ block_settings.link_preset }}">
-                <a href="{{ link.url }}">
+                <a href="{{ link.url }}" style="{% if block_settings.link_color != blank %}color: {{ block_settings.link_color }};{% endif %}{% if block_settings.link_font_size != 14 %} font-size: {{ block_settings.link_font_size }}px;{% endif %}">
                   {{ link.title }}
                 </a>
               </li>
@@ -207,6 +207,36 @@
     {
       "type": "header",
       "content": "t:content.typography"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:settings.heading_color"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "t:settings.heading_font_size",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "t:settings.link_color"
+    },
+    {
+      "type": "range",
+      "id": "link_font_size",
+      "label": "t:settings.link_font_size",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 14
     },
     {
       "type": "select",
