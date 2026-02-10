@@ -543,6 +543,10 @@
             "label": "32px"
           },
           {
+            "value": "36",
+            "label": "36px"
+          },
+          {
             "value": "40",
             "label": "40px"
           },
@@ -693,6 +697,10 @@
           {
             "value": "32",
             "label": "32px"
+          },
+          {
+            "value": "36",
+            "label": "36px"
           },
           {
             "value": "40",
@@ -859,6 +867,10 @@
             "label": "32px"
           },
           {
+            "value": "36",
+            "label": "36px"
+          },
+          {
             "value": "40",
             "label": "40px"
           },
@@ -1017,6 +1029,10 @@
           {
             "value": "32",
             "label": "32px"
+          },
+          {
+            "value": "36",
+            "label": "36px"
           },
           {
             "value": "40",
@@ -1179,6 +1195,10 @@
             "label": "32px"
           },
           {
+            "value": "36",
+            "label": "36px"
+          },
+          {
             "value": "40",
             "label": "40px"
           },
@@ -1337,6 +1357,10 @@
           {
             "value": "32",
             "label": "32px"
+          },
+          {
+            "value": "36",
+            "label": "36px"
           },
           {
             "value": "40",
