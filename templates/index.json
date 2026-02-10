@@ -2994,7 +2994,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/light_steel_DS.png",
+                    "image": "shopify://shop_images/ds_logo.jpg",
                     "link": "",
                     "image_ratio": "adapt",
                     "image_ratio_mobile": "same",
@@ -3156,7 +3156,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/heavyduty_steel_CL.png",
+                    "image": "shopify://shop_images/cl.jpg",
                     "link": "",
                     "image_ratio": "adapt",
                     "image_ratio_mobile": "same",
@@ -3318,7 +3318,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/light_aluminium_ML.png",
+                    "image": "shopify://shop_images/ml.jpg",
                     "link": "",
                     "image_ratio": "adapt",
                     "image_ratio_mobile": "same",
@@ -3537,7 +3537,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/heavyduty_aluminium_M.png",
+                    "image": "shopify://shop_images/m.jpg",
                     "link": "",
                     "image_ratio": "adapt",
                     "image_ratio_mobile": "same",
@@ -3699,7 +3699,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/super_heavyduty_aluminium_MegaX.png",
+                    "image": "shopify://shop_images/mx.jpg",
                     "link": "",
                     "image_ratio": "adapt",
                     "image_ratio_mobile": "same",
