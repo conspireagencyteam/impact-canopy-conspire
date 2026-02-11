@@ -424,7 +424,7 @@
           "foreground": "#490e67",
           "primary": "#490e67",
           "primary_hover": "#490e67db",
-          "border": "#490e67",
+          "border": "#cccccc",
           "shadow": "#000000",
           "primary_button_background": "#ee7623",
           "primary_button_text": "#ffffff",
