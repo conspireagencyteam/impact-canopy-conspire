@@ -118,7 +118,7 @@
   {%- endif -%}
 {%- endcapture -%}
 
-<div ref="priceContainer">
+<div ref="priceContainer" style="display: inline-flex; width: fit-content; align-items: center;gap: 8px;">
   {% if save_value_position == 'before' %}{{ save_badge }}{% endif %}
 
   {% unless hide_prices %}
