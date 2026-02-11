@@ -450,16 +450,16 @@
           "input_hover_background": "#fafafa",
           "variant_background_color": "#ffffff",
           "variant_text_color": "#490e67",
-          "variant_border_color": "#490e67db",
-          "variant_hover_background_color": "#f5f5f5",
+          "variant_border_color": "#cccccc",
+          "variant_hover_background_color": "#eef0f2",
           "variant_hover_text_color": "#490e67",
-          "variant_hover_border_color": "#490e67",
-          "selected_variant_background_color": "#490e67",
-          "selected_variant_text_color": "#ffffff",
-          "selected_variant_border_color": "#490e67",
-          "selected_variant_hover_background_color": "#490e67db",
-          "selected_variant_hover_text_color": "#ffffff",
-          "selected_variant_hover_border_color": "#490e67db"
+          "variant_hover_border_color": "#cccccc",
+          "selected_variant_background_color": "#eef0f2",
+          "selected_variant_text_color": "#490e67",
+          "selected_variant_border_color": "#cccccc",
+          "selected_variant_hover_background_color": "#eef0f2",
+          "selected_variant_hover_text_color": "#490e67",
+          "selected_variant_hover_border_color": "#cccccc"
         }
       },
       "scheme-1bb32d91-cd41-403f-bc8d-b9253d6eed6b": {
