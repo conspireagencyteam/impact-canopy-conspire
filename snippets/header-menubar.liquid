@@ -39,7 +39,7 @@
           {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: block_settings.menu, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_206a_forloop__index == nil %}{% assign locksmith_206a_forloop__index = 1 %}{% assign locksmith_206a_forloop__index0 = 0 %}{% else %}{% assign locksmith_206a_forloop__index = locksmith_206a_forloop__index | plus: 1 %}{% assign locksmith_206a_forloop__index0 = locksmith_206a_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_206a_forloop__index == 1 %}{% assign locksmith_206a_forloop__first = true %}{% else %}{% assign locksmith_206a_forloop__first = false %}{% endif %}{% if locksmith_206a_forloop__index == locksmith_206a_forloop__size %}{% assign locksmith_206a_forloop__last = true %}{% else %}{% assign locksmith_206a_forloop__last = false %}{% endif %}{% assign locksmith_206a_forloop__rindex = locksmith_206a_forloop__size | minus: locksmith_206a_forloop__index | minus: 1 %}{% assign locksmith_206a_forloop__rindex0 = locksmith_206a_forloop__size | minus: locksmith_206a_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
         {%- comment %}</locksmith:5b7a>{% endcomment -%}
         <li class="main-item">
-          <a class="main-link" href="{{ link.url }}"{% if link.links %} data-ref="menuitem{{ locksmith_206a_forloop__index }}"{% endif %}>
+          <a class="main-link{% if forloop.first %} active{% endif %}" href="{{ link.url }}"{% if link.links %} data-ref="menuitem{{ locksmith_206a_forloop__index }}"{% endif %}>
             <span class="menu-list__link-title">{{- link.title -}}</span>
             {%- if link.links != blank -%}
               <span class="svg-wrapper icon-caret icon-animated">
@@ -60,7 +60,7 @@
           {%- comment %}</locksmith:3730>{% endcomment -%}
           {% assign link_num = locksmith_2d77_forloop__index %}
           {% if link.links!= blank %}  
-            <div class="menu-contents menu-contents-{{ link_num }}" id="menuitem{{ link_num }}">
+            <div class="menu-contents menu-contents-{{ link_num }}{% if forloop.first %} active{% endif %}" id="menuitem{{ link_num }}">
               <div class="item-lists">
                 <ul class="sub-items">
                   {% for link in link.links %}
