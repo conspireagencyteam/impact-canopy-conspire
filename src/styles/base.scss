@@ -1239,6 +1239,9 @@ results-list[initialized] {
 
 .text-block {
   width: 100%;
+  &.price-badge-block:has(.block-hidden) {
+    display: none;
+  }
 }
 
 .text-block > *:first-child,
@@ -4441,6 +4444,8 @@ text-component {
     }
   }
 }
+
+
 
 // custom class add
 .line-height-zero {

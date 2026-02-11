@@ -247,15 +247,21 @@
   }
 
   .variant-option label {
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 500;
     text-transform: capitalize;
+    padding: 10px 12px;
+    line-height: 14px;
+    min-height: fit-content;
   }
 
   .variant-option--swatches {
     --options-border-radius: var(--variant-picker-swatch-radius);
 
     width: 100%;
+    label {
+      padding: 0;
+    }
   }
 
   .variant-option--swatches-disabled {
@@ -283,6 +289,8 @@
   .variant-option--buttons legend {
     padding: 0;
     margin-block-end: var(--margin-xs);
+    font-weight: 600;
+    font-size: 13px;
   }
 
   .variant-option__swatch-value {
