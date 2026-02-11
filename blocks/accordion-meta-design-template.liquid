@@ -12,8 +12,7 @@
     {% render 'spacing-style', settings: block_settings %}
     {% render 'border-override', settings: block_settings %}
   "
-  {{ block.shopify_attributes }}
->
+  {{ block.shopify_attributes }}>
   {% assign meta_item_design = metaobjects.product_design_template.values %}
 
   {% comment %} Collect unique categories {% endcomment %}
@@ -31,13 +30,13 @@
 
   {% comment %} Loop through each category and create accordion for each {% endcomment %}
   {% for category in categories_array %}
-    <accordion-custom
+    <accordion-custom class="accordion_product-meta"
       {% if block_settings.open_by_default and forloop.first %}
         open-by-default-on-desktop
         open-by-default-on-mobile
       {% endif %}
     >
-      <details class="details" data-testid="accordion-details">
+      <details class="details details_product-meta" data-testid="accordion-details">
         <summary class="details__header">
           {{ category }}
           <span class="svg-wrapper icon-caret icon-animated">
@@ -71,7 +70,23 @@
     width: 100%;
   }
 
-  .accordion accordion-custom:not(:last-child) {
+  .accordion_product-meta {
+    background-color: #ffffff;
+    padding: 12.8px 12px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    &:not(:last-child){
+      margin-bottom: 12px;
+    }
+  }
+
+  @media screen and (min-width: 750px){
+    .accordion_product-meta {
+      padding: 12.8px 24px;
+    }
+  }
+
+  .accordion accordion-custom.accordion_product-meta {
     display: block;
   }
   .accordion--dividers accordion-custom details{
@@ -79,9 +94,9 @@
     border-top: 1px solid #ccc;
   }
 
-  .accordion accordion-custom:last-child details {
+  .accordion accordion-custom.accordion_product-meta:last-child details {
     display: block;
-    border-bottom: 1px solid #ccc;
+    border-bottom: none;
   }
 
   .accordion--dividers accordion-custom details summary {
@@ -127,9 +142,22 @@
   }
 
   .accordion-items-list {
+    --list-gap: 12px;
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: var(--list-gap);
+  }
+
+  @media screen and (min-width: 750px) {
+    .accordion-items-list {
+      flex-direction: row;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .accordion-items-list {
+      flex-direction: column;
+    }
   }
 
   .accordion-item {
@@ -157,6 +185,21 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+  }
+
+  accordion-custom details[open] .details-content .accordion-items-list {
+    margin-top: 10px; 
+    margin-bottom: 12px;
+  }
+
+  .details-content .accordion-items-list > div {
+    flex: 0 0 100%;
+  }
+
+  @media screen and (min-width: 750px) {
+    .details-content .accordion-items-list > div {
+      flex: 0 0 calc(50% - var(--list-gap) / 2);
+    }
   }
 {% endstylesheet %}
 
