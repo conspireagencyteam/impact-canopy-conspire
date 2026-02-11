@@ -111,6 +111,13 @@
 
   product-price .compare-at-price {
     font-size: var(--compare-at-price-font-size, inherit);
+    opacity: 1;
+
+  }
+  [role="group"]:has(.compare-at-price) {
+    display: inline;
+    line-height: 1;
+    color: #cccccc;
   }
 {% endstylesheet %}
 
