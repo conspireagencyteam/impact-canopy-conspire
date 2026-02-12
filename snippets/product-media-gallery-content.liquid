@@ -72,7 +72,7 @@
   else
     assign slideshow_class = ''
 
-    if media_presentation == 'carousel'
+    if media_presentation == 'carousel' and block_settings.hide_carousel_arrows != true
       assign render_slideshow_arrows = true
     endif
   endif

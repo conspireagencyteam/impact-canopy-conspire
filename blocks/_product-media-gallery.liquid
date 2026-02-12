@@ -72,6 +72,13 @@
       "content": "t:content.carousel"
     },
     {
+      "type": "checkbox",
+      "id": "hide_carousel_arrows",
+      "label": "Hide carousel arrows",
+      "default": false,
+      "visible_if": "{{ block.settings.media_presentation == 'carousel' }}"
+    },
+    {
       "type": "select",
       "id": "icons_style",
       "label": "t:settings.icons",
@@ -94,7 +101,7 @@
         }
       ],
       "default": "arrow",
-      "visible_if": "{{ block.settings.media_presentation == 'carousel' }}"
+      "visible_if": "{{ block.settings.media_presentation == 'carousel' and block.settings.hide_carousel_arrows == false }}"
     },
     {
       "type": "select",
