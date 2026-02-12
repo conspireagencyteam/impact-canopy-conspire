@@ -3305,7 +3305,7 @@
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
-            "type_preset": "h2",
+            "type_preset": "h3",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
             "line_height": "normal",
@@ -4903,7 +4903,7 @@
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "h2",
+                    "type_preset": "h3",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -5781,7 +5781,7 @@
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "h2",
+                    "type_preset": "h3",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -6644,7 +6644,7 @@
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
-                        "type_preset": "rte",
+                        "type_preset": "h3",
                         "font": "var(--font-body--family)",
                         "font_size": "1rem",
                         "line_height": "normal",
@@ -7985,7 +7985,7 @@
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "h2",
+                    "type_preset": "h3",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -9997,10 +9997,10 @@
         "padding-inline-end-mobile": 0
       }
     },
-    "section_bCQDAq": {
+    "section_nczTKT": {
       "type": "section",
       "blocks": {
-        "group_cKiRGM": {
+        "group_V3Lw9L": {
           "type": "group",
           "name": "t:names.group",
           "settings": {
@@ -10050,7 +10050,7 @@
             "custom_class": ""
           },
           "blocks": {
-            "group_JryBQq": {
+            "group_jkQc6m": {
               "type": "group",
               "name": "Head",
               "settings": {
@@ -10099,7 +10099,7 @@
                 "custom_class": ""
               },
               "blocks": {
-                "group_GxT84N": {
+                "group_7w6wH8": {
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
@@ -10148,7 +10148,7 @@
                     "custom_class": ""
                   },
                   "blocks": {
-                    "text_L76gGP": {
+                    "text_E4mzg6": {
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
@@ -10158,7 +10158,7 @@
                         "alignment": "left",
                         "type_preset": "custom",
                         "font": "var(--font-body--family)",
-                        "font_size": "1rem",
+                        "font_size": "0.875rem",
                         "line_height": "normal",
                         "letter_spacing": "normal",
                         "case": "uppercase",
@@ -10185,7 +10185,7 @@
                       },
                       "blocks": {}
                     },
-                    "text_aAYWBV": {
+                    "text_wYeV4b": {
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
@@ -10193,7 +10193,7 @@
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
-                        "type_preset": "h1",
+                        "type_preset": "h2",
                         "font": "var(--font-body--family)",
                         "font_size": "1rem",
                         "line_height": "normal",
@@ -10222,7 +10222,7 @@
                       },
                       "blocks": {}
                     },
-                    "text_hzDTTb": {
+                    "text_8wwz34": {
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
@@ -10259,7 +10259,7 @@
                       },
                       "blocks": {}
                     },
-                    "text_39BAVW": {
+                    "text_tb7T3R": {
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
@@ -10267,10 +10267,10 @@
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
-                        "type_preset": "rte",
+                        "type_preset": "custom",
                         "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
+                        "font_size": "0.8125rem",
+                        "line_height": "loose",
                         "letter_spacing": "normal",
                         "case": "none",
                         "wrap": "pretty",
@@ -10298,13 +10298,13 @@
                     }
                   },
                   "block_order": [
-                    "text_L76gGP",
-                    "text_aAYWBV",
-                    "text_hzDTTb",
-                    "text_39BAVW"
+                    "text_E4mzg6",
+                    "text_wYeV4b",
+                    "text_8wwz34",
+                    "text_tb7T3R"
                   ]
                 },
-                "quote_form_button_EqDpqc": {
+                "quote_form_button_6Vdjxj": {
                   "type": "quote-form-button",
                   "name": "Quote Form Button",
                   "settings": {
@@ -10314,7 +10314,7 @@
                     "label": "Schedule a Call",
                     "link": "",
                     "custom_liquid": false,
-                    "liquid_code": "",
+                    "liquid_code": "<!--  ----------------------------------------------------------------------  -->\n<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->\n<!--  If necessary, please modify the charset parameter to specify the        -->\n<!--  character set of your HTML page.                                        -->\n<!--  ----------------------------------------------------------------------  -->\n<!--  <META HTTP-EQUIV=\"Content-type\" CONTENT=\"text/html; charset=UTF-8\"> -->\n<!--  RECAPTCHA CODE - 1 of 2  -->\n<script src=\"https://www.google.com/recaptcha/api.js\" async defer></script>\n<script>\n function timestamp() { var response = document.getElementById(\"g-recaptcha-response\"); if (response == null || response.value.trim() == \"\") {var elems = JSON.parse(document.getElementsByName(\"captcha_settings\")[0].value);elems[\"ts\"] = JSON.stringify(new Date().getTime());document.getElementsByName(\"captcha_settings\")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);\n</script>\n<!-- End Recaptcha Code -->\n<!--  ----------------------------------------------------------------------  -->\n<!--  NOTE: Please add the following <FORM> element to your page.             -->\n<!--  ----------------------------------------------------------------------  -->\n<form id=\"myWebToLeadForm\"action=\"https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DU0000000YU2Y\" method=\"POST\">\n<!-- Hidden Salesforce Fields -->\n<input type=hidden name=\"oid\" value=\"00DU0000000YU2Y\">\n<input type=hidden name=\"retURL\" value=\"https://impactcanopy.com/pages/thank-you\">\n<input type=hidden name=\"00NU0000004hksn\" value=\"10x10 Custom Canopy with frame selection\">\n<!--  Hidden Field for Division  -->\n<input type=hidden name=\"00NU0000005TqQh\" value=\"United States\">\n<!--  Hidden Field for Lead Source  -->\n<input type=hidden name=\"00N0P0000066L3M\" value=\"Web Store\">\n{%- capture selected_product -%}\n  {%- for option in product.options_with_values -%}{{ option.name }}: {{ option.selected_value }}{% unless forloop.last %}, {% endunless %}{%- endfor -%}\n{%- endcapture -%}\n<input type=\"hidden\" name=\"handle\" value=\"{{ product.handle }}\">\n<input type=\"hidden\" name=\"variant\" value=\"{{- selected_product -}}\">\n<!--  ----------------------------------------------------------------------  -->\n<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->\n<!--  these lines if you wish to test in debug mode.                          -->\n<!--  <input type=\"hidden\" name=\"debug\" value=1>                              -->\n<!--  <input type=\"hidden\" name=\"debugEmail\" value=\"marketing@impactcanopy.com\">       -->\n<!--  ----------------------------------------------------------------------  -->\n<!-- Form Fields -->\n<label for=\"selectyourrep\">Have you worked with us before? Select Your Sales Rep</label><select  id=\"Web_Form_Rep__c\" name=\"Web_Form_Rep__c\" title=\"Select Your Sales Rep\"><option value=\"\">--New Customer--</option><option value=\"Anne Bohl\">Anne Bohl</option>\n<option value=\"Aaron Harvey\">Aaron Harvey</option>\n<option value=\"Patrick Wheelan\">Patrick Wheelan (Food Service)</option>\n<option value=\"Don Puerling\">Don Puerling (Baseball/Softball)</option>\n<option value=\"Joe Delucia\">Joe Delucia (Field Sports)</option>\n<option value=\"Justin Petty\">Justin Petty (Motorsports)</option>\n<option value=\"Keith Townson\">Keith Townson (Soccer)</option>\n<option value=\"Luis Curiel\">Luis Curiel (Soccer)</option>\n<option value=\"Michelle Goerss\">Michelle Goerss</option>\n<option value=\"Mike Ohirko\">Mike Ohirko</option>\n<option value=\"Nancy Van Echten\">Nancy Van Echten</option>\n<option value=\"Rachel Hart\">Rachel Hart</option>\n<option value=\"Mike Smith\">Mike Smith (Motorsports-Karting)</option>\n</select><br>\n\n<label for=\"first_name\">First Name</label><input  id=\"first_name\" maxlength=\"40\" name=\"first_name\" size=\"20\" type=\"text\" /><br>\n<label for=\"last_name\">Last Name</label><input  id=\"last_name\" maxlength=\"80\" name=\"last_name\" size=\"20\" type=\"text\" /><br>\n<label for=\"email\">Email</label><input  id=\"email\" maxlength=\"80\" name=\"email\" size=\"20\" type=\"text\" required /><br>\n<label for=\"phone\">Phone</label><input  id=\"phone\" maxlength=\"40\" name=\"phone\" size=\"20\" type=\"text\" /><br>\n<label for=\"zip\">Postal Code*</label><input  id=\"Zip_Postal_Code__c\" maxlength=\"10\" name=\"Zip_Postal_Code__c\" size=\"20\" type=\"text\" /><br>\n<label for=\"quantity\">Quantity</label><input  id=\"00NRp0000000S17\" name=\"00NRp0000000S17\" size=\"20\" type=\"text\" /><br>\n<label for=\"company\">Company</label><input  id=\"company\" maxlength=\"40\" name=\"company\" size=\"20\" type=\"text\" /><br>\n<label for=\"business\">Business Type</label><input  id=\"00N4U000008Fzqc\" name=\"00N4U000008Fzqc\" size=\"12\" type=\"text\" ></input ><br>\n\n<!--RECAPTCHA CODE 2 of 2)-->\n<script>\n  function onSubmit(token) {\n    document.getElementById(\"myWebToLeadForm\").submit();\n  }\n</script>\n<input type=hidden name='captcha_settings' value='{\"keyname\":\"RecaptchaBadgev2\",\"fallback\":\"true\",\"orgId\":\"00DU0000000YU2Y\",\"ts\":\"\"}'>\n  <div class=\"g-recaptcha\"\n       data-sitekey=\"6LdaMQQrAAAAACBI8mdCNlC2szstRqJxUb8xyKLK\"\n       data-callback=\"onCaptchaSuccess\"\n       data-expired-callback=\"onCaptchaExpired\">\n  </div>\n<!-- Visible Error Message -->\n  <p id=\"captchaError\" style=\"color: red; display: none;\">Please confirm you're not a robot before submitting.</p>\n<!-- Submit Button (starts disabled) -->\n  <input type=\"submit\" id=\"submitBtn\" name=\"submit\" value=\"Get A Quote\" disabled>\n<!-- End Recaptcha Code -->\n</form>\n<!-- JavaScript to Control reCAPTCHA Behavior -->\n<script>\n  function onCaptchaSuccess() {\n    document.getElementById(\"submitBtn\").disabled = false;\n    document.getElementById(\"captchaError\").style.display = \"none\";\n  }\n  function onCaptchaExpired() {\n    document.getElementById(\"submitBtn\").disabled = true;\n  }\n  document.addEventListener(\"DOMContentLoaded\", function () {\n    const form = document.getElementById(\"mywebToLeadForm\");\n    form.addEventListener(\"submit\", function (e) {\n      const response = grecaptcha.getResponse();\n      if (!response) {\n        e.preventDefault();\n        document.getElementById(\"captchaError\").style.display = \"block\";\n        document.getElementById(\"submitBtn\").disabled = true;\n      }\n    });\n  });\n</script>\n<!-- END RECAPTCHA CODE -->",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "button_size": "default",
@@ -10339,11 +10339,11 @@
                 }
               },
               "block_order": [
-                "group_GxT84N",
-                "quote_form_button_EqDpqc"
+                "group_7w6wH8",
+                "quote_form_button_6Vdjxj"
               ]
             },
-            "group_XbWzKn": {
+            "group_yDjq6H": {
               "type": "group",
               "name": "Product Cards",
               "disabled": true,
@@ -10393,7 +10393,7 @@
                 "custom_class": ""
               },
               "blocks": {
-                "product_card_bqf7aq": {
+                "product_card_ctfCjQ": {
                   "type": "product-card",
                   "name": "t:names.product_card",
                   "settings": {
@@ -10417,7 +10417,7 @@
                     "padding-inline-end-mobile": 0
                   },
                   "blocks": {
-                    "product_card_gallery_yNzctg": {
+                    "product_card_gallery_MATCwp": {
                       "type": "_product-card-gallery",
                       "settings": {
                         "image_ratio": "adapt",
@@ -10437,7 +10437,7 @@
                       },
                       "blocks": {}
                     },
-                    "product_title_nkGKEj": {
+                    "product_title_KfcRyM": {
                       "type": "product-title",
                       "name": "t:names.product_title",
                       "settings": {
@@ -10471,7 +10471,7 @@
                       },
                       "blocks": {}
                     },
-                    "price_3YpfxY": {
+                    "price_tpPdLD": {
                       "type": "price",
                       "name": "t:names.product_price",
                       "settings": {
@@ -10511,12 +10511,12 @@
                     }
                   },
                   "block_order": [
-                    "product_card_gallery_yNzctg",
-                    "product_title_nkGKEj",
-                    "price_3YpfxY"
+                    "product_card_gallery_MATCwp",
+                    "product_title_KfcRyM",
+                    "price_tpPdLD"
                   ]
                 },
-                "product_card_9MDzXh": {
+                "product_card_RRB97a": {
                   "type": "product-card",
                   "name": "t:names.product_card",
                   "settings": {
@@ -10540,7 +10540,7 @@
                     "padding-inline-end-mobile": 0
                   },
                   "blocks": {
-                    "product_card_gallery_h9DCkB": {
+                    "product_card_gallery_zmqcBC": {
                       "type": "_product-card-gallery",
                       "settings": {
                         "image_ratio": "adapt",
@@ -10560,7 +10560,7 @@
                       },
                       "blocks": {}
                     },
-                    "product_title_QdpzVq": {
+                    "product_title_jaA8nH": {
                       "type": "product-title",
                       "name": "t:names.product_title",
                       "settings": {
@@ -10594,7 +10594,7 @@
                       },
                       "blocks": {}
                     },
-                    "price_eMyzeg": {
+                    "price_Xp9GkD": {
                       "type": "price",
                       "name": "t:names.product_price",
                       "settings": {
@@ -10634,12 +10634,12 @@
                     }
                   },
                   "block_order": [
-                    "product_card_gallery_h9DCkB",
-                    "product_title_QdpzVq",
-                    "price_eMyzeg"
+                    "product_card_gallery_zmqcBC",
+                    "product_title_jaA8nH",
+                    "price_Xp9GkD"
                   ]
                 },
-                "product_card_AQt4Hd": {
+                "product_card_dcjeqY": {
                   "type": "product-card",
                   "name": "t:names.product_card",
                   "settings": {
@@ -10663,7 +10663,7 @@
                     "padding-inline-end-mobile": 0
                   },
                   "blocks": {
-                    "product_card_gallery_g6MpYY": {
+                    "product_card_gallery_86PdeQ": {
                       "type": "_product-card-gallery",
                       "settings": {
                         "image_ratio": "adapt",
@@ -10683,7 +10683,7 @@
                       },
                       "blocks": {}
                     },
-                    "product_title_t96w7x": {
+                    "product_title_6YJKi6": {
                       "type": "product-title",
                       "name": "t:names.product_title",
                       "settings": {
@@ -10717,7 +10717,7 @@
                       },
                       "blocks": {}
                     },
-                    "price_KMMUXn": {
+                    "price_QCyYDy": {
                       "type": "price",
                       "name": "t:names.product_price",
                       "settings": {
@@ -10757,12 +10757,12 @@
                     }
                   },
                   "block_order": [
-                    "product_card_gallery_g6MpYY",
-                    "product_title_t96w7x",
-                    "price_KMMUXn"
+                    "product_card_gallery_86PdeQ",
+                    "product_title_6YJKi6",
+                    "price_QCyYDy"
                   ]
                 },
-                "product_card_nTqgxR": {
+                "product_card_nnXdrQ": {
                   "type": "product-card",
                   "name": "t:names.product_card",
                   "settings": {
@@ -10786,7 +10786,7 @@
                     "padding-inline-end-mobile": 0
                   },
                   "blocks": {
-                    "product_card_gallery_7hCdG9": {
+                    "product_card_gallery_tmhDFy": {
                       "type": "_product-card-gallery",
                       "settings": {
                         "image_ratio": "adapt",
@@ -10806,7 +10806,7 @@
                       },
                       "blocks": {}
                     },
-                    "product_title_VUttwY": {
+                    "product_title_q8PyXi": {
                       "type": "product-title",
                       "name": "t:names.product_title",
                       "settings": {
@@ -10840,7 +10840,7 @@
                       },
                       "blocks": {}
                     },
-                    "price_K8G7Xd": {
+                    "price_WfRAdm": {
                       "type": "price",
                       "name": "t:names.product_price",
                       "settings": {
@@ -10880,28 +10880,28 @@
                     }
                   },
                   "block_order": [
-                    "product_card_gallery_7hCdG9",
-                    "product_title_VUttwY",
-                    "price_K8G7Xd"
+                    "product_card_gallery_tmhDFy",
+                    "product_title_q8PyXi",
+                    "price_WfRAdm"
                   ]
                 }
               },
               "block_order": [
-                "product_card_bqf7aq",
-                "product_card_9MDzXh",
-                "product_card_AQt4Hd",
-                "product_card_nTqgxR"
+                "product_card_ctfCjQ",
+                "product_card_RRB97a",
+                "product_card_dcjeqY",
+                "product_card_nnXdrQ"
               ]
             }
           },
           "block_order": [
-            "group_JryBQq",
-            "group_XbWzKn"
+            "group_jkQc6m",
+            "group_yDjq6H"
           ]
         }
       },
       "block_order": [
-        "group_cKiRGM"
+        "group_V3Lw9L"
       ],
       "name": "t:names.custom_section",
       "settings": {
@@ -10948,6 +10948,6 @@
     "section_nwWj7G",
     "section_Tf6Cxy",
     "dynamic_type_recommendation_NJrVxK",
-    "section_bCQDAq"
+    "section_nczTKT"
   ]
 }
