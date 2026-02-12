@@ -4016,8 +4016,13 @@
           "type": "marquee-blur",
           "name": "Marquee with Blur",
           "settings": {
+            "sizing_mode": "item_width",
             "columns_desktop": 7,
             "columns_mobile": 3,
+            "item_width_desktop": 200,
+            "item_width_mobile": 150,
+            "item_height_desktop": 170,
+            "item_height_mobile": 130,
             "movement_direction": "normal",
             "speed_factor": 10,
             "blur_width": 15,
