@@ -26,7 +26,7 @@
               "flag-accessories",
               "replacement-parts"
             ],
-            "show_home_icon": true,
+            "show_home_icon": false,
             "home_text": "Home",
             "separator": "chevron",
             "text_size": "small",
