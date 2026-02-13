@@ -1349,7 +1349,7 @@
                       "settings": {
                         "text": "{{ closest.product.metafields.custom.canopy_top | metafield_tag }}",
                         "width": "100%",
-                        "max_width": "normal",
+                        "max_width": "none",
                         "alignment": "left",
                         "type_preset": "rte",
                         "font": "var(--font-body--family)",
@@ -1399,7 +1399,7 @@
                       "settings": {
                         "text": "{{ closest.product.metafields.custom.canopy_frame | metafield_tag }}",
                         "width": "100%",
-                        "max_width": "normal",
+                        "max_width": "none",
                         "alignment": "left",
                         "type_preset": "rte",
                         "font": "var(--font-body--family)",
@@ -1449,7 +1449,7 @@
                       "settings": {
                         "text": "{{ closest.product.metafields.custom[\"9_wing_flag\"] | metafield_tag }}",
                         "width": "100%",
-                        "max_width": "normal",
+                        "max_width": "none",
                         "alignment": "left",
                         "type_preset": "rte",
                         "font": "var(--font-body--family)",
@@ -1499,7 +1499,7 @@
                       "settings": {
                         "text": "{{ closest.product.metafields.custom.table_cover | metafield_tag }}",
                         "width": "100%",
-                        "max_width": "normal",
+                        "max_width": "none",
                         "alignment": "left",
                         "type_preset": "rte",
                         "font": "var(--font-body--family)",
@@ -1549,7 +1549,7 @@
                       "settings": {
                         "text": "{{ closest.product.metafields.custom.black_wall_options | metafield_tag }}",
                         "width": "100%",
-                        "max_width": "normal",
+                        "max_width": "none",
                         "alignment": "left",
                         "type_preset": "rte",
                         "font": "var(--font-body--family)",
