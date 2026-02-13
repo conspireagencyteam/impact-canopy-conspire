@@ -1,8 +1,16 @@
 {%- capture children %}
+  {% assign instruction_sheet = product.metafields.custom.instructions.value %}
   {% assign design_sheet = product.metafields.custom.design_template.value %}
   {% assign spec_sheet = product.metafields.custom.spec_sheet.value %}
-  {% if design_sheet != blank or spec_sheet != blank %}
+  {% if design_sheet != blank or spec_sheet != blank or instruction_sheet != blank %}
     <div class="block-detail-product-download">
+      {% if instruction_sheet != blank %}
+        {% for ins_item in instruction_sheet %}
+          {% assign design_item_file = ins_item.file | file_url %}
+          {% assign fallback_label = 'Download Instruction' %}
+          {% content_for 'block', id: 'fileGroupInstruction', type: '_meta-group-product-detail', item: ins_item, fallback_link: design_item_file, fallback_label: fallback_label %}
+        {%  endfor %}
+      {% endif %}
       {% if design_sheet != blank %}
         {% for design_item in design_sheet %}
           {% assign design_item_file = design_item.file | file_url %}
