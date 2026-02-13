@@ -591,7 +591,7 @@
               },
               "blocks": {}
             },
-            "group_ph4zJ9": {
+            "group_TwRDna": {
               "type": "group",
               "name": "Price Wrapper",
               "settings": {
@@ -640,17 +640,17 @@
                 "custom_class": ""
               },
               "blocks": {
-                "text_Qh3wif": {
+                "text_aa9ihi": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p><strong>Total Price:</strong></p>",
+                    "text": "<p>Total Price:</p>",
                     "width": "100%",
                     "max_width": "wide",
                     "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
+                    "type_preset": "custom",
+                    "font": "var(--font-accent--family)",
+                    "font_size": "0.8125rem",
                     "line_height": "normal",
                     "letter_spacing": "normal",
                     "case": "none",
@@ -677,7 +677,7 @@
                   },
                   "blocks": {}
                 },
-                "price_3pRmPQ": {
+                "price_RiffPc": {
                   "type": "price",
                   "settings": {
                     "show_sale_price_first": false,
@@ -692,12 +692,12 @@
                     "save_badge_background": "#ee7623",
                     "save_badge_text_color": "#ffffff",
                     "save_badge_text_transform": "uppercase",
-                    "type_preset": "h5",
+                    "type_preset": "custom",
                     "width": "100%",
                     "alignment": "right",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "compare_at_price_font_size": "",
+                    "font": "var(--font-accent--family)",
+                    "font_size": "1.5rem",
+                    "compare_at_price_font_size": "1rem",
                     "line_height": "normal",
                     "letter_spacing": "normal",
                     "case": "none",
@@ -716,8 +716,8 @@
                 }
               },
               "block_order": [
-                "text_Qh3wif",
-                "price_3pRmPQ"
+                "text_aa9ihi",
+                "price_RiffPc"
               ]
             },
             "divider_LA6KwY": {
@@ -1604,7 +1604,7 @@
             "uploadly_file_upload_app_block_M7kmj7",
             "static_form_field_7DEbKB",
             "divider_ephR9K",
-            "group_ph4zJ9",
+            "group_TwRDna",
             "divider_LA6KwY",
             "buy_buttons_eYQEYi",
             "cross_sell_NaXebJ",
@@ -7881,10 +7881,10 @@
         "padding-block-end-mobile": 0
       }
     },
-    "section_Tf6Cxy": {
+    "section_KF84Ck": {
       "type": "section",
       "blocks": {
-        "group_dhBwEp": {
+        "group_bA4V9d": {
           "type": "group",
           "name": "Header",
           "settings": {
@@ -7933,7 +7933,7 @@
             "custom_class": ""
           },
           "blocks": {
-            "group_7M9KXk": {
+            "group_bzUXnB": {
               "type": "group",
               "name": "t:names.group",
               "settings": {
@@ -7982,7 +7982,7 @@
                 "custom_class": ""
               },
               "blocks": {
-                "text_yc7Fh8": {
+                "text_YrzgNQ": {
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
@@ -8019,7 +8019,7 @@
                   },
                   "blocks": {}
                 },
-                "text_7nYrXp": {
+                "text_N3UUfN": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
@@ -8058,16 +8058,16 @@
                 }
               },
               "block_order": [
-                "text_yc7Fh8",
-                "text_7nYrXp"
+                "text_YrzgNQ",
+                "text_N3UUfN"
               ]
             }
           },
           "block_order": [
-            "group_7M9KXk"
+            "group_bzUXnB"
           ]
         },
-        "group_wwcRJ6": {
+        "group_NEG6ac": {
           "type": "group",
           "name": "Block with icon",
           "settings": {
@@ -8116,7 +8116,7 @@
             "custom_class": ""
           },
           "blocks": {
-            "group_tP4AXt": {
+            "group_f4E8jC": {
               "type": "group",
               "name": "Testimonial",
               "settings": {
@@ -8165,7 +8165,7 @@
                 "custom_class": ""
               },
               "blocks": {
-                "group_qRCUPV": {
+                "group_aWVWg9": {
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
@@ -8214,7 +8214,7 @@
                     "custom_class": ""
                   },
                   "blocks": {
-                    "icon_WG6PFF": {
+                    "icon_wk4f6F": {
                       "type": "icon",
                       "name": "t:names.icon",
                       "settings": {
@@ -8226,7 +8226,7 @@
                       },
                       "blocks": {}
                     },
-                    "group_F8NfnX": {
+                    "group_mAyUqX": {
                       "type": "group",
                       "name": "review",
                       "settings": {
@@ -8275,7 +8275,7 @@
                         "custom_class": ""
                       },
                       "blocks": {
-                        "icon_UkLKDW": {
+                        "icon_mNFFLt": {
                           "type": "icon",
                           "name": "t:names.icon",
                           "settings": {
@@ -8287,7 +8287,7 @@
                           },
                           "blocks": {}
                         },
-                        "text_NQpx6P": {
+                        "text_Gac6Nm": {
                           "type": "text",
                           "name": "t:names.heading",
                           "settings": {
@@ -8326,27 +8326,27 @@
                         }
                       },
                       "block_order": [
-                        "icon_UkLKDW",
-                        "text_NQpx6P"
+                        "icon_mNFFLt",
+                        "text_Gac6Nm"
                       ]
                     }
                   },
                   "block_order": [
-                    "icon_WG6PFF",
-                    "group_F8NfnX"
+                    "icon_wk4f6F",
+                    "group_mAyUqX"
                   ]
                 },
-                "text_dkwMgV": {
+                "text_KFeXUz": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
                     "text": "<p>“Used Impact canopies for our 3-day cycling event. Setup was fast, looked professional, and survived 25mph winds with no issues.\"</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
+                    "width": "100%",
+                    "max_width": "none",
                     "alignment": "left",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
+                    "type_preset": "custom",
+                    "font": "var(--font-subheading--family)",
+                    "font_size": "0.8125rem",
                     "line_height": "normal",
                     "letter_spacing": "normal",
                     "case": "none",
@@ -8373,7 +8373,7 @@
                   },
                   "blocks": {}
                 },
-                "group_pmkJAm": {
+                "group_ytVGMM": {
                   "type": "group",
                   "name": "Testimonial photo",
                   "settings": {
@@ -8422,7 +8422,7 @@
                     "custom_class": ""
                   },
                   "blocks": {
-                    "icon_NrAC9E": {
+                    "icon_7w3LfR": {
                       "type": "icon",
                       "name": "t:names.icon",
                       "settings": {
@@ -8434,7 +8434,7 @@
                       },
                       "blocks": {}
                     },
-                    "group_fb6CQy": {
+                    "group_jwFLb9": {
                       "type": "group",
                       "name": "t:names.group",
                       "settings": {
@@ -8483,7 +8483,7 @@
                         "custom_class": ""
                       },
                       "blocks": {
-                        "text_bJrm4p": {
+                        "text_99Jkh7": {
                           "type": "text",
                           "name": "t:names.heading",
                           "settings": {
@@ -8491,7 +8491,7 @@
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
-                            "type_preset": "h6",
+                            "type_preset": "h5",
                             "font": "var(--font-body--family)",
                             "font_size": "1rem",
                             "line_height": "normal",
@@ -8520,7 +8520,7 @@
                           },
                           "blocks": {}
                         },
-                        "text_RXHg8h": {
+                        "text_bMkHgy": {
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
@@ -8528,9 +8528,9 @@
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
-                            "type_preset": "paragraph",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
+                            "type_preset": "custom",
+                            "font": "var(--font-subheading--family)",
+                            "font_size": "0.8125rem",
                             "line_height": "normal",
                             "letter_spacing": "normal",
                             "case": "none",
@@ -8559,24 +8559,24 @@
                         }
                       },
                       "block_order": [
-                        "text_bJrm4p",
-                        "text_RXHg8h"
+                        "text_99Jkh7",
+                        "text_bMkHgy"
                       ]
                     }
                   },
                   "block_order": [
-                    "icon_NrAC9E",
-                    "group_fb6CQy"
+                    "icon_7w3LfR",
+                    "group_jwFLb9"
                   ]
                 }
               },
               "block_order": [
-                "group_qRCUPV",
-                "text_dkwMgV",
-                "group_pmkJAm"
+                "group_aWVWg9",
+                "text_KFeXUz",
+                "group_ytVGMM"
               ]
             },
-            "group_nCBfXx": {
+            "group_N6typg": {
               "type": "group",
               "name": "Testimonial",
               "settings": {
@@ -8625,7 +8625,7 @@
                 "custom_class": ""
               },
               "blocks": {
-                "group_zrYPLz": {
+                "group_HiFWgR": {
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
@@ -8674,7 +8674,7 @@
                     "custom_class": ""
                   },
                   "blocks": {
-                    "icon_8K8MCb": {
+                    "icon_JKA9pD": {
                       "type": "icon",
                       "name": "t:names.icon",
                       "settings": {
@@ -8686,7 +8686,7 @@
                       },
                       "blocks": {}
                     },
-                    "group_3BgFpF": {
+                    "group_iCPUew": {
                       "type": "group",
                       "name": "review",
                       "settings": {
@@ -8735,7 +8735,7 @@
                         "custom_class": ""
                       },
                       "blocks": {
-                        "icon_ajjgFD": {
+                        "icon_RPh79U": {
                           "type": "icon",
                           "name": "t:names.icon",
                           "settings": {
@@ -8747,7 +8747,7 @@
                           },
                           "blocks": {}
                         },
-                        "text_JkMRgb": {
+                        "text_DFFhGP": {
                           "type": "text",
                           "name": "t:names.heading",
                           "settings": {
@@ -8786,27 +8786,27 @@
                         }
                       },
                       "block_order": [
-                        "icon_ajjgFD",
-                        "text_JkMRgb"
+                        "icon_RPh79U",
+                        "text_DFFhGP"
                       ]
                     }
                   },
                   "block_order": [
-                    "icon_8K8MCb",
-                    "group_3BgFpF"
+                    "icon_JKA9pD",
+                    "group_iCPUew"
                   ]
                 },
-                "text_6ixecY": {
+                "text_gajqJK": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
                     "text": "<p>“Used Impact canopies for our 3-day cycling event. Setup was fast, looked professional, and survived 25mph winds with no issues.\"</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
+                    "width": "100%",
+                    "max_width": "none",
                     "alignment": "left",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
+                    "type_preset": "custom",
+                    "font": "var(--font-subheading--family)",
+                    "font_size": "0.8125rem",
                     "line_height": "normal",
                     "letter_spacing": "normal",
                     "case": "none",
@@ -8833,7 +8833,7 @@
                   },
                   "blocks": {}
                 },
-                "group_8hzdPL": {
+                "group_cKbaBW": {
                   "type": "group",
                   "name": "Testimonial photo",
                   "settings": {
@@ -8882,7 +8882,7 @@
                     "custom_class": ""
                   },
                   "blocks": {
-                    "icon_F6MDCM": {
+                    "icon_a4VtFd": {
                       "type": "icon",
                       "name": "t:names.icon",
                       "settings": {
@@ -8894,7 +8894,7 @@
                       },
                       "blocks": {}
                     },
-                    "group_QXPwG9": {
+                    "group_Jrmw6m": {
                       "type": "group",
                       "name": "t:names.group",
                       "settings": {
@@ -8943,7 +8943,7 @@
                         "custom_class": ""
                       },
                       "blocks": {
-                        "text_pycABf": {
+                        "text_Qw3a4m": {
                           "type": "text",
                           "name": "t:names.heading",
                           "settings": {
@@ -8951,7 +8951,7 @@
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
-                            "type_preset": "h6",
+                            "type_preset": "h5",
                             "font": "var(--font-body--family)",
                             "font_size": "1rem",
                             "line_height": "normal",
@@ -8980,7 +8980,7 @@
                           },
                           "blocks": {}
                         },
-                        "text_niVjjp": {
+                        "text_GWTVtn": {
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
@@ -8988,9 +8988,9 @@
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
-                            "type_preset": "paragraph",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
+                            "type_preset": "custom",
+                            "font": "var(--font-subheading--family)",
+                            "font_size": "0.8125rem",
                             "line_height": "normal",
                             "letter_spacing": "normal",
                             "case": "none",
@@ -9019,24 +9019,24 @@
                         }
                       },
                       "block_order": [
-                        "text_pycABf",
-                        "text_niVjjp"
+                        "text_Qw3a4m",
+                        "text_GWTVtn"
                       ]
                     }
                   },
                   "block_order": [
-                    "icon_F6MDCM",
-                    "group_QXPwG9"
+                    "icon_a4VtFd",
+                    "group_Jrmw6m"
                   ]
                 }
               },
               "block_order": [
-                "group_zrYPLz",
-                "text_6ixecY",
-                "group_8hzdPL"
+                "group_HiFWgR",
+                "text_gajqJK",
+                "group_cKbaBW"
               ]
             },
-            "group_qA4LqX": {
+            "group_8ecVQ4": {
               "type": "group",
               "name": "Testimonial",
               "settings": {
@@ -9085,7 +9085,7 @@
                 "custom_class": ""
               },
               "blocks": {
-                "group_y4biHN": {
+                "group_gMFQwH": {
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
@@ -9134,7 +9134,7 @@
                     "custom_class": ""
                   },
                   "blocks": {
-                    "icon_6bECXC": {
+                    "icon_kdnL8R": {
                       "type": "icon",
                       "name": "t:names.icon",
                       "settings": {
@@ -9146,7 +9146,7 @@
                       },
                       "blocks": {}
                     },
-                    "group_yn7wah": {
+                    "group_jFwJXn": {
                       "type": "group",
                       "name": "review",
                       "settings": {
@@ -9195,7 +9195,7 @@
                         "custom_class": ""
                       },
                       "blocks": {
-                        "icon_GEW4wh": {
+                        "icon_8aTCeM": {
                           "type": "icon",
                           "name": "t:names.icon",
                           "settings": {
@@ -9207,7 +9207,7 @@
                           },
                           "blocks": {}
                         },
-                        "text_qCn4cX": {
+                        "text_w3CdmG": {
                           "type": "text",
                           "name": "t:names.heading",
                           "settings": {
@@ -9246,27 +9246,27 @@
                         }
                       },
                       "block_order": [
-                        "icon_GEW4wh",
-                        "text_qCn4cX"
+                        "icon_8aTCeM",
+                        "text_w3CdmG"
                       ]
                     }
                   },
                   "block_order": [
-                    "icon_6bECXC",
-                    "group_yn7wah"
+                    "icon_kdnL8R",
+                    "group_jFwJXn"
                   ]
                 },
-                "text_EM7mzn": {
+                "text_4CLwed": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
                     "text": "<p>“Used Impact canopies for our 3-day cycling event. Setup was fast, looked professional, and survived 25mph winds with no issues.\"</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
+                    "width": "100%",
+                    "max_width": "none",
                     "alignment": "left",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
+                    "type_preset": "custom",
+                    "font": "var(--font-subheading--family)",
+                    "font_size": "0.8125rem",
                     "line_height": "normal",
                     "letter_spacing": "normal",
                     "case": "none",
@@ -9293,7 +9293,7 @@
                   },
                   "blocks": {}
                 },
-                "group_H9zbny": {
+                "group_TaMVgX": {
                   "type": "group",
                   "name": "Testimonial photo",
                   "settings": {
@@ -9342,7 +9342,7 @@
                     "custom_class": ""
                   },
                   "blocks": {
-                    "icon_VYtGx6": {
+                    "icon_HEGMXM": {
                       "type": "icon",
                       "name": "t:names.icon",
                       "settings": {
@@ -9354,7 +9354,7 @@
                       },
                       "blocks": {}
                     },
-                    "group_4QMGTV": {
+                    "group_CtTUw3": {
                       "type": "group",
                       "name": "t:names.group",
                       "settings": {
@@ -9403,7 +9403,7 @@
                         "custom_class": ""
                       },
                       "blocks": {
-                        "text_KtRyKW": {
+                        "text_8igiDV": {
                           "type": "text",
                           "name": "t:names.heading",
                           "settings": {
@@ -9411,7 +9411,7 @@
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
-                            "type_preset": "h6",
+                            "type_preset": "h5",
                             "font": "var(--font-body--family)",
                             "font_size": "1rem",
                             "line_height": "normal",
@@ -9440,7 +9440,7 @@
                           },
                           "blocks": {}
                         },
-                        "text_CAHRnV": {
+                        "text_tGcLWN": {
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
@@ -9448,9 +9448,9 @@
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
-                            "type_preset": "paragraph",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
+                            "type_preset": "custom",
+                            "font": "var(--font-subheading--family)",
+                            "font_size": "0.8125rem",
                             "line_height": "normal",
                             "letter_spacing": "normal",
                             "case": "none",
@@ -9479,34 +9479,34 @@
                         }
                       },
                       "block_order": [
-                        "text_KtRyKW",
-                        "text_CAHRnV"
+                        "text_8igiDV",
+                        "text_tGcLWN"
                       ]
                     }
                   },
                   "block_order": [
-                    "icon_VYtGx6",
-                    "group_4QMGTV"
+                    "icon_HEGMXM",
+                    "group_CtTUw3"
                   ]
                 }
               },
               "block_order": [
-                "group_y4biHN",
-                "text_EM7mzn",
-                "group_H9zbny"
+                "group_gMFQwH",
+                "text_4CLwed",
+                "group_TaMVgX"
               ]
             }
           },
           "block_order": [
-            "group_tP4AXt",
-            "group_nCBfXx",
-            "group_qA4LqX"
+            "group_f4E8jC",
+            "group_N6typg",
+            "group_8ecVQ4"
           ]
         }
       },
       "block_order": [
-        "group_dhBwEp",
-        "group_wwcRJ6"
+        "group_bA4V9d",
+        "group_NEG6ac"
       ],
       "name": "Block",
       "settings": {
@@ -10951,7 +10951,7 @@
     "section_LDACn7",
     "section_FFE8n7",
     "section_nwWj7G",
-    "section_Tf6Cxy",
+    "section_KF84Ck",
     "dynamic_type_recommendation_NJrVxK",
     "section_nczTKT"
   ]
