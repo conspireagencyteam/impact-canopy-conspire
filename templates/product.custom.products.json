@@ -562,7 +562,7 @@
                 "textarea_label": "Comments about design",
                 "textarea_placeholder": "Enter your design comments here...",
                 "textarea_name": "design_comments",
-                "textarea_rows": 5,
+                "textarea_rows": 3,
                 "textarea_required": false,
                 "show_checkbox": true,
                 "checkbox_label": "I have an event",
