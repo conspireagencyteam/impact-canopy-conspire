@@ -116,7 +116,7 @@
               class="slideshow-control button button-unstyled slideshow-controls__thumbnail"
               aria-label="{{ 'accessibility.slide_status' | t: index: forloop.index, length: forloop.length }}"
               on:click="/select/{{ forloop.index0 }}"
-              style="--aspect-ratio: {% if aspect_ratio == 'adapt' %}{{ media.preview_image.aspect_ratio | default: 1.0 }}{% else %}{{ aspect_ratio }}{% endif %};"
+              style="--aspect-ratio: 1.0"
               ref="thumbnails[]"
               {% if forloop.first %}
                 aria-selected="true"
@@ -130,7 +130,7 @@
               %}
               {{
                 media.preview_image
-                | image_url: width: 144
+                | image_url: width: 144, height: 144
                 | image_tag: loading: 'lazy', alt: media.alt, style: focal_point_style
                 | escape
               }}
