@@ -228,6 +228,10 @@
     width: 100%;
   }
 
+  .variant-option.variant-option--dropdowns label {
+    padding-left: 0;
+  }
+
   .variant-picker__form {
     display: flex;
     flex-direction: column;
@@ -247,10 +251,10 @@
   }
 
   .variant-option label {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 13px;
+    font-weight: 600;
     text-transform: capitalize;
-    padding: 10px 12px;
+    padding: 8px 12px;
     line-height: 14px;
     min-height: fit-content;
   }
@@ -464,6 +468,7 @@
     text-align: start;
     text-wrap: auto;
     z-index: 2;
+    font-weight: 500;
   }
 
   .variant-option--equal-width-buttons {
@@ -657,13 +662,15 @@
   }
 
   .variant-option__select {
-    padding-block: var(--padding-md);
+    padding-block: 10px;
     padding-inline: var(--padding-lg) calc(var(--padding-lg) + var(--icon-size-2xs));
     appearance: none;
     border: 0;
     width: 100%;
     margin: 0;
     cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
   }
 
   .variant-option__select-wrapper .icon {

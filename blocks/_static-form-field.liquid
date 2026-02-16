@@ -164,7 +164,8 @@
     gap: var(--padding-2xs);
     font-family: var(--font-body--family);
     font-size: var(--font-paragraph--size);
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 13px;
     color: var(--color-foreground);
   }
 
@@ -271,7 +272,8 @@
     background-color: var(--color-input-background);
     color: var(--color-input-text);
     font-family: var(--font-body--family);
-    font-size: var(--font-paragraph--size);
+    font-size: 13px;
+    font-weight: 500;
     resize: vertical;
     transition: box-shadow var(--animation-speed) ease, background-color var(--animation-speed) ease;
     outline: none;
@@ -290,7 +292,7 @@
   /* Checkbox */
   .static-form-field__checkbox-label {
     display: inline-flex;
-    align-items: flex-start;
+    align-items: center;
     gap: var(--padding-xs);
     cursor: pointer;
     font-family: var(--font-body--family);
@@ -302,12 +304,12 @@
   .static-form-field__checkbox-input {
     appearance: none;
     -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     margin: 0;
     cursor: pointer;
     border-radius: 4px;
-    box-shadow: var(--input-box-shadow);
+    box-shadow: none;
     background-color: var(--color-input-background);
     display: flex;
     align-items: center;
@@ -315,12 +317,14 @@
     transition: background-color var(--animation-speed) ease, box-shadow var(--animation-speed) ease;
     position: relative;
     flex-shrink: 0;
+    border: 2px solid #490E67;
   }
 
   .static-form-field__checkbox-input::after {
     content: '';
-    width: 6px;
-    height: 10px;
+    margin-top: 1px;
+    width: 4px;
+    height: 7px;
     border: solid #490e67;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg) scale(0);
@@ -350,6 +354,8 @@
 
   .static-form-field__checkbox-text {
     line-height: 1.4;
+    font-size: 13px;
+    font-weight: 500;
   }
 
   /* Calendar/Date Input */
@@ -364,7 +370,7 @@
   .static-form-field__date-input {
     width: 100%;
     max-width: 300px;
-    padding: var(--input-padding);
+    padding: 8px;
     border-radius: var(--style-border-radius-inputs);
     border: none;
     box-shadow: var(--input-box-shadow);
