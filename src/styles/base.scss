@@ -4669,10 +4669,10 @@ text-component {
 .custom-quote-form label {
   display: block;
   font-family: var(--font-body--family);
-  font-size: var(--font-paragraph--size);
+  font-size: 13px;
   color: var(--color-foreground);
   margin-bottom: var(--padding-2xs);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .custom-quote-form input[type="text"],
@@ -4682,17 +4682,17 @@ text-component {
 .custom-quote-form textarea,
 .custom-quote-form select {
   width: 100%;
-  padding: var(--input-padding);
+  padding: 8px;
   border-radius: var(--style-border-radius-inputs);
   border: none;
   box-shadow: var(--input-box-shadow);
   background-color: var(--color-input-background);
   color: var(--color-input-text);
   font-family: var(--font-body--family);
-  font-size: var(--font-paragraph--size);
+  font-size: 14px;
+  font-weight: 500;
   transition: box-shadow var(--animation-speed) ease, background-color var(--animation-speed) ease;
   outline: none;
-
   &:focus,
   &:hover {
     box-shadow: var(--input-box-shadow-focus);
@@ -4711,6 +4711,11 @@ text-component {
   background-position: right var(--padding-md) center;
   padding-right: var(--padding-2xl);
   cursor: pointer;
+  padding-top: 8px;
+  padding-left: 8px;
+  padding-bottom: 8px;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .custom-quote-form input[type="submit"],
@@ -4804,3 +4809,26 @@ text-component {
   }
 }
 
+
+
+// non popup Form css in pdp
+.pdp-form-no-popup {
+  .row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &:not(.asd){
+      margin-top: 16px;
+    }
+    .field-wrap {
+      flex: 0 0 100%;
+      @media screen and (min-width: 1024px) {
+        flex: 0 0 calc(50% - 8px);
+      }
+    }
+    .field-wrap-full {
+      flex: 0 0 100%;
+    }
+  }
+}
