@@ -6149,6 +6149,9 @@
         "group_TCnHAt",
         "group_AUYRcY"
       ],
+      "custom_css": [
+        "::marker {color: #490e67;}"
+      ],
       "name": "Step",
       "settings": {
         "content_direction": "column",
