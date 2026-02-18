@@ -5786,7 +5786,7 @@
                     "padding-block-end-mobile": 0,
                     "padding-inline-start-mobile": 0,
                     "padding-inline-end-mobile": 0,
-                    "custom_class": ""
+                    "custom_class": "ul-space-ten ul-padding-left-fifteen"
                   },
                   "blocks": {}
                 },
@@ -5954,7 +5954,7 @@
                     "padding-block-end-mobile": 0,
                     "padding-inline-start-mobile": 0,
                     "padding-inline-end-mobile": 0,
-                    "custom_class": ""
+                    "custom_class": "ul-space-ten ul-padding-left-fifteen"
                   },
                   "blocks": {}
                 },
@@ -6122,7 +6122,7 @@
                     "padding-block-end-mobile": 0,
                     "padding-inline-start-mobile": 0,
                     "padding-inline-end-mobile": 0,
-                    "custom_class": ""
+                    "custom_class": "ul-space-ten ul-padding-left-fifteen"
                   },
                   "blocks": {}
                 },
