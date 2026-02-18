@@ -4706,9 +4706,10 @@ text-component {
 
 .custom-quote-form select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z' fill='%23333'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right var(--padding-md) center;
+  background-size: 9.5px;
   padding-right: var(--padding-2xl);
   cursor: pointer;
   padding-top: 8px;
