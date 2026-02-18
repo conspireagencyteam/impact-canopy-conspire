@@ -533,7 +533,7 @@
               "type": "variant-picker",
               "settings": {
                 "variant_style": "buttons",
-                "style_override_options": "",
+                "style_override_options": "Frame Type",
                 "show_swatches": true,
                 "alignment": "left",
                 "padding-block-start": 0,
