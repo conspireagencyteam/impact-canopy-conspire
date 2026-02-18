@@ -4814,7 +4814,15 @@ text-component {
   }
 }
 
+.ul-padding-left-fifteen ul{
+  padding-left: 15px;
+}
 
+.ul-space-ten ul li{
+  &:not(:last-child){
+    margin-bottom: 8px;
+  }
+}
 
 // non popup Form css in pdp
 .pdp-form-no-popup {
