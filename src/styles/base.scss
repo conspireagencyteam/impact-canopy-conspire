@@ -4732,18 +4732,22 @@ text-component {
   border: 1px solid var(--color-input-border);
   border-radius: var(--style-border-radius-buttons-primary);
   font-family: var(--font-paragraph--family);
-  font-size: var(--font-h6--size);
-  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color var(--animation-speed) var(--animation-easing),
+  transition: border-color var(--animation-speed) var(--animation-easing),
     color var(--animation-speed) var(--animation-easing);
   margin-top: var(--padding-md);
   -webkit-appearance: none;
   appearance: none;
 
+  &:hover {
+    border-color: var(--color-input-border);
+  }
+
   &:hover:not(:disabled) {
-    background-color: var(--button-background-color-hover);
-    color: var(--button-color-hover);
+    border-color: var(--font-paragraph--family);
   }
 
   &:disabled {
