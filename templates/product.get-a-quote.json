@@ -4678,6 +4678,9 @@
         "group_ExiiGX",
         "group_Pr4NfK"
       ],
+      "custom_css": [
+        "img {max-width: 150px !important;}"
+      ],
       "name": "Exclusive custom",
       "settings": {
         "content_direction": "column",
