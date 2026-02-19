@@ -1336,6 +1336,9 @@
           ]
         }
       },
+      "custom_css": [
+        ".quote-form-button-popup button {padding-block: 14px;}"
+      ],
       "settings": {
         "content_width": "content-center-aligned",
         "desktop_media_position": "left",
