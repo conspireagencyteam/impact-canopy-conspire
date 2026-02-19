@@ -4542,7 +4542,7 @@ text-component {
 .custom-quote-form {
   overflow-y: auto;
   flex: 1;
-  min-height: 0;
+  min-height: fit-content;
 }
 
 .custom-quote-form form {
