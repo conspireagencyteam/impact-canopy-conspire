@@ -360,12 +360,46 @@
                     "custom_class": ""
                   },
                   "blocks": {}
+                },
+                "quote_form_button_d9RyFc": {
+                  "type": "quote-form-button",
+                  "name": "Quote Form Button",
+                  "settings": {
+                    "button_type": "popup",
+                    "popup_behavior": "default",
+                    "popup_heading": "Contact Us",
+                    "label": "Schedule a call",
+                    "link": "",
+                    "custom_liquid": false,
+                    "liquid_code": "",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "button_size": "default",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_tablet": "fit-content",
+                    "custom_width_tablet": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100,
+                    "font_desktop": "default",
+                    "font_size_desktop": 16,
+                    "font_mobile": "default",
+                    "font_size_mobile": 14,
+                    "show_underline": false,
+                    "underline_thickness": 1,
+                    "underline_offset": 2,
+                    "icon": "none",
+                    "icon_size": 20,
+                    "icon_position": "left"
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
                 "group_iJVzrm",
                 "text_xKWMaW",
-                "text_38gmna"
+                "text_38gmna",
+                "quote_form_button_d9RyFc"
               ]
             }
           },
