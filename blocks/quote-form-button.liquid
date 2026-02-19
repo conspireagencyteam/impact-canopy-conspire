@@ -129,6 +129,7 @@
     display: block;
   }
   .contact-form-button-popup__dialog {
+    --modal-max-height: 100dvh;
     box-shadow: var(--shadow-popover);
     border: var(--style-border-popover);
     border-radius: var(--style-border-radius-popover);
@@ -141,6 +142,7 @@
     @media screen and (min-width: 750px) {
       padding: var(--padding-5xl);
       min-width: 500px;
+      --modal-max-height: 90dvh;
     }
   }
 
@@ -209,7 +211,7 @@
   }
 
   .quote-form-button-popup input[type="submit"]{
-    border: 1px solid #490e67 !important;
+    border: 1px solid #EE7623;
   }
 
   .contact-form-button-popup__message--success svg {
