@@ -1345,7 +1345,7 @@
         "equal_columns": false,
         "limit_details_width": false,
         "details_width": 46,
-        "gap": 24,
+        "gap": 12,
         "color_scheme": "scheme-3",
         "padding-block-start": 0,
         "padding-block-end": 36,
