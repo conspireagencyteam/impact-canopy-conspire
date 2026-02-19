@@ -553,8 +553,18 @@ class ProductFormComponent extends Component {
   /**
    * Disable the add to cart button while the UI is updating before #onVariantUpdate is called.
    * Accelerated checkout button is also disabled via its own event listener not exposed to the theme.
+   * @param {VariantSelectedEvent} event
    */
-  #onVariantSelected = () => {
+  #onVariantSelected = (event) => {
+    // Only disable if the event is from a variant picker for the same product.
+    // This prevents cross-sell products from being affected by the main product's variant changes.
+    const variantPicker = event.target;
+    if (variantPicker instanceof HTMLElement) {
+      const variantPickerProductId = variantPicker.dataset.productId;
+      if (variantPickerProductId && variantPickerProductId !== this.dataset.productId) {
+        return;
+      }
+    }
     this.refs.addToCartButtonContainer?.disable();
   };
 }

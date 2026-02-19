@@ -144,6 +144,12 @@
     object-position: var(--focal-point, center center);
   }
 
+  .media-gallery--carousel slideshow-container,
+  .media-gallery--grid .product-media > * {
+    border-radius: calc(var(--media-radius) / 2);
+    overflow: hidden;
+  }
+
   /*** Media border-radius feature ****/
   @media screen and (min-width: 750px) {
     .media-gallery--carousel slideshow-container,
