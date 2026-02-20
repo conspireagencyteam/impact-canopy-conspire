@@ -70,29 +70,5 @@
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          const formContainer = document.querySelector('.custom-sale-group-form-modified');
-
-          if (!formContainer) return;
-
-          const selectlabel = formContainer.querySelector('label[for="selectyourrep"]');
-          const select = formContainer.querySelector('select[title="Select Your Sales Rep"]');
-          const saleTitle = document.querySelector('.sale-title');
-
-          if (!select || !saleTitle) return;
-
-          const hiddenInput = document.createElement('input');
-          hiddenInput.type = 'hidden';
-          hiddenInput.id = select.id;
-          hiddenInput.name = select.name;
-          hiddenInput.value = saleTitle.textContent.trim();
-
-          select.parentNode.insertBefore(hiddenInput, select);
-          select.remove();
-          selectlabel.remove();
-      });
-    </script>
   </body>
 </html>
