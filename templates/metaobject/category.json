@@ -365,6 +365,7 @@
                   "type": "metaobject-sale",
                   "name": "Sale Metaobjects",
                   "settings": {
+                    "representative": "{{ closest.metaobject.category.representative.value }}",
                     "columns": 1,
                     "gap": 12,
                     "inherit_color_scheme": true,
