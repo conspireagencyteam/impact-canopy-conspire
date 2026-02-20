@@ -1038,11 +1038,28 @@
         "padding-block-start-mobile": 0,
         "padding-block-end-mobile": 0
       }
+    },
+    "custom_liquid_3Gy6yx": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<script>\ndocument.addEventListener('DOMContentLoaded', function() {\n    const formContainer = document.querySelector('.custom-sale-group-form-modified');      \n\n    if (!formContainer) return;\n\n    const select = formContainer.querySelector('select[title=\"Select Your Sales\n  Rep\"]');\n    const saleTitle = document.querySelector('.sale-title');\n\n    if (!select || !saleTitle) return;\n\n    const hiddenInput = document.createElement('input');\n    hiddenInput.type = 'hidden';\n    hiddenInput.id = select.id;\n    hiddenInput.name = select.name;\n    hiddenInput.value = saleTitle.textContent.trim();\n\n    select.parentNode.insertBefore(hiddenInput, select);\n    select.remove();\n  });\n</script>",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0,
+        "use_mobile_padding": false,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0,
+        "padding-inline-start-mobile": 0,
+        "padding-inline-end-mobile": 0
+      }
     }
   },
   "order": [
     "section_DpdYc6",
     "custom_product_list_jhE7UU",
-    "section_XEjpCQ"
+    "section_XEjpCQ",
+    "custom_liquid_3Gy6yx"
   ]
 }
