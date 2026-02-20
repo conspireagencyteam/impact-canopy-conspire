@@ -1,0 +1,126 @@
+<div
+  class="frame-card"
+  {{ block.shopify_attributes }}
+>
+  <div class="frame-card__left">
+    {% content_for 'block', type: '_meta-frame-image', id: 'staticImage', fallback_image: item.frame_image %}
+  </div>
+
+  <div class="frame-card__right">
+    <div class="frame-card__stats">
+      {% content_for 'block', type: 'text', id: 'staticText', fallback_text: item.name %}
+      {% content_for 'block', type: '_progress-bar', id: 'progressBar', label: 'Frame Warranty', value: item.frame_warranty %}
+      {% content_for 'block', type: '_progress-bar', id: 'progressBar2', label: 'Frame Strength', value: item.frame_strength %}
+      {% content_for 'block', type: '_progress-bar', id: 'progressBar3', label: 'Popularity', value: item.popularity %}
+      {% content_for 'block', type: '_progress-bar', id: 'progressBar4', label: 'Product Weight', value: item.product_weight %}
+      {% content_for 'block', type: '_progress-bar', id: 'progressBar5', label: 'Price', value: item.price %}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .frame-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 24px;
+    background: #fff;
+    border: none;
+    border-radius: 12px;
+  }
+
+  @media screen and (max-width: 549px) {
+    .frame-card {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  .frame-card__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .frame-card__image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .frame-card__right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .frame-card__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 20px 0;
+    font-style: italic;
+  }
+
+  .frame-card__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+  }
+
+  .frame-card__link {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #5c2d82;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  .frame-card__link:hover {
+    color: #f47920;
+  }
+
+  @media screen and (max-width: 549px) {
+    .frame-card__right {
+      align-items: center;
+    }
+
+    .frame-card__title {
+      text-align: center;
+    }
+
+    .frame-card__stats {
+      width: 100%;
+    }
+
+    .frame-card__link {
+      text-align: center;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Frame Card",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "@theme"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Card Content"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Frame Card",
+      "category": "Custom",
+    }
+  ]
+}
+{% endschema %}

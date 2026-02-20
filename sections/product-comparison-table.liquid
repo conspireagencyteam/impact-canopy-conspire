@@ -1,0 +1,776 @@
+<style>
+  .product-comparison-table {
+    --table-header-bg: #f5f5f5;
+    --table-border-color: #cccccc;
+    --table-text-color: #5c2d82;
+    --table-accent-color: #5c2d82;
+    --table-accent-secondary: #f47920;
+    --table-row-bg: #fff;
+    --table-row-alt-bg: #fafafa;
+    --table-best-for-bg: #EEF0F2;
+    --table-best-for-border: #fff;
+
+    /* Desktop column widths (percentage) */
+    --col-1-width-desktop: {{ section.settings.col_1_width_desktop }}%;
+    --col-2-width-desktop: {{ section.settings.col_2_width_desktop }}%;
+    --col-3-width-desktop: {{ section.settings.col_3_width_desktop }}%;
+    --col-4-width-desktop: {{ section.settings.col_4_width_desktop }}%;
+    --col-5-width-desktop: {{ section.settings.col_5_width_desktop }}%;
+    --col-6-width-desktop: {{ section.settings.col_6_width_desktop }}%;
+
+    /* Mobile column widths (pixels) */
+    --col-1-width-mobile: {{ section.settings.col_1_width_mobile }}px;
+    --col-2-width-mobile: {{ section.settings.col_2_width_mobile }}px;
+    --col-3-width-mobile: {{ section.settings.col_3_width_mobile }}px;
+    --col-4-width-mobile: {{ section.settings.col_4_width_mobile }}px;
+    --col-5-width-mobile: {{ section.settings.col_5_width_mobile }}px;
+    --col-6-width-mobile: {{ section.settings.col_6_width_mobile }}px;
+  }
+
+  .product-comparison-table__wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 16px;
+    border: 1px solid var(--table-border-color);
+    background-color: #ffffff;
+  }
+
+  @media screen and (min-width: 750px) {
+    .product-comparison-table__wrapper {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
+  /* 5th column background color */
+  .product-comparison-table__col-5 {
+    background-color: var(--table-best-for-bg);
+  }
+
+  .product-comparison-table__table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 700px;
+    table-layout: fixed;
+  }
+
+  /* Desktop column widths */
+  @media screen and (min-width: 750px) {
+    .product-comparison-table__table {
+      table-layout: fixed;
+    }
+
+    .product-comparison-table__col-1 { width: var(--col-1-width-desktop); }
+    .product-comparison-table__col-2 { width: var(--col-2-width-desktop); }
+    .product-comparison-table__col-3 { width: var(--col-3-width-desktop); }
+    .product-comparison-table__col-4 { width: var(--col-4-width-desktop); }
+    .product-comparison-table__col-5 { width: var(--col-5-width-desktop); }
+    .product-comparison-table__col-6 { width: var(--col-6-width-desktop); }
+  }
+
+  /* Mobile column widths */
+  @media screen and (max-width: 749px) {
+    .product-comparison-table--mobile-sticky .product-comparison-table__col-1 { width: var(--col-1-width-mobile); min-width: var(--col-1-width-mobile); }
+    .product-comparison-table--mobile-sticky .product-comparison-table__col-2 { width: var(--col-2-width-mobile); min-width: var(--col-2-width-mobile); }
+    .product-comparison-table--mobile-sticky .product-comparison-table__col-3 { width: var(--col-3-width-mobile); min-width: var(--col-3-width-mobile); }
+    .product-comparison-table--mobile-sticky .product-comparison-table__col-4 { width: var(--col-4-width-mobile); min-width: var(--col-4-width-mobile); }
+    .product-comparison-table--mobile-sticky .product-comparison-table__col-5 { width: var(--col-5-width-mobile); min-width: var(--col-5-width-mobile); }
+    .product-comparison-table--mobile-sticky .product-comparison-table__col-6 { width: var(--col-6-width-mobile); min-width: var(--col-6-width-mobile); }
+  }
+
+  .product-comparison-table__thead {
+    background: var(--table-header-bg);
+  }
+
+  .product-comparison-table__th {
+    padding: 16px 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--table-accent-color);
+    white-space: nowrap;
+    background: var(--table-row-bg);
+    border-bottom: 1px solid var(--table-border-color);
+  }
+
+  /* First row top-left corner radius */
+  .product-comparison-table__thead .product-comparison-table__th:first-child {
+    border-top-left-radius: 15px;
+  }
+
+  /* First row top-right corner radius */
+  .product-comparison-table__thead .product-comparison-table__th:last-child {
+    border-top-right-radius: 15px;
+  }
+
+  /* Best For column header */
+  .product-comparison-table__th.product-comparison-table__th--best-for {
+    background: var(--table-best-for-bg);
+    border-top: 1px solid var(--table-best-for-border);
+    border-bottom: 1px solid var(--table-best-for-border);
+  }
+
+  .product-comparison-table__th:first-child,
+  .product-comparison-table__td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: var(--table-row-bg);
+  }
+
+  .product-comparison-table__thead .product-comparison-table__th:first-child {
+    background: var(--table-row-bg);
+    z-index: 3;
+  }
+
+  .product-comparison-table__th:first-child {
+    text-align: left;
+    padding-left: 24px;
+  }
+
+  .product-comparison-table__tbody tr {
+    transition: background-color 0.2s ease;
+  }
+
+  .product-comparison-table__tbody tr:hover {
+    background-color: var(--table-row-alt-bg);
+  }
+
+  .product-comparison-table__tbody tr:hover .product-comparison-table__td:first-child {
+    background-color: var(--table-row-alt-bg);
+  }
+
+  .product-comparison-table__td {
+    padding: 16px 8px; 
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    color: var(--table-text-color);
+    background: var(--table-row-bg);
+    border-bottom: 1px solid var(--table-border-color);
+  }
+
+  /* Last row bottom-left corner radius */
+  .product-comparison-table__tbody tr:last-child .product-comparison-table__td:first-child {
+    border-bottom-left-radius: 15px;
+  }
+
+  /* Last row bottom-right corner radius */
+  .product-comparison-table__tbody tr:last-child .product-comparison-table__td:last-child {
+    border-bottom-right-radius: 15px;
+  }
+
+  /* Last row no bottom border */
+  .product-comparison-table__tbody tr:last-child .product-comparison-table__td {
+    border-bottom: none;
+  }
+
+  .product-comparison-table__td:first-child {
+    text-align: left;
+    padding-left: 8px;
+  }
+
+  /* Show box shadow only when table is scrolled */
+  .product-comparison-table__wrapper.is-scrolled .product-comparison-table__th:first-child,
+  .product-comparison-table__wrapper.is-scrolled .product-comparison-table__td:first-child {
+    box-shadow: 2px 0 5px -2px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-comparison-table__logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+
+  .product-comparison-table__logo-cell {
+    /* Width controlled by column settings */
+    img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+    }
+  }
+
+  .product-comparison-table__material {
+    font-weight: 500;
+  }
+
+  .product-comparison-table__structure-color {
+    color: var(--table-accent-color);
+    font-weight: 500;
+  }
+
+  .product-comparison-table__latch {
+    color: var(--table-accent-color);
+    font-weight: 500;
+  }
+
+  .product-comparison-table__best-for {
+    color: var(--table-accent-color);
+    font-weight: 500;
+    line-height: 1.5;
+    background: var(--table-best-for-bg);
+    border-top: 1px solid var(--table-best-for-border);
+    border-bottom: 1px solid var(--table-best-for-border);
+  }
+
+  .product-comparison-table__availability {
+    font-weight: 500;
+  }
+
+  .product-comparison-table__availability--available {
+    color: #333;
+  }
+
+  .product-comparison-table__availability--special {
+    color: var(--table-accent-color);
+  }
+
+  /* Mobile Stacked Layout */
+  @media screen and (max-width: 749px) {
+    .product-comparison-table--mobile-stack .product-comparison-table__wrapper {
+      width: 100%;
+      border: none;
+      border-radius: 0;
+      overflow-x: visible;
+      padding: 0;
+      margin: 0;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__table {
+      min-width: 100%;
+      display: block;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__thead {
+      display: none;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__tbody {
+      display: block;
+      width: 100%;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__tbody tr {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 20px;
+      margin-bottom: 16px;
+      border: 1px solid var(--table-border-color);
+      border-radius: 8px;
+      background: var(--table-row-bg);
+      box-sizing: border-box;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__td {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      text-align: right;
+      border: none;
+      position: static;
+      box-shadow: none;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__td:first-child {
+      padding-left: 0;
+      justify-content: center;
+      padding-bottom: 16px;
+      margin-bottom: 8px;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__td::before {
+      content: attr(data-label);
+      font-weight: 600;
+      color: var(--table-accent-color);
+      text-align: left;
+      flex: 1;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__td:first-child::before {
+      display: none;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__logo {
+      width: 80px;
+      height: 80px;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__best-for {
+      max-width: none;
+      text-align: right;
+      background: var(--table-best-for-bg);
+      border-left: none;
+      border-right: none;
+      border-radius: 4px;
+      padding: 12px 8px;
+      margin: 4px 0;
+    }
+  }
+
+  /* Mobile Sticky Column Layout */
+  @media screen and (max-width: 749px) {
+    .product-comparison-table--mobile-sticky .product-comparison-table__table {
+      min-width: 700px;
+    }
+
+    .product-comparison-table--mobile-sticky .product-comparison-table__th,
+    .product-comparison-table--mobile-sticky .product-comparison-table__td {
+      padding: 12px 10px;
+      font-size: 12px;
+    }
+
+    .product-comparison-table--mobile-sticky .product-comparison-table__logo {
+      width: 50px;
+      height: 50px;
+    }
+
+    .product-comparison-table--mobile-sticky .product-comparison-table__best-for {
+      max-width: none;
+    }
+  }
+</style>
+
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<div
+  class="
+    section
+    section--{{ section.settings.section_width }}
+    color-{{ section.settings.color_scheme }}
+    product-comparison-table
+    product-comparison-table--mobile-{{ section.settings.mobile_layout }}
+    spacing-style
+    gap-style
+  "
+  style="
+    {% render 'spacing-style', settings: section.settings, mobile: section.settings.use_mobile_padding %}
+    {% render 'gap-style', value: section.settings.gap %}
+  "
+>
+  {%  content_for 'block', id: 'staticHeader', type: 'text' %}
+
+  <div class="product-comparison-table__wrapper">
+    <table class="product-comparison-table__table">
+      <colgroup>
+        <col class="product-comparison-table__col-1">
+        <col class="product-comparison-table__col-2">
+        <col class="product-comparison-table__col-3">
+        <col class="product-comparison-table__col-4">
+        <col class="product-comparison-table__col-5">
+        <col class="product-comparison-table__col-6">
+      </colgroup>
+      <thead class="product-comparison-table__thead">
+        <tr>
+          <th class="product-comparison-table__th product-comparison-table__logo-cell"></th>
+          <th class="product-comparison-table__th">{{ section.settings.header_material | default: 'Material' }}</th>
+          <th class="product-comparison-table__th">{{ section.settings.header_structure_color | default: 'Structure Color' }}</th>
+          <th class="product-comparison-table__th">{{ section.settings.header_latch | default: 'Latch' }}</th>
+          <th class="product-comparison-table__th product-comparison-table__th--best-for">{{ section.settings.header_best_for | default: 'Best For' }}</th>
+          <th class="product-comparison-table__th">{{ section.settings.header_availability | default: 'Availability' }}</th>
+        </tr>
+      </thead>
+      <tbody class="product-comparison-table__tbody">
+        {% assign table_rows = metaobjects.frames.values %}
+        {% for row in table_rows %}
+          {% assign logo_value = row.logo %}
+          {% assign material_value = row.material %}
+          {% assign structure_color_value = row.structure_color %}
+          {% assign latch_value = row.latch %}
+          {% assign best_for_value = row.best_for | metafield_tag %}
+          {% assign availability_value = row.parts_available %}
+          {% assign is_special_value = row.is_special %}
+
+          <tr>
+            <td class="product-comparison-table__td product-comparison-table__logo-cell">
+              {% if logo_value != blank %}
+                {{ logo_value | image_url: width: 100, height: 100 | image_tag }}
+              {% endif %}
+            </td>
+            <td class="product-comparison-table__td product-comparison-table__material" data-label="{{ section.settings.header_material | default: 'Material' }}">
+              {{ material_value }}
+            </td>
+            <td class="product-comparison-table__td product-comparison-table__structure-color" data-label="{{ section.settings.header_structure_color | default: 'Structure Color' }}">
+              {{ structure_color_value }}
+            </td>
+            <td class="product-comparison-table__td product-comparison-table__latch" data-label="{{ section.settings.header_latch | default: 'Latch' }}">
+              {{ latch_value }}
+            </td>
+            <td class="product-comparison-table__td product-comparison-table__best-for" data-label="{{ section.settings.header_best_for | default: 'Best For' }}">
+              {{ best_for_value }}
+            </td>
+            <td class="product-comparison-table__td product-comparison-table__availability {% if is_special_value %}product-comparison-table__availability--special{% else %}product-comparison-table__availability--available{% endif %}" data-label="{{ section.settings.header_availability | default: 'Availability' }}">
+              {{ availability_value }}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const wrapper = document.querySelector('#shopify-section-{{ section.id }} .product-comparison-table__wrapper');
+    if (!wrapper) return;
+
+    function checkOverflow() {
+      const isOverflowing = wrapper.scrollWidth > wrapper.clientWidth;
+      const isScrolled = wrapper.scrollLeft > 0;
+
+      if (isOverflowing && isScrolled) {
+        wrapper.classList.add('is-scrolled');
+      } else {
+        wrapper.classList.remove('is-scrolled');
+      }
+    }
+
+    wrapper.addEventListener('scroll', checkOverflow);
+    window.addEventListener('resize', checkOverflow);
+    checkOverflow();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Product Comparison Table",
+  "class": "product-comparison-table-section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Compare Our Frames"
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "label": "Title Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Table Headers"
+    },
+    {
+      "type": "text",
+      "id": "header_material",
+      "label": "Material Header",
+      "default": "Material"
+    },
+    {
+      "type": "text",
+      "id": "header_structure_color",
+      "label": "Structure Color Header",
+      "default": "Structure Color"
+    },
+    {
+      "type": "text",
+      "id": "header_latch",
+      "label": "Latch Header",
+      "default": "Latch"
+    },
+    {
+      "type": "text",
+      "id": "header_best_for",
+      "label": "Best For Header",
+      "default": "Best For"
+    },
+    {
+      "type": "text",
+      "id": "header_availability",
+      "label": "Availability Header",
+      "default": "Availability"
+    },
+    {
+      "type": "header",
+      "content": "Section Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Page"
+        },
+        {
+          "value": "full-width",
+          "label": "Full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "Mobile Layout",
+      "options": [
+        {
+          "value": "sticky",
+          "label": "Sticky Column (Scrollable Table)"
+        },
+        {
+          "value": "stack",
+          "label": "Stacked Cards"
+        }
+      ],
+      "default": "sticky",
+      "info": "Choose how the table displays on mobile devices"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Desktop Column Widths (%)"
+    },
+    {
+      "type": "range",
+      "id": "col_1_width_desktop",
+      "label": "Column 1 (Logo)",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "unit": "%",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "col_2_width_desktop",
+      "label": "Column 2 (Material)",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "unit": "%",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "col_3_width_desktop",
+      "label": "Column 3 (Structure Color)",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "unit": "%",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "col_4_width_desktop",
+      "label": "Column 4 (Latch)",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "unit": "%",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "col_5_width_desktop",
+      "label": "Column 5 (Best For)",
+      "min": 10,
+      "max": 40,
+      "step": 1,
+      "unit": "%",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "col_6_width_desktop",
+      "label": "Column 6 (Availability)",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "unit": "%",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Mobile Column Widths (px)"
+    },
+    {
+      "type": "range",
+      "id": "col_1_width_mobile",
+      "label": "Column 1 (Logo)",
+      "min": 50,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "col_2_width_mobile",
+      "label": "Column 2 (Material)",
+      "min": 50,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "col_3_width_mobile",
+      "label": "Column 3 (Structure Color)",
+      "min": 50,
+      "max": 250,
+      "step": 5,
+      "unit": "px",
+      "default": 130
+    },
+    {
+      "type": "range",
+      "id": "col_4_width_mobile",
+      "label": "Column 4 (Latch)",
+      "min": 50,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "col_5_width_mobile",
+      "label": "Column 5 (Best For)",
+      "min": 100,
+      "max": 350,
+      "step": 5,
+      "unit": "px",
+      "default": 200
+    },
+    {
+      "type": "range",
+      "id": "col_6_width_mobile",
+      "label": "Column 6 (Availability)",
+      "min": 50,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "default": 90
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Mobile Padding"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_mobile_padding",
+      "label": "Use Mobile Padding",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start-mobile",
+      "label": "Top (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24,
+      "visible_if": "{{ section.settings.use_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end-mobile",
+      "label": "Bottom (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24,
+      "visible_if": "{{ section.settings.use_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start-mobile",
+      "label": "Left (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ section.settings.use_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end-mobile",
+      "label": "Right (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ section.settings.use_mobile_padding == true }}"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Comparison Table",
+      "category": "Custom",
+      "settings": {
+        "section_width": "page-width",
+        "mobile_layout": "sticky",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    }
+  ]
+}
+{% endschema %}
