@@ -114,7 +114,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "{{ closest.metaobject.sale_representatives.representative_image.value }}",
+                    "image": "{{ closest.metaobject.category.representative.value.representative_image.value }}",
                     "link": "",
                     "image_ratio": "landscape",
                     "image_ratio_mobile": "same",
