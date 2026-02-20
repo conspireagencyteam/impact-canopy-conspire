@@ -249,7 +249,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>{{ closest.metaobject.sale_representatives.tagline.value }}</p>",
+                        "text": "<p>{{ closest.metaobject.category.representative.value.tagline.value }}</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -328,7 +328,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "{{ closest.metaobject.sale_representatives.description | metafield_tag }}",
+                    "text": "<p>{{ closest.metaobject.category.description | metafield_tag }}</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
