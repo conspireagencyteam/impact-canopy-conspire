@@ -4642,10 +4642,12 @@ text-component {
   /* Row 7: Company / Business Type labels */
   .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="company"] { grid-row: 9; }
   .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="business"] { grid-row: 9; }
+  .custom-quote-form:not(.custom-quote-form-pdp) form > label[for="00NU0000003s27Z"]{ grid-row: 9; }
 
   /* Row 8: Company / Business Type inputs */
   .custom-quote-form:not(.custom-quote-form-pdp) form > input#company { grid-row: 10; }
   .custom-quote-form:not(.custom-quote-form-pdp) form > input[id="00N4U000008Fzqc"] { grid-row: 10; }
+  .custom-quote-form:not(.custom-quote-form-pdp) form > textarea[id="00NU0000003s27Z"] { grid-row: 10; }
 
   /* reCAPTCHA - full width */
   .custom-quote-form:not(.custom-quote-form-pdp) form > .g-recaptcha {
