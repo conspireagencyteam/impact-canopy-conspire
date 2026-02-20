@@ -1,5 +1,9 @@
 {%- liquid
-  assign metaobject_list = metaobject.speciality
+  if block.settings.representative != blank
+    assign metaobject_list = block.settings.representative.speciality
+  else
+    assign metaobject_list = metaobject.speciality
+  endif
 -%}
 {% stylesheet %}
   .metaobject-pdp {
@@ -61,6 +65,16 @@
     }
   ],
   "settings": [
+    {
+      "type": "metaobject",
+      "id": "representative",
+      "metaobject_type": "sale_representatives",
+      "label": "Representative"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
     {
       "type": "range",
       "id": "columns",
