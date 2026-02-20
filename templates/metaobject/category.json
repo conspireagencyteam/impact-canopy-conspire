@@ -291,7 +291,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>{{ closest.metaobject.sale_representatives.name.value }}</p>",
+                    "text": "<p>{{ closest.metaobject.category.representative.value.name.value }}</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
