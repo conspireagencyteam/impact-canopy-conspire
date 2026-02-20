@@ -1,8 +1,7 @@
 {%- capture children %}
   {% content_for 'blocks' %}
 {% endcapture %}
-
-{% render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
+{% render 'group-sale', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
 
 {% schema %}
 {
@@ -310,30 +309,9 @@
       "visible_if": "{{ block.settings.inherit_color_scheme == false }}"
     },
     {
-      "type": "select",
-      "id": "background_media",
-      "label": "t:settings.background_media",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:options.none"
-        },
-        {
-          "value": "image",
-          "label": "t:options.image"
-        },
-        {
-          "value": "video",
-          "label": "t:options.video"
-        }
-      ],
-      "default": "none"
-    },
-    {
       "type": "video",
       "id": "video",
-      "label": "t:settings.video",
-      "visible_if": "{{ block.settings.background_media == 'video' }}"
+      "label": "t:settings.video"
     },
     {
       "type": "select",
@@ -349,21 +327,18 @@
           "label": "t:options.contain"
         }
       ],
-      "default": "cover",
-      "visible_if": "{{ block.settings.background_media == 'video' }}"
+      "default": "cover"
     },
     {
       "type": "image_picker",
       "id": "background_image",
-      "label": "t:settings.image",
-      "visible_if": "{{ block.settings.background_media == 'image' }}"
+      "label": "t:settings.image"
     },
     {
       "type": "image_picker",
       "id": "background_image_mobile",
       "label": "t:settings.image_mobile",
-      "info": "t:info.image_mobile",
-      "visible_if": "{{ block.settings.background_media == 'image' }}"
+      "info": "t:info.image_mobile"
     },
     {
       "type": "select",
@@ -379,8 +354,7 @@
           "label": "t:options.fit"
         }
       ],
-      "default": "cover",
-      "visible_if": "{{ block.settings.background_media == 'image' }}"
+      "default": "cover"
     },
     {
       "type": "select",
@@ -621,7 +595,6 @@
             "custom_height": 100,
             "inherit_color_scheme": false,
             "color_scheme": "scheme-6",
-            "background_media": "image",
             "video_position": "cover",
             "background_image": "{{ closest.metaobject.sale_representatives.banner_image.value }}",
             "background_image_position": "cover",
