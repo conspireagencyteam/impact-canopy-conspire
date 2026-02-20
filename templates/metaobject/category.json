@@ -1120,7 +1120,7 @@
       },
       "name": "t:names.custom_product_list",
       "settings": {
-        "products": "{{ metaobject.representative.value.products.value }}",
+        "products": "{{ metaobject.products.value }}",
         "layout_type": "grid",
         "carousel_on_mobile": false,
         "max_products": 8,
