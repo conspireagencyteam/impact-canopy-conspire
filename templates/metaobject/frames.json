@@ -94,10 +94,78 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 12,
-        "padding-block-end": 36,
+        "padding-block-end": 12,
         "use_mobile_padding": false,
         "padding-block-start-mobile": 0,
         "padding-block-end-mobile": 0
+      }
+    },
+    "product_comparison_table_detail_jih9kc": {
+      "type": "product-comparison-table-detail",
+      "blocks": {
+        "staticHeader": {
+          "type": "text",
+          "static": true,
+          "settings": {
+            "text": "",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "custom_color": "#000000",
+            "use_mobile_typography": false,
+            "font_size_mobile": "1rem",
+            "line_height_mobile": "normal",
+            "letter_spacing_mobile": "normal",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "use_mobile_padding": false,
+            "padding-block-start-mobile": 0,
+            "padding-block-end-mobile": 0,
+            "padding-inline-start-mobile": 0,
+            "padding-inline-end-mobile": 0,
+            "custom_class": ""
+          },
+          "blocks": {}
+        }
+      },
+      "name": "Frame Table Detail",
+      "settings": {
+        "col_name_1": "StructureMaterial",
+        "col_name_2": "Finish Options",
+        "col_name_3": "Bracket Material",
+        "col_name_4": "Outer Leg(mm)",
+        "col_name_5": "Truss(mm)",
+        "col_name_6": "Frame Sizes ft",
+        "col_name_7": "Weight Ibs",
+        "col_name_8": "Max Height ft",
+        "col_name_9": "Max Head Clearance Height ft",
+        "col_name_10": "Closed Frame Dimensions (In)",
+        "col_name_11": "PartsAvailable",
+        "col_name_12": "Limited Manufacturer Warranty",
+        "section_width": "page-width",
+        "mobile_layout": "sticky",
+        "gap": 24,
+        "color_scheme": "scheme-3",
+        "padding-block-start": 0,
+        "padding-block-end": 36,
+        "use_mobile_padding": false,
+        "padding-block-start-mobile": 24,
+        "padding-block-end-mobile": 24,
+        "padding-inline-start-mobile": 0,
+        "padding-inline-end-mobile": 0
       }
     },
     "product_list_bEqVhG": {
@@ -1026,6 +1094,7 @@
   },
   "order": [
     "section_DQ74pJ",
+    "product_comparison_table_detail_jih9kc",
     "product_list_bEqVhG",
     "product_list_eENdy8",
     "section_bh6w7f"
