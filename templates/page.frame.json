@@ -805,6 +805,34 @@
                 "padding-inline-end-mobile": 0
               },
               "blocks": {}
+            },
+            "metaButton": {
+              "type": "_meta-button",
+              "static": true,
+              "settings": {
+                "label": "Shop now",
+                "link": "",
+                "open_in_new_tab": false,
+                "style_class": "link",
+                "button_size": "default",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_tablet": "fit-content",
+                "custom_width_tablet": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100,
+                "font_desktop": "default",
+                "font_size_desktop": 16,
+                "font_mobile": "default",
+                "font_size_mobile": 14,
+                "show_underline": true,
+                "underline_thickness": 1,
+                "underline_offset": 2,
+                "icon": "none",
+                "icon_size": 20,
+                "icon_position": "left"
+              },
+              "blocks": {}
             }
           },
           "block_order": []
