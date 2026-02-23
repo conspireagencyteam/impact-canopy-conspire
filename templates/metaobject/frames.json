@@ -1148,6 +1148,7 @@
           "type": "image",
           "static": true,
           "settings": {
+            "image": "{{ closest.metaobject.frames.collage_left_top_image.value }}",
             "link": "",
             "image_ratio": "adapt",
             "image_ratio_mobile": "same",
@@ -1179,6 +1180,7 @@
           "type": "image",
           "static": true,
           "settings": {
+            "image": "{{ closest.metaobject.frames.collage_left_bottom_image.value }}",
             "link": "",
             "image_ratio": "adapt",
             "image_ratio_mobile": "same",
@@ -1210,6 +1212,7 @@
           "type": "image",
           "static": true,
           "settings": {
+            "image": "{{ closest.metaobject.frames.collage_center_image.value }}",
             "link": "",
             "image_ratio": "adapt",
             "image_ratio_mobile": "same",
@@ -1241,6 +1244,7 @@
           "type": "image",
           "static": true,
           "settings": {
+            "image": "{{ closest.metaobject.frames.collage_right_top_image.value }}",
             "link": "",
             "image_ratio": "adapt",
             "image_ratio_mobile": "same",
@@ -1272,6 +1276,7 @@
           "type": "image",
           "static": true,
           "settings": {
+            "image": "{{ closest.metaobject.frames.collage_right_bottom_image.value }}",
             "link": "",
             "image_ratio": "adapt",
             "image_ratio_mobile": "same",
