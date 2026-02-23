@@ -25,18 +25,18 @@
     --col-12-width-desktop: 8.2%;
 
     /* Mobile column widths (pixels) */
-    --col-1-width-mobile: 6.7%;
-    --col-2-width-mobile: 10%;
-    --col-3-width-mobile: 10%;
-    --col-4-width-mobile: 10%;
-    --col-5-width-mobile: 10.3%;
-    --col-6-width-mobile: 8.3%;
-    --col-7-width-mobile: 5.5%;
-    --col-8-width-mobile: 7.8%;
-    --col-9-width-mobile: 6.2%;
-    --col-10-width-mobile: 8.5%;
-    --col-11-width-mobile: 8.5%;
-    --col-12-width-mobile: 8.2%;
+    --col-1-width-mobile: 90px;
+    --col-2-width-mobile: 120px;
+    --col-3-width-mobile: 120px;
+    --col-4-width-mobile: 120px;
+    --col-5-width-mobile: 120px;
+    --col-6-width-mobile: 150px;
+    --col-7-width-mobile: 150px;
+    --col-8-width-mobile: 150px;
+    --col-9-width-mobile: 150px;
+    --col-10-width-mobile: 150px;
+    --col-11-width-mobile: 150px;
+    --col-12-width-mobile: 150px;
   }
 
   .product-comparison-table__wrapper {
@@ -46,18 +46,6 @@
     border-radius: 16px;
     border: 1px solid var(--table-border-color);
     background-color: #ffffff;
-  }
-
-  @media screen and (min-width: 750px) {
-    .product-comparison-table__wrapper {
-      padding-left: 24px;
-      padding-right: 24px;
-    }
-  }
-
-  /* 5th column background color */
-  .product-comparison-table__col-5 {
-    background-color: var(--table-best-for-bg);
   }
 
   .product-comparison-table__table {
@@ -109,14 +97,19 @@
   }
 
   .product-comparison-table__th {
-    padding: 16px 20px;
+    padding: 12px;
     text-align: center;
     font-weight: 600;
     font-size: 14px;
     color: var(--table-accent-color);
-    white-space: nowrap;
+    white-space: wrap;
     background: var(--table-row-bg);
-    border-bottom: 1px solid var(--table-border-color);
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+
+  .product-comparison-table__th:last-child {
+    border-right: none;
   }
 
   /* First row top-left corner radius */
@@ -150,8 +143,7 @@
   }
 
   .product-comparison-table__th:first-child {
-    text-align: left;
-    padding-left: 24px;
+    text-align: center;
   }
 
   .product-comparison-table__tbody tr {
@@ -167,33 +159,58 @@
   }
 
   .product-comparison-table__td {
-    padding: 16px 8px; 
+    padding: 10px;
     text-align: center;
     vertical-align: middle;
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 500;
     color: var(--table-text-color);
     background: var(--table-row-bg);
-    border-bottom: 1px solid var(--table-border-color);
+    border-bottom: none;
+    border-right: 1px solid #ccc;
+  }
+
+  .product-comparison-table__td.product-comparison-table__td__inner-table {
+    padding: 0 !important;
+  }
+
+  .product-comparison-table__td.product-comparison-table__td__inner-table table,
+  .product-comparison-table__td.product-comparison-table__td__inner-table table tbody,
+  .product-comparison-table__td.product-comparison-table__td__inner-table table tbody tr {
+    display: flex;
+    flex-direction: column;
+  }
+  .product-comparison-table__td.product-comparison-table__td__inner-table table tbody tr td {
+    border-bottom: 1px solid #ccc;
+    padding: 12px;
+  }
+
+  .product-comparison-table__td.product-comparison-table__td__inner-table table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .product-comparison-table__td.product-comparison-table__td__inner-table td {
+    position: static !important;
+    z-index: 1 !important;
+  }
+
+
+  .product-comparison-table__td:last-child {
+    border-right: none;
   }
 
   /* Last row bottom-left corner radius */
   .product-comparison-table__tbody tr:last-child .product-comparison-table__td:first-child {
-    border-bottom-left-radius: 15px;
+    border-bottom-left-radius: 0;
   }
 
   /* Last row bottom-right corner radius */
   .product-comparison-table__tbody tr:last-child .product-comparison-table__td:last-child {
-    border-bottom-right-radius: 15px;
-  }
-
-  /* Last row no bottom border */
-  .product-comparison-table__tbody tr:last-child .product-comparison-table__td {
-    border-bottom: none;
+    border-bottom-right-radius: 0;
   }
 
   .product-comparison-table__td:first-child {
-    text-align: left;
-    padding-left: 8px;
+    text-align: center;
   }
 
   /* Show box shadow only when table is scrolled */
@@ -314,22 +331,6 @@
     .product-comparison-table--mobile-stack .product-comparison-table__td:first-child::before {
       display: none;
     }
-
-    .product-comparison-table--mobile-stack .product-comparison-table__logo {
-      width: 80px;
-      height: 80px;
-    }
-
-    .product-comparison-table--mobile-stack .product-comparison-table__best-for {
-      max-width: none;
-      text-align: right;
-      background: var(--table-best-for-bg);
-      border-left: none;
-      border-right: none;
-      border-radius: 4px;
-      padding: 12px 8px;
-      margin: 4px 0;
-    }
   }
 
   /* Mobile Sticky Column Layout */
@@ -340,7 +341,7 @@
 
     .product-comparison-table--mobile-sticky .product-comparison-table__th,
     .product-comparison-table--mobile-sticky .product-comparison-table__td {
-      padding: 12px 10px;
+      padding: 12px;
       font-size: 12px;
     }
 
@@ -392,7 +393,6 @@
       <thead class="product-comparison-table__thead">
         <tr>
           {% assign table_rows = metaobjects.frames.values %}
-          {% for row in table_rows %}
             {% if section.settings.col_name_1 != blank %}
             <th class="product-comparison-table__th product-comparison-table__logo-cell">{{ section.settings.col_name_1 }}</th>
             {% endif %}
@@ -429,24 +429,22 @@
             {% if section.settings.col_name_12 != blank %}
             <th class="product-comparison-table__th">{{ section.settings.col_name_12 }}</th>
             {% endif %}
-          {% endfor %}
         </tr>
       </thead>
       <tbody class="product-comparison-table__tbody">
-        {% assign table_rows = metaobjects.frames.values %}
-        {% for row in table_rows %}
-          {% assign col_one = row.logo %}
-          {% assign col_two = row.material %}
-          {% assign col_three = row.structure_color %}
-          {% assign col_four = row.latch %}
-          {% assign col_five = row.best_for %}
-          {% assign col_six = row.parts_available %}
-          {% assign col_seven = row.col_seven %}
-          {% assign col_eight = row.col_eight %}
-          {% assign col_nine = row.col_nine %}
-          {% assign col_ten = row.col_ten %}
-          {% assign col_eleven = row.col_eleven %}
-          {% assign col_twelve = row.col_twelve %}
+        {% assign row = metaobject %}
+          {% assign col_one = row.material %}
+          {% assign col_two = row.finish_options %}
+          {% assign col_three = row.bracket_material %}
+          {% assign col_four = row.outer_leg_mm %}
+          {% assign col_five = row.truss_mm %}
+          {% assign col_six = row.frame_sizes_ft %}
+          {% assign col_seven = row.weight_lbs %}
+          {% assign col_eight = row.max_height_ft %}
+          {% assign col_nine = row.max_head_clearance_height_ft %}
+          {% assign col_ten = row.closed_frame_dimensions_in %}
+          {% assign col_eleven = row.parts_available_list %}
+          {% assign col_twelve = row.limited_manufactu_warranty %}
 
           <tr>
             {% if col_one != blank %}
@@ -469,33 +467,81 @@
               </td>
             {% endif %}
             {% if col_six != blank %}
-              <td class="product-comparison-table__td">
-                {{ col_six }}
+              <td class="product-comparison-table__td product-comparison-table__td__inner-table">
+                {% if col_six != blank %}
+                <table>
+                  {% for item in col_six.value %}
+                  <tr>
+                    <td class="product-comparison-table__td">{{ item }}</td>
+                  </tr>
+                {% endfor %}
+                </table>
+                {% endif %}
               </td>
             {% endif %}
             {% if col_seven != blank %}
-              <td class="product-comparison-table__td">
-                {{ col_seven }}
+              <td class="product-comparison-table__td product-comparison-table__td__inner-table">
+                {% if col_seven != blank %}
+                <table>
+                  {% for item in col_seven.value %}
+                  <tr>
+                    <td class="product-comparison-table__td">{{ item }}</td>
+                  </tr>
+                {% endfor %}
+                </table>
+                {% endif %}
               </td>
             {% endif %}
             {% if col_eight != blank %}
-              <td class="product-comparison-table__td">
-                {{ col_eight }}
+              <td class="product-comparison-table__td product-comparison-table__td__inner-table">
+                {% if col_eight != blank %}
+                <table>
+                  {% for item in col_eight.value %}
+                  <tr>
+                    <td class="product-comparison-table__td">{{ item }}</td>
+                  </tr>
+                {% endfor %}
+                </table>
+                {% endif %}
               </td>
             {% endif %}
             {% if col_nine != blank %}
-              <td class="product-comparison-table__td">
-                {{ col_nine }}
+              <td class="product-comparison-table__td product-comparison-table__td__inner-table">
+                {% if col_nine != blank %}
+                <table>
+                  {% for item in col_nine.value %}
+                  <tr>
+                    <td class="product-comparison-table__td">{{ item }}</td>
+                  </tr>
+                {% endfor %}
+                </table>
+                {% endif %}
               </td>
             {% endif %}
             {% if col_ten != blank %}
-              <td class="product-comparison-table__td">
-                {{ col_ten }}
+              <td class="product-comparison-table__td product-comparison-table__td__inner-table">
+                {% if col_ten != blank %}
+                <table>
+                  {% for item in col_ten.value %}
+                  <tr>
+                    <td class="product-comparison-table__td">{{ item }}</td>
+                  </tr>
+                {% endfor %}
+                </table>
+                {% endif %}
               </td>
             {% endif %}
             {% if col_eleven != blank %}
-              <td class="product-comparison-table__td">
-                {{ col_eleven }}
+              <td class="product-comparison-table__td product-comparison-table__td__inner-table">
+                {% if col_eleven != blank %}
+                <table>
+                  {% for item in col_eleven.value %}
+                  <tr>
+                    <td class="product-comparison-table__td">{{ item }}</td>
+                  </tr>
+                {% endfor %}
+                </table>
+                {% endif %}
               </td>
             {% endif %}
             {% if col_twelve != blank %}
@@ -504,7 +550,6 @@
               </td>
             {% endif %}
           </tr>
-        {% endfor %}
       </tbody>
     </table>
   </div>
