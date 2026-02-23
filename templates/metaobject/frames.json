@@ -1307,7 +1307,7 @@
       },
       "name": "Image Collage",
       "settings": {
-        "images_gap": 16,
+        "images_gap": 12,
         "border_radius": 16,
         "section_width": "page-width",
         "gap": 24,
