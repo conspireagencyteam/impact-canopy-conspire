@@ -1,0 +1,762 @@
+<style>
+  .product-comparison-table {
+    --table-header-bg: #f5f5f5;
+    --table-border-color: #cccccc;
+    --table-text-color: #5c2d82;
+    --table-accent-color: #5c2d82;
+    --table-accent-secondary: #f47920;
+    --table-row-bg: #fff;
+    --table-row-alt-bg: #fff;
+    --table-best-for-bg: #EEF0F2;
+    --table-best-for-border: #fff;
+
+    /* Desktop column widths (percentage) */
+    --col-1-width-desktop: 6.7%;
+    --col-2-width-desktop: 10%;
+    --col-3-width-desktop: 10%;
+    --col-4-width-desktop: 10%;
+    --col-5-width-desktop: 10.3%;
+    --col-6-width-desktop: 8.3%;
+    --col-7-width-desktop: 5.5%;
+    --col-8-width-desktop: 7.8%;
+    --col-9-width-desktop: 6.2%;
+    --col-10-width-desktop: 8.5%;
+    --col-11-width-desktop: 8.5%;
+    --col-12-width-desktop: 8.2%;
+
+    /* Mobile column widths (pixels) */
+    --col-1-width-mobile: 6.7%;
+    --col-2-width-mobile: 10%;
+    --col-3-width-mobile: 10%;
+    --col-4-width-mobile: 10%;
+    --col-5-width-mobile: 10.3%;
+    --col-6-width-mobile: 8.3%;
+    --col-7-width-mobile: 5.5%;
+    --col-8-width-mobile: 7.8%;
+    --col-9-width-mobile: 6.2%;
+    --col-10-width-mobile: 8.5%;
+    --col-11-width-mobile: 8.5%;
+    --col-12-width-mobile: 8.2%;
+  }
+
+  .product-comparison-table__wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 16px;
+    border: 1px solid var(--table-border-color);
+    background-color: #ffffff;
+  }
+
+  @media screen and (min-width: 750px) {
+    .product-comparison-table__wrapper {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
+  /* 5th column background color */
+  .product-comparison-table__col-5 {
+    background-color: var(--table-best-for-bg);
+  }
+
+  .product-comparison-table__table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 700px;
+    table-layout: fixed;
+  }
+
+  /* Desktop column widths */
+  @media screen and (min-width: 750px) {
+    .product-comparison-table__table {
+      table-layout: fixed;
+    }
+
+    .product-comparison-table__col-1 { width: var(--col-1-width-desktop); }
+    .product-comparison-table__col-2 { width: var(--col-2-width-desktop); }
+    .product-comparison-table__col-3 { width: var(--col-3-width-desktop); }
+    .product-comparison-table__col-4 { width: var(--col-4-width-desktop); }
+    .product-comparison-table__col-5 { width: var(--col-5-width-desktop); }
+    .product-comparison-table__col-6 { width: var(--col-6-width-desktop); }
+    .product-comparison-table__col-7 { width: var(--col-7-width-desktop); }
+    .product-comparison-table__col-8 { width: var(--col-8-width-desktop); }
+    .product-comparison-table__col-9 { width: var(--col-9-width-desktop); }
+    .product-comparison-table__col-10 { width: var(--col-10-width-desktop); }
+    .product-comparison-table__col-11 { width: var(--col-11-width-desktop); }
+    .product-comparison-table__col-12 { width: var(--col-12-width-desktop); }
+  }
+
+  /* Mobile column widths */
+  @media screen and (max-width: 749px) {
+    .product-comparison-table--mobile-sticky .product-comparison-table__col-1 { width: var(--col-1-width-mobile); min-width: var(--col-1-width-mobile); }
+    .product-comparison-table--mobile-sticky .product-comparison-table__col-2 { width: var(--col-2-width-mobile); min-width: var(--col-2-width-mobile); }
+    .product-comparison-table--mobile-sticky .product-comparison-table__col-3 { width: var(--col-3-width-mobile); min-width: var(--col-3-width-mobile); }
+    .product-comparison-table--mobile-sticky .product-comparison-table__col-4 { width: var(--col-4-width-mobile); min-width: var(--col-4-width-mobile); }
+    .product-comparison-table--mobile-sticky .product-comparison-table__col-5 { width: var(--col-5-width-mobile); min-width: var(--col-5-width-mobile); }
+    .product-comparison-table--mobile-sticky .product-comparison-table__col-6 { width: var(--col-6-width-mobile); min-width: var(--col-6-width-mobile); }
+    .product-comparison-table--mobile-sticky .product-comparison-table__col-7 { width: var(--col-7-width-mobile); min-width: var(--col-7-width-mobile); }
+    .product-comparison-table--mobile-sticky .product-comparison-table__col-8 { width: var(--col-8-width-mobile); min-width: var(--col-8-width-mobile); }
+    .product-comparison-table--mobile-sticky .product-comparison-table__col-9 { width: var(--col-9-width-mobile); min-width: var(--col-9-width-mobile); }
+    .product-comparison-table--mobile-sticky .product-comparison-table__col-10 { width: var(--col-10-width-mobile); min-width: var(--col-10-width-mobile); }
+    .product-comparison-table--mobile-sticky .product-comparison-table__col-11 { width: var(--col-11-width-mobile); min-width: var(--col-11-width-mobile); }
+    .product-comparison-table--mobile-sticky .product-comparison-table__col-12 { width: var(--col-12-width-mobile); min-width: var(--col-12-width-mobile); }
+  }
+
+  .product-comparison-table__thead {
+    background: var(--table-header-bg);
+  }
+
+  .product-comparison-table__th {
+    padding: 16px 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--table-accent-color);
+    white-space: nowrap;
+    background: var(--table-row-bg);
+    border-bottom: 1px solid var(--table-border-color);
+  }
+
+  /* First row top-left corner radius */
+  .product-comparison-table__thead .product-comparison-table__th:first-child {
+    border-top-left-radius: 15px;
+  }
+
+  /* First row top-right corner radius */
+  .product-comparison-table__thead .product-comparison-table__th:last-child {
+    border-top-right-radius: 15px;
+  }
+
+  /* Best For column header */
+  .product-comparison-table__th.product-comparison-table__th--best-for {
+    background: var(--table-best-for-bg);
+    border-top: 1px solid var(--table-best-for-border);
+    border-bottom: 1px solid var(--table-best-for-border);
+  }
+
+  .product-comparison-table__th:first-child,
+  .product-comparison-table__td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: var(--table-row-bg);
+  }
+
+  .product-comparison-table__thead .product-comparison-table__th:first-child {
+    background: var(--table-row-bg);
+    z-index: 3;
+  }
+
+  .product-comparison-table__th:first-child {
+    text-align: left;
+    padding-left: 24px;
+  }
+
+  .product-comparison-table__tbody tr {
+    transition: background-color 0.2s ease;
+  }
+
+  .product-comparison-table__tbody tr:hover {
+    background-color: var(--table-row-alt-bg);
+  }
+
+  .product-comparison-table__tbody tr:hover .product-comparison-table__td:first-child {
+    background-color: var(--table-row-alt-bg);
+  }
+
+  .product-comparison-table__td {
+    padding: 16px 8px; 
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    color: var(--table-text-color);
+    background: var(--table-row-bg);
+    border-bottom: 1px solid var(--table-border-color);
+  }
+
+  /* Last row bottom-left corner radius */
+  .product-comparison-table__tbody tr:last-child .product-comparison-table__td:first-child {
+    border-bottom-left-radius: 15px;
+  }
+
+  /* Last row bottom-right corner radius */
+  .product-comparison-table__tbody tr:last-child .product-comparison-table__td:last-child {
+    border-bottom-right-radius: 15px;
+  }
+
+  /* Last row no bottom border */
+  .product-comparison-table__tbody tr:last-child .product-comparison-table__td {
+    border-bottom: none;
+  }
+
+  .product-comparison-table__td:first-child {
+    text-align: left;
+    padding-left: 8px;
+  }
+
+  /* Show box shadow only when table is scrolled */
+  .product-comparison-table__wrapper.is-scrolled .product-comparison-table__th:first-child,
+  .product-comparison-table__wrapper.is-scrolled .product-comparison-table__td:first-child {
+    box-shadow: 2px 0 5px -2px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-comparison-table__logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+
+  .product-comparison-table__logo-cell {
+    img {
+      width: 95px;
+      height: 90px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+  }
+
+  .product-comparison-table__material {
+    font-weight: 500;
+  }
+
+  .product-comparison-table__structure-color {
+    color: var(--table-accent-color);
+    font-weight: 500;
+  }
+
+  .product-comparison-table__latch {
+    color: var(--table-accent-color);
+    font-weight: 500;
+  }
+
+  .product-comparison-table__best-for {
+    color: var(--table-accent-color);
+    font-weight: 500;
+    line-height: 1.5;
+    background: var(--table-best-for-bg);
+    border-top: 1px solid var(--table-best-for-border);
+    border-bottom: 1px solid var(--table-best-for-border);
+  }
+
+  .product-comparison-table__availability {
+    font-weight: 500;
+  }
+
+  .product-comparison-table__availability--special {
+    color: var(--table-accent-color);
+  }
+
+  /* Mobile Stacked Layout */
+  @media screen and (max-width: 749px) {
+    .product-comparison-table--mobile-stack .product-comparison-table__wrapper {
+      width: 100%;
+      border: none;
+      border-radius: 0;
+      overflow-x: visible;
+      padding: 0;
+      margin: 0;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__table {
+      min-width: 100%;
+      display: block;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__thead {
+      display: none;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__tbody {
+      display: block;
+      width: 100%;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__tbody tr {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 20px;
+      margin-bottom: 16px;
+      border: 1px solid var(--table-border-color);
+      border-radius: 8px;
+      background: var(--table-row-bg);
+      box-sizing: border-box;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__td {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      text-align: right;
+      border: none;
+      position: static;
+      box-shadow: none;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__td:first-child {
+      padding-left: 0;
+      justify-content: center;
+      padding-bottom: 16px;
+      margin-bottom: 8px;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__td::before {
+      content: attr(data-label);
+      font-weight: 600;
+      color: var(--table-accent-color);
+      text-align: left;
+      flex: 1;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__td:first-child::before {
+      display: none;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__logo {
+      width: 80px;
+      height: 80px;
+    }
+
+    .product-comparison-table--mobile-stack .product-comparison-table__best-for {
+      max-width: none;
+      text-align: right;
+      background: var(--table-best-for-bg);
+      border-left: none;
+      border-right: none;
+      border-radius: 4px;
+      padding: 12px 8px;
+      margin: 4px 0;
+    }
+  }
+
+  /* Mobile Sticky Column Layout */
+  @media screen and (max-width: 749px) {
+    .product-comparison-table--mobile-sticky .product-comparison-table__table {
+      min-width: 700px;
+    }
+
+    .product-comparison-table--mobile-sticky .product-comparison-table__th,
+    .product-comparison-table--mobile-sticky .product-comparison-table__td {
+      padding: 12px 10px;
+      font-size: 12px;
+    }
+
+    .product-comparison-table--mobile-sticky .product-comparison-table__logo {
+      width: 50px;
+      height: 50px;
+    }
+
+    .product-comparison-table--mobile-sticky .product-comparison-table__best-for {
+      max-width: none;
+    }
+  }
+</style>
+
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<div
+  class="
+    section
+    section--{{ section.settings.section_width }}
+    color-{{ section.settings.color_scheme }}
+    product-comparison-table
+    product-comparison-table--mobile-{{ section.settings.mobile_layout }}
+    spacing-style
+    gap-style
+  "
+  style="
+    {% render 'spacing-style', settings: section.settings, mobile: section.settings.use_mobile_padding %}
+    {% render 'gap-style', value: section.settings.gap %}
+  "
+>
+  {%  content_for 'block', id: 'staticHeader', type: 'text' %}
+
+  <div class="product-comparison-table__wrapper">
+    <table class="product-comparison-table__table">
+      <colgroup>
+        <col class="product-comparison-table__col-1">
+        <col class="product-comparison-table__col-2">
+        <col class="product-comparison-table__col-3">
+        <col class="product-comparison-table__col-4">
+        <col class="product-comparison-table__col-5">
+        <col class="product-comparison-table__col-6">
+        <col class="product-comparison-table__col-7">
+        <col class="product-comparison-table__col-8">
+        <col class="product-comparison-table__col-9">
+        <col class="product-comparison-table__col-10">
+        <col class="product-comparison-table__col-11">
+        <col class="product-comparison-table__col-12">
+      </colgroup>
+      <thead class="product-comparison-table__thead">
+        <tr>
+          {% assign table_rows = metaobjects.frames.values %}
+          {% for row in table_rows %}
+            {% if section.settings.col_name_1 != blank %}
+            <th class="product-comparison-table__th product-comparison-table__logo-cell">{{ section.settings.col_name_1 }}</th>
+            {% endif %}
+            {% if section.settings.col_name_2 != blank %}
+            <th class="product-comparison-table__th">{{ section.settings.col_name_2 }}</th>
+            {% endif %}
+            {% if section.settings.col_name_3 != blank %}
+            <th class="product-comparison-table__th">{{ section.settings.col_name_3 }}</th>
+            {% endif %}
+            {% if section.settings.col_name_4 != blank %}
+            <th class="product-comparison-table__th">{{ section.settings.col_name_4 }}</th>
+            {% endif %}
+            {% if section.settings.col_name_5 != blank %}
+            <th class="product-comparison-table__th">{{ section.settings.col_name_5 }}</th>
+            {% endif %}
+            {% if section.settings.col_name_6 != blank %}
+            <th class="product-comparison-table__th">{{ section.settings.col_name_6 }}</th>
+            {% endif %}
+            {% if section.settings.col_name_7 != blank %}
+            <th class="product-comparison-table__th">{{ section.settings.col_name_7 }}</th>
+            {% endif %}
+            {% if section.settings.col_name_8 != blank %}
+            <th class="product-comparison-table__th">{{ section.settings.col_name_8 }}</th>
+            {% endif %}
+            {% if section.settings.col_name_9 != blank %}
+            <th class="product-comparison-table__th">{{ section.settings.col_name_9 }}</th>
+            {% endif %}
+            {% if section.settings.col_name_10 != blank %}
+            <th class="product-comparison-table__th">{{ section.settings.col_name_10 }}</th>
+            {% endif %}
+            {% if section.settings.col_name_11 != blank %}
+            <th class="product-comparison-table__th">{{ section.settings.col_name_11 }}</th>
+            {% endif %}
+            {% if section.settings.col_name_12 != blank %}
+            <th class="product-comparison-table__th">{{ section.settings.col_name_12 }}</th>
+            {% endif %}
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody class="product-comparison-table__tbody">
+        {% assign table_rows = metaobjects.frames.values %}
+        {% for row in table_rows %}
+          {% assign col_one = row.logo %}
+          {% assign col_two = row.material %}
+          {% assign col_three = row.structure_color %}
+          {% assign col_four = row.latch %}
+          {% assign col_five = row.best_for %}
+          {% assign col_six = row.parts_available %}
+          {% assign col_seven = row.col_seven %}
+          {% assign col_eight = row.col_eight %}
+          {% assign col_nine = row.col_nine %}
+          {% assign col_ten = row.col_ten %}
+          {% assign col_eleven = row.col_eleven %}
+          {% assign col_twelve = row.col_twelve %}
+
+          <tr>
+            {% if col_one != blank %}
+              <td class="product-comparison-table__td product-comparison-table__logo-cell">{{ col_one }}</td>
+            {% endif %}
+            {% if col_two != blank %}
+              <td class="product-comparison-table__td">{{ col_two }}</td>
+            {% endif %}
+            {% if col_three != blank %}
+              <td class="product-comparison-table__td">{{ col_three }}</td>
+            {% endif %}
+            {% if col_four != blank %}
+              <td class="product-comparison-table__td">
+                {{ col_four }}
+              </td>
+            {% endif %}
+            {% if col_five != blank %}
+              <td class="product-comparison-table__td">
+                {{ col_five }}
+              </td>
+            {% endif %}
+            {% if col_six != blank %}
+              <td class="product-comparison-table__td">
+                {{ col_six }}
+              </td>
+            {% endif %}
+            {% if col_seven != blank %}
+              <td class="product-comparison-table__td">
+                {{ col_seven }}
+              </td>
+            {% endif %}
+            {% if col_eight != blank %}
+              <td class="product-comparison-table__td">
+                {{ col_eight }}
+              </td>
+            {% endif %}
+            {% if col_nine != blank %}
+              <td class="product-comparison-table__td">
+                {{ col_nine }}
+              </td>
+            {% endif %}
+            {% if col_ten != blank %}
+              <td class="product-comparison-table__td">
+                {{ col_ten }}
+              </td>
+            {% endif %}
+            {% if col_eleven != blank %}
+              <td class="product-comparison-table__td">
+                {{ col_eleven }}
+              </td>
+            {% endif %}
+            {% if col_twelve != blank %}
+              <td class="product-comparison-table__td">
+                {{ col_twelve }}
+              </td>
+            {% endif %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const wrapper = document.querySelector('#shopify-section-{{ section.id }} .product-comparison-table__wrapper');
+    if (!wrapper) return;
+
+    function checkOverflow() {
+      const isOverflowing = wrapper.scrollWidth > wrapper.clientWidth;
+      const isScrolled = wrapper.scrollLeft > 0;
+
+      if (isOverflowing && isScrolled) {
+        wrapper.classList.add('is-scrolled');
+      } else {
+        wrapper.classList.remove('is-scrolled');
+      }
+    }
+
+    wrapper.addEventListener('scroll', checkOverflow);
+    window.addEventListener('resize', checkOverflow);
+    checkOverflow();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Frame Table Detail",
+  "class": "product-comparison-table-section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Table Headers"
+    },
+    {
+      "type": "text",
+      "id": "col_name_1",
+      "label": "Column Name 1",
+      "default": "Material"
+    },
+    {
+      "type": "text",
+      "id": "col_name_2",
+      "label": "Column Name 2",
+      "default": "Material"
+    },
+    {
+      "type": "text",
+      "id": "col_name_3",
+      "label": "Column Name 3",
+      "default": "Structure Color"
+    },
+    {
+      "type": "text",
+      "id": "col_name_4",
+      "label": "Column Name 4",
+      "default": "Latch"
+    },
+    {
+      "type": "text",
+      "id": "col_name_5",
+      "label": "Column Name 5",
+      "default": "Best For"
+    },
+    {
+      "type": "text",
+      "id": "col_name_6",
+      "label": "Column Name 6",
+      "default": "Availability"
+    },
+    {
+      "type": "text",
+      "id": "col_name_7",
+      "label": "Column Name 7",
+      "default": "Col 7"
+    },
+    {
+      "type": "text",
+      "id": "col_name_8",
+      "label": "Column Name 8",
+      "default": "Col 8"
+    },
+    {
+      "type": "text",
+      "id": "col_name_9",
+      "label": "Column Name 9",
+      "default": "Col 9"
+    },
+    {
+      "type": "text",
+      "id": "col_name_10",
+      "label": "Column Name 10",
+      "default": "Col 10"
+    },
+    {
+      "type": "text",
+      "id": "col_name_11",
+      "label": "Column Name 11",
+      "default": "Col 11"
+    },
+    {
+      "type": "text",
+      "id": "col_name_12",
+      "label": "Column Name 12",
+      "default": "Col 12"
+    },
+    {
+      "type": "header",
+      "content": "Section Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Page"
+        },
+        {
+          "value": "full-width",
+          "label": "Full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "Mobile Layout",
+      "options": [
+        {
+          "value": "sticky",
+          "label": "Sticky Column (Scrollable Table)"
+        },
+        {
+          "value": "stack",
+          "label": "Stacked Cards"
+        }
+      ],
+      "default": "sticky",
+      "info": "Choose how the table displays on mobile devices"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Mobile Padding"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_mobile_padding",
+      "label": "Use Mobile Padding",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start-mobile",
+      "label": "Top (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24,
+      "visible_if": "{{ section.settings.use_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end-mobile",
+      "label": "Bottom (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24,
+      "visible_if": "{{ section.settings.use_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start-mobile",
+      "label": "Left (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ section.settings.use_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end-mobile",
+      "label": "Right (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ section.settings.use_mobile_padding == true }}"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Frame Table Detail",
+      "category": "Custom",
+      "settings": {
+        "section_width": "page-width",
+        "mobile_layout": "sticky",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    }
+  ]
+}
+{% endschema %}
