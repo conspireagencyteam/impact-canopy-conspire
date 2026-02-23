@@ -1,0 +1,301 @@
+{% comment %}
+  Image Collage Section
+  5-image collage with 2 left, 1 center, 2 right layout
+{% endcomment %}
+
+<style>
+  .image-collage__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    gap: var(--image-collage-gap, 16px);
+    width: 100%;
+  }
+
+  .image-collage__column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--image-collage-gap, 16px);
+  }
+
+  .image-collage__column--center {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .image-collage__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--image-collage-radius, 16px);
+    flex: 1;
+  }
+
+  .image-collage__column--center .image-collage__image-wrapper {
+    height: 100%;
+  }
+
+  .image-collage__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .image-collage__placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-collage__placeholder svg {
+    width: 48px;
+    height: 48px;
+    opacity: 0.5;
+  }
+
+  @media screen and (max-width: 749px) {
+    .image-collage__grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+    }
+
+    .image-collage__column--left {
+      order: 1;
+    }
+
+    .image-collage__column--center {
+      order: 3;
+      grid-column: 1 / -1;
+    }
+
+    .image-collage__column--right {
+      order: 2;
+    }
+
+    .image-collage__column--center .image-collage__image-wrapper {
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
+  }
+</style>
+
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<div
+  class="
+    section
+    section--{{ section.settings.section_width }}
+    color-{{ section.settings.color_scheme }}
+    image-collage
+    spacing-style
+    gap-style
+  "
+  style="
+    {% render 'spacing-style', settings: section.settings, mobile: section.settings.use_mobile_padding %}
+    {% render 'gap-style', value: section.settings.gap %}
+    --image-collage-gap: {{ section.settings.images_gap }}px;
+    --image-collage-radius: {{ section.settings.border_radius }}px;
+  "
+>
+  {%  content_for 'block', id: 'staticHeader', type: 'group' %}
+
+  <div class="image-collage__grid">
+    {% comment %} Left Column - 2 images {% endcomment %}
+    <div class="image-collage__column image-collage__column--left">
+      <div class="image-collage__image-wrapper">
+        {% content_for 'block', type: 'image', id: 'staticImageLeftTop' %}
+      </div>
+      <div class="image-collage__image-wrapper">
+        {% content_for 'block', type: 'image', id: 'staticImageLeftBottom' %}
+      </div>
+    </div>
+
+    {% comment %} Center Column - 1 large image {% endcomment %}
+    <div class="image-collage__column image-collage__column--center">
+      <div class="image-collage__image-wrapper">
+        {% content_for 'block', type: 'image', id: 'staticImageCenter' %}
+      </div>
+    </div>
+
+    {% comment %} Right Column - 2 images {% endcomment %}
+    <div class="image-collage__column image-collage__column--right">
+      <div class="image-collage__image-wrapper">
+        {% content_for 'block', type: 'image', id: 'staticImageRightTop' %}
+      </div>
+      <div class="image-collage__image-wrapper">
+        {% content_for 'block', type: 'image', id: 'staticImageRightBottom' %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image Collage",
+  "class": "image-collage-section",
+  "tag": "section",
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image Settings"
+    },
+    {
+      "type": "range",
+      "id": "images_gap",
+      "label": "Gap Between Images",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border Radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Section Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Page"
+        },
+        {
+          "value": "full-width",
+          "label": "Full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Mobile Padding"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_mobile_padding",
+      "label": "Use Mobile Padding",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start-mobile",
+      "label": "Top (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24,
+      "visible_if": "{{ section.settings.use_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end-mobile",
+      "label": "Bottom (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24,
+      "visible_if": "{{ section.settings.use_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start-mobile",
+      "label": "Left (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ section.settings.use_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end-mobile",
+      "label": "Right (Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ section.settings.use_mobile_padding == true }}"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Collage",
+      "category": "Custom",
+      "settings": {
+        "section_width": "page-width",
+        "images_gap": 16,
+        "border_radius": 16,
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    }
+  ]
+}
+{% endschema %}
