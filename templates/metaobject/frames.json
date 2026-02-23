@@ -143,7 +143,7 @@
       },
       "name": "Frame Table Detail",
       "settings": {
-        "col_name_1": "StructureMaterial",
+        "col_name_1": "Structure Material",
         "col_name_2": "Finish Options",
         "col_name_3": "Bracket Material",
         "col_name_4": "Outer Leg(mm)",
