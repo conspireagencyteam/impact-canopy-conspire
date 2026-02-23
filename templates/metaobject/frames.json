@@ -35,9 +35,8 @@
             "custom_height": 100,
             "inherit_color_scheme": true,
             "color_scheme": "",
-            "background_media": "image",
+            "background_media": "none",
             "video_position": "cover",
-            "background_image": "{{ closest.metaobject.frames.banner_image.value }}",
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
@@ -61,7 +60,43 @@
             "padding-inline-end-mobile": 0,
             "custom_class": ""
           },
-          "blocks": {}
+          "blocks": {
+            "image_UM4wBc": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "{{ closest.metaobject.frames.banner_image.value }}",
+                "link": "",
+                "image_ratio": "adapt",
+                "image_ratio_mobile": "same",
+                "width": "fill",
+                "custom_width": 100,
+                "width_tablet": "fill",
+                "custom_width_tablet": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fill",
+                "height_mobile": "fill",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "use_mobile_padding": false,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_UM4wBc"
+          ]
         }
       },
       "block_order": [
@@ -79,7 +114,7 @@
         "vertical_alignment_flex_direction_column": "center",
         "gap": 12,
         "section_width": "page-width",
-        "section_height": "small",
+        "section_height": "",
         "section_height_custom": 50,
         "color_scheme": "scheme-3",
         "background_media": "none",
