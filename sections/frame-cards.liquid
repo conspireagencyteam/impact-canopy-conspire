@@ -1,18 +1,152 @@
 {% comment %}
   Frame Cards Section
-  A grid of frame product cards with progress bar ratings
+  Tabbed frame cards with horizontal scrollable tabs
 {% endcomment %}
 
 <style>
-  .frame-cards__grid {
-    display: grid;
-    grid-template-columns: repeat(var(--frame-cards-columns, 2), 1fr);
-    gap: var(--frame-cards-gap, 24px);
+  .frame-cards__tabs-wrapper {
+    position: relative;
+    margin-bottom: 16px;
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .frame-cards__tabs-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .frame-cards__tabs {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    padding: 0;
+    flex: 1;
+  }
+
+  .frame-cards__tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .frame-cards__arrow {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    z-index: 2;
+  }
+
+  .frame-cards__arrow:hover {
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .frame-cards__arrow--left {
+    margin-right: 12px;
+  }
+
+  .frame-cards__arrow--right {
+    margin-left: 12px;
+  }
+
+  .frame-cards__arrow svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: #333;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .frame-cards__tabs-container.has-overflow .frame-cards__arrow {
+    display: flex;
+  }
+
+  .frame-cards__arrow.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .frame-cards__tab {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 140px;
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 12px;
+  }
+
+  .frame-cards__tab:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .frame-cards__tab.active {
+    background-color: #eef0f2;
+  }
+
+  .frame-cards__tab-icon {
+    max-width: 136px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+  }
+
+  .frame-cards__content {
+    position: relative;
+  }
+
+  .frame-cards__panel {
+    display: none;
+  }
+
+  .frame-cards__panel.active {
+    display: block;
   }
 
   @media screen and (max-width: 749px) {
-    .frame-cards__grid {
-      grid-template-columns: repeat(var(--frame-cards-columns-mobile, 1), 1fr);
+    .frame-cards__tab {
+      width: 85px;
+      height: 70px;
+      padding: 5px;
+    }
+    .frame-cards__arrow {
+      width: 32px;
+      height: 32px;
+    }
+
+    .frame-cards__arrow svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .frame-cards__arrow--left {
+      margin-right: 8px;
+    }
+
+    .frame-cards__arrow--right {
+      margin-left: 8px;
     }
   }
 </style>
@@ -30,20 +164,152 @@
   style="
     {% render 'spacing-style', settings: section.settings, mobile: section.settings.use_mobile_padding %}
     {% render 'gap-style', value: section.settings.gap %}
-    --frame-cards-columns: {{ section.settings.columns }};
-    --frame-cards-columns-mobile: {{ section.settings.columns_mobile }};
-    --frame-cards-gap: {{ section.settings.cards_gap }}px;
   "
 >
   {%  content_for 'block', id: 'staticHeader', type: 'text' %}
 
-  <div class="frame-cards__grid">
-    {% assign table_rows = metaobjects.frames.values %}
+  {% assign table_rows = metaobjects.frames.values %}
+
+  {% comment %} Horizontal Tabs {% endcomment %}
+  <div class="frame-cards__tabs-wrapper">
+    <div class="frame-cards__tabs-container">
+      <button class="frame-cards__arrow frame-cards__arrow--left" aria-label="Scroll left">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <div class="frame-cards__tabs" role="tablist">
+      {% for row in table_rows %}
+        <button
+          class="frame-cards__tab{% if forloop.first %} active{% endif %}"
+          role="tab"
+          aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+          aria-controls="frame-panel-{{ forloop.index }}"
+          data-tab-index="{{ forloop.index }}"
+          id="frame-tab-{{ forloop.index }}"
+        >
+          {% if row.logo %}
+            {{ row.logo | image_url: width: 160 | image_tag: alt: row.name, class: 'frame-cards__tab-icon', loading: 'lazy' }}
+          {% else %}
+            <span class="frame-cards__tab-text">{{ row.name | truncate: 10 }}</span>
+          {% endif %}
+        </button>
+      {% endfor %}
+        </div>
+      <button class="frame-cards__arrow frame-cards__arrow--right" aria-label="Scroll right">
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+  </div>
+
+  {% comment %} Card Panels {% endcomment %}
+  <div class="frame-cards__content">
     {% for row in table_rows %}
-      {% content_for 'block', type: '_frame-card', id: 'staticFrameCard', item: row %}
+      <div
+        class="frame-cards__panel{% if forloop.first %} active{% endif %}"
+        role="tabpanel"
+        id="frame-panel-{{ forloop.index }}"
+        aria-labelledby="frame-tab-{{ forloop.index }}"
+        {% unless forloop.first %}hidden{% endunless %}
+      >
+        {% content_for 'block', type: '_frame-card', id: 'staticFrameCard', item: row %}
+      </div>
     {% endfor %}
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const section = document.querySelector('.frame-cards');
+    if (!section) return;
+
+    const tabs = section.querySelectorAll('.frame-cards__tab');
+    const panels = section.querySelectorAll('.frame-cards__panel');
+    const tabsContainer = section.querySelector('.frame-cards__tabs-container');
+    const tabsWrapper = section.querySelector('.frame-cards__tabs');
+    const leftArrow = section.querySelector('.frame-cards__arrow--left');
+    const rightArrow = section.querySelector('.frame-cards__arrow--right');
+
+    // Check for overflow and show/hide arrows
+    function checkOverflow() {
+      if (!tabsWrapper) return;
+      const hasOverflow = tabsWrapper.scrollWidth > tabsWrapper.clientWidth;
+      if (hasOverflow) {
+        tabsContainer.classList.add('has-overflow');
+      } else {
+        tabsContainer.classList.remove('has-overflow');
+      }
+      updateArrowStates();
+    }
+
+    // Update arrow disabled states based on scroll position
+    function updateArrowStates() {
+      if (!tabsWrapper || !leftArrow || !rightArrow) return;
+      const scrollLeft = tabsWrapper.scrollLeft;
+      const maxScroll = tabsWrapper.scrollWidth - tabsWrapper.clientWidth;
+      if (scrollLeft <= 0) {
+        leftArrow.classList.add('disabled');
+      } else {
+        leftArrow.classList.remove('disabled');
+      }
+      if (scrollLeft >= maxScroll - 1) {
+        rightArrow.classList.add('disabled');
+      } else {
+        rightArrow.classList.remove('disabled');
+      }
+    }
+
+    // Scroll tabs
+    function scrollTabs(direction) {
+      if (!tabsWrapper) return;
+      const scrollAmount = 200;
+      const newScrollLeft = tabsWrapper.scrollLeft + (direction === 'left' ? -scrollAmount : scrollAmount);
+      tabsWrapper.scrollTo({ left: newScrollLeft, behavior: 'smooth' });
+    }
+
+    // Arrow click handlers
+    if (leftArrow) {
+      leftArrow.addEventListener('click', function() { scrollTabs('left'); });
+    }
+    if (rightArrow) {
+      rightArrow.addEventListener('click', function() { scrollTabs('right'); });
+    }
+
+    // Update arrow states on scroll
+    if (tabsWrapper) {
+      tabsWrapper.addEventListener('scroll', updateArrowStates);
+    }
+
+    // Check overflow on load and resize
+    checkOverflow();
+    window.addEventListener('resize', checkOverflow);
+
+    // Tab click handlers
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        const tabIndex = this.getAttribute('data-tab-index');
+
+        // Update tabs
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        this.classList.add('active');
+        this.setAttribute('aria-selected', 'true');
+
+        // Update panels
+        panels.forEach(panel => {
+          panel.classList.remove('active');
+          panel.setAttribute('hidden', '');
+        });
+
+        const activePanel = section.querySelector('#frame-panel-' + tabIndex);
+        if (activePanel) {
+          activePanel.classList.add('active');
+          activePanel.removeAttribute('hidden');
+        }
+      });
+    });
+  });
+</script>
 
 {% schema %}
 {
@@ -59,45 +325,6 @@
     }
   ],
   "settings": [
-    {
-      "type": "header",
-      "content": "Grid Layout"
-    },
-    {
-      "type": "range",
-      "id": "columns",
-      "label": "Columns (Desktop)",
-      "min": 1,
-      "max": 4,
-      "step": 1,
-      "default": 2
-    },
-    {
-      "type": "select",
-      "id": "columns_mobile",
-      "label": "Columns (Mobile)",
-      "options": [
-        {
-          "value": "1",
-          "label": "1"
-        },
-        {
-          "value": "2",
-          "label": "2"
-        }
-      ],
-      "default": "1"
-    },
-    {
-      "type": "range",
-      "id": "cards_gap",
-      "label": "Gap Between Cards",
-      "min": 0,
-      "max": 60,
-      "step": 4,
-      "unit": "px",
-      "default": 24
-    },
     {
       "type": "header",
       "content": "Section Layout"
@@ -219,9 +446,6 @@
       "category": "Custom",
       "settings": {
         "section_width": "page-width",
-        "columns": 2,
-        "columns_mobile": "1",
-        "cards_gap": 24,
         "padding-block-start": 48,
         "padding-block-end": 48
       }

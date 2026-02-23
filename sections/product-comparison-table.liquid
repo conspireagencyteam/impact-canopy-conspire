@@ -6,7 +6,7 @@
     --table-accent-color: #5c2d82;
     --table-accent-secondary: #f47920;
     --table-row-bg: #fff;
-    --table-row-alt-bg: #fafafa;
+    --table-row-alt-bg: #fff;
     --table-best-for-bg: #EEF0F2;
     --table-best-for-border: #fff;
 
@@ -185,11 +185,11 @@
   }
 
   .product-comparison-table__logo-cell {
-    /* Width controlled by column settings */
     img {
-      width: 90px;
+      width: 95px;
       height: 90px;
       object-fit: contain;
+      mix-blend-mode: multiply;
     }
   }
 
@@ -383,7 +383,7 @@
           <tr>
             <td class="product-comparison-table__td product-comparison-table__logo-cell">
               {% if logo_value != blank %}
-                {{ logo_value | image_url: width: 100, height: 100 | image_tag }}
+                {{ logo_value | image_url: width: 100 | image_tag }}
               {% endif %}
             </td>
             <td class="product-comparison-table__td product-comparison-table__material" data-label="{{ section.settings.header_material | default: 'Material' }}">
