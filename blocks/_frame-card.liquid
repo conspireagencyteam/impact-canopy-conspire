@@ -14,6 +14,7 @@
       {% content_for 'block', type: '_progress-bar', id: 'progressBar3', label: 'Popularity', value: item.popularity %}
       {% content_for 'block', type: '_progress-bar', id: 'progressBar4', label: 'Product Weight', value: item.product_weight %}
       {% content_for 'block', type: '_progress-bar', id: 'progressBar5', label: 'Price', value: item.price %}
+      {% content_for 'block', type: '_meta-button', id: 'metaButton', label: 'Price', fallback_link: item.system.url, fallback_label: 'More Details' %}
     </div>
   </div>
 </div>
