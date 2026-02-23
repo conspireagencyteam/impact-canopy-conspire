@@ -899,7 +899,7 @@
           "name": "t:names.text",
           "settings": {
             "text": "<p>Professional specs for informed purchasing</p>",
-            "width": "fit-content",
+            "width": "100%",
             "max_width": "normal",
             "alignment": "left",
             "type_preset": "rte",
@@ -919,7 +919,7 @@
             "background_color": "#00000026",
             "corner_radius": 0,
             "padding-block-start": 0,
-            "padding-block-end": 0,
+            "padding-block-end": 18,
             "padding-inline-start": 0,
             "padding-inline-end": 0,
             "use_mobile_padding": false,
