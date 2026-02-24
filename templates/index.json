@@ -2871,7 +2871,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Ultralight steel (TL)</h2>",
+                    "text": "<h2>Recreational Steel (TL)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -3033,7 +3033,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Light Steel (DS)</h2>",
+                    "text": "<h2>Industrial Steel (DS)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -3195,7 +3195,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Heavy duty Steel(CL)</h2>",
+                    "text": "<h2>Heavy Duty Steel (CL)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -3357,7 +3357,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Light Aluminium (ML)</h2>",
+                    "text": "<h2>Commercial Aluminum (ML)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -3576,7 +3576,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Heavy duty aluminum (M)</h2>",
+                    "text": "<h2>Super Duty Aluminum (M)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -3738,7 +3738,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Super Heavy duty aluminum (MegaX)</h2>",
+                    "text": "<h2>Extreme Aluminum (MegaX)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -3900,7 +3900,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2> Modular aluminum (ExpoDome)</h2>",
+                    "text": "<h2> Modular Aluminum (ExpoDome)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
