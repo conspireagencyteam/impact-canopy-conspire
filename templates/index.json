@@ -262,7 +262,7 @@
             "toggle_overlay": true,
             "overlay_style": "gradient",
             "overlay_color": "#000000d1",
-            "overlay_gradient": "",
+            "overlay_gradient": "linear-gradient(0deg, rgba(73, 14, 103, 1), rgba(0, 0, 0, 0.28) 100%)",
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
