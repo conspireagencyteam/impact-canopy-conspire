@@ -2071,7 +2071,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Perfect for single-day events, easy transport</p>",
+                    "text": "<p>Perfect for indoor or light use</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2196,7 +2196,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Light Steel (DS)</h2>",
+                    "text": "<h2>Industrial Steel (DS)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -2233,7 +2233,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Multi-day events, moderate wind resistance</p>",
+                    "text": "<p>Most popular frame option: Great for indoor/outdoor use</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2358,7 +2358,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Heavy duty Steel(CL)</h2>",
+                    "text": "<h2>Heavy Duty Steel (CL)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -2520,7 +2520,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Light Aluminium (ML)</h2>",
+                    "text": "<h2>Commercial Aluminum (ML)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -2557,7 +2557,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Maximum strength for permanent installations</p>",
+                    "text": "<p>Perfect combination of lightweight and durability</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2739,7 +2739,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Heavy duty aluminum (M)</h2>",
+                    "text": "<h2>Super Duty Aluminum (M)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -2776,7 +2776,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Perfect for single-day events, easy transport</p>",
+                    "text": "<p>Ideal for the toughest Environments </p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2901,7 +2901,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Super Heavy duty aluminum (MegaX)</h2>",
+                    "text": "<h2>Extreme Aluminum (MegaX)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -2938,7 +2938,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Multi-day events, moderate wind resistance</p>",
+                    "text": "<p>Large area Coverage</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3063,7 +3063,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2> Modular aluminum (ExpoDome)</h2>",
+                    "text": "<h2> Modular Aluminum (ExpoDome)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -3100,7 +3100,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Pro tournaments, high-wind environments</p>",
+                    "text": "<p>Stand out appearance and modular setup </p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3225,7 +3225,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Inflatable structure (ImpactAir)</h2>",
+                    "text": "<h2>ImpactAir                                    Inflatable Structure </h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -3262,7 +3262,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Maximum strength for permanent installations</p>",
+                    "text": "<p>Compact transport showstopping appearance </p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
