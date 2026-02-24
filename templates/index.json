@@ -6212,7 +6212,7 @@
                       "type": "product-card",
                       "name": "t:names.product_card",
                       "settings": {
-                        "product": "10x10-canopy",
+                        "product": "10x10-impact-canopy-custom-kit-with-graphics-a",
                         "layout_orientation": "column",
                         "product_card_gap": 10,
                         "inherit_color_scheme": false,
