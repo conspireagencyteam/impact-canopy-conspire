@@ -2908,7 +2908,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Perfect for single-day events, easy transport</p>",
+                    "text": "<p>Perfect for indoor or light use</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3070,7 +3070,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Multi-day events, moderate wind resistance</p>",
+                    "text": "<p>Most popular frame option: Great for indoor/outdoor use</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3394,7 +3394,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Maximum strength for permanent installations</p>",
+                    "text": "<p>Perfect combination of lightweight and durability<br/></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3613,7 +3613,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Perfect for single-day events, easy transport</p>",
+                    "text": "<p>Ideal for the toughest Environments <br/></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3775,7 +3775,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Multi-day events, moderate wind resistance</p>",
+                    "text": "<p>Large area Coverage </p><p></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3937,7 +3937,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Pro tournaments, high-wind environments</p>",
+                    "text": "<p>Stand out appearance and modular setup </p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -4099,7 +4099,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Maximum strength for permanent installations</p>",
+                    "text": "<p>Compact transport showstopping appearance </p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
