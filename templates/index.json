@@ -6037,7 +6037,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Select your canopy size and frame, then add accessories like table covers, flags, and banners to complete your setup.</p>",
+                        "text": "<p>Choose from our most popular configurations or build your own custom canopy kit </p>",
                         "width": "fit-content",
                         "max_width": "wide",
                         "alignment": "left",
@@ -6080,7 +6080,7 @@
                   "type": "button",
                   "name": "t:names.button",
                   "settings": {
-                    "label": "Shop All",
+                    "label": "Build your Kit",
                     "link": "shopify://collections",
                     "open_in_new_tab": false,
                     "style_class": "button-tertiary",
