@@ -1930,7 +1930,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Job Sites & Construction</p>",
+                    "text": "<p>Food Service and Vending</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
