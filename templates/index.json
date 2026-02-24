@@ -7192,7 +7192,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "Talk to a Sales Rep",
-                    "link": "shopify://collections/all",
+                    "link": "shopify://pages/contact-us",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "button_size": "default",
