@@ -433,6 +433,7 @@
                 },
                 "button_GiQPfj": {
                   "type": "button",
+                  "disabled": true,
                   "settings": {
                     "label": "Shop now",
                     "link": "shopify://collections/all",
