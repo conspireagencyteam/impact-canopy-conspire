@@ -550,7 +550,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>From major brands to local organizations, Impact Canopy products are chosen for their reliability, quality, and professional presentation.</p>",
+            "text": "",
             "width": "fit-content",
             "max_width": "wide",
             "alignment": "left",
