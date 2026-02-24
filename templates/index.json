@@ -14,6 +14,7 @@
       "blocks": {
         "slide_wiL4dw": {
           "type": "_slide",
+          "disabled": true,
           "settings": {
             "media_type_1": "video",
             "image_1": "shopify://shop_images/IMPACT_CANOPY_-_REFRESH_-_STYLE_2_-_CANOPY.jpg",
@@ -243,7 +244,6 @@
         },
         "slide_Ctq3VA": {
           "type": "_slide",
-          "disabled": true,
           "settings": {
             "media_type_1": "video",
             "image_1": "shopify://shop_images/IMPACT_CANOPY_-_REFRESH_-_STYLE_2_-_CANOPY.jpg",
