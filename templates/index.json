@@ -6547,7 +6547,7 @@
                     "overlay_style": "solid",
                     "overlay_color": "#00000026",
                     "overlay_gradient": "",
-                    "link": "shopify://collections/custom-chairs-tables-umbrellas",
+                    "link": "shopify://products/10x20-impact-canopy-custom-kit-with-graphics",
                     "open_in_new_tab": false,
                     "placeholder": "",
                     "padding-block-start": 16,
@@ -6566,7 +6566,7 @@
                       "type": "product-card",
                       "name": "t:names.product_card",
                       "settings": {
-                        "product": "10x10-brp-branded-canopy-m-kits",
+                        "product": "10x20-impact-canopy-custom-kit-with-graphics",
                         "layout_orientation": "column",
                         "product_card_gap": 10,
                         "inherit_color_scheme": false,
