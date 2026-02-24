@@ -1774,7 +1774,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/field_board_ww.jpg",
+                    "image": "shopify://shop_images/wonder_woman_check_in.jpg",
                     "link": "",
                     "image_ratio": "portrait",
                     "image_ratio_mobile": "same",
