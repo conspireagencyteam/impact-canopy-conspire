@@ -6946,7 +6946,8 @@
             "color_scheme": "",
             "background_media": "image",
             "video_position": "cover",
-            "background_image": "shopify://shop_images/group_cd474f6a-16fc-46f2-893a-25742f1707a0.jpg",
+            "background_image": "shopify://shop_images/group_7c23f500-6fdb-4c69-9187-2101b24d2368.jpg",
+            "background_image_mobile": "shopify://shop_images/group_sq.jpg",
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
@@ -7146,6 +7147,7 @@
                     "text_KbPCJK": {
                       "type": "text",
                       "name": "t:names.text",
+                      "disabled": true,
                       "settings": {
                         "text": "<p>Connect with a sales specialist to plan large-scale orders, custom configurations, or event-wide setups.</p>",
                         "width": "fit-content",
@@ -7191,7 +7193,7 @@
                   "type": "button",
                   "name": "t:names.button",
                   "settings": {
-                    "label": "Talk to a Sales Rep",
+                    "label": "Connect with our Team",
                     "link": "shopify://pages/quote-mock-up-request",
                     "open_in_new_tab": false,
                     "style_class": "button",
