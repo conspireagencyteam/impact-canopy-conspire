@@ -8220,7 +8220,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Tournament Director:**</p>",
+                            "text": "<p>Local Guide</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -9140,7 +9140,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Tournament Director:**</p>",
+                            "text": "<p>Happy Customer</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
