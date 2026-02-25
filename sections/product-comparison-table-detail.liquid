@@ -46,6 +46,55 @@
     border-radius: 16px;
     border: 1px solid var(--table-border-color);
     background-color: #ffffff;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  .product-comparison-table__wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  /* Custom scrollbar container */
+  .product-comparison-table__scrollbar-container {
+    width: 100%;
+    margin-top: 6px;
+    display: none;
+  }
+
+  .product-comparison-table__scrollbar-container.is-visible {
+    display: block;
+    padding: 2px;
+    border-radius: 100px;
+    background: #ccc;
+  }
+
+  .product-comparison-table__scrollbar-track {
+    width: 100%;
+    height: 8px;
+    background: #CCC;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .product-comparison-table__scrollbar-thumb {
+    height: 100%;
+    background: #fff;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: grab;
+    min-width: 40px;
+    transition: background 0.2s ease, left 0s;
+  }
+
+  .product-comparison-table__scrollbar-thumb:hover {
+    background: var(--table-accent-secondary, #f47920);
+  }
+
+  .product-comparison-table__scrollbar-thumb:active {
+    cursor: grabbing;
   }
 
   .product-comparison-table__table {
@@ -62,34 +111,34 @@
       table-layout: fixed;
     }
 
-    .product-comparison-table__col-1 { width: var(--col-1-width-desktop); }
-    .product-comparison-table__col-2 { width: var(--col-2-width-desktop); }
-    .product-comparison-table__col-3 { width: var(--col-3-width-desktop); }
-    .product-comparison-table__col-4 { width: var(--col-4-width-desktop); }
-    .product-comparison-table__col-5 { width: var(--col-5-width-desktop); }
-    .product-comparison-table__col-6 { width: var(--col-6-width-desktop); }
-    .product-comparison-table__col-7 { width: var(--col-7-width-desktop); }
-    .product-comparison-table__col-8 { width: var(--col-8-width-desktop); }
-    .product-comparison-table__col-9 { width: var(--col-9-width-desktop); }
-    .product-comparison-table__col-10 { width: var(--col-10-width-desktop); }
-    .product-comparison-table__col-11 { width: var(--col-11-width-desktop); }
-    .product-comparison-table__col-12 { width: var(--col-12-width-desktop); }
+    .product-comparison-table__col-1 { width: var(--col-1-width-desktop); min-width: var(--col-1-width-mobile); }
+    .product-comparison-table__col-2 { width: var(--col-2-width-desktop); min-width: var(--col-2-width-mobile); }
+    .product-comparison-table__col-3 { width: var(--col-3-width-desktop); min-width: var(--col-3-width-mobile); }
+    .product-comparison-table__col-4 { width: var(--col-4-width-desktop); min-width: var(--col-4-width-mobile); }
+    .product-comparison-table__col-5 { width: var(--col-5-width-desktop); min-width: var(--col-5-width-mobile); }
+    .product-comparison-table__col-6 { width: var(--col-6-width-desktop); min-width: var(--col-6-width-mobile); }
+    .product-comparison-table__col-7 { width: var(--col-7-width-desktop); min-width: var(--col-7-width-mobile); }
+    .product-comparison-table__col-8 { width: var(--col-8-width-desktop); min-width: var(--col-8-width-mobile); }
+    .product-comparison-table__col-9 { width: var(--col-9-width-desktop); min-width: var(--col-9-width-mobile); }
+    .product-comparison-table__col-10 { width: var(--col-10-width-desktop); min-width: var(--col-10-width-mobile); }
+    .product-comparison-table__col-11 { width: var(--col-11-width-desktop); min-width: var(--col-11-width-mobile); }
+    .product-comparison-table__col-12 { width: var(--col-12-width-desktop); min-width: var(--col-12-width-mobile); }
   }
 
   /* Mobile column widths */
   @media screen and (max-width: 749px) {
-    .product-comparison-table--mobile-sticky .product-comparison-table__col-1 { width: var(--col-1-width-mobile); min-width: var(--col-1-width-mobile); }
-    .product-comparison-table--mobile-sticky .product-comparison-table__col-2 { width: var(--col-2-width-mobile); min-width: var(--col-2-width-mobile); }
-    .product-comparison-table--mobile-sticky .product-comparison-table__col-3 { width: var(--col-3-width-mobile); min-width: var(--col-3-width-mobile); }
-    .product-comparison-table--mobile-sticky .product-comparison-table__col-4 { width: var(--col-4-width-mobile); min-width: var(--col-4-width-mobile); }
-    .product-comparison-table--mobile-sticky .product-comparison-table__col-5 { width: var(--col-5-width-mobile); min-width: var(--col-5-width-mobile); }
-    .product-comparison-table--mobile-sticky .product-comparison-table__col-6 { width: var(--col-6-width-mobile); min-width: var(--col-6-width-mobile); }
-    .product-comparison-table--mobile-sticky .product-comparison-table__col-7 { width: var(--col-7-width-mobile); min-width: var(--col-7-width-mobile); }
-    .product-comparison-table--mobile-sticky .product-comparison-table__col-8 { width: var(--col-8-width-mobile); min-width: var(--col-8-width-mobile); }
-    .product-comparison-table--mobile-sticky .product-comparison-table__col-9 { width: var(--col-9-width-mobile); min-width: var(--col-9-width-mobile); }
-    .product-comparison-table--mobile-sticky .product-comparison-table__col-10 { width: var(--col-10-width-mobile); min-width: var(--col-10-width-mobile); }
-    .product-comparison-table--mobile-sticky .product-comparison-table__col-11 { width: var(--col-11-width-mobile); min-width: var(--col-11-width-mobile); }
-    .product-comparison-table--mobile-sticky .product-comparison-table__col-12 { width: var(--col-12-width-mobile); min-width: var(--col-12-width-mobile); }
+    .product-comparison-table__col-1 { width: var(--col-1-width-mobile); min-width: var(--col-1-width-mobile); }
+    .product-comparison-table__col-2 { width: var(--col-2-width-mobile); min-width: var(--col-2-width-mobile); }
+    .product-comparison-table__col-3 { width: var(--col-3-width-mobile); min-width: var(--col-3-width-mobile); }
+    .product-comparison-table__col-4 { width: var(--col-4-width-mobile); min-width: var(--col-4-width-mobile); }
+    .product-comparison-table__col-5 { width: var(--col-5-width-mobile); min-width: var(--col-5-width-mobile); }
+    .product-comparison-table__col-6 { width: var(--col-6-width-mobile); min-width: var(--col-6-width-mobile); }
+    .product-comparison-table__col-7 { width: var(--col-7-width-mobile); min-width: var(--col-7-width-mobile); }
+    .product-comparison-table__col-8 { width: var(--col-8-width-mobile); min-width: var(--col-8-width-mobile); }
+    .product-comparison-table__col-9 { width: var(--col-9-width-mobile); min-width: var(--col-9-width-mobile); }
+    .product-comparison-table__col-10 { width: var(--col-10-width-mobile); min-width: var(--col-10-width-mobile); }
+    .product-comparison-table__col-11 { width: var(--col-11-width-mobile); min-width: var(--col-11-width-mobile); }
+    .product-comparison-table__col-12 { width: var(--col-12-width-mobile); min-width: var(--col-12-width-mobile); }
   }
 
   .product-comparison-table__thead {
@@ -129,16 +178,26 @@
     border-bottom: 1px solid var(--table-best-for-border);
   }
 
+  /* Default: no sticky */
   .product-comparison-table__th:first-child,
   .product-comparison-table__td:first-child {
+    background: var(--table-row-bg);
+  }
+
+  .product-comparison-table__thead .product-comparison-table__th:first-child {
+    background: var(--table-row-bg);
+  }
+
+  /* Sticky Column Layout - applies to both mobile and desktop when enabled */
+  .product-comparison-table--sticky .product-comparison-table__th:first-child,
+  .product-comparison-table--sticky .product-comparison-table__td:first-child {
     position: sticky;
     left: 0;
     z-index: 2;
     background: var(--table-row-bg);
   }
 
-  .product-comparison-table__thead .product-comparison-table__th:first-child {
-    background: var(--table-row-bg);
+  .product-comparison-table--sticky .product-comparison-table__thead .product-comparison-table__th:first-child {
     z-index: 3;
   }
 
@@ -213,9 +272,9 @@
     text-align: center;
   }
 
-  /* Show box shadow only when table is scrolled */
-  .product-comparison-table__wrapper.is-scrolled .product-comparison-table__th:first-child,
-  .product-comparison-table__wrapper.is-scrolled .product-comparison-table__td:first-child {
+  /* Show box shadow only when table is scrolled and sticky is enabled */
+  .product-comparison-table--sticky .product-comparison-table__wrapper.is-scrolled .product-comparison-table__th:first-child,
+  .product-comparison-table--sticky .product-comparison-table__wrapper.is-scrolled .product-comparison-table__td:first-child {
     box-shadow: 2px 0 5px -2px rgba(0, 0, 0, 0.1);
   }
 
@@ -265,92 +324,24 @@
     color: var(--table-accent-color);
   }
 
-  /* Mobile Stacked Layout */
+  /* Mobile adjustments */
   @media screen and (max-width: 749px) {
-    .product-comparison-table--mobile-stack .product-comparison-table__wrapper {
-      width: 100%;
-      border: none;
-      border-radius: 0;
-      overflow-x: visible;
-      padding: 0;
-      margin: 0;
-    }
-
-    .product-comparison-table--mobile-stack .product-comparison-table__table {
-      min-width: 100%;
-      display: block;
-    }
-
-    .product-comparison-table--mobile-stack .product-comparison-table__thead {
-      display: none;
-    }
-
-    .product-comparison-table--mobile-stack .product-comparison-table__tbody {
-      display: block;
-      width: 100%;
-    }
-
-    .product-comparison-table--mobile-stack .product-comparison-table__tbody tr {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      padding: 20px;
-      margin-bottom: 16px;
-      border: 1px solid var(--table-border-color);
-      border-radius: 8px;
-      background: var(--table-row-bg);
-      box-sizing: border-box;
-    }
-
-    .product-comparison-table--mobile-stack .product-comparison-table__td {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 8px 0;
-      text-align: right;
-      border: none;
-      position: static;
-      box-shadow: none;
-    }
-
-    .product-comparison-table--mobile-stack .product-comparison-table__td:first-child {
-      padding-left: 0;
-      justify-content: center;
-      padding-bottom: 16px;
-      margin-bottom: 8px;
-    }
-
-    .product-comparison-table--mobile-stack .product-comparison-table__td::before {
-      content: attr(data-label);
-      font-weight: 600;
-      color: var(--table-accent-color);
-      text-align: left;
-      flex: 1;
-    }
-
-    .product-comparison-table--mobile-stack .product-comparison-table__td:first-child::before {
-      display: none;
-    }
-  }
-
-  /* Mobile Sticky Column Layout */
-  @media screen and (max-width: 749px) {
-    .product-comparison-table--mobile-sticky .product-comparison-table__table {
+    .product-comparison-table__table {
       min-width: 700px;
     }
 
-    .product-comparison-table--mobile-sticky .product-comparison-table__th,
-    .product-comparison-table--mobile-sticky .product-comparison-table__td {
+    .product-comparison-table__th,
+    .product-comparison-table__td {
       padding: 12px;
       font-size: 12px;
     }
 
-    .product-comparison-table--mobile-sticky .product-comparison-table__logo {
+    .product-comparison-table__logo {
       width: 50px;
       height: 50px;
     }
 
-    .product-comparison-table--mobile-sticky .product-comparison-table__best-for {
+    .product-comparison-table__best-for {
       max-width: none;
     }
   }
@@ -363,7 +354,7 @@
     section--{{ section.settings.section_width }}
     color-{{ section.settings.color_scheme }}
     product-comparison-table
-    product-comparison-table--mobile-{{ section.settings.mobile_layout }}
+    {% if section.settings.sticky_column %}product-comparison-table--sticky{% endif %}
     spacing-style
     gap-style
   "
@@ -553,27 +544,207 @@
       </tbody>
     </table>
   </div>
+
+  <div class="product-comparison-table__scrollbar-container">
+    <div class="product-comparison-table__scrollbar-track">
+      <div class="product-comparison-table__scrollbar-thumb"></div>
+    </div>
+  </div>
 </div>
 
 <script>
   (function() {
-    const wrapper = document.querySelector('#shopify-section-{{ section.id }} .product-comparison-table__wrapper');
-    if (!wrapper) return;
+    const script = document.currentScript;
+    const section = script.closest('.product-comparison-table') || script.parentElement.querySelector('.product-comparison-table');
 
-    function checkOverflow() {
-      const isOverflowing = wrapper.scrollWidth > wrapper.clientWidth;
-      const isScrolled = wrapper.scrollLeft > 0;
+    function init() {
+      const container = section || document.querySelector('.product-comparison-table');
+      if (!container) return;
 
-      if (isOverflowing && isScrolled) {
-        wrapper.classList.add('is-scrolled');
-      } else {
-        wrapper.classList.remove('is-scrolled');
+      const wrapper = container.querySelector('.product-comparison-table__wrapper');
+      const scrollbarContainer = container.querySelector('.product-comparison-table__scrollbar-container');
+      const track = container.querySelector('.product-comparison-table__scrollbar-track');
+      const thumb = container.querySelector('.product-comparison-table__scrollbar-thumb');
+
+      if (!wrapper || !track || !thumb || !scrollbarContainer) return;
+
+      let isDragging = false;
+      let startX = 0;
+      let startScrollLeft = 0;
+
+      function updateScrollbar() {
+        const scrollWidth = wrapper.scrollWidth;
+        const clientWidth = wrapper.clientWidth;
+        const isOverflowing = scrollWidth > clientWidth;
+
+        if (isOverflowing) {
+          scrollbarContainer.classList.add('is-visible');
+          const thumbWidthPercent = Math.max((clientWidth / scrollWidth) * 100, 10);
+          thumb.style.width = thumbWidthPercent + '%';
+          updateThumbPosition();
+        } else {
+          scrollbarContainer.classList.remove('is-visible');
+        }
       }
+
+      function updateThumbPosition() {
+        const scrollWidth = wrapper.scrollWidth;
+        const clientWidth = wrapper.clientWidth;
+        const scrollLeft = wrapper.scrollLeft;
+        const maxScroll = scrollWidth - clientWidth;
+        const trackWidth = track.offsetWidth;
+        const thumbWidth = thumb.offsetWidth;
+        const maxThumbLeft = trackWidth - thumbWidth;
+
+        if (maxScroll > 0 && maxThumbLeft > 0) {
+          const thumbLeft = (scrollLeft / maxScroll) * maxThumbLeft;
+          thumb.style.left = thumbLeft + 'px';
+        }
+      }
+
+      function checkOverflow() {
+        const isOverflowing = wrapper.scrollWidth > wrapper.clientWidth;
+        const isScrolled = wrapper.scrollLeft > 0;
+
+        if (isOverflowing && isScrolled) {
+          wrapper.classList.add('is-scrolled');
+        } else {
+          wrapper.classList.remove('is-scrolled');
+        }
+      }
+
+      // Sync wrapper scroll with thumb position
+      wrapper.addEventListener('scroll', function() {
+        checkOverflow();
+        if (!isDragging) {
+          updateThumbPosition();
+        }
+      });
+
+      // Thumb drag functionality
+      let startThumbLeft = 0;
+
+      thumb.addEventListener('mousedown', function(e) {
+        isDragging = true;
+        startX = e.clientX;
+        startScrollLeft = wrapper.scrollLeft;
+        startThumbLeft = thumb.offsetLeft;
+        thumb.style.cursor = 'grabbing';
+        document.body.style.userSelect = 'none';
+        document.body.style.cursor = 'grabbing';
+        e.preventDefault();
+        e.stopPropagation();
+      });
+
+      document.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+
+        const deltaX = e.clientX - startX;
+        const trackWidth = track.offsetWidth;
+        const thumbWidth = thumb.offsetWidth;
+        const maxThumbLeft = trackWidth - thumbWidth;
+        const scrollWidth = wrapper.scrollWidth;
+        const clientWidth = wrapper.clientWidth;
+        const maxScroll = scrollWidth - clientWidth;
+
+        if (maxThumbLeft > 0) {
+          // Calculate new thumb position
+          let newThumbLeft = startThumbLeft + deltaX;
+          newThumbLeft = Math.max(0, Math.min(newThumbLeft, maxThumbLeft));
+
+          // Set thumb position directly
+          thumb.style.left = newThumbLeft + 'px';
+
+          // Calculate and set scroll position
+          const scrollLeft = (newThumbLeft / maxThumbLeft) * maxScroll;
+          wrapper.scrollLeft = scrollLeft;
+        }
+      });
+
+      document.addEventListener('mouseup', function() {
+        if (isDragging) {
+          isDragging = false;
+          thumb.style.cursor = 'grab';
+          document.body.style.userSelect = '';
+          document.body.style.cursor = '';
+        }
+      });
+
+      // Track click functionality
+      track.addEventListener('click', function(e) {
+        if (e.target === thumb) return;
+
+        const trackRect = track.getBoundingClientRect();
+        const clickX = e.clientX - trackRect.left;
+        const trackWidth = track.offsetWidth;
+        const thumbWidth = thumb.offsetWidth;
+        const scrollWidth = wrapper.scrollWidth;
+        const clientWidth = wrapper.clientWidth;
+        const maxScroll = scrollWidth - clientWidth;
+        const maxThumbLeft = trackWidth - thumbWidth;
+
+        if (maxThumbLeft > 0) {
+          const targetThumbLeft = clickX - (thumbWidth / 2);
+          const clampedThumbLeft = Math.max(0, Math.min(targetThumbLeft, maxThumbLeft));
+          const scrollLeft = (clampedThumbLeft / maxThumbLeft) * maxScroll;
+          wrapper.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+        }
+      });
+
+      // Touch support for thumb drag
+      thumb.addEventListener('touchstart', function(e) {
+        isDragging = true;
+        startX = e.touches[0].clientX;
+        startScrollLeft = wrapper.scrollLeft;
+        startThumbLeft = thumb.offsetLeft;
+        e.preventDefault();
+      }, { passive: false });
+
+      document.addEventListener('touchmove', function(e) {
+        if (!isDragging) return;
+
+        const deltaX = e.touches[0].clientX - startX;
+        const trackWidth = track.offsetWidth;
+        const thumbWidth = thumb.offsetWidth;
+        const maxThumbLeft = trackWidth - thumbWidth;
+        const scrollWidth = wrapper.scrollWidth;
+        const clientWidth = wrapper.clientWidth;
+        const maxScroll = scrollWidth - clientWidth;
+
+        if (maxThumbLeft > 0) {
+          // Calculate new thumb position
+          let newThumbLeft = startThumbLeft + deltaX;
+          newThumbLeft = Math.max(0, Math.min(newThumbLeft, maxThumbLeft));
+
+          // Set thumb position directly
+          thumb.style.left = newThumbLeft + 'px';
+
+          // Calculate and set scroll position
+          const scrollLeft = (newThumbLeft / maxThumbLeft) * maxScroll;
+          wrapper.scrollLeft = scrollLeft;
+        }
+      }, { passive: true });
+
+      document.addEventListener('touchend', function() {
+        isDragging = false;
+      });
+
+      window.addEventListener('resize', function() {
+        updateScrollbar();
+        checkOverflow();
+      });
+
+      // Initial setup
+      updateScrollbar();
+      checkOverflow();
     }
 
-    wrapper.addEventListener('scroll', checkOverflow);
-    window.addEventListener('resize', checkOverflow);
-    checkOverflow();
+    // Run init when DOM is ready or immediately if already loaded
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
   })();
 </script>
 
@@ -680,21 +851,11 @@
       "default": "page-width"
     },
     {
-      "type": "select",
-      "id": "mobile_layout",
-      "label": "Mobile Layout",
-      "options": [
-        {
-          "value": "sticky",
-          "label": "Sticky Column (Scrollable Table)"
-        },
-        {
-          "value": "stack",
-          "label": "Stacked Cards"
-        }
-      ],
-      "default": "sticky",
-      "info": "Choose how the table displays on mobile devices"
+      "type": "checkbox",
+      "id": "sticky_column",
+      "label": "Sticky First Column",
+      "default": true,
+      "info": "Makes the first column sticky when scrolling horizontally (applies to both mobile and desktop)"
     },
     {
       "type": "range",
@@ -797,7 +958,7 @@
       "category": "Custom",
       "settings": {
         "section_width": "page-width",
-        "mobile_layout": "sticky",
+        "sticky_column": true,
         "padding-block-start": 48,
         "padding-block-end": 48
       }
