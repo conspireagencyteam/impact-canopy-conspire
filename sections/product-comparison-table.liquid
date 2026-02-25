@@ -34,6 +34,55 @@
     border-radius: 16px;
     border: 1px solid var(--table-border-color);
     background-color: #ffffff;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  .product-comparison-table__wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  /* Custom scrollbar container */
+  .product-comparison-table__scrollbar-container {
+    width: 100%;
+    margin-top: 6px;
+    display: none;
+  }
+
+  .product-comparison-table__scrollbar-container.is-visible {
+    display: block;
+    padding: 2px;
+    background: #cccccc;
+    border-radius: 100px;
+  }
+
+  .product-comparison-table__scrollbar-track {
+    width: 100%;
+    height: 8px;
+    background: #cccccc;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .product-comparison-table__scrollbar-thumb {
+    height: 100%;
+    background: #ffffff;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: grab;
+    min-width: 40px;
+    transition: background 0.2s ease, left 0s;
+  }
+
+  .product-comparison-table__scrollbar-thumb:hover {
+    background: var(--table-accent-secondary, #f47920);
+  }
+
+  .product-comparison-table__scrollbar-thumb:active {
+    cursor: grabbing;
   }
 
   @media screen and (min-width: 750px) {
@@ -62,12 +111,12 @@
       table-layout: fixed;
     }
 
-    .product-comparison-table__col-1 { width: var(--col-1-width-desktop); }
-    .product-comparison-table__col-2 { width: var(--col-2-width-desktop); }
-    .product-comparison-table__col-3 { width: var(--col-3-width-desktop); }
-    .product-comparison-table__col-4 { width: var(--col-4-width-desktop); }
-    .product-comparison-table__col-5 { width: var(--col-5-width-desktop); }
-    .product-comparison-table__col-6 { width: var(--col-6-width-desktop); }
+    .product-comparison-table__col-1 { width: var(--col-1-width-desktop); min-width: var(--col-1-width-mobile); }
+    .product-comparison-table__col-2 { width: var(--col-2-width-desktop); min-width: var(--col-2-width-mobile); }
+    .product-comparison-table__col-3 { width: var(--col-3-width-desktop); min-width: var(--col-3-width-mobile); }
+    .product-comparison-table__col-4 { width: var(--col-4-width-desktop); min-width: var(--col-4-width-mobile); }
+    .product-comparison-table__col-5 { width: var(--col-5-width-desktop); min-width: var(--col-5-width-mobile); }
+    .product-comparison-table__col-6 { width: var(--col-6-width-desktop); min-width: var(--col-6-width-mobile); }
   }
 
   /* Mobile column widths */
@@ -143,7 +192,7 @@
   }
 
   .product-comparison-table__td {
-    padding: 16px 8px; 
+    padding: 16px 8px;
     text-align: center;
     vertical-align: middle;
     font-size: 14px;
@@ -406,27 +455,206 @@
       </tbody>
     </table>
   </div>
+
+  <div class="product-comparison-table__scrollbar-container">
+    <div class="product-comparison-table__scrollbar-track">
+      <div class="product-comparison-table__scrollbar-thumb"></div>
+    </div>
+  </div>
 </div>
 
 <script>
   (function() {
-    const wrapper = document.querySelector('#shopify-section-{{ section.id }} .product-comparison-table__wrapper');
-    if (!wrapper) return;
+    const script = document.currentScript;
+    const section = script.closest('.product-comparison-table') || script.parentElement.querySelector('.product-comparison-table');
 
-    function checkOverflow() {
-      const isOverflowing = wrapper.scrollWidth > wrapper.clientWidth;
-      const isScrolled = wrapper.scrollLeft > 0;
+    function init() {
+      const container = section || document.querySelector('.product-comparison-table');
+      if (!container) return;
 
-      if (isOverflowing && isScrolled) {
-        wrapper.classList.add('is-scrolled');
-      } else {
-        wrapper.classList.remove('is-scrolled');
+      const wrapper = container.querySelector('.product-comparison-table__wrapper');
+      const scrollbarContainer = container.querySelector('.product-comparison-table__scrollbar-container');
+      const track = container.querySelector('.product-comparison-table__scrollbar-track');
+      const thumb = container.querySelector('.product-comparison-table__scrollbar-thumb');
+
+      if (!wrapper || !track || !thumb || !scrollbarContainer) return;
+
+      let isDragging = false;
+      let startX = 0;
+      let startScrollLeft = 0;
+      let startThumbLeft = 0;
+
+      function updateScrollbar() {
+        const scrollWidth = wrapper.scrollWidth;
+        const clientWidth = wrapper.clientWidth;
+        const isOverflowing = scrollWidth > clientWidth;
+
+        if (isOverflowing) {
+          scrollbarContainer.classList.add('is-visible');
+          const thumbWidthPercent = Math.max((clientWidth / scrollWidth) * 100, 10);
+          thumb.style.width = thumbWidthPercent + '%';
+          updateThumbPosition();
+        } else {
+          scrollbarContainer.classList.remove('is-visible');
+        }
       }
+
+      function updateThumbPosition() {
+        const scrollWidth = wrapper.scrollWidth;
+        const clientWidth = wrapper.clientWidth;
+        const scrollLeft = wrapper.scrollLeft;
+        const maxScroll = scrollWidth - clientWidth;
+        const trackWidth = track.offsetWidth;
+        const thumbWidth = thumb.offsetWidth;
+        const maxThumbLeft = trackWidth - thumbWidth;
+
+        if (maxScroll > 0 && maxThumbLeft > 0) {
+          const thumbLeft = (scrollLeft / maxScroll) * maxThumbLeft;
+          thumb.style.left = thumbLeft + 'px';
+        }
+      }
+
+      function checkOverflow() {
+        const isOverflowing = wrapper.scrollWidth > wrapper.clientWidth;
+        const isScrolled = wrapper.scrollLeft > 0;
+
+        if (isOverflowing && isScrolled) {
+          wrapper.classList.add('is-scrolled');
+        } else {
+          wrapper.classList.remove('is-scrolled');
+        }
+      }
+
+      // Sync wrapper scroll with thumb position
+      wrapper.addEventListener('scroll', function() {
+        checkOverflow();
+        if (!isDragging) {
+          updateThumbPosition();
+        }
+      });
+
+      // Thumb drag functionality
+      thumb.addEventListener('mousedown', function(e) {
+        isDragging = true;
+        startX = e.clientX;
+        startScrollLeft = wrapper.scrollLeft;
+        startThumbLeft = thumb.offsetLeft;
+        thumb.style.cursor = 'grabbing';
+        document.body.style.userSelect = 'none';
+        document.body.style.cursor = 'grabbing';
+        e.preventDefault();
+        e.stopPropagation();
+      });
+
+      document.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+
+        const deltaX = e.clientX - startX;
+        const trackWidth = track.offsetWidth;
+        const thumbWidth = thumb.offsetWidth;
+        const maxThumbLeft = trackWidth - thumbWidth;
+        const scrollWidth = wrapper.scrollWidth;
+        const clientWidth = wrapper.clientWidth;
+        const maxScroll = scrollWidth - clientWidth;
+
+        if (maxThumbLeft > 0) {
+          // Calculate new thumb position
+          let newThumbLeft = startThumbLeft + deltaX;
+          newThumbLeft = Math.max(0, Math.min(newThumbLeft, maxThumbLeft));
+
+          // Set thumb position directly
+          thumb.style.left = newThumbLeft + 'px';
+
+          // Calculate and set scroll position
+          const scrollLeft = (newThumbLeft / maxThumbLeft) * maxScroll;
+          wrapper.scrollLeft = scrollLeft;
+        }
+      });
+
+      document.addEventListener('mouseup', function() {
+        if (isDragging) {
+          isDragging = false;
+          thumb.style.cursor = 'grab';
+          document.body.style.userSelect = '';
+          document.body.style.cursor = '';
+        }
+      });
+
+      // Track click functionality
+      track.addEventListener('click', function(e) {
+        if (e.target === thumb) return;
+
+        const trackRect = track.getBoundingClientRect();
+        const clickX = e.clientX - trackRect.left;
+        const trackWidth = track.offsetWidth;
+        const thumbWidth = thumb.offsetWidth;
+        const scrollWidth = wrapper.scrollWidth;
+        const clientWidth = wrapper.clientWidth;
+        const maxScroll = scrollWidth - clientWidth;
+        const maxThumbLeft = trackWidth - thumbWidth;
+
+        if (maxThumbLeft > 0) {
+          const targetThumbLeft = clickX - (thumbWidth / 2);
+          const clampedThumbLeft = Math.max(0, Math.min(targetThumbLeft, maxThumbLeft));
+          const scrollLeft = (clampedThumbLeft / maxThumbLeft) * maxScroll;
+          wrapper.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+        }
+      });
+
+      // Touch support for thumb drag
+      thumb.addEventListener('touchstart', function(e) {
+        isDragging = true;
+        startX = e.touches[0].clientX;
+        startScrollLeft = wrapper.scrollLeft;
+        startThumbLeft = thumb.offsetLeft;
+        e.preventDefault();
+      }, { passive: false });
+
+      document.addEventListener('touchmove', function(e) {
+        if (!isDragging) return;
+
+        const deltaX = e.touches[0].clientX - startX;
+        const trackWidth = track.offsetWidth;
+        const thumbWidth = thumb.offsetWidth;
+        const maxThumbLeft = trackWidth - thumbWidth;
+        const scrollWidth = wrapper.scrollWidth;
+        const clientWidth = wrapper.clientWidth;
+        const maxScroll = scrollWidth - clientWidth;
+
+        if (maxThumbLeft > 0) {
+          // Calculate new thumb position
+          let newThumbLeft = startThumbLeft + deltaX;
+          newThumbLeft = Math.max(0, Math.min(newThumbLeft, maxThumbLeft));
+
+          // Set thumb position directly
+          thumb.style.left = newThumbLeft + 'px';
+
+          // Calculate and set scroll position
+          const scrollLeft = (newThumbLeft / maxThumbLeft) * maxScroll;
+          wrapper.scrollLeft = scrollLeft;
+        }
+      }, { passive: true });
+
+      document.addEventListener('touchend', function() {
+        isDragging = false;
+      });
+
+      window.addEventListener('resize', function() {
+        updateScrollbar();
+        checkOverflow();
+      });
+
+      // Initial setup
+      updateScrollbar();
+      checkOverflow();
     }
 
-    wrapper.addEventListener('scroll', checkOverflow);
-    window.addEventListener('resize', checkOverflow);
-    checkOverflow();
+    // Run init when DOM is ready or immediately if already loaded
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
   })();
 </script>
 
