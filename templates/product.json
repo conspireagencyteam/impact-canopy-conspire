@@ -8183,7 +8183,7 @@
                           "type": "text",
                           "name": "t:names.heading",
                           "settings": {
-                            "text": "<p>JJ Valdes</p>",
+                            "text": "<p><a href=\"https://www.google.com/maps/contrib/108828392158088310168/place/ChIJY6BX2tC-3IAR6K-QjsDgUz4/@26.9936695,-99.6420631,5z/data=!4m6!1m5!8m4!1e1!2s108828392158088310168!3m1!1e1?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDIyMi4wIKXMDSoASAFQAw%3D%3D\" target=\"_blank\" title=\"https://www.google.com/maps/contrib/108828392158088310168/place/ChIJY6BX2tC-3IAR6K-QjsDgUz4/@26.9936695,-99.6420631,5z/data=!4m6!1m5!8m4!1e1!2s108828392158088310168!3m1!1e1?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDIyMi4wIKXMDSoASAFQAw%3D%3D\">JJ Valdes</a></p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -8643,7 +8643,7 @@
                           "type": "text",
                           "name": "t:names.heading",
                           "settings": {
-                            "text": "<p>Teresa S.</p>",
+                            "text": "<p><a href=\"https://www.yelp.com/user_details?userid=UrMbVZfqfxNBYt9lePeO6A\" target=\"_blank\" title=\"https://www.yelp.com/user_details?userid=UrMbVZfqfxNBYt9lePeO6A\">Teresa S.</a></p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
