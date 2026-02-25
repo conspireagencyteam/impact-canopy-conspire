@@ -91,6 +91,7 @@
         "text_tqQTNE",
         "text_twGGkJ"
       ],
+      "disabled": true,
       "name": "Collection heading",
       "settings": {
         "content_direction": "column",
@@ -252,6 +253,7 @@
                 "alignment": "center",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
+                "compare_at_price_font_size": "",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -315,6 +317,7 @@
           ]
         }
       },
+      "disabled": true,
       "settings": {
         "layout_type": "grid",
         "product_card_size": "medium",
