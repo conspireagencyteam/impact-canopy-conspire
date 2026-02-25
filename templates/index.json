@@ -7192,7 +7192,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "Talk to a Sales Rep",
-                    "link": "shopify://pages/contact-us",
+                    "link": "shopify://pages/quote-mock-up-request",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "button_size": "default",
