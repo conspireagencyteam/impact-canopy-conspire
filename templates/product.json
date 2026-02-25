@@ -9103,7 +9103,7 @@
                           "type": "text",
                           "name": "t:names.heading",
                           "settings": {
-                            "text": "<p>Alexis Deadwiley</p>",
+                            "text": "<p><a href=\"https://www.google.com/maps/contrib/115845097662450578618/reviews/@33.7908015,-117.4960441,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDIyMi4wIKXMDSoASAFQAw%3D%3D\" target=\"_blank\" title=\"https://www.google.com/maps/contrib/115845097662450578618/reviews/@33.7908015,-117.4960441,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDIyMi4wIKXMDSoASAFQAw%3D%3D\">Alexis Deadwiley</a></p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
