@@ -191,7 +191,7 @@
         "col_name_11": "Parts Available",
         "col_name_12": "Limited Manufacturer Warranty",
         "section_width": "page-width",
-        "sticky_column": true,
+        "sticky_column": false,
         "gap": 24,
         "color_scheme": "scheme-3",
         "padding-block-start": 0,
