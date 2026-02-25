@@ -10436,7 +10436,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "Customer Service",
-                    "link": "shopify://collections/all",
+                    "link": "shopify://pages/customer-support",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "button_size": "default",
