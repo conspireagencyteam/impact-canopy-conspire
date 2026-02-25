@@ -7914,8 +7914,8 @@
                       "type": "icon",
                       "name": "t:names.icon",
                       "settings": {
-                        "icon": "price_tag",
-                        "image_upload": "shopify://shop_images/kawasaki_85d8c98f-314e-4167-a28a-ad82b205d381.png",
+                        "icon": "star",
+                        "image_upload": "shopify://shop_images/Impact_Instant_Canopy_-_square-01_e5782b6d-98b7-423c-a00c-c629c7bd9493.jpg",
                         "width": 40,
                         "link": "",
                         "open_in_new_tab": false
@@ -8375,7 +8375,7 @@
                       "name": "t:names.icon",
                       "settings": {
                         "icon": "price_tag",
-                        "image_upload": "shopify://shop_images/kawasaki_85d8c98f-314e-4167-a28a-ad82b205d381.png",
+                        "image_upload": "shopify://shop_images/Impact_Instant_Canopy_-_square-01_e5782b6d-98b7-423c-a00c-c629c7bd9493.jpg",
                         "width": 40,
                         "link": "",
                         "open_in_new_tab": false
@@ -8680,7 +8680,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Tournament Director:**</p>",
+                            "text": "<p>Athletic Coordinator</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -8835,7 +8835,7 @@
                       "name": "t:names.icon",
                       "settings": {
                         "icon": "price_tag",
-                        "image_upload": "shopify://shop_images/kawasaki_85d8c98f-314e-4167-a28a-ad82b205d381.png",
+                        "image_upload": "shopify://shop_images/Impact_Instant_Canopy_-_square-01_e5782b6d-98b7-423c-a00c-c629c7bd9493.jpg",
                         "width": 40,
                         "link": "",
                         "open_in_new_tab": false
