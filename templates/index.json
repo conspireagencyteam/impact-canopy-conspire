@@ -7147,7 +7147,6 @@
                     "text_KbPCJK": {
                       "type": "text",
                       "name": "t:names.text",
-                      "disabled": true,
                       "settings": {
                         "text": "<p>Connect with a sales specialist to plan large-scale orders, custom configurations, or event-wide setups.</p>",
                         "width": "fit-content",
@@ -7193,7 +7192,7 @@
                   "type": "button",
                   "name": "t:names.button",
                   "settings": {
-                    "label": "Connect with our Team",
+                    "label": "Get expert help!",
                     "link": "shopify://pages/quote-mock-up-request",
                     "open_in_new_tab": false,
                     "style_class": "button",
