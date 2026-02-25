@@ -125,6 +125,10 @@
         "padding-block-end-mobile": 15
       }
     },
+    "pf-4ff13251": {
+      "type": "pf-4ff13251",
+      "settings": {}
+    },
     "main": {
       "type": "main-collection",
       "blocks": {
@@ -339,15 +343,11 @@
         "padding-inline-start-mobile": 0,
         "padding-inline-end-mobile": 0
       }
-    },
-    "pf-4ff13251": {
-      "type": "pf-4ff13251",
-      "settings": {}
     }
   },
   "order": [
     "section",
-    "main",
-    "pf-4ff13251"
+    "pf-4ff13251",
+    "main"
   ]
 }
