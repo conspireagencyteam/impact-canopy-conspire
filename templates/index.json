@@ -8088,6 +8088,7 @@
       "block_order": [
         "group_Dq3hi7"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
