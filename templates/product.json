@@ -1489,7 +1489,7 @@
                   "type": "_accordion-row",
                   "name": "t:names.accordion_row",
                   "settings": {
-                    "heading": "When will I get my order?",
+                    "heading": "Sub Description 4",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
