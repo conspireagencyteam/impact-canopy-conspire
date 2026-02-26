@@ -1007,7 +1007,7 @@
           "type": "image",
           "static": true,
           "settings": {
-            "image": "shopify://shop_images/10x10_-_Kinesiology_Athletics_-_Athletics.jpg",
+            "image": "{{ closest.metaobject.category.collage_left_top_image.value }}",
             "link": "",
             "image_ratio": "adapt",
             "image_ratio_mobile": "same",
@@ -1039,7 +1039,7 @@
           "type": "image",
           "static": true,
           "settings": {
-            "image": "shopify://shop_images/10x10_-_High_Roller_Lacrosse_3_-_Lacrosse.jpg",
+            "image": "{{ closest.metaobject.category.collage_left_bottom_image.value }}",
             "link": "",
             "image_ratio": "adapt",
             "image_ratio_mobile": "same",
@@ -1071,7 +1071,7 @@
           "type": "image",
           "static": true,
           "settings": {
-            "image": "shopify://shop_images/10x15_Custom_Canopy_-_Lax.jpg",
+            "image": "{{ closest.metaobject.category.collage_center_image.value }}",
             "link": "",
             "image_ratio": "adapt",
             "image_ratio_mobile": "same",
@@ -1103,7 +1103,7 @@
           "type": "image",
           "static": true,
           "settings": {
-            "image": "shopify://shop_images/Silverlakes-Soccer-10x10-IMG.jpg",
+            "image": "{{ closest.metaobject.category.collage_right_top_image.value }}",
             "link": "",
             "image_ratio": "adapt",
             "image_ratio_mobile": "same",
@@ -1135,7 +1135,7 @@
           "type": "image",
           "static": true,
           "settings": {
-            "image": "shopify://shop_images/Yorba_Linda_Track_and_Field-School-10x15-IMG.jpg",
+            "image": "{{ closest.metaobject.category.collage_right_bottom_image.value }}",
             "link": "",
             "image_ratio": "adapt",
             "image_ratio_mobile": "same",
