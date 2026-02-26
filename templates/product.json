@@ -1338,7 +1338,7 @@
                 "accordion_row_jMQB9i": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "CANOPY TOP",
+                    "heading": "Additional Information",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -1388,7 +1388,7 @@
                 "accordion_row_3d6xzJ": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Warranty Information",
+                    "heading": "Included with Purchase",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -1438,7 +1438,7 @@
                 "accordion_row_qrgHAp": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "9' Wing Flag",
+                    "heading": "Key Advantages",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
