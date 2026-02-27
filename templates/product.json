@@ -2696,7 +2696,7 @@
                       "settings": {
                         "image": "shopify://shop_images/WEBSITE-COLLECTION-IMAGES-DISPALY-FLAGS.jpg",
                         "link": "",
-                        "image_ratio": "portrait",
+                        "image_ratio": "square",
                         "image_ratio_mobile": "same",
                         "width": "fill",
                         "custom_width": 100,
@@ -2820,7 +2820,7 @@
                       "settings": {
                         "image": "shopify://shop_images/WEBSITE-COLLECTION-IMAGES-SIGNS-_-BANNERS.jpg",
                         "link": "",
-                        "image_ratio": "portrait",
+                        "image_ratio": "square",
                         "image_ratio_mobile": "same",
                         "width": "fill",
                         "custom_width": 100,
@@ -2944,7 +2944,7 @@
                       "settings": {
                         "image": "shopify://shop_images/WEBSITE-COLLECTION-IMAGES-CANOPY-WALLS.jpg",
                         "link": "",
-                        "image_ratio": "portrait",
+                        "image_ratio": "square",
                         "image_ratio_mobile": "same",
                         "width": "fill",
                         "custom_width": 100,
@@ -3068,7 +3068,7 @@
                       "settings": {
                         "image": "shopify://shop_images/WEBSITE-COLLECTION-IMAGES-TABLE-COVERS.jpg",
                         "link": "",
-                        "image_ratio": "portrait",
+                        "image_ratio": "square",
                         "image_ratio_mobile": "same",
                         "width": "fill",
                         "custom_width": 100,
