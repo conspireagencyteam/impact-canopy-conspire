@@ -1,6 +1,9 @@
 {%- liquid
   if block.settings.representative != blank
     assign metaobject_list = block.settings.representative.speciality
+
+  elsif item != blank
+    assign metaobject_list = item
   else
     assign metaobject_list = metaobject.speciality
   endif
