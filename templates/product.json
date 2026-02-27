@@ -2694,7 +2694,7 @@
                       "type": "image",
                       "name": "t:names.image",
                       "settings": {
-                        "image": "shopify://shop_images/CUSTOM-FLAGS-GRANDE-WING-1500x1500_1c6e8b45-704e-4339-b1c9-b959671aa6dd.jpg",
+                        "image": "shopify://shop_images/WEBSITE-COLLECTION-IMAGES-DISPALY-FLAGS.jpg",
                         "link": "",
                         "image_ratio": "portrait",
                         "image_ratio_mobile": "same",
@@ -2818,7 +2818,7 @@
                       "type": "image",
                       "name": "t:names.image",
                       "settings": {
-                        "image": "shopify://shop_images/060100202_1-Z-3.jpg",
+                        "image": "shopify://shop_images/WEBSITE-COLLECTION-IMAGES-SIGNS-_-BANNERS.jpg",
                         "link": "",
                         "image_ratio": "portrait",
                         "image_ratio_mobile": "same",
@@ -2942,7 +2942,7 @@
                       "type": "image",
                       "name": "t:names.image",
                       "settings": {
-                        "image": "shopify://shop_images/colored_sidewalls-white.jpg",
+                        "image": "shopify://shop_images/WEBSITE-COLLECTION-IMAGES-CANOPY-WALLS.jpg",
                         "link": "",
                         "image_ratio": "portrait",
                         "image_ratio_mobile": "same",
@@ -3066,7 +3066,7 @@
                       "type": "image",
                       "name": "t:names.image",
                       "settings": {
-                        "image": "shopify://shop_images/CUSTOM-FITTED-TABLE-COVER-1500x1500_1.jpg",
+                        "image": "shopify://shop_images/WEBSITE-COLLECTION-IMAGES-TABLE-COVERS.jpg",
                         "link": "",
                         "image_ratio": "portrait",
                         "image_ratio_mobile": "same",
