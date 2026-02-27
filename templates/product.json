@@ -9266,6 +9266,7 @@
             "background_media": "image",
             "video_position": "cover",
             "background_image": "shopify://shop_images/group_7c23f500-6fdb-4c69-9187-2101b24d2368.jpg",
+            "background_image_mobile": "shopify://shop_images/group_sq.jpg",
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
