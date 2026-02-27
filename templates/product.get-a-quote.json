@@ -1879,7 +1879,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Weighted bases</p>",
+                        "text": "<p>Custom Signs</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -2003,7 +2003,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Sidewalls</p>",
+                        "text": "<p>Custom Walls</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -2127,7 +2127,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Custom table covers</p>",
+                        "text": "<p>Custom Table Covers</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
