@@ -1591,8 +1591,8 @@
                   "type": "button",
                   "name": "t:names.button",
                   "settings": {
-                    "label": "Add Accessories",
-                    "link": "shopify://collections/canopy-accessories",
+                    "label": "Shop Custom",
+                    "link": "shopify://collections/custom-products",
                     "open_in_new_tab": false,
                     "style_class": "button-tertiary",
                     "button_size": "default",
