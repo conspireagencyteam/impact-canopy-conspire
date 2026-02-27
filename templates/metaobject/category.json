@@ -1229,7 +1229,7 @@
             "padding-block-end-mobile": 0,
             "padding-inline-start-mobile": 0,
             "padding-inline-end-mobile": 0,
-            "custom_class": ""
+            "custom_class": "custom-sale-group-form-modified"
           },
           "blocks": {
             "staticImageGroup": {
@@ -1488,7 +1488,7 @@
                     "padding-block-end-mobile": 0,
                     "padding-inline-start-mobile": 0,
                     "padding-inline-end-mobile": 0,
-                    "custom_class": ""
+                    "custom_class": "sale-title"
                   },
                   "blocks": {}
                 },
@@ -1709,7 +1709,7 @@
                     "button_size": "default",
                     "width": "fit-content",
                     "custom_width": 100,
-                    "width_tablet": "fill",
+                    "width_tablet": "fit-content",
                     "custom_width_tablet": 100,
                     "width_mobile": "fit-content",
                     "custom_width_mobile": 100,
@@ -1772,7 +1772,7 @@
       "type": "custom-liquid",
       "name": "t:names.custom_liquid",
       "settings": {
-        "custom_liquid": "<script>\n  document.addEventListener('DOMContentLoaded', function () {\n    const formContainer = document.querySelector('.custom-sale-group-form-modified');\n\n    if (!formContainer) return;\n\n    const selectlabel = formContainer.querySelector('label[for=\"selectyourrep\"]');\n    const select = formContainer.querySelector('select[title=\"Select Your Sales Rep\"]');\n    const saleTitle = document.querySelector('.sale-title');\n\n    if (!select || !saleTitle) return;\n\n    const hiddenInput = document.createElement('input');\n    hiddenInput.type = 'hidden';\n    hiddenInput.id = select.id;\n    hiddenInput.name = select.name;\n    hiddenInput.value = saleTitle.textContent.trim();\n\n    select.parentNode.insertBefore(hiddenInput, select);\n    select.remove();\n    selectlabel.remove();\n  });\n</script>",
+        "custom_liquid": "<script>\n      document.addEventListener('DOMContentLoaded', function () {\n        const formContainers = document.querySelectorAll('.custom-sale-group-form-modified');\n\n          if (!formContainers.length) return;\n\n          const saleTitle = document.querySelector('.sale-title');\n          if (!saleTitle) return;\n\n          formContainers.forEach(function (formContainer) {\n            const selectlabel = formContainer.querySelector('label[for=\"selectyourrep\"]');     \n            const select = formContainer.querySelector('select[title=\"Select Your Sales Rep\"]');\n\n            if (!select) return;\n\n            const hiddenInput = document.createElement('input');\n            hiddenInput.type = 'hidden';\n            hiddenInput.id = select.id;\n            hiddenInput.name = select.name;\n            hiddenInput.value = saleTitle.textContent.trim();\n\n            select.parentNode.insertBefore(hiddenInput, select);\n            select.remove();\n            if (selectlabel) selectlabel.remove();\n          });\n      });\n    </script>",
         "color_scheme": "",
         "section_width": "page-width",
         "padding-block-start": 0,
