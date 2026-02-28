@@ -5181,7 +5181,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Quickly replace worn or damaged components with tops and accessories designed to fit your existing canopy.</p>",
+                    "text": "<p>Quickly replace worn or damaged canopies with tops designed to fit your existing Impact canopy.</p>",
                     "width": "fit-content",
                     "max_width": "wide",
                     "alignment": "left",
