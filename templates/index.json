@@ -11254,7 +11254,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Talk to our sales team for existing issues about pricing & partnerships</p>",
+                        "text": "<p>Talk to our customer service team for existing issues about products or service.</p>",
                         "width": "fit-content",
                         "max_width": "wide",
                         "alignment": "left",
