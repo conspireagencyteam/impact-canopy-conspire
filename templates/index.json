@@ -8278,7 +8278,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h2>Complete your setup</h2>",
+                        "text": "<h2>Explore our off the shelf products</h2>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -8315,7 +8315,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Select your canopy size and frame, then add accessories like table covers, flags, and banners to complete your setup.</p>",
+                        "text": "<p>Choose from our wide selection of non-branded items - ready to ship same day</p>",
                         "width": "fit-content",
                         "max_width": "wide",
                         "alignment": "left",
@@ -8358,8 +8358,8 @@
                   "type": "button",
                   "name": "t:names.button",
                   "settings": {
-                    "label": "Shop Custom",
-                    "link": "shopify://collections/custom-products",
+                    "label": "Shop In Stock",
+                    "link": "shopify://collections/blank-canopies",
                     "open_in_new_tab": false,
                     "style_class": "button-tertiary",
                     "button_size": "default",
