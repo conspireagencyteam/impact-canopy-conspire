@@ -610,43 +610,10 @@
                             "padding-inline-end-mobile": 0
                           },
                           "blocks": {}
-                        },
-                        "image_8LXJKN": {
-                          "type": "image",
-                          "name": "t:names.image",
-                          "settings": {
-                            "image": "shopify://shop_images/thomas-covid19-response-supplier.png",
-                            "link": "",
-                            "image_ratio": "adapt",
-                            "image_ratio_mobile": "same",
-                            "width": "custom",
-                            "custom_width": 30,
-                            "width_tablet": "custom",
-                            "custom_width_tablet": 30,
-                            "width_mobile": "fill",
-                            "custom_width_mobile": 100,
-                            "height": "fit",
-                            "height_mobile": "fit",
-                            "border": "none",
-                            "border_width": 1,
-                            "border_opacity": 100,
-                            "border_radius": 0,
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0,
-                            "use_mobile_padding": false,
-                            "padding-block-start-mobile": 0,
-                            "padding-block-end-mobile": 0,
-                            "padding-inline-start-mobile": 0,
-                            "padding-inline-end-mobile": 0
-                          },
-                          "blocks": {}
                         }
                       },
                       "block_order": [
-                        "image_Aj8pih",
-                        "image_8LXJKN"
+                        "image_Aj8pih"
                       ]
                     }
                   },
