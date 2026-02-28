@@ -1102,7 +1102,7 @@
       },
       "name": "t:names.products_grid",
       "settings": {
-        "collection": "custom-canopies",
+        "collection": "{{ metaobjects.frames[\"light-steel-ds\"].collection_two.value }}",
         "layout_type": "grid",
         "carousel_on_mobile": true,
         "max_products": 6,
