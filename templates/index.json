@@ -4782,7 +4782,7 @@
                     "overlay_style": "solid",
                     "overlay_color": "#00000026",
                     "overlay_gradient": "",
-                    "link": "shopify://collections/custom-chairs-tables-umbrellas",
+                    "link": "shopify://collections/custom-walls",
                     "open_in_new_tab": false,
                     "placeholder": "",
                     "padding-block-start": 16,
@@ -4833,7 +4833,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p><strong>Chairs</strong></p>",
+                        "text": "<p><strong>Walls</strong></p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
