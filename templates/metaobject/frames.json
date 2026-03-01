@@ -759,7 +759,7 @@
       },
       "name": "t:names.products_grid",
       "settings": {
-        "collection": "{{ metaobjects.frames[\"light-steel-ds\"].collection_one.value }}",
+        "collection": "{{ metaobject.collection_one.value }}",
         "layout_type": "grid",
         "carousel_on_mobile": true,
         "max_products": 6,
