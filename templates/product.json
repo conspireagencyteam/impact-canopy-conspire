@@ -93,7 +93,7 @@
             "thumbnail_width": 80,
             "thumbnail_radius": 6,
             "thumbnail_gap": 12,
-            "aspect_ratio": "adapt",
+            "aspect_ratio": "1",
             "constrain_to_viewport": false,
             "media_fit": "contain",
             "media_radius": 16,
@@ -1338,7 +1338,7 @@
                 "accordion_row_jMQB9i": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "CANOPY TOP",
+                    "heading": "Additional Information",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -1388,7 +1388,7 @@
                 "accordion_row_3d6xzJ": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Warranty Information",
+                    "heading": "Included with Purchase",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -1438,7 +1438,7 @@
                 "accordion_row_qrgHAp": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "9' Wing Flag",
+                    "heading": "Product Highlights",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -1489,7 +1489,7 @@
                   "type": "_accordion-row",
                   "name": "t:names.accordion_row",
                   "settings": {
-                    "heading": "When will I get my order?",
+                    "heading": "Warranty Information",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -2562,8 +2562,8 @@
                   "type": "button",
                   "name": "t:names.button",
                   "settings": {
-                    "label": "Add Accessories",
-                    "link": "shopify://collections/canopy-accessories",
+                    "label": "Shop Custom",
+                    "link": "shopify://collections/custom-products",
                     "open_in_new_tab": false,
                     "style_class": "button-tertiary",
                     "button_size": "default",
@@ -2675,7 +2675,7 @@
                     "overlay_style": "solid",
                     "overlay_color": "#00000026",
                     "overlay_gradient": "",
-                    "link": "",
+                    "link": "shopify://collections/custom-flags",
                     "open_in_new_tab": false,
                     "placeholder": "",
                     "padding-block-start": 16,
@@ -2694,9 +2694,9 @@
                       "type": "image",
                       "name": "t:names.image",
                       "settings": {
-                        "image": "shopify://shop_images/CUSTOM-FLAGS-GRANDE-WING-1500x1500_1c6e8b45-704e-4339-b1c9-b959671aa6dd.jpg",
+                        "image": "shopify://shop_images/WEBSITE-COLLECTION-IMAGES-DISPALY-FLAGS.jpg",
                         "link": "",
-                        "image_ratio": "portrait",
+                        "image_ratio": "square",
                         "image_ratio_mobile": "same",
                         "width": "fill",
                         "custom_width": 100,
@@ -2799,7 +2799,7 @@
                     "overlay_style": "solid",
                     "overlay_color": "#00000026",
                     "overlay_gradient": "",
-                    "link": "",
+                    "link": "shopify://collections/custom-signs-banners",
                     "open_in_new_tab": false,
                     "placeholder": "",
                     "padding-block-start": 16,
@@ -2818,9 +2818,9 @@
                       "type": "image",
                       "name": "t:names.image",
                       "settings": {
-                        "image": "shopify://shop_images/060100202_1-Z-3.jpg",
+                        "image": "shopify://shop_images/WEBSITE-COLLECTION-IMAGES-SIGNS-_-BANNERS.jpg",
                         "link": "",
-                        "image_ratio": "portrait",
+                        "image_ratio": "square",
                         "image_ratio_mobile": "same",
                         "width": "fill",
                         "custom_width": 100,
@@ -2923,7 +2923,7 @@
                     "overlay_style": "solid",
                     "overlay_color": "#00000026",
                     "overlay_gradient": "",
-                    "link": "",
+                    "link": "shopify://collections/custom-walls",
                     "open_in_new_tab": false,
                     "placeholder": "",
                     "padding-block-start": 16,
@@ -2942,9 +2942,9 @@
                       "type": "image",
                       "name": "t:names.image",
                       "settings": {
-                        "image": "shopify://shop_images/colored_sidewalls-white.jpg",
+                        "image": "shopify://shop_images/WEBSITE-COLLECTION-IMAGES-CANOPY-WALLS.jpg",
                         "link": "",
-                        "image_ratio": "portrait",
+                        "image_ratio": "square",
                         "image_ratio_mobile": "same",
                         "width": "fill",
                         "custom_width": 100,
@@ -3047,7 +3047,7 @@
                     "overlay_style": "solid",
                     "overlay_color": "#00000026",
                     "overlay_gradient": "",
-                    "link": "",
+                    "link": "shopify://collections/custom-table-covers",
                     "open_in_new_tab": false,
                     "placeholder": "",
                     "padding-block-start": 16,
@@ -3066,9 +3066,9 @@
                       "type": "image",
                       "name": "t:names.image",
                       "settings": {
-                        "image": "shopify://shop_images/CUSTOM-FITTED-TABLE-COVER-1500x1500_1.jpg",
+                        "image": "shopify://shop_images/WEBSITE-COLLECTION-IMAGES-TABLE-COVERS.jpg",
                         "link": "",
-                        "image_ratio": "portrait",
+                        "image_ratio": "square",
                         "image_ratio_mobile": "same",
                         "width": "fill",
                         "custom_width": 100,
@@ -8123,7 +8123,7 @@
                       "name": "t:names.icon",
                       "settings": {
                         "icon": "price_tag",
-                        "image_upload": "shopify://shop_images/sarah_m..png",
+                        "image_upload": "shopify://shop_images/aaa_jv.jpg",
                         "width": 50,
                         "link": "",
                         "open_in_new_tab": false
@@ -8583,7 +8583,7 @@
                       "name": "t:names.icon",
                       "settings": {
                         "icon": "price_tag",
-                        "image_upload": "shopify://shop_images/sarah_m..png",
+                        "image_upload": "shopify://shop_images/AAA_TS.jpg",
                         "width": 50,
                         "link": "",
                         "open_in_new_tab": false
@@ -9043,7 +9043,7 @@
                       "name": "t:names.icon",
                       "settings": {
                         "icon": "price_tag",
-                        "image_upload": "shopify://shop_images/sarah_m..png",
+                        "image_upload": "shopify://shop_images/AAA_AD.jpg",
                         "width": 50,
                         "link": "",
                         "open_in_new_tab": false
@@ -9265,7 +9265,8 @@
             "color_scheme": "",
             "background_media": "image",
             "video_position": "cover",
-            "background_image": "shopify://shop_images/representative-image.png",
+            "background_image": "shopify://shop_images/group_7c23f500-6fdb-4c69-9187-2101b24d2368.jpg",
+            "background_image_mobile": "shopify://shop_images/group_sq.jpg",
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,

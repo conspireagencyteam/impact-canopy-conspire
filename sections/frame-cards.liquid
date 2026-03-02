@@ -168,7 +168,11 @@
 >
   {%  content_for 'block', id: 'staticHeader', type: 'text' %}
 
+
   {% assign table_rows = metaobjects.frames.values %}
+  {% if section.settings.meta_id != blank %}
+    {% assign table_rows = section.settings.meta_id %}
+  {% endif %}
 
   {% comment %} Horizontal Tabs {% endcomment %}
   <div class="frame-cards__tabs-wrapper">
@@ -325,6 +329,12 @@
     }
   ],
   "settings": [
+    {
+      "type": "metaobject_list",
+      "id": "meta_id",
+      "label": "Metaobject",
+      "metaobject_type": "frames"
+    },
     {
       "type": "header",
       "content": "Section Layout"

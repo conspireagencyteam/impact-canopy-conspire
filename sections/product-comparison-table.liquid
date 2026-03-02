@@ -420,6 +420,9 @@
       </thead>
       <tbody class="product-comparison-table__tbody">
         {% assign table_rows = metaobjects.frames.values %}
+        {% if section.settings.meta_id != blank %}
+          {% assign table_rows = section.settings.meta_id %}
+        {% endif %}
         {% for row in table_rows %}
           {% assign logo_value = row.logo %}
           {% assign material_value = row.material %}
@@ -664,6 +667,12 @@
   "class": "product-comparison-table-section",
   "tag": "section",
   "settings": [
+    {
+      "type": "metaobject_list",
+      "id": "meta_id",
+      "label": "Metaobject",
+      "metaobject_type": "frames"
+    },
     {
       "type": "header",
       "content": "Table Headers"

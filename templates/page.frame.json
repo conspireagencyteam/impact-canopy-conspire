@@ -543,11 +543,21 @@
       },
       "name": "Product Comparison Table",
       "settings": {
+        "meta_id": [
+          "light-steel-ds",
+          "heavy-duty-steel-cl",
+          "commercial-steel-ml",
+          "super-duty-aluminum-m",
+          "extreme-aluminum-mx",
+          "recreational-steel-tl",
+          "expodome",
+          "impact-air"
+        ],
         "header_material": "Material",
         "header_structure_color": "Structure Color",
         "header_latch": "Latch",
         "header_best_for": "Best For",
-        "header_availability": "Availability",
+        "header_availability": "Parts",
         "section_width": "page-width",
         "mobile_layout": "sticky",
         "gap": 24,
@@ -840,6 +850,16 @@
       },
       "name": "Frame Cards",
       "settings": {
+        "meta_id": [
+          "light-steel-ds",
+          "heavy-duty-steel-cl",
+          "commercial-steel-ml",
+          "super-duty-aluminum-m",
+          "extreme-aluminum-mx",
+          "recreational-steel-tl",
+          "expodome",
+          "impact-air"
+        ],
         "section_width": "page-width",
         "gap": 24,
         "color_scheme": "scheme-3",
