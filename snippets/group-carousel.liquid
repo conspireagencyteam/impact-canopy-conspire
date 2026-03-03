@@ -1,0 +1,193 @@
+{%- doc -%}
+  Renders a carousel of group items
+
+  @param {string} ref - The ref of the slideshow
+  @param {array} slides - An array of HTML for the slides
+  @param {number} slide_count - The number of slides
+  @param {object} settings - The block settings
+{%- enddoc -%}
+
+{% liquid
+  assign slideshow_ref = ref | default: 'groupCarousel'
+  if settings.section_width == 'page-width' or settings.section_width == 'custom'
+    assign slideshow_gutters = 'start end'
+  else
+    assign slideshow_gutters = 'null'
+  endif
+
+  assign render_slideshow_controls = false
+  if settings.layout_type == 'carousel' and settings.autoplay or settings.slideshow_controls_style != 'none'
+    assign render_slideshow_controls = true
+  endif
+
+  assign render_mobile_slideshow_controls = false
+
+  if settings.slideshow_controls_style != settings.slideshow_mobile_controls_style
+    assign slideshow_controls_class = 'mobile:hidden'
+  endif
+
+  if settings.layout_type == 'grid' or settings.slideshow_controls_style != settings.slideshow_mobile_controls_style
+    assign render_mobile_slideshow_controls = true
+  endif
+
+  assign slideshow_controls_style = settings.slideshow_controls_style
+  # Use a counter instead of dots when there are many images to avoid cropping/overflow.
+  if slideshow_controls_style == 'dots' and slide_count > 10
+    assign slideshow_controls_style = 'counter'
+  endif
+  assign arrows_on_media = true
+
+  assign slideshow_class = 'resource-list__carousel'
+%}
+
+{% capture slides_html %}
+  {% for item in slides limit: slides.size %}
+    {% render 'slideshow-slide',
+      index: forloop.index0,
+      children: item,
+      class: 'resource-list__slide'
+    %}
+  {% endfor %}
+{% endcapture %}
+
+<div
+  class="group-carousel__wrapper resource-list__carousel"
+  style="
+    {% if settings.section_width == 'page-width' or settings.section_width == 'custom' %}
+      --gutter-slide-width: var(--util-page-margin-offset);
+    {% elsif settings.section_width == 'full-width' %}
+      --gutter-slide-width: 0px;
+    {% endif %}
+    --slide-width-max: 450px;
+    {% if settings.full_width_on_mobile %}
+      --slide-width--mobile: 90%;
+      --peek-next-slide-size: 10%;
+    {% endif %}
+    container-name: resource-list-carousel;
+    container-type: inline-size;
+  "
+>
+  {% if slide_count > 1 %}
+    {% capture controls %}
+      {% if render_slideshow_controls %}
+        {%- render 'slideshow-controls',
+          class: slideshow_controls_class,
+          style: slideshow_controls_style,
+          item_count: slide_count,
+          pagination_position: 'center',
+          arrows_on_media: arrows_on_media,
+          autoplay: settings.autoplay
+        -%}
+      {% endif %}
+
+      {% if render_mobile_slideshow_controls %}
+        {%- render 'slideshow-controls',
+          class: 'desktop:hidden media-gallery__mobile-controls resource-list__mobile-controls',
+          style: settings.slideshow_mobile_controls_style,
+          item_count: slide_count,
+          pagination_position: 'center',
+          arrows_on_media: arrows_on_media,
+          autoplay: settings.autoplay
+        -%}
+      {% endif %}
+    {% endcapture %}
+  {% endif %}
+
+  {% liquid
+    # Determine mobile arrow behavior
+    if settings.icons_style_mobile == 'none'
+      # Mobile arrows explicitly disabled
+      assign render_mobile_arrows = false
+      assign has_separate_mobile_arrows = true
+    elsif settings.icons_style_mobile != blank and settings.icons_style_mobile != nil
+      # Mobile has separate arrow style
+      assign render_mobile_arrows = true
+      assign has_separate_mobile_arrows = true
+      assign mobile_icon_style = settings.icons_style_mobile
+    else
+      # Use desktop arrows for both
+      assign render_mobile_arrows = true
+      assign has_separate_mobile_arrows = false
+    endif
+  %}
+
+  {% capture slideshow_arrows %}
+    {% if has_separate_mobile_arrows %}
+      {% render 'slideshow-arrows', icon_style: settings.icons_style, icon_shape: settings.icons_shape, arrows_position: settings.slideshow_controls_position, class: 'mobile:hidden' %}
+      {% if render_mobile_arrows %}
+        {% render 'slideshow-arrows', icon_style: mobile_icon_style, icon_shape: settings.icons_shape, arrows_position: settings.slideshow_controls_position, class: 'desktop:hidden' %}
+      {% endif %}
+    {% else %}
+      {% render 'slideshow-arrows', icon_style: settings.icons_style, icon_shape: settings.icons_shape, arrows_position: settings.slideshow_controls_position %}
+    {% endif %}
+  {% endcapture %}
+
+  {% render 'slideshow',
+    ref: slideshow_ref,
+    class: slideshow_class,
+    slides: slides_html,
+    slideshow_arrows: slideshow_arrows,
+    auto_hide_controls: false,
+    infinite: settings.autoplay,
+    initial_slide: 0,
+    slide_count: slide_count,
+    slideshow_gutters: slideshow_gutters,
+    arrows_position: settings.slideshow_controls_position,
+    controls: controls,
+    autoplay: settings.autoplay,
+    autoplay_speed: settings.autoplay_speed
+  %}
+</div>
+
+{% stylesheet %}
+  slideshow-component:has(slideshow-arrows[position='bottom']) {
+    gap: var(--gap);
+  }
+  slideshow-arrows[position="bottom"] .slideshow-control {
+    opacity: 1;
+  }
+
+  @container resource-list-carousel (width < 750px) {
+    .resource-list__carousel .resource-list__slide {
+      --slide-width: 90%;
+    }
+
+    .group-carousel__wrapper {
+      margin-inline-end: calc(-1 * var(--peek-next-slide-size, 0px));
+      padding-inline-end: var(--peek-next-slide-size, 0px);
+      overflow: visible;
+    }
+
+    .group-carousel__wrapper slideshow-component {
+      overflow: visible;
+    }
+
+    .group-carousel__wrapper slideshow-slides {
+      gap: 16px;
+      padding-inline-end: 10%;
+    }
+  }
+  .group-carousel__wrapper slideshow-controls:has(.slideshow-controls__dots) {
+    mix-blend-mode: unset;
+  }
+  .group-carousel__wrapper .slideshow-controls__dots {
+    margin-block-start: 5px;
+  }
+  .group-carousel__wrapper .slideshow-controls__dots button {
+    --color: rgb(var(--color-foreground-heading-rgb) / 0.2);
+    --width: 6px;
+    --height: 6px;
+    width: calc(var(--width) * 2);
+    height: calc(var(--height) * 2);
+    margin: calc(var(--height) / 2) calc(var(--width) / -2);
+  }
+
+  .group-carousel__wrapper .slideshow-controls__dots button:after {
+    width: var(--width);
+    height: var(--height);
+  }
+
+  .group-carousel__wrapper .slideshow-controls__dots button[aria-selected='true'] {
+    --color: var(--color-foreground-heading);
+  }
+{% endstylesheet %}
