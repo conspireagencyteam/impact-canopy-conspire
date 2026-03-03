@@ -184,6 +184,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -233,6 +234,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -362,6 +364,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -491,6 +494,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -653,8 +657,8 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 48,
-        "padding-block-end": 48,
+        "padding-block-start": 0,
+        "padding-block-end": 0,
         "use_mobile_padding": false,
         "padding-block-start-mobile": 0,
         "padding-block-end-mobile": 0
@@ -957,6 +961,7 @@
           "type": "group",
           "static": true,
           "settings": {
+            "display": "all",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -1368,6 +1373,7 @@
                   "type": "group",
                   "name": "Tagline",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
