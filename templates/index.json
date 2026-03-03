@@ -48,6 +48,7 @@
             "group_PyMtpL": {
               "type": "group",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -277,6 +278,7 @@
             "group_KYWqki": {
               "type": "group",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -622,6 +624,7 @@
                   "type": "group",
                   "name": "Logo",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -720,6 +723,7 @@
                   "type": "group",
                   "name": "Logo",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -818,6 +822,7 @@
                   "type": "group",
                   "name": "Logo",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -916,6 +921,7 @@
                   "type": "group",
                   "name": "Logo",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -1014,6 +1020,7 @@
                   "type": "group",
                   "name": "Logo",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -1112,6 +1119,7 @@
                   "type": "group",
                   "name": "Logo",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -1210,6 +1218,7 @@
                   "type": "group",
                   "name": "Logo",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -1428,6 +1437,7 @@
           "type": "group",
           "name": "Card group",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -1477,6 +1487,7 @@
               "type": "group",
               "name": "Card",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -1601,6 +1612,7 @@
               "type": "group",
               "name": "Card",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -1725,6 +1737,7 @@
               "type": "group",
               "name": "Card",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -1849,6 +1862,7 @@
               "type": "group",
               "name": "Card",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -1973,6 +1987,7 @@
               "type": "group",
               "name": "Card",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -2189,6 +2204,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -2507,8 +2523,18 @@
         "mobile_card_size": "60cqw",
         "columns_gap": 8,
         "rows_gap": 24,
+        "columns_gap_mobile": 8,
+        "rows_gap_mobile": 8,
         "icons_style": "arrow",
         "icons_shape": "none",
+        "full_width_on_mobile": false,
+        "slideshow_controls_style": "none",
+        "slideshow_mobile_controls_style": "dots",
+        "dot_style_type": "default",
+        "dot_background_color": "#ffffff",
+        "dot_active_background_color": "#000000",
+        "dot_border_color": "#000000",
+        "dot_active_border_color": "#000000",
         "section_width": "page-width",
         "horizontal_alignment": "flex-start",
         "gap": 28,
@@ -2529,6 +2555,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -2578,6 +2605,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -2741,6 +2769,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -2790,6 +2819,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -2952,6 +2982,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -3114,6 +3145,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -3276,6 +3308,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -3446,6 +3479,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -3495,6 +3529,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -3657,6 +3692,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -3819,6 +3855,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -3981,6 +4018,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -4193,6 +4231,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "display": "all",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -4243,6 +4282,7 @@
               "type": "group",
               "name": "Head",
               "settings": {
+                "display": "all",
                 "content_direction": "row",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -4292,6 +4332,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -4455,6 +4496,7 @@
               "type": "group",
               "name": "Collection Cards",
               "settings": {
+                "display": "all",
                 "content_direction": "row",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -4504,6 +4546,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -4628,6 +4671,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -4752,6 +4796,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -4876,6 +4921,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -5095,6 +5141,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -5413,8 +5460,18 @@
         "mobile_card_size": "60cqw",
         "columns_gap": 8,
         "rows_gap": 24,
+        "columns_gap_mobile": 8,
+        "rows_gap_mobile": 8,
         "icons_style": "arrow",
         "icons_shape": "circle",
+        "full_width_on_mobile": false,
+        "slideshow_controls_style": "none",
+        "slideshow_mobile_controls_style": "dots",
+        "dot_style_type": "default",
+        "dot_background_color": "#ffffff",
+        "dot_active_background_color": "#000000",
+        "dot_border_color": "#000000",
+        "dot_active_border_color": "#000000",
         "section_width": "page-width",
         "horizontal_alignment": "flex-start",
         "gap": 28,
@@ -5435,6 +5492,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "display": "all",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -5485,6 +5543,7 @@
               "type": "group",
               "name": "Head",
               "settings": {
+                "display": "all",
                 "content_direction": "row",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -5534,6 +5593,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -5697,6 +5757,7 @@
               "type": "group",
               "name": "Collection Cards",
               "settings": {
+                "display": "all",
                 "content_direction": "row",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -5746,6 +5807,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -5923,6 +5985,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -6100,6 +6163,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -6277,6 +6341,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -6508,6 +6573,7 @@
           "type": "group",
           "name": "Head",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -6557,6 +6623,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -6904,8 +6971,18 @@
         "mobile_card_size": "60cqw",
         "columns_gap": 20,
         "rows_gap": 8,
+        "columns_gap_mobile": 16,
+        "rows_gap_mobile": 16,
         "icons_style": "arrow",
         "icons_shape": "none",
+        "full_width_on_mobile": false,
+        "slideshow_controls_style": "none",
+        "slideshow_mobile_controls_style": "dots",
+        "dot_style_type": "default",
+        "dot_background_color": "#ffffff",
+        "dot_active_background_color": "#000000",
+        "dot_border_color": "#000000",
+        "dot_active_border_color": "#000000",
         "section_width": "page-width",
         "gap": 20,
         "color_scheme": "scheme-3",
@@ -6925,6 +7002,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "display": "all",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -6976,6 +7054,7 @@
               "type": "group",
               "name": "Head",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -7025,6 +7104,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -7227,6 +7307,7 @@
               "name": "Product Cards",
               "disabled": true,
               "settings": {
+                "display": "all",
                 "content_direction": "row",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -7822,6 +7903,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "display": "all",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -7872,6 +7954,7 @@
               "type": "group",
               "name": "Head",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -7921,6 +8004,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -8130,6 +8214,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "display": "all",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -8180,6 +8265,7 @@
               "type": "group",
               "name": "Head",
               "settings": {
+                "display": "all",
                 "content_direction": "row",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -8229,6 +8315,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -8392,6 +8479,7 @@
               "type": "group",
               "name": "Collection Cards",
               "settings": {
+                "display": "all",
                 "content_direction": "row",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -8441,6 +8529,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -8565,6 +8654,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -8646,7 +8736,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p><strong>Event Tents</strong></p>",
+                        "text": "<p><strong>Event/Storage Tents</strong></p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -8689,6 +8779,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -8813,6 +8904,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -9246,8 +9338,18 @@
         "mobile_card_size": "60cqw",
         "columns_gap": 8,
         "rows_gap": 24,
+        "columns_gap_mobile": 8,
+        "rows_gap_mobile": 8,
         "icons_style": "arrow",
         "icons_shape": "circle",
+        "full_width_on_mobile": false,
+        "slideshow_controls_style": "none",
+        "slideshow_mobile_controls_style": "dots",
+        "dot_style_type": "default",
+        "dot_background_color": "#ffffff",
+        "dot_active_background_color": "#000000",
+        "dot_border_color": "#000000",
+        "dot_active_border_color": "#000000",
         "section_width": "page-width",
         "horizontal_alignment": "flex-start",
         "gap": 28,
@@ -9268,6 +9370,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "display": "all",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -9696,6 +9799,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "display": "all",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -9820,6 +9924,7 @@
               "type": "group",
               "name": "Image with text",
               "settings": {
+                "display": "all",
                 "content_direction": "row",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -9992,6 +10097,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "display": "all",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -10042,6 +10148,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "display": "all",
                 "content_direction": "row",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -10293,6 +10400,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -10343,6 +10451,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -10472,6 +10581,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -10601,6 +10711,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -10730,6 +10841,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -10859,6 +10971,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -11038,6 +11151,7 @@
           "type": "group",
           "name": "Desktop Only",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -11119,6 +11233,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "display": "all",
                 "content_direction": "row",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -11168,6 +11283,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -11337,6 +11453,7 @@
           "type": "group",
           "name": "Mobile Only",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -11386,6 +11503,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "display": "all",
                 "content_direction": "row",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -11436,6 +11554,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -11645,6 +11764,7 @@
           "type": "group",
           "name": "t:names.column",
           "settings": {
+            "display": "all",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -11786,6 +11906,7 @@
           "type": "group",
           "name": "t:names.column",
           "settings": {
+            "display": "all",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -11927,6 +12048,7 @@
           "type": "group",
           "name": "t:names.column",
           "settings": {
+            "display": "all",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -12068,6 +12190,7 @@
           "type": "group",
           "name": "t:names.column",
           "settings": {
+            "display": "all",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
