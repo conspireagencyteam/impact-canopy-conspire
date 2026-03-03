@@ -1,4 +1,3 @@
-<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {% if closest.collection == blank %}
   {% assign text = 'placeholders.collection_title' | t %}
   {% assign collection_title = '<p>' | append: text | append: '</p>' %}
@@ -7,7 +6,6 @@
   {% assign collection_title = '<p>' | append: closest.collection.title | append: '</p>' %}
   {% render 'text', fallback_text: collection_title, block: block %}
 {% endif %}
-</div>
 
 {% schema %}
 {

@@ -1,4 +1,3 @@
-<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {% capture children %}
   {% content_for 'blocks' %}
 {% endcapture %}
@@ -9,7 +8,6 @@
   settings: block.settings,
   shopify_attributes: block.shopify_attributes
 %}
-</div>
 
 {% schema %}
 {

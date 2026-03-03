@@ -1,4 +1,3 @@
-<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {% assign title = item.name %}
 {% assign description = item.description | metafield_tag %}
 {% assign points = item.speciality %}
@@ -13,7 +12,6 @@
 {% endcapture %}
 
 {% render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
-</div>
 
 {% schema %}
 {

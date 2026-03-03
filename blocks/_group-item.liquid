@@ -1,4 +1,3 @@
-<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {%- capture children %}
   {% content_for 'blocks' %}
 {% endcapture %}
@@ -7,7 +6,6 @@
   {% render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
 </div>
 <!--@list/split-->
-</div>
 
 {% schema %}
 {

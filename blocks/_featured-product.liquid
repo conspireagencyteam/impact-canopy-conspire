@@ -1,4 +1,3 @@
-<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {% capture product_card_children %}
   <div class="featured-product-content-top">
     {% content_for 'block', type: 'product-title', id: 'featured-product-title' %}
@@ -25,7 +24,6 @@
     display: none;
   }
 {% endstylesheet %}
-</div>
 
 {% schema %}
 {

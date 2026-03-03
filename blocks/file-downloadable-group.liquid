@@ -1,4 +1,3 @@
-<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {%- capture children %}
   {% assign instruction_sheet = product.metafields.custom.instructions.value %}
   {% assign design_sheet = product.metafields.custom.design_template.value %}
@@ -56,7 +55,6 @@
     }
   }
 </style>
-</div>
 
 {% schema %}
 {

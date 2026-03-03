@@ -1,11 +1,9 @@
-<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {%- capture children %}
   {% content_for 'block', type: '_group-category-image', id: 'staticImageGroup', item: item %}
   {% content_for 'block', type: '_group-category-details', id: 'staticDetailsGroup', item: item %}
 {% endcapture %}
 
 {% render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
-</div>
 
 {% schema %}
 {

@@ -1,4 +1,3 @@
-<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {%- if shop.features.follow_on_shop? -%}
   <div
     class="spacing-style"
@@ -8,7 +7,6 @@
     {{ shop | login_button: action: 'follow' }}
   </div>
 {%- endif -%}
-</div>
 
 {% schema %}
 {

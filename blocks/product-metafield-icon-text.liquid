@@ -1,4 +1,3 @@
-<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {%- liquid
   # Get icon with text metaobjects from product
   assign icon_text_items = product.metafields.custom.icon_with_text_and_description.value
@@ -134,7 +133,6 @@
       <p>No icon with text items found. Add metaobjects to the product to display them here.</p>
     </div>
 {%- endif -%}
-</div>
 
 {% schema %}
 {

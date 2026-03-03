@@ -1,9 +1,7 @@
-<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {% assign placeholder = 'content.featured_products' | t %}
 {% assign placeholder = '<h3>' | append: placeholder | append: '</h3>' %}
 
 {% render 'text', fallback_text: placeholder, block: block %}
-</div>
 
 {% schema %}
 {

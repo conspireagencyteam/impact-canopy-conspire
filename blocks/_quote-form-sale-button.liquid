@@ -1,4 +1,3 @@
-<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {% assign block_settings = block.settings %}
 {% if fallback_link != blank %}
 {% render 'button', fallback_label: fallback_text, link: fallback_link %}
@@ -236,7 +235,6 @@
     flex-shrink: 0;
   }
 {% endstylesheet %}
-</div>
 
 {% schema %}
 {

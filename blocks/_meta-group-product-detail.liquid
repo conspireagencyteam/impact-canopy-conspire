@@ -1,11 +1,9 @@
-<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {%- capture children %}
   {% content_for 'block', id: 'staticText', type: '_meta-title', item: item %}
   {% content_for 'block', id: 'staticButton', type: '_meta-button', fallback_link: fallback_link, fallback_label: fallback_label %}
 {% endcapture %}
 
 {% render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
-</div>
 
 {% schema %}
 {
