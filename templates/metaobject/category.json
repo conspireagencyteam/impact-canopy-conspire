@@ -1423,7 +1423,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Your sales rep for Lacrosse</p>",
+                        "text": "<p>Your sales rep for {{ closest.metaobject.category.name.value }}</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
