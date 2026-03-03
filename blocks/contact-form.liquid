@@ -1,14 +1,37 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {% capture submit_button %}
   {% content_for 'block', type: 'contact-form-submit-button', id: 'submit-button' %}
 {% endcapture %}
 
 {% render 'contact-form', settings: block.settings, submit_button: submit_button %}
+</div>
 
 {% schema %}
 {
   "name": "t:names.contact_form",
   "tag": null,
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "select",
       "id": "width",

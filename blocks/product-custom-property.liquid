@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {%- liquid
   assign block_settings = block.settings
   assign property_name = 'properties[custom-property]' | replace: 'custom-property', block_settings.property_key
@@ -208,12 +209,34 @@
   type="module"
   fetchpriority="low"
 ></script>
+</div>
 
 {% schema %}
 {
   "name": "t:names.product_custom_property",
   "tag": "product-custom-property-component",
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "text",
       "id": "property_heading",

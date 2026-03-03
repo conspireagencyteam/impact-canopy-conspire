@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {% assign block_settings = block.settings %}
 <div
   class="accordion accordion--{{ block.id }} accordion--{{ block_settings.icon }} border-style spacing-style{% if block_settings.inherit_color_scheme == false %} color-{{ block_settings.color_scheme }}{% endif %}{% if block_settings.dividers %} accordion--dividers{% endif %}"
@@ -78,6 +79,7 @@
     min-height: var(--minimum-touch-target);
   }
 {% endstylesheet %}
+</div>
 
 {% schema %}
 {
@@ -90,6 +92,27 @@
     }
   ],
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "select",
       "id": "icon",

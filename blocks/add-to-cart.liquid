@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {%- doc -%}
   This block is used to display the add to cart button.
   Intended for product-form.liquid block.
@@ -23,12 +24,34 @@
     add_to_cart_text: add_to_cart_text
   %}
 </span>
+</div>
 
 {% schema %}
 {
   "name": "t:names.add_to_cart",
   "tag": null,
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "select",
       "id": "style_class",

@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {% capture product_card_children %}
   <div class="featured-product-content-top">
     {% content_for 'block', type: 'product-title', id: 'featured-product-title' %}
@@ -24,12 +25,34 @@
     display: none;
   }
 {% endstylesheet %}
+</div>
 
 {% schema %}
 {
   "name": "t:names.product",
   "tag": null,
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "paragraph",
       "content": "t:content.resource_reference_product_card"

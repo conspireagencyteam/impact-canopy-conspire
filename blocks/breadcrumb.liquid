@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {%- liquid
   # Only render on product pages
   unless product
@@ -203,11 +204,33 @@
     }
   }
 {% endstylesheet %}
+</div>
 
 {% schema %}
 {
   "name": "Product Breadcrumb",
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "collection_list",
       "id": "custom_collections",

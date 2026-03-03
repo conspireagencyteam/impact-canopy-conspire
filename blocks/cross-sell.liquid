@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {%- doc -%}
   Cross-sell block that displays products from the metafield custom.product_accessories.
   Each product card has: image, title/price group, and buy button.
@@ -135,12 +136,34 @@
     cursor: not-allowed;
   }
 {% endstylesheet %}
+</div>
 
 {% schema %}
 {
   "name": "Cross Sell",
   "tag": null,
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "text",
       "id": "heading",

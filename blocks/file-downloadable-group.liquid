@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {%- capture children %}
   {% assign instruction_sheet = product.metafields.custom.instructions.value %}
   {% assign design_sheet = product.metafields.custom.design_template.value %}
@@ -55,12 +56,34 @@
     }
   }
 </style>
+</div>
 
 {% schema %}
 {
   "name": "File Downloadable Group",
   "tag": null,
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "header",
       "content": "t:content.layout"

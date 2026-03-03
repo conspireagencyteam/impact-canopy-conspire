@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {% assign block_settings = block.settings %}
 {% if fallback_link != blank %}
 {% render 'button', fallback_label: fallback_text, link: fallback_link %}
@@ -235,12 +236,34 @@
     flex-shrink: 0;
   }
 {% endstylesheet %}
+</div>
 
 {% schema %}
 {
   "name": "Quote Form Button",
   "tag": null,
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "header",
       "content": "Button Type"

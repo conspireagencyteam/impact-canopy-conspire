@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {% liquid
   assign has_applied_colour_filter = false
   assign filters_to_check = collection.filters | default: search.filters
@@ -29,12 +30,34 @@
     <h3 class="h4">{{ closest.product.title }}</h3>
   {% endif %}
 </div>
+</div>
 
 {% schema %}
 {
   "name": "t:names.product_image",
   "tag": null,
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "paragraph",
       "content": "t:content.resource_reference_product_media"

@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {%- if shop.features.follow_on_shop? -%}
   <div
     class="spacing-style"
@@ -7,12 +8,34 @@
     {{ shop | login_button: action: 'follow' }}
   </div>
 {%- endif -%}
+</div>
 
 {% schema %}
 {
   "name": "t:names.follow_on_shop",
   "tag": null,
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "paragraph",
       "content": "t:content.follow_on_shop_eligiblity"

@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {% assign block_settings = block.settings %}
 
 <script
@@ -94,6 +95,7 @@
     animation: none;
   }
 {% endstylesheet %}
+</div>
 
 {% schema %}
 {
@@ -108,6 +110,27 @@
   ],
   "tag": null,
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "header",
       "content": "t:content.popup"

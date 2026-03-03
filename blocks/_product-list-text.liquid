@@ -1,13 +1,36 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {% assign placeholder = 'content.featured_products' | t %}
 {% assign placeholder = '<h3>' | append: placeholder | append: '</h3>' %}
 
 {% render 'text', fallback_text: placeholder, block: block %}
+</div>
 
 {% schema %}
 {
   "name": "t:names.collection_title",
   "tag": null,
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "richtext",
       "id": "text",

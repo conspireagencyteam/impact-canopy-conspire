@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {% assign block_settings = block.settings %}
 <div
   class="collection-info collection-info--{{ block_settings.placement }} color-{{ block_settings.color_scheme }}"
@@ -11,6 +12,7 @@
   <div class="collection-info__controls collection-info__controls--{{ block_settings.navigation }}">
     {%- render 'slideshow-controls', icon_style: block_settings.icons_style, shape: block_settings.background_style -%}
   </div>
+</div>
 </div>
 
 {% schema %}
@@ -26,6 +28,27 @@
     }
   ],
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "select",
       "id": "placement",

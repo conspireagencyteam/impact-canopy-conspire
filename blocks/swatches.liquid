@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {%- liquid
   assign block_settings = block.settings
   for product_option in closest.product.options_with_values
@@ -96,12 +97,34 @@
     color: var(--color-foreground-rgb);
   }
 {% endstylesheet %}
+</div>
 
 {% schema %}
 {
   "name": "t:names.swatches",
   "tag": null,
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "paragraph",
       "content": "t:content.resource_reference_product_swatches"

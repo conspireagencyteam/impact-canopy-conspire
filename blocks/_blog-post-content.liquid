@@ -14,7 +14,28 @@
 {% schema %}
 {
   "name": "t:names.content",
-  "settings": [],
+  "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    }
+  ],
   "presets": [
     {
       "name": "t:names.content"

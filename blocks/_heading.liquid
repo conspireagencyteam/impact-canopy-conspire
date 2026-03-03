@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {%- doc -%}
   Renders a heading block.
 
@@ -7,11 +8,34 @@
 {% render 'text', width: '100%', block: block, fallback_text: text %}
 
 {% # theme-check-disable %}
+</div>
+
 {% schema %}
 {
   "name": "t:names.heading",
   "tag": null,
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "select",
       "id": "type_preset",

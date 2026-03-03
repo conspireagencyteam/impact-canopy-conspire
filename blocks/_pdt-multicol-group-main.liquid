@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {%- capture children %}
   {% content_for 'block', type: '_pdt-multicol-group-left', id: 'pdtMulticolLeft' %}
   {% content_for 'block', type: '_pdt-multicol-group-center', id: 'pdtMulticolCenter' %}
@@ -7,6 +8,7 @@
 {% if product.metafields.custom.product_multicolumn_left.value != blank and product.metafields.custom.product_multicolumn_left.value != blank %}
 {% render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
 {% endif %}
+</div>
 
 {% schema %}
 {
@@ -24,6 +26,27 @@
     }
   ],
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "header",
       "content": "t:content.layout"

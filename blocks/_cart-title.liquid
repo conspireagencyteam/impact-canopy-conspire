@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {% assign block_settings = block.settings %}
 
 <div
@@ -48,12 +49,34 @@
     font-size: clamp(var(--cart-font-size--2xs), 0.7lh, var(--cart-font-size--xs));
   }
 {% endstylesheet %}
+</div>
 
 {% schema %}
 {
   "name": "t:names.title",
   "tag": null,
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "inline_richtext",
       "id": "title",

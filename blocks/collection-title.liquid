@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {% if closest.collection == blank %}
   {% assign text = 'placeholders.collection_title' | t %}
   {% assign collection_title = '<p>' | append: text | append: '</p>' %}
@@ -6,12 +7,34 @@
   {% assign collection_title = '<p>' | append: closest.collection.title | append: '</p>' %}
   {% render 'text', fallback_text: collection_title, block: block %}
 {% endif %}
+</div>
 
 {% schema %}
 {
   "name": "t:names.collection_title",
   "tag": null,
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "paragraph",
       "content": "t:content.resource_reference_collection_title"

@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {%- liquid
   # Get FAQ metaobjects from product
   assign faq_items = product.metafields.custom.faq.value
@@ -185,6 +186,7 @@
     font-size: 0.75rem;
   }
 {% endstylesheet %}
+</div>
 
 {% schema %}
 {
@@ -192,6 +194,27 @@
   "tag": null,
   "class": "accordion",
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "header",
       "content": "FAQ Source"

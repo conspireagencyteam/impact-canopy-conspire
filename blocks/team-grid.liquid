@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {%- liquid
   assign metaobject_list = block.settings.team_members
 -%}
@@ -111,6 +112,7 @@
     </p>
   </div>
 {%- endif -%}
+</div>
 
 {% schema %}
 {
@@ -129,6 +131,27 @@
     }
   ],
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "metaobject_list",
       "metaobject_type": "team",

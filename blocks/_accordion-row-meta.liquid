@@ -1,3 +1,4 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {% assign block_settings = block.settings %}
 {% capture blocks_detail %}
   {% content_for 'blocks' %}
@@ -44,6 +45,7 @@
     margin-inline-end: var(--margin-xs);
   }
 {% endstylesheet %}
+</div>
 
 {% schema %}
 {
@@ -58,6 +60,27 @@
     }
   ],
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "text",
       "id": "heading",

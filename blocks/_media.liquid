@@ -1,10 +1,33 @@
+<div class="block-visibility block-visibility--{{ block.settings.display }}">
 {% render 'media', section_id: section.id %}
+</div>
 
 {% schema %}
 {
   "name": "t:names.media",
   "tag": null,
   "settings": [
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "all",
+          "label": "Show on all devices"
+        },
+        {
+          "value": "desktop-hidden",
+          "label": "Hidden on desktop"
+        },
+        {
+          "value": "mobile-hidden",
+          "label": "Hidden on mobile"
+        }
+      ],
+      "default": "all"
+    },
+   
     {
       "type": "select",
       "id": "media_type",
