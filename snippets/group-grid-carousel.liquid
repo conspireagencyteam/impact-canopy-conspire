@@ -46,6 +46,7 @@
     spacing-style
     {% if settings.inherit_color_scheme == false %} color-{{ settings.color_scheme }}{% endif %}
     block-resource-list
+    {% if settings.full_width_on_mobile %}full-width-mobile{% endif %}
   "
   style="
     --column-count-mobile: {{ settings.mobile_columns }};
@@ -122,7 +123,7 @@
             if settings.full_width_on_mobile
               assign mobile_slide_count = list_items_array.size
             else
-              assign mobile_slide_count = list_items_array.size | plus: 1 | minus: settings.mobile_columns
+              assign mobile_slide_count = list_items_array.size
             endif
           %}
           {% render 'group-carousel',
@@ -193,7 +194,7 @@
   }
 
   @media screen and (max-width: 749px) {
-    .grid-carousel-group > .block-resource-list {
+    .grid-carousel-group > .block-resource-list.full-width-mobile {
       margin-right: -15px !important;
     }
 
