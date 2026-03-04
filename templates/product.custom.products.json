@@ -3055,7 +3055,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2> Modular aluminum (ExpoDome)</h2>",
+                    "text": "<h2> Modular Aluminum (ExpoDome)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -3092,7 +3092,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Pro tournaments, high-wind environments</p>",
+                    "text": "<p>Stand out appearance and modular setup</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
