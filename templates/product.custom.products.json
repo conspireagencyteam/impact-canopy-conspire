@@ -1968,7 +1968,7 @@
                 "overlay_style": "solid",
                 "overlay_color": "#00000026",
                 "overlay_gradient": "",
-                "link": "",
+                "link": "{{ metaobjects.frames[\"recreational-steel-tl\"].system.url }}",
                 "open_in_new_tab": false,
                 "placeholder": "",
                 "padding-block-start": 24,
