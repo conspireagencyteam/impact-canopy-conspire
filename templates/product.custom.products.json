@@ -1854,7 +1854,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "Explore Frame Options",
-                "link": "shopify://collections",
+                "link": "shopify://pages/find-your-frame",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "button_size": "default",
