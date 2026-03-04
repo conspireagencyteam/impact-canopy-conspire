@@ -6089,10 +6089,10 @@
         "padding-block-end-mobile": 0
       }
     },
-    "section_M3B3qn": {
+    "section_mXfaLw": {
       "type": "section",
       "blocks": {
-        "group_UTz8dt": {
+        "group_H7XVdL": {
           "type": "group",
           "name": "Header",
           "settings": {
@@ -6142,7 +6142,7 @@
             "custom_class": ""
           },
           "blocks": {
-            "group_pDpjqj": {
+            "group_QGMAK3": {
               "type": "group",
               "name": "t:names.group",
               "settings": {
@@ -6192,7 +6192,7 @@
                 "custom_class": ""
               },
               "blocks": {
-                "text_LfCB6N": {
+                "text_tPM8tV": {
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
@@ -6229,7 +6229,7 @@
                   },
                   "blocks": {}
                 },
-                "text_Yc7iPP": {
+                "text_jDnb8M": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
@@ -6268,11 +6268,11 @@
                 }
               },
               "block_order": [
-                "text_LfCB6N",
-                "text_Yc7iPP"
+                "text_tPM8tV",
+                "text_jDnb8M"
               ]
             },
-            "group_wnELYg": {
+            "group_aUiiic": {
               "type": "group",
               "name": "t:names.group",
               "settings": {
@@ -6322,7 +6322,7 @@
                 "custom_class": ""
               },
               "blocks": {
-                "button_98anAV": {
+                "button_UgjcCA": {
                   "type": "button",
                   "name": "t:names.button",
                   "settings": {
@@ -6353,16 +6353,16 @@
                 }
               },
               "block_order": [
-                "button_98anAV"
+                "button_UgjcCA"
               ]
             }
           },
           "block_order": [
-            "group_pDpjqj",
-            "group_wnELYg"
+            "group_QGMAK3",
+            "group_aUiiic"
           ]
         },
-        "group_grid_carousel_77AQ6e": {
+        "group_grid_carousel_Bajq6d": {
           "type": "group-grid-carousel",
           "name": "Group Grid",
           "settings": {
@@ -6394,7 +6394,7 @@
             "padding-block-end": 0
           },
           "blocks": {
-            "group_item_VJfkWk": {
+            "group_item_3pgyAF": {
               "type": "_group-item",
               "name": "Group Item",
               "settings": {
@@ -6443,7 +6443,7 @@
                 "custom_class": ""
               },
               "blocks": {
-                "group_with_title_QNbAaf": {
+                "group_with_title_QJn4wc": {
                   "type": "group-with-title",
                   "name": "Group with block name",
                   "settings": {
@@ -6484,17 +6484,17 @@
                     "padding-block-end": 24,
                     "padding-inline-start": 24,
                     "padding-inline-end": 24,
-                    "use_mobile_padding": false,
-                    "padding-block-start-mobile": 0,
-                    "padding-block-end-mobile": 0,
-                    "padding-inline-start-mobile": 0,
-                    "padding-inline-end-mobile": 0,
+                    "use_mobile_padding": true,
+                    "padding-block-start-mobile": 40,
+                    "padding-block-end-mobile": 24,
+                    "padding-inline-start-mobile": 24,
+                    "padding-inline-end-mobile": 24,
                     "group_title_top": 0,
                     "group_title_left": 4,
                     "custom_class": ""
                   },
                   "blocks": {
-                    "text_F6aiWt": {
+                    "text_kAWREM": {
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
@@ -6531,7 +6531,7 @@
                       },
                       "blocks": {}
                     },
-                    "text_zNiDVf": {
+                    "text_3b4TaX": {
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
@@ -6607,16 +6607,16 @@
                     }
                   },
                   "block_order": [
-                    "text_F6aiWt",
-                    "text_zNiDVf"
+                    "text_kAWREM",
+                    "text_3b4TaX"
                   ]
                 }
               },
               "block_order": [
-                "group_with_title_QNbAaf"
+                "group_with_title_QJn4wc"
               ]
             },
-            "group_item_KG9CDi": {
+            "group_item_zKDJ3W": {
               "type": "_group-item",
               "name": "Group Item",
               "settings": {
@@ -6665,7 +6665,7 @@
                 "custom_class": ""
               },
               "blocks": {
-                "group_with_title_pTA3w8": {
+                "group_with_title_zL9xef": {
                   "type": "group-with-title",
                   "name": "Group with block name",
                   "settings": {
@@ -6706,17 +6706,17 @@
                     "padding-block-end": 24,
                     "padding-inline-start": 24,
                     "padding-inline-end": 24,
-                    "use_mobile_padding": false,
-                    "padding-block-start-mobile": 0,
-                    "padding-block-end-mobile": 0,
-                    "padding-inline-start-mobile": 0,
-                    "padding-inline-end-mobile": 0,
+                    "use_mobile_padding": true,
+                    "padding-block-start-mobile": 40,
+                    "padding-block-end-mobile": 24,
+                    "padding-inline-start-mobile": 24,
+                    "padding-inline-end-mobile": 24,
                     "group_title_top": 0,
                     "group_title_left": 4,
                     "custom_class": ""
                   },
                   "blocks": {
-                    "text_jD9mDH": {
+                    "text_y9FPPA": {
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
@@ -6753,7 +6753,7 @@
                       },
                       "blocks": {}
                     },
-                    "text_wrQCKa": {
+                    "text_pamEqK": {
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
@@ -6829,16 +6829,16 @@
                     }
                   },
                   "block_order": [
-                    "text_jD9mDH",
-                    "text_wrQCKa"
+                    "text_y9FPPA",
+                    "text_pamEqK"
                   ]
                 }
               },
               "block_order": [
-                "group_with_title_pTA3w8"
+                "group_with_title_zL9xef"
               ]
             },
-            "group_item_DaaJYi": {
+            "group_item_cm4xjU": {
               "type": "_group-item",
               "name": "Group Item",
               "settings": {
@@ -6887,7 +6887,7 @@
                 "custom_class": ""
               },
               "blocks": {
-                "group_with_title_9XW6XL": {
+                "group_with_title_EEQTaD": {
                   "type": "group-with-title",
                   "name": "Group with block name",
                   "settings": {
@@ -6928,17 +6928,17 @@
                     "padding-block-end": 24,
                     "padding-inline-start": 24,
                     "padding-inline-end": 24,
-                    "use_mobile_padding": false,
-                    "padding-block-start-mobile": 0,
-                    "padding-block-end-mobile": 0,
-                    "padding-inline-start-mobile": 0,
-                    "padding-inline-end-mobile": 0,
+                    "use_mobile_padding": true,
+                    "padding-block-start-mobile": 40,
+                    "padding-block-end-mobile": 24,
+                    "padding-inline-start-mobile": 24,
+                    "padding-inline-end-mobile": 24,
                     "group_title_top": 0,
                     "group_title_left": 4,
                     "custom_class": ""
                   },
                   "blocks": {
-                    "text_NQdGhQ": {
+                    "text_chwxVx": {
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
@@ -6975,7 +6975,7 @@
                       },
                       "blocks": {}
                     },
-                    "text_B4CbjM": {
+                    "text_wYN6BV": {
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
@@ -7051,23 +7051,23 @@
                     }
                   },
                   "block_order": [
-                    "text_NQdGhQ",
-                    "text_B4CbjM"
+                    "text_chwxVx",
+                    "text_wYN6BV"
                   ]
                 }
               },
               "block_order": [
-                "group_with_title_9XW6XL"
+                "group_with_title_EEQTaD"
               ]
             }
           },
           "block_order": [
-            "group_item_VJfkWk",
-            "group_item_KG9CDi",
-            "group_item_DaaJYi"
+            "group_item_3pgyAF",
+            "group_item_zKDJ3W",
+            "group_item_cm4xjU"
           ]
         },
-        "group_UYJTRe": {
+        "group_PdfMq6": {
           "type": "group",
           "name": "t:names.group",
           "settings": {
@@ -7117,7 +7117,7 @@
             "custom_class": ""
           },
           "blocks": {
-            "button_pXJMPF": {
+            "button_Vyg9WP": {
               "type": "button",
               "name": "t:names.button",
               "settings": {
@@ -7148,14 +7148,14 @@
             }
           },
           "block_order": [
-            "button_pXJMPF"
+            "button_Vyg9WP"
           ]
         }
       },
       "block_order": [
-        "group_UTz8dt",
-        "group_grid_carousel_77AQ6e",
-        "group_UYJTRe"
+        "group_H7XVdL",
+        "group_grid_carousel_Bajq6d",
+        "group_PdfMq6"
       ],
       "custom_css": [
         "::marker {color: #490e67;}"
@@ -12911,7 +12911,7 @@
     "custom_product_frame_section_iTzM6t",
     "section_dbwrh9",
     "section_Th4XMM",
-    "section_M3B3qn",
+    "section_mXfaLw",
     "section_GWWybf",
     "section_rLz3cx",
     "section_detYHB",
