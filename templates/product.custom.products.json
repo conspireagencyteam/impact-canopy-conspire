@@ -183,6 +183,7 @@
               "type": "group",
               "name": "Header",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -595,6 +596,7 @@
               "type": "group",
               "name": "Price Wrapper",
               "settings": {
+                "display": "all",
                 "content_direction": "row",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -1370,7 +1372,7 @@
                   "type": "_accordion-row",
                   "settings": {
                     "heading": "Additional Information",
-                    "open_by_default": true,
+                    "open_by_default": false,
                     "icon": "none",
                     "width": 20
                   },
@@ -1671,6 +1673,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -1720,6 +1723,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -1883,6 +1887,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -1932,6 +1937,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -2094,6 +2100,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -2256,6 +2263,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -2418,6 +2426,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -2588,6 +2597,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -2637,6 +2647,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -2799,6 +2810,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -2961,6 +2973,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -3123,6 +3136,7 @@
               "type": "group",
               "name": "t:names.column",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -3336,6 +3350,7 @@
           "type": "group",
           "name": "Header",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -3385,6 +3400,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -3978,6 +3994,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "display": "all",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -4028,6 +4045,7 @@
               "type": "group",
               "name": "Head",
               "settings": {
+                "display": "all",
                 "content_direction": "row",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -4077,6 +4095,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -4240,6 +4259,7 @@
               "type": "group",
               "name": "Collection Cards",
               "settings": {
+                "display": "all",
                 "content_direction": "row",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -4289,6 +4309,7 @@
                   "type": "group",
                   "name": "Card",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -4413,6 +4434,7 @@
                   "type": "group",
                   "name": "Card",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -4537,6 +4559,7 @@
                   "type": "group",
                   "name": "Card",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -4661,6 +4684,7 @@
                   "type": "group",
                   "name": "Card",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -4839,6 +4863,7 @@
           "type": "group",
           "name": "Header",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -4888,6 +4913,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -5051,6 +5077,7 @@
           "type": "group",
           "name": "Block with icon",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -5100,6 +5127,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -5242,6 +5270,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -5384,6 +5413,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -5526,6 +5556,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -5717,6 +5748,7 @@
           "type": "group",
           "name": "Header",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -5766,6 +5798,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -5929,6 +5962,7 @@
           "type": "group",
           "name": "Block with icon",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -6533,6 +6567,7 @@
           "type": "group",
           "name": "Header",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -6582,6 +6617,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -6716,6 +6752,7 @@
           "type": "group",
           "name": "Block with icon",
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -6765,6 +6802,7 @@
               "type": "group",
               "name": "Testimonial",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -6814,6 +6852,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "row",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -6875,6 +6914,7 @@
                       "type": "group",
                       "name": "review",
                       "settings": {
+                        "display": "all",
                         "content_direction": "row",
                         "vertical_on_mobile": false,
                         "reverse_on_mobile": false,
@@ -7022,6 +7062,7 @@
                   "type": "group",
                   "name": "Testimonial photo",
                   "settings": {
+                    "display": "all",
                     "content_direction": "row",
                     "vertical_on_mobile": false,
                     "reverse_on_mobile": false,
@@ -7083,6 +7124,7 @@
                       "type": "group",
                       "name": "t:names.group",
                       "settings": {
+                        "display": "all",
                         "content_direction": "column",
                         "vertical_on_mobile": true,
                         "reverse_on_mobile": false,
@@ -7225,6 +7267,7 @@
               "type": "group",
               "name": "Testimonial",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -7274,6 +7317,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "row",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -7335,6 +7379,7 @@
                       "type": "group",
                       "name": "review",
                       "settings": {
+                        "display": "all",
                         "content_direction": "row",
                         "vertical_on_mobile": false,
                         "reverse_on_mobile": false,
@@ -7482,6 +7527,7 @@
                   "type": "group",
                   "name": "Testimonial photo",
                   "settings": {
+                    "display": "all",
                     "content_direction": "row",
                     "vertical_on_mobile": false,
                     "reverse_on_mobile": false,
@@ -7543,6 +7589,7 @@
                       "type": "group",
                       "name": "t:names.group",
                       "settings": {
+                        "display": "all",
                         "content_direction": "column",
                         "vertical_on_mobile": true,
                         "reverse_on_mobile": false,
@@ -7685,6 +7732,7 @@
               "type": "group",
               "name": "Testimonial",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -7734,6 +7782,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "row",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -7795,6 +7844,7 @@
                       "type": "group",
                       "name": "review",
                       "settings": {
+                        "display": "all",
                         "content_direction": "row",
                         "vertical_on_mobile": false,
                         "reverse_on_mobile": false,
@@ -7942,6 +7992,7 @@
                   "type": "group",
                   "name": "Testimonial photo",
                   "settings": {
+                    "display": "all",
                     "content_direction": "row",
                     "vertical_on_mobile": false,
                     "reverse_on_mobile": false,
@@ -8003,6 +8054,7 @@
                       "type": "group",
                       "name": "t:names.group",
                       "settings": {
+                        "display": "all",
                         "content_direction": "column",
                         "vertical_on_mobile": true,
                         "reverse_on_mobile": false,
@@ -8654,6 +8706,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
+            "display": "all",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -8704,6 +8757,7 @@
               "type": "group",
               "name": "Head",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -8753,6 +8807,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -8998,6 +9053,7 @@
               "name": "Product Cards",
               "disabled": true,
               "settings": {
+                "display": "all",
                 "content_direction": "row",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -9668,6 +9724,7 @@
           "name": "Logo group",
           "disabled": true,
           "settings": {
+            "display": "all",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -9717,6 +9774,7 @@
               "type": "group",
               "name": "Logo",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -9803,6 +9861,7 @@
               "type": "group",
               "name": "Logo",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -9889,6 +9948,7 @@
               "type": "group",
               "name": "Logo",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -9975,6 +10035,7 @@
               "type": "group",
               "name": "Logo",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -10061,6 +10122,7 @@
               "type": "group",
               "name": "Logo",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -10147,6 +10209,7 @@
               "type": "group",
               "name": "Logo",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -10233,6 +10296,7 @@
               "type": "group",
               "name": "Logo",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -10365,6 +10429,7 @@
                   "type": "group",
                   "name": "Logo",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -10463,6 +10528,7 @@
                   "type": "group",
                   "name": "Logo",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -10561,6 +10627,7 @@
                   "type": "group",
                   "name": "Logo",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -10659,6 +10726,7 @@
                   "type": "group",
                   "name": "Logo",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -10757,6 +10825,7 @@
                   "type": "group",
                   "name": "Logo",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -10855,6 +10924,7 @@
                   "type": "group",
                   "name": "Logo",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
@@ -10953,6 +11023,7 @@
                   "type": "group",
                   "name": "Logo",
                   "settings": {
+                    "display": "all",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "reverse_on_mobile": false,
