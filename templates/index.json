@@ -3231,7 +3231,7 @@
             "rows_gap": 12,
             "autoplay": false,
             "autoplay_speed": 4,
-            "icons_style": "arrow",
+            "icons_style": "none",
             "slideshow_controls_position": "center",
             "icons_shape": "none",
             "icons_style_mobile": "none",
