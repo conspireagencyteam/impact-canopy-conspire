@@ -559,6 +559,13 @@
       ],
       "default": "left",
       "visible_if": "{{ block.settings.icon != 'none' or block.settings.icon_image != blank }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "justify_space_between",
+      "label": "Justify space between (text and icon)",
+      "default": false,
+      "visible_if": "{{ block.settings.icon != 'none' or block.settings.icon_image != blank }}"
     }
   ],
   "presets": [
