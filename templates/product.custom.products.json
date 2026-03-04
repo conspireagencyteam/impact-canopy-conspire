@@ -2019,7 +2019,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Ultralight steel (TL)</h2>",
+                    "text": "<h2>Recreational Steel (TL)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -2056,7 +2056,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Perfect for single-day events, easy transport</p>",
+                    "text": "<p>Perfect for indoor or light use</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
