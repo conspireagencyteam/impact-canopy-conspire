@@ -8858,7 +8858,7 @@
         "rows_gap": 8,
         "columns_gap_mobile": 16,
         "rows_gap_mobile": 16,
-        "icons_style": "arrow",
+        "icons_style": "none",
         "icons_shape": "none",
         "full_width_on_mobile": false,
         "slideshow_controls_style": "none",
