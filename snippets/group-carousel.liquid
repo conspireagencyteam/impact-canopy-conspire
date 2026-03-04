@@ -16,8 +16,10 @@
   endif
 
   assign render_slideshow_controls = false
-  if settings.layout_type == 'carousel' and settings.autoplay or settings.slideshow_controls_style != 'none'
-    assign render_slideshow_controls = true
+  if settings.layout_type == 'carousel'
+    if settings.autoplay or settings.slideshow_controls_style != 'none'
+      assign render_slideshow_controls = true
+    endif
   endif
 
   assign render_mobile_slideshow_controls = false
@@ -26,7 +28,11 @@
     assign slideshow_controls_class = 'mobile:hidden'
   endif
 
-  if settings.layout_type == 'grid' or settings.slideshow_controls_style != settings.slideshow_mobile_controls_style
+  if settings.layout_type_mobile == 'carousel'
+    if settings.autoplay or settings.slideshow_mobile_controls_style != 'none'
+      assign render_mobile_slideshow_controls = true
+    endif
+  elsif settings.layout_type == 'grid' and settings.slideshow_controls_style != settings.slideshow_mobile_controls_style
     assign render_mobile_slideshow_controls = true
   endif
 
@@ -202,5 +208,10 @@
 
   .group-carousel__wrapper .slideshow-controls__dots button[aria-selected='true'] {
     --color: var(--color-foreground-heading);
+  }
+
+  /* Hide slideshow-controls when empty (no dots, counter, or autoplay) */
+  .group-carousel__wrapper slideshow-controls:empty {
+    display: none;
   }
 {% endstylesheet %}
