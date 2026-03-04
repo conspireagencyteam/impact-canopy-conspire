@@ -2579,7 +2579,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Ultralight steel (TL)</h2>",
+                    "text": "<h2>Recreational Steel (TL)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -2616,7 +2616,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Perfect for single-day events, easy transport</p>",
+                    "text": "<p>Perfect for indoor or light use </p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2742,7 +2742,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Light Steel (DS)</h2>",
+                    "text": "<h2>Industrial Steel (DS)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -2779,7 +2779,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Multi-day events, moderate wind resistance</p>",
+                    "text": "<p>Most popular frame option: Great for indoor/outdoor use</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2905,7 +2905,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Heavy duty Steel(CL)</h2>",
+                    "text": "<h2>Heavy duty Steel (CL)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -3068,7 +3068,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Light Aluminium (ML)</h2>",
+                    "text": "<h2>Commercial Aluminium (ML)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -3105,7 +3105,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Maximum strength for permanent installations</p>",
+                    "text": "<p>Perfect combination between lightweight and durability</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3289,7 +3289,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Heavy duty aluminum (M)</h2>",
+                    "text": "<h2>Super Duty Aluminum (M)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -3326,7 +3326,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Perfect for single-day events, easy transport</p>",
+                    "text": "<p>Ideal for the toughest environments </p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3452,7 +3452,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Super Heavy duty aluminum (MegaX)</h2>",
+                    "text": "<h2>Extreme Aluminum (MegaX)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -3489,7 +3489,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Multi-day events, moderate wind resistance</p>",
+                    "text": "<p>Built for large area coverage </p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3615,7 +3615,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2> Modular aluminum (ExpoDome)</h2>",
+                    "text": "<h2> Modular Aluminum (ExpoDome)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -3652,7 +3652,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Pro tournaments, high-wind environments</p>",
+                    "text": "<p>Stand out appearance modular setup</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3778,7 +3778,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Inflatable structure (ImpactAir)</h2>",
+                    "text": "<h2>Inflatable Structure (ImpactAir)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -3815,7 +3815,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Maximum strength for permanent installations</p>",
+                    "text": "<p>Easy transport and show stopping appearance</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
