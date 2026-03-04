@@ -4507,7 +4507,7 @@
                       "settings": {
                         "text": "<ul><li>Upload your files through our secure submission system</li><li>Include design goals, event details, and timeline</li><li>Complete payment to begin the design process</li><li>Receive professional digital rendering within 48 hours</li></ul>",
                         "width": "fit-content",
-                        "max_width": "normal",
+                        "max_width": "none",
                         "alignment": "left",
                         "type_preset": "custom",
                         "font": "var(--font-subheading--family)",
