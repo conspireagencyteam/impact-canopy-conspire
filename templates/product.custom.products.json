@@ -2729,7 +2729,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Heavy duty aluminum (M)</h2>",
+                    "text": "<h2>Super Auty Aluminum (M)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -2766,7 +2766,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Perfect for single-day events, easy transport</p>",
+                    "text": "<p>Ideal for the toughest environments</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2892,7 +2892,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Super Heavy duty aluminum (MegaX)</h2>",
+                    "text": "<h2>Extreme Aluminum (MegaX)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -2929,7 +2929,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Multi-day events, moderate wind resistance</p>",
+                    "text": "<p>Built for large area coverage</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
