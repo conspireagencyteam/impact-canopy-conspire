@@ -2182,7 +2182,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Light Steel (DS)</h2>",
+                    "text": "<h2>Industrial Steel (DS)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -2219,7 +2219,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Multi-day events, moderate wind resistance</p>",
+                    "text": "<p>Most popular frame option: Great for indoor/outdoor use</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2345,7 +2345,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Heavy duty Steel(CL)</h2>",
+                    "text": "<h2>Heavy duty Steel (CL)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -2508,7 +2508,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Light Aluminium (ML)</h2>",
+                    "text": "<h2>Commercial Aluminum (ML)</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -2545,7 +2545,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Maximum strength for permanent installations</p>",
+                    "text": "<p>Perfect combination of lightweight and durability</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
