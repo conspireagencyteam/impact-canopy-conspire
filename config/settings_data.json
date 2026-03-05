@@ -197,7 +197,7 @@
         "settings": {
           "background": "#eef0f2",
           "foreground_heading": "#2a2a2a",
-          "foreground": "#868686",
+          "foreground": "#2a2a2a",
           "primary": "#490e67",
           "primary_hover": "#490e67d1",
           "border": "#cccccc",
