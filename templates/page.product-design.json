@@ -559,7 +559,7 @@
               "name": "Design Template Meta",
               "settings": {
                 "icon": "caret",
-                "open_by_default": true,
+                "open_by_default": false,
                 "dividers": false,
                 "type_preset": "h6",
                 "inherit_color_scheme": false,
