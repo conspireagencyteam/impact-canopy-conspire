@@ -8,7 +8,10 @@
   {% content_for 'block', type: 'text', id:'staticCategoryText', fallback_text: title %}
   {% content_for 'block', type: 'text', id:'staticCategoryDesc', fallback_text: description %}
   {% content_for 'block', type: 'metaobject-sale', id:'staticCategoryList', item: points %}
-  {% content_for 'block', type: '_quote-form-sale-button', id: 'staticNewCat', fallback_link: link_url, fallback_text: link_txt %}
+  {% capture children_inner %}
+    {% content_for 'block', type: '_quote-form-sale-button', id: 'staticNewCat', fallback_link: link_url, fallback_text: link_txt %}
+  {% endcapture %}
+  {% content_for 'block', type: 'group', children: children_inner, id: 'staticCategoryButtonGroup' %}
 {% endcapture %}
 
 {% render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
