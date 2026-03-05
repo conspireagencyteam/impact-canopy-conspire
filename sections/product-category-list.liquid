@@ -214,6 +214,28 @@
       "visible_if": "{{ section.settings.layout_type == 'grid'}}"
     },
     {
+      "type": "range",
+      "id": "columns_gap_mobile",
+      "label": "Mobile Horizontal Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 8,
+      "visible_if": "{{ section.settings.layout_type == 'grid' or section.settings.layout_type == 'carousel' }}"
+    },
+    {
+      "type": "range",
+      "id": "rows_gap_mobile",
+      "label": "Mobile Vertical Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 8,
+      "visible_if": "{{ section.settings.layout_type == 'grid' }}"
+    },
+    {
       "type": "header",
       "content": "t:content.carousel_navigation",
       "visible_if": "{{ section.settings.layout_type == 'carousel' or section.settings.carousel_on_mobile == true }}"
@@ -267,6 +289,101 @@
       ],
       "default": "none",
       "visible_if": "{{ section.settings.icons_style != 'none' and section.settings.layout_type == 'carousel' or section.settings.carousel_on_mobile == true }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width_on_mobile",
+      "label": "Show Peek on Mobile",
+      "info": "Show 90% slide width with peek of next slide",
+      "default": false,
+      "visible_if": "{{ section.settings.layout_type == 'carousel' or section.settings.carousel_on_mobile == true }}"
+    },
+    {
+      "type": "select",
+      "id": "slideshow_controls_style",
+      "label": "Desktop Pagination",
+      "options": [
+        {
+          "value": "dots",
+          "label": "t:options.dots"
+        },
+        {
+          "value": "counter",
+          "label": "t:options.counter"
+        },
+        {
+          "value": "none",
+          "label": "t:options.none"
+        }
+      ],
+      "default": "none",
+      "visible_if": "{{ section.settings.layout_type == 'carousel' }}"
+    },
+    {
+      "type": "select",
+      "id": "slideshow_mobile_controls_style",
+      "label": "Mobile Pagination",
+      "options": [
+        {
+          "value": "dots",
+          "label": "t:options.dots"
+        },
+        {
+          "value": "counter",
+          "label": "t:options.counter"
+        },
+        {
+          "value": "none",
+          "label": "t:options.none"
+        }
+      ],
+      "default": "dots",
+      "visible_if": "{{ section.settings.layout_type == 'carousel' or section.settings.carousel_on_mobile == true }}"
+    },
+    {
+      "type": "select",
+      "id": "dot_style_type",
+      "label": "Dot Style",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "custom",
+          "label": "Custom"
+        }
+      ],
+      "default": "default",
+      "visible_if": "{{ section.settings.slideshow_controls_style == 'dots' or section.settings.slideshow_mobile_controls_style == 'dots' }}"
+    },
+    {
+      "type": "color",
+      "id": "dot_background_color",
+      "label": "Dot Background Color",
+      "default": "#ffffff",
+      "visible_if": "{{ section.settings.dot_style_type == 'custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "dot_active_background_color",
+      "label": "Dot Active Background Color",
+      "default": "#000000",
+      "visible_if": "{{ section.settings.dot_style_type == 'custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "dot_border_color",
+      "label": "Dot Border Color",
+      "default": "#000000",
+      "visible_if": "{{ section.settings.dot_style_type == 'custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "dot_active_border_color",
+      "label": "Dot Active Border Color",
+      "default": "#000000",
+      "visible_if": "{{ section.settings.dot_style_type == 'custom' }}"
     },
     {
       "type": "header",
