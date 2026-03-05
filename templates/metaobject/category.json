@@ -933,7 +933,7 @@
       "settings": {
         "collection": "{{ metaobject.collection.value }}",
         "layout_type": "grid",
-        "carousel_on_mobile": false,
+        "carousel_on_mobile": true,
         "max_products": 12,
         "columns": 6,
         "mobile_columns": "2",
