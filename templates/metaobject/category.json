@@ -767,7 +767,8 @@
                 "underline_offset": 2,
                 "icon": "arrow",
                 "icon_size": 20,
-                "icon_position": "right"
+                "icon_position": "right",
+                "justify_space_between": false
               },
               "blocks": {}
             }
@@ -932,7 +933,7 @@
       "settings": {
         "collection": "{{ metaobject.collection.value }}",
         "layout_type": "grid",
-        "carousel_on_mobile": false,
+        "carousel_on_mobile": true,
         "max_products": 12,
         "columns": 6,
         "mobile_columns": "2",
@@ -1728,7 +1729,8 @@
                     "underline_offset": 2,
                     "icon": "arrow",
                     "icon_size": 20,
-                    "icon_position": "right"
+                    "icon_position": "right",
+                    "justify_space_between": false
                   },
                   "blocks": {}
                 }
