@@ -4851,3 +4851,15 @@ text-component {
     }
   }
 }
+
+@media screen and (min-width: 750px) {
+  .block-visibility--desktop-hidden {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .block-visibility--mobile-hidden {
+    display: none !important;
+  }
+}

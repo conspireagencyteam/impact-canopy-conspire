@@ -25,7 +25,13 @@
 
   {% capture list_items %}
     {% if products != blank and products.size > 0 %}
+      {%- comment %}<locksmith:018e>{% endcomment -%}
+        {%- assign locksmith_8a9d_forloop__size = 0 %}{% for product in products limit: max_items %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_8a9d_forloop__size = locksmith_8a9d_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_8a9d_forloop__index = nil -%}
+      {%- comment %}</locksmith:018e>{% endcomment -%}
       {% for product in products limit: max_items %}
+        {%- comment %}<locksmith:25dc>{% endcomment -%}
+          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_8a9d_forloop__index == nil %}{% assign locksmith_8a9d_forloop__index = 1 %}{% assign locksmith_8a9d_forloop__index0 = 0 %}{% else %}{% assign locksmith_8a9d_forloop__index = locksmith_8a9d_forloop__index | plus: 1 %}{% assign locksmith_8a9d_forloop__index0 = locksmith_8a9d_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_8a9d_forloop__index == 1 %}{% assign locksmith_8a9d_forloop__first = true %}{% else %}{% assign locksmith_8a9d_forloop__first = false %}{% endif %}{% if locksmith_8a9d_forloop__index == locksmith_8a9d_forloop__size %}{% assign locksmith_8a9d_forloop__last = true %}{% else %}{% assign locksmith_8a9d_forloop__last = false %}{% endif %}{% assign locksmith_8a9d_forloop__rindex = locksmith_8a9d_forloop__size | minus: locksmith_8a9d_forloop__index | minus: 1 %}{% assign locksmith_8a9d_forloop__rindex0 = locksmith_8a9d_forloop__size | minus: locksmith_8a9d_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+        {%- comment %}</locksmith:25dc>{% endcomment -%}
         <div
           class="resource-list__item"
         >
@@ -34,7 +40,7 @@
           {% # theme-check-enable UniqueStaticBlockId %}
         </div>
 
-        {% unless forloop.last %}
+        {% unless locksmith_8a9d_forloop__last %}
           <!--@list/split-->
         {% endunless %}
       {% endfor %}

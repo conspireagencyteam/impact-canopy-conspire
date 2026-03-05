@@ -13,6 +13,14 @@
     transform: translate(-50%, -50%);
     z-index: 10;
   }
+  @media (max-width: 749px) {
+    .group-title-{{ block.id }} {
+      top: 0;
+      left: 0;
+      transform: none;
+      margin-bottom: 12px;
+    }
+  }
 {% endstyle %}
 {%- capture children %}
   <div class="group-title-{{ block.id }}">{% content_for 'block',id: 'statictitlegroup', type: 'text' %}</div>
@@ -20,7 +28,7 @@
 {% endcapture %}
 
 {% render 'group-title', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
- 
+
 {% schema %}
 {
   "name": "Group with Block name",

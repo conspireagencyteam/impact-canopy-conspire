@@ -18,9 +18,30 @@
   else
     assign slideshow_gutters = null
   endif
+
+  assign render_slideshow_controls = false
+  if settings.slideshow_controls_style != 'none' and settings.slideshow_controls_style != blank
+    assign render_slideshow_controls = true
+  endif
+
+  assign render_mobile_slideshow_controls = false
+  if settings.slideshow_mobile_controls_style != 'none' and settings.slideshow_mobile_controls_style != blank
+    if settings.slideshow_controls_style != settings.slideshow_mobile_controls_style
+      assign render_mobile_slideshow_controls = true
+    endif
+  endif
+
+  if settings.slideshow_controls_style != settings.slideshow_mobile_controls_style
+    assign slideshow_controls_class = 'mobile:hidden'
+  endif
+
+  assign slideshow_controls_style = settings.slideshow_controls_style
+  if slideshow_controls_style == 'dots' and slide_count > 10
+    assign slideshow_controls_style = 'counter'
+  endif
 %}
 
-{% capture slides %}
+{% capture slides_html %}
   {% for item in slides limit: slides.size %}
     {% render 'slideshow-slide'
       index : forloop.index0,
@@ -36,6 +57,40 @@
   {% endcapture %}
 {% endif %}
 
+{% if slide_count > 1 %}
+  {% capture controls %}
+    {% if render_slideshow_controls %}
+      {%- render 'slideshow-controls',
+        class: slideshow_controls_class,
+        style: slideshow_controls_style,
+        item_count: slide_count,
+        pagination_position: 'center',
+        arrows_on_media: true,
+        dot_style_type: settings.dot_style_type,
+        dot_background_color: settings.dot_background_color,
+        dot_active_background_color: settings.dot_active_background_color,
+        dot_border_color: settings.dot_border_color,
+        dot_active_border_color: settings.dot_active_border_color
+      -%}
+    {% endif %}
+
+    {% if render_mobile_slideshow_controls %}
+      {%- render 'slideshow-controls',
+        class: 'desktop:hidden media-gallery__mobile-controls resource-list__mobile-controls',
+        style: settings.slideshow_mobile_controls_style,
+        item_count: slide_count,
+        pagination_position: 'center',
+        arrows_on_media: true,
+        dot_style_type: settings.dot_style_type,
+        dot_background_color: settings.dot_background_color,
+        dot_active_background_color: settings.dot_active_background_color,
+        dot_border_color: settings.dot_border_color,
+        dot_active_border_color: settings.dot_active_border_color
+      -%}
+    {% endif %}
+  {% endcapture %}
+{% endif %}
+
 <div
   class="resource-list__carousel"
   style="
@@ -45,17 +100,25 @@
       --gutter-slide-width: 0px;
     {% endif %}
     --slide-width-max: {{ slide_width_max | default: '300px' }};
+    {% if settings.full_width_on_mobile %}
+      --slide-width--mobile: 90%;
+      --peek-next-slide-size: 10%;
+    {% else %}
+      --slide-width--mobile: 100%;
+      --peek-next-slide-size: 0%;
+    {% endif %}
   "
 >
   {% render 'slideshow',
     ref: slideshow_ref,
     class: 'resource-list__carousel',
-    slides: slides,
+    slides: slides_html,
     slideshow_arrows: slideshow_arrows,
     auto_hide_controls: false,
     infinite: false,
     initial_slide: 0,
     slide_count: slide_count,
-    slideshow_gutters: slideshow_gutters
+    slideshow_gutters: slideshow_gutters,
+    controls: controls
   %}
 </div>

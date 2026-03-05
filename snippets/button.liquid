@@ -22,6 +22,9 @@
   assign underline_offset = block_settings.underline_offset | default: 2
   assign button_size = block_settings.button_size | default: "default"
 
+  # Layout variables
+  assign justify_space_between = block_settings.justify_space_between | default: false
+
   # Icon variables
   assign icon = block_settings.icon | default: 'none'
   assign icon_image = block_settings.icon_image
@@ -73,6 +76,7 @@
     button--{{ button_size }}
     {{ block_settings.style_class }}--{{ block.id }}
     {% if show_underline and block_settings.style_class == 'link' %}link--underline{% endif %}
+    {% if justify_space_between %}button--justify-space-between{% endif %}
     {% if has_icon %}button--has-icon button--icon-{{ icon_position }}{% endif %}
   "
   style="{% render 'size-style', settings: block_settings %}{{ custom_style }}"
@@ -107,6 +111,14 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5em;
+  }
+
+  /* Button justify space-between */
+  .button--justify-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
 
   .button__icon {
