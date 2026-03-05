@@ -1882,7 +1882,7 @@
                     "icon": "arrow",
                     "icon_size": 20,
                     "icon_position": "right",
-                    "justify_space_between": false
+                    "justify_space_between": true
                   },
                   "blocks": {}
                 }
