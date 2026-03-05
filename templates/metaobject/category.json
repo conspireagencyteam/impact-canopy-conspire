@@ -940,7 +940,7 @@
         "mobile_card_size": "60cqw",
         "columns_gap": 12,
         "rows_gap": 12,
-        "icons_style": "arrow",
+        "icons_style": "none",
         "icons_shape": "none",
         "section_width": "page-width",
         "horizontal_alignment": "flex-start",
