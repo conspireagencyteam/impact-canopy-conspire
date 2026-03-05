@@ -427,7 +427,7 @@
           {% assign col_one = row.material %}
           {% assign col_two = row.finish_options %}
           {% assign col_three = row.bracket_material %}
-          {% assign col_four = row.outer_leg_mm %}
+          {% assign col_four = row.outer_leg_mm_list %}
           {% assign col_five = row.truss_mm %}
           {% assign col_six = row.frame_sizes_ft %}
           {% assign col_seven = row.weight_lbs %}
@@ -448,8 +448,18 @@
               <td class="product-comparison-table__td">{{ col_three }}</td>
             {% endif %}
             {% if col_four != blank %}
-              <td class="product-comparison-table__td">
-                {{ col_four }}
+              <td class="product-comparison-table__td{% if col_four.value.size > 1 %} product-comparison-table__td__inner-table{% endif %}">
+                {% if col_four.value.size > 1 %}
+                <table>
+                  {% for item in col_four.value %}
+                  <tr>
+                    <td class="product-comparison-table__td">{{ item }}</td>
+                  </tr>
+                {% endfor %}
+                </table>
+                {% else %}
+                  {{ col_four.value }}
+                {% endif %}
               </td>
             {% endif %}
             {% if col_five != blank %}
@@ -748,6 +758,63 @@
   })();
 </script>
 
+<script>
+  (function() {
+    function syncInnerTableRowHeights() {
+      var container = document.querySelector(".product-comparison-table");
+      if (!container) return;
+      var innerTableCells = container.querySelectorAll(".product-comparison-table__td__inner-table");
+      if (innerTableCells.length === 0) return;
+      var tables = [];
+      for (var i = 0; i < innerTableCells.length; i++) {
+        var tbl = innerTableCells[i].querySelector("table");
+        if (tbl) tables.push(tbl);
+      }
+      if (tables.length === 0) return;
+      for (var t = 0; t < tables.length; t++) {
+        var rows = tables[t].querySelectorAll("tr");
+        for (var r = 0; r < rows.length; r++) {
+          rows[r].style.height = "auto";
+          var td = rows[r].querySelector("td");
+          if (td) td.style.height = "auto";
+        }
+      }
+      var maxRows = 0;
+      for (var t = 0; t < tables.length; t++) {
+        var rowCount = tables[t].querySelectorAll("tr").length;
+        if (rowCount > maxRows) maxRows = rowCount;
+      }
+      for (var i = 0; i < maxRows; i++) {
+        var rowsAtIndex = [];
+        for (var t = 0; t < tables.length; t++) {
+          var allRows = tables[t].querySelectorAll("tr");
+          if (allRows[i]) rowsAtIndex.push(allRows[i]);
+        }
+        var maxH = 0;
+        for (var r = 0; r < rowsAtIndex.length; r++) {
+          var h = rowsAtIndex[r].getBoundingClientRect().height;
+          if (h > maxH) maxH = h;
+        }
+        for (var r = 0; r < rowsAtIndex.length; r++) {
+          rowsAtIndex[r].style.height = maxH + "px";
+          var td = rowsAtIndex[r].querySelector("td");
+          if (td) {
+            td.style.height = maxH + "px";
+            td.style.display = "flex";
+            td.style.alignItems = "center";
+            td.style.justifyContent = "center";
+          }
+        }
+      }
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", syncInnerTableRowHeights);
+    } else {
+      setTimeout(syncInnerTableRowHeights, 100);
+    }
+    window.addEventListener("resize", syncInnerTableRowHeights);
+  })();
+</script>
 {% schema %}
 {
   "name": "Frame Table Detail",
