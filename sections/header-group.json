@@ -124,6 +124,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
@@ -189,6 +190,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "display": "all",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
