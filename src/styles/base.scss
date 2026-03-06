@@ -3407,6 +3407,11 @@ slideshow-slide.product-media-container--tallest {
   }
 }
 
+/* Ensure first slide in resource-list carousels is always visible */
+.resource-list__carousel slideshow-slide:first-of-type {
+  content-visibility: visible;
+}
+
 /*
  * Be specific about HTML children structure to avoid targeting nested slideshows.
  * Ensure that the content is 'visible' while scrolling instead of 'auto' to avoid issues in Safari.
