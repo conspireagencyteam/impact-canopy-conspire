@@ -19,26 +19,24 @@
   {% if load_empty_state %}
     <div class="predictive-search-results__inner">
       {% liquid
-        assign collection = settings.empty_state_collection | default: collections.all
-        assign default_title = 'content.search_results_resource_products' | t
-        assign title = settings.empty_state_collection.title | default: default_title
+        assign collection = collections.all
+        assign default_title = 'content.best_sellers' | t | default: 'Best Sellers'
+        assign title = default_title
+        assign products = collection.products | sort: 'best-selling'
       %}
-      {% paginate collection.products by 4 %}
-        {% assign products = collection.products %}
-        {% comment %} Only show products section if there are products to display {% endcomment %}
-        {% if products.size > 0 %}
-          {% render 'predictive-search-products-list',
-            products_test_id: products_test_id,
-            title: title,
-            products: products,
-            limit: 4
-          %}
-        {% else %}
-          <div class="predictive-search-results__no-results">
-            <p>{{ 'content.no_products_found' | t }}</p>
-          </div>
-        {% endif %}
-      {% endpaginate %}
+      {% comment %} Only show products section if there are products to display {% endcomment %}
+      {% if products.size > 0 %}
+        {% render 'predictive-search-products-list',
+          products_test_id: products_test_id,
+          title: title,
+          products: products,
+          limit: 4
+        %}
+      {% else %}
+        <div class="predictive-search-results__no-results">
+          <p>{{ 'content.no_products_found' | t }}</p>
+        </div>
+      {% endif %}
     </div>
   {% endif %}
 </div>
