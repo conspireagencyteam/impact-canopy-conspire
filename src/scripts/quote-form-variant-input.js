@@ -7,12 +7,38 @@
   const PRODUCT_HANDLE_INPUT_NAME = 'product-handle';
   const SELECTED_VARIANT_INPUT_NAME = 'selected-variant';
   const PRODUCT_TITLE_INPUT_NAME = '00NU0000004hksn';
+  const NON_PRODUCT_VALUE = 'non product';
+
+  /**
+   * Checks if current page is a product page
+   * @returns {boolean} True if on a product page
+   */
+  function isProductPage() {
+    return window.location.pathname.includes('/products/');
+  }
+
+  /**
+   * Gets the page title from og:title meta tag
+   * @returns {string} The page title or empty string
+   */
+  function getPageTitle() {
+    const metaTitle = document.querySelector('meta[property="og:title"]');
+    if (metaTitle) {
+      return metaTitle.getAttribute('content') || '';
+    }
+    return '';
+  }
 
   /**
    * Gets the product title from the page
-   * @returns {string} The product title or empty string
+   * @returns {string} The product title or og:title for non-product pages
    */
   function getProductTitle() {
+    // For non-product pages, use og:title
+    if (!isProductPage()) {
+      return getPageTitle();
+    }
+
     // Try to get from the product title element
     const titleElement = document.querySelector('.product__title, h1[class*="product"], [data-product-title]');
     if (titleElement) {
@@ -20,19 +46,19 @@
     }
 
     // Fallback: try to get from meta tag
-    const metaTitle = document.querySelector('meta[property="og:title"]');
-    if (metaTitle) {
-      return metaTitle.getAttribute('content') || '';
-    }
-
-    return '';
+    return getPageTitle();
   }
 
   /**
    * Gets the product handle from the page
-   * @returns {string} The product handle or empty string
+   * @returns {string} The product handle or URL pathname for non-product pages
    */
   function getProductHandle() {
+    // For non-product pages, return the URL pathname
+    if (!isProductPage()) {
+      return window.location.pathname;
+    }
+
     // Try to get from URL path (e.g., /products/my-product)
     const pathMatch = window.location.pathname.match(/\/products\/([^/?#]+)/);
     if (pathMatch) {
@@ -49,15 +75,20 @@
       }
     }
 
-    return '';
+    return window.location.pathname;
   }
 
   /**
    * Gets the selected variant options from the variant picker
    * Returns a string like "Frame Type: Industrial Aluminium - ML Series, Color: Red"
-   * @returns {string} The formatted variant options string
+   * @returns {string} The formatted variant options string or 'non product' for non-product pages
    */
   function getSelectedVariantOptions() {
+    // For non-product pages, return 'non product'
+    if (!isProductPage()) {
+      return NON_PRODUCT_VALUE;
+    }
+
     const variantPicker = document.querySelector('variant-picker');
     if (!variantPicker) return 'default';
 
@@ -92,8 +123,8 @@
     // Method 2: Handle dropdown style (div.variant-option--dropdowns)
     const dropdowns = variantPicker.querySelectorAll('.variant-option--dropdowns');
     dropdowns.forEach((dropdown) => {
-      // Get the option name from the label > b element
-      const label = dropdown.querySelector('label b');
+      // Get the option name from the label element (direct text content)
+      const label = dropdown.querySelector('label');
       const optionName = label?.textContent?.trim() || '';
 
       // Get the selected value from the select element
