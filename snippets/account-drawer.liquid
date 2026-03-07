@@ -91,4 +91,11 @@
       transform: translateY(100%);
     }
   }
+
+  /* Remove focus outline on touch devices (iPhone) */
+  @media (pointer: coarse) {
+    .account-drawer__close-button:focus-visible {
+      outline: none;
+    }
+  }
 {% endstylesheet %}

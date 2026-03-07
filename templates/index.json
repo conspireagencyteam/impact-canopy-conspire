@@ -2911,7 +2911,7 @@
       ],
       "name": "t:names.products_grid",
       "settings": {
-        "collection": "custom-canopies",
+        "collection": "custom-canopies-sn",
         "layout_type": "grid",
         "carousel_on_mobile": true,
         "max_products": 6,
@@ -9057,7 +9057,7 @@
             "border_radius": 16,
             "toggle_overlay": true,
             "overlay_style": "solid",
-            "overlay_color": "#00000046",
+            "overlay_color": "#00000045",
             "overlay_gradient": "",
             "link": "",
             "open_in_new_tab": false,

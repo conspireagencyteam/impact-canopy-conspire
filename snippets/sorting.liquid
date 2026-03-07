@@ -358,4 +358,16 @@
       overflow-y: visible;
     }
   }
+
+  /* Hide title ascending/descending and date sort options */
+  .sorting-filter__option:has(input[value="title-ascending"]),
+  .sorting-filter__option:has(input[value="title-descending"]),
+  .sorting-filter__option:has(input[value="created-ascending"]),
+  .sorting-filter__option:has(input[value="created-descending"]),
+  .sorting-filter__select option[value="title-ascending"],
+  .sorting-filter__select option[value="title-descending"],
+  .sorting-filter__select option[value="created-ascending"],
+  .sorting-filter__select option[value="created-descending"] {
+    display: none;
+  }
 {% endstylesheet %}

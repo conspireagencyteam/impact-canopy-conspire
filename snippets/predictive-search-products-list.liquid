@@ -66,9 +66,9 @@
           {% endfor %}
         {% else %}
           {% for product in products limit: limit %}
-            {%- comment %}<locksmith:e79a>{% endcomment -%}
+            {%- comment %}<locksmith:8b94>{% endcomment -%}
               {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-            {%- comment %}</locksmith:e79a>{% endcomment -%}
+            {%- comment %}</locksmith:8b94>{% endcomment -%}
             <li
               class="predictive-search-results__card predictive-search-results__card--product"
               ref="recentlyViewedItems[]"
@@ -98,9 +98,9 @@
         assign limit = limit | default: 8
       %}
       {% for product in products limit: limit %}
-        {%- comment %}<locksmith:9c08>{% endcomment -%}
+        {%- comment %}<locksmith:c972>{% endcomment -%}
           {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-        {%- comment %}</locksmith:9c08>{% endcomment -%}
+        {%- comment %}</locksmith:c972>{% endcomment -%}
         <li
           class="predictive-search-results__card predictive-search-results__card--product"
           ref="resultsItems[]"

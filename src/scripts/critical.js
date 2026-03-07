@@ -492,3 +492,57 @@ export function updateAllHeaderCustomProperties() {
 
 // Run both functions on page load
 updateAllHeaderCustomProperties();
+
+/**
+ * Forces lazy-loaded images to load when viewport resizes across breakpoints.
+ * This fixes an issue where lazy images don't load when resizing from desktop to mobile,
+ * particularly for images inside slideshow slides with content-visibility: hidden.
+ */
+function initLazyImageResizeHandler() {
+  const MOBILE_BREAKPOINT = 750;
+  let lastBreakpoint = window.innerWidth >= MOBILE_BREAKPOINT ? 'desktop' : 'mobile';
+  let resizeTimeout;
+
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      const currentBreakpoint = window.innerWidth >= MOBILE_BREAKPOINT ? 'desktop' : 'mobile';
+
+      if (currentBreakpoint !== lastBreakpoint) {
+        lastBreakpoint = currentBreakpoint;
+
+        // Force all slideshow slides to be visible temporarily to allow images to load
+        const slideshowSlides = document.querySelectorAll('slideshow-slide');
+        slideshowSlides.forEach((slide) => {
+          slide.style.contentVisibility = 'visible';
+        });
+
+        // Find all images inside slideshows and product cards and force them to reload
+        const slideshowImages = document.querySelectorAll(
+          'slideshow-slide img, slideshow-slides img, product-card img, .resource-list img'
+        );
+
+        slideshowImages.forEach((img) => {
+          // Remove loading attribute to trigger immediate load
+          img.removeAttribute('loading');
+
+          // Force browser to re-evaluate and load the image by cloning srcset
+          if (img.srcset) {
+            const srcset = img.srcset;
+            img.srcset = '';
+            img.srcset = srcset;
+          }
+        });
+
+        // Reset content-visibility after images have had a chance to load
+        setTimeout(() => {
+          slideshowSlides.forEach((slide) => {
+            slide.style.contentVisibility = '';
+          });
+        }, 500);
+      }
+    }, 150);
+  });
+}
+
+initLazyImageResizeHandler();

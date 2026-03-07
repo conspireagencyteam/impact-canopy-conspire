@@ -104,4 +104,11 @@
   .account-button shop-user-avatar {
     pointer-events: none;
   }
+
+  /* Remove focus outline on touch devices (iPhone) */
+  @media (pointer: coarse) {
+    .account-button:focus-visible {
+      outline: none;
+    }
+  }
 {% endstylesheet %}

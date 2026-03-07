@@ -499,36 +499,16 @@
     position: sticky;
 
     /* Use -1 instead of 0 so intersection observer can track sticky state */
-    top: -1px;
+    top: 0px;
     z-index: var(--layer-sticky);
   }
 
   .header[data-sticky-state] {
-    transition: transform var(--animation-speed) var(--ease-out-quad), opacity var(--animation-speed) var(--ease-out-quad);
     opacity: 1;
-    transform: translateY(0);
   }
 
   .header[data-sticky-state='active'] {
     view-transition-name: sticky-header;
-    animation: sticky-header-slide-in 300ms var(--ease-out-quad) forwards;
-  }
-
-  .header[data-sticky-state='idle'],
-  .header[data-sticky-state='active'][data-animating] {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  @keyframes sticky-header-slide-in {
-    from {
-      transform: translateY(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
   }
 
   .header__row {
@@ -547,6 +527,7 @@
     padding-left: 24px;
     padding-right: 24px;
     border-radius: 16px;
+    margin-top: 12px;
   }
 
   @media (max-width: 749px){
@@ -555,6 +536,7 @@
       margin-right: 15px;
       padding-left: 15px;
       padding-right: 15px;
+      margin-top: 10px;
     }
   }
 
@@ -711,15 +693,31 @@
     /* Column-specific dimming effect when any interactive element is hovered
       Multiple selectors for performance: each simple :has() check is faster than one complex selector with multiple conditions */
     .header__column:has(header-menu:hover),
-    .header__column:has(.header-actions__action:hover),
+    
     .header__column:has(.dropdown-localization__button:hover),
     .header__column:has(.header__icon--menu:hover) {
       header-menu:not(:hover),
-      .header-actions__action:not(:hover),
+      
       .dropdown-localization__button:not(:hover),
       .header__icon--menu:not(:hover) {
         opacity: var(--opacity-subdued-text);
         transition: opacity var(--animation-speed) var(--animation-easing);
+      }
+    }
+  }
+
+  /* Header actions hover effect */
+  .header-actions__action:hover {
+    opacity: 0.8;
+  }
+
+  header-actions {
+    a:hover .icon-block__media{
+      transition: opacity var(--animation-speed, 0.2s) var(--animation-easing, ease);
+    }
+    @media (hover: hover) {
+      a:hover .icon-block__media {
+        opacity: 0.8;
       }
     }
   }
