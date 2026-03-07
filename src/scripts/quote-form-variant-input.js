@@ -6,6 +6,27 @@
 (function () {
   const PRODUCT_HANDLE_INPUT_NAME = 'product-handle';
   const SELECTED_VARIANT_INPUT_NAME = 'selected-variant';
+  const PRODUCT_TITLE_INPUT_NAME = '00NU0000004hksn';
+
+  /**
+   * Gets the product title from the page
+   * @returns {string} The product title or empty string
+   */
+  function getProductTitle() {
+    // Try to get from the product title element
+    const titleElement = document.querySelector('.product__title, h1[class*="product"], [data-product-title]');
+    if (titleElement) {
+      return titleElement.textContent?.trim() || '';
+    }
+
+    // Fallback: try to get from meta tag
+    const metaTitle = document.querySelector('meta[property="og:title"]');
+    if (metaTitle) {
+      return metaTitle.getAttribute('content') || '';
+    }
+
+    return '';
+  }
 
   /**
    * Gets the product handle from the page
@@ -110,8 +131,9 @@
    * @param {HTMLFormElement} form - The form element
    * @param {string} productHandle - The product handle
    * @param {string} variantValue - The variant options string
+   * @param {string} productTitle - The product title
    */
-  function injectInputs(form, productHandle, variantValue) {
+  function injectInputs(form, productHandle, variantValue, productTitle) {
     // Product handle input
     let handleInput = form.querySelector(`input[name="${PRODUCT_HANDLE_INPUT_NAME}"]`);
     if (!handleInput) {
@@ -129,6 +151,12 @@
     } else {
       variantInput.value = variantValue;
     }
+
+    // Product title input (00NU0000004hksn)
+    let titleInput = form.querySelector(`input[name="${PRODUCT_TITLE_INPUT_NAME}"]`);
+    if (titleInput) {
+      titleInput.value = productTitle;
+    }
   }
 
   /**
@@ -140,9 +168,10 @@
 
     const productHandle = getProductHandle();
     const variantValue = getSelectedVariantOptions();
+    const productTitle = getProductTitle();
 
     quoteForms.forEach((form) => {
-      injectInputs(form, productHandle, variantValue);
+      injectInputs(form, productHandle, variantValue, productTitle);
     });
   }
 
@@ -153,9 +182,10 @@
     const quoteForms = document.querySelectorAll('.custom-quote-form form');
     const variantValue = getSelectedVariantOptions();
     const productHandle = getProductHandle();
+    const productTitle = getProductTitle();
 
     quoteForms.forEach((form) => {
-      injectInputs(form, productHandle, variantValue);
+      injectInputs(form, productHandle, variantValue, productTitle);
     });
   }
 
