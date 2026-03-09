@@ -38,6 +38,7 @@
   class="text-block {{ text_block_classes }} text-{{ block_settings.alignment }} {{ block_settings.type_preset | default: 'paragraph' }} spacing-style"
   data-block-id="{{ block.id }}"
   data-product-id="{{ product_resource.id }}"
+  data-alignment-mobile="{{ block_settings.alignment_mobile | default: block_settings.alignment }}"
   style="
     {% render 'typography-style', settings: block_settings %}
     {% render 'spacing-style', settings: block_settings %}
@@ -123,7 +124,13 @@
     color: #cccccc;
   }
 
-  /* Mobile font sizes */
+  /* Price container with compare-at-price: space-between layout */
+  product-price [ref="priceContainer"]:has(.compare-at-price):has(.save-badge) {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Mobile font sizes and alignment */
   @media screen and (max-width: 749px) {
     product-price .price {
       font-size: var(--price-font-size-mobile, inherit);
@@ -135,6 +142,42 @@
 
     product-price .save-badge {
       font-size: var(--save-badge-font-size-mobile, 12px) !important;
+    }
+
+    /* Mobile alignment - override desktop classes */
+    product-price[data-alignment-mobile="left"],
+    product-price[data-alignment-mobile="left"].text-center,
+    product-price[data-alignment-mobile="left"].text-right {
+      text-align: left !important;
+    }
+
+    product-price[data-alignment-mobile="center"],
+    product-price[data-alignment-mobile="center"].text-left,
+    product-price[data-alignment-mobile="center"].text-right {
+      text-align: center !important;
+    }
+
+    product-price[data-alignment-mobile="right"],
+    product-price[data-alignment-mobile="right"].text-left,
+    product-price[data-alignment-mobile="right"].text-center {
+      text-align: right !important;
+    }
+
+    product-price[data-alignment-mobile="left"] [ref="priceContainer"] {
+      justify-content: flex-start !important;
+    }
+
+    product-price[data-alignment-mobile="center"] [ref="priceContainer"] {
+      justify-content: center !important;
+    }
+
+    product-price[data-alignment-mobile="right"] [ref="priceContainer"] {
+      justify-content: flex-end !important;
+    }
+
+    /* Override: space-between when has compare-at-price and save-badge on mobile */
+    product-price[data-alignment-mobile] [ref="priceContainer"]:has(.compare-at-price):has(.save-badge) {
+      justify-content: space-between !important;
     }
   }
 {% endstylesheet %}
@@ -340,6 +383,13 @@
       "type": "text_alignment",
       "id": "alignment",
       "label": "t:settings.alignment",
+      "default": "left",
+      "visible_if": "{{ block.settings.width != 'fit-content' }}"
+    },
+    {
+      "type": "text_alignment",
+      "id": "alignment_mobile",
+      "label": "Alignment (mobile)",
       "default": "left",
       "visible_if": "{{ block.settings.width != 'fit-content' }}"
     },
