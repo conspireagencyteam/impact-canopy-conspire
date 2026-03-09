@@ -9522,7 +9522,7 @@
                     "padding-block-end-mobile": 15,
                     "padding-inline-start-mobile": 15,
                     "padding-inline-end-mobile": 15,
-                    "custom_class": ""
+                    "custom_class": "testimonial-block"
                   },
                   "blocks": {
                     "group_3prqqX": {
@@ -9634,7 +9634,7 @@
                             "padding-block-end-mobile": 0,
                             "padding-inline-start-mobile": 0,
                             "padding-inline-end-mobile": 0,
-                            "custom_class": ""
+                            "custom_class": "review-block"
                           },
                           "blocks": {
                             "icon_mc3Pw9": {
@@ -10041,7 +10041,7 @@
                     "padding-block-end-mobile": 15,
                     "padding-inline-start-mobile": 15,
                     "padding-inline-end-mobile": 15,
-                    "custom_class": ""
+                    "custom_class": "testimonial-block"
                   },
                   "blocks": {
                     "group_7KnQa6": {
@@ -10153,7 +10153,7 @@
                             "padding-block-end-mobile": 0,
                             "padding-inline-start-mobile": 0,
                             "padding-inline-end-mobile": 0,
-                            "custom_class": ""
+                            "custom_class": "review-block"
                           },
                           "blocks": {
                             "icon_ePjcRC": {
@@ -10560,7 +10560,7 @@
                     "padding-block-end-mobile": 15,
                     "padding-inline-start-mobile": 15,
                     "padding-inline-end-mobile": 15,
-                    "custom_class": ""
+                    "custom_class": "testimonial-block"
                   },
                   "blocks": {
                     "group_zq34gQ": {
@@ -10672,7 +10672,7 @@
                             "padding-block-end-mobile": 0,
                             "padding-inline-start-mobile": 0,
                             "padding-inline-end-mobile": 0,
-                            "custom_class": ""
+                            "custom_class": "review-block"
                           },
                           "blocks": {
                             "icon_PLrKbq": {
