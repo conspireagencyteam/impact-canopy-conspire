@@ -1786,6 +1786,13 @@ zoom-dialog dialog {
   }
 }
 
+/* Remove focus outline on touch devices (iPhone) */
+@media (pointer: coarse) {
+  .close-button:focus-visible {
+    outline: none;
+  }
+}
+
 .dialog--closed .close-button {
   animation: elementSlideOutBottom calc(var(--animation-speed) * 0.5) var(--animation-easing) forwards;
 }
