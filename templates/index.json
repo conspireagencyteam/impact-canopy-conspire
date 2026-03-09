@@ -8717,7 +8717,7 @@
             "padding-block-end": 24,
             "padding-inline-start": 24,
             "padding-inline-end": 24,
-            "use_mobile_padding": true,
+            "use_mobile_padding": false,
             "padding-block-start-mobile": 15,
             "padding-block-end-mobile": 20,
             "padding-inline-start-mobile": 15,
