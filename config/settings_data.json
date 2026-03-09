@@ -881,6 +881,8 @@
     }
   },
   "platform_customizations": {
-    "custom_css": []
+    "custom_css": [
+      ".review-block .group-block-content {--flex-wrap-mobile: nowrap !important;}"
+    ]
   }
 }
