@@ -33,6 +33,8 @@
   style="
     --padding-block-start: {{ block.settings.padding-block-start }}px;
     --padding-block-end: {{ block.settings.padding-block-end }}px;
+    --padding-block-start-mobile: {{ block.settings.padding-block-start-mobile }}px;
+    --padding-block-end-mobile: {{ block.settings.padding-block-end-mobile }}px;
   "
   aria-label="Breadcrumb"
   {{ block.shopify_attributes }}
@@ -193,6 +195,8 @@
   @media screen and (max-width: 749px) {
     .breadcrumb__list {
       gap: 0.375rem;
+      padding-block-start: var(--padding-block-start-mobile, 12px);
+      padding-block-end: var(--padding-block-end-mobile, 12px);
     }
 
     .breadcrumb__item--current .breadcrumb__text {
@@ -317,6 +321,30 @@
     {
       "type": "range",
       "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Mobile Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start-mobile",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end-mobile",
       "label": "t:settings.bottom",
       "min": 0,
       "max": 100,

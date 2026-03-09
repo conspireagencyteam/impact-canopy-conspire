@@ -88,7 +88,9 @@
         border-radius: {{ block_settings.save_badge_border_radius }}px;
         background-color: {{ block_settings.save_badge_background }};
         color: {{ block_settings.save_badge_text_color }};
-        font-size: {{ block_settings.save_badge_font_size }}px;
+        --save-badge-font-size: {{ block_settings.save_badge_font_size }}px;
+        --save-badge-font-size-mobile: {{ block_settings.save_badge_font_size_mobile }}px;
+        font-size: var(--save-badge-font-size);
         font-weight: {{ block_settings.save_badge_font_weight }};
         text-transform: {{ block_settings.save_badge_text_transform }};
         white-space: nowrap;
@@ -96,6 +98,14 @@
     {% endif %}
   </div>
 </div>
+
+{% stylesheet %}
+  @media screen and (max-width: 749px) {
+    .save-badge {
+      font-size: var(--save-badge-font-size-mobile) !important;
+    }
+  }
+{% endstylesheet %}
 
 {% # theme-check-disable %}
 
@@ -180,6 +190,16 @@
       "type": "range",
       "id": "save_badge_font_size",
       "label": "Font size",
+      "min": 8,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "save_badge_font_size_mobile",
+      "label": "Font size (mobile)",
       "min": 8,
       "max": 24,
       "step": 1,

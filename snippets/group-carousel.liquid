@@ -167,7 +167,7 @@
   }
 
   @container resource-list-carousel (width < 750px) {
-    .resource-list__carousel .resource-list__slide {
+    .group-carousel__wrapper > slideshow-component > slideshow-container > slideshow-slides > .resource-list__slide {
       --slide-width: var(--slide-width--mobile, 90%);
     }
 
@@ -177,11 +177,11 @@
       overflow: visible;
     }
 
-    .group-carousel__wrapper slideshow-component {
+    .group-carousel__wrapper > slideshow-component {
       overflow: visible;
     }
 
-    .group-carousel__wrapper slideshow-slides {
+    .group-carousel__wrapper > slideshow-component > slideshow-container > slideshow-slides {
       gap: 16px;
       padding-inline-end: var(--peek-next-slide-size, 10%);
     }
