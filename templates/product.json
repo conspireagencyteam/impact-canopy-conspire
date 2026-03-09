@@ -12333,9 +12333,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 72,
         "padding-block-end": 36,
-        "use_mobile_padding": false,
-        "padding-block-start-mobile": 0,
-        "padding-block-end-mobile": 0
+        "use_mobile_padding": true,
+        "padding-block-start-mobile": 36,
+        "padding-block-end-mobile": 36
       }
     }
   },
