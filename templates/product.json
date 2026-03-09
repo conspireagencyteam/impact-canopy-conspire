@@ -32,7 +32,9 @@
             "text_size": "small",
             "alignment": "left",
             "padding-block-start": 12,
-            "padding-block-end": 12
+            "padding-block-end": 12,
+            "padding-block-start-mobile": 5,
+            "padding-block-end-mobile": 5
           },
           "blocks": {}
         }
