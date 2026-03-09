@@ -3569,6 +3569,9 @@ slideshow-controls[thumbnails]:is([pagination-position='right'], [pagination-pos
 
   .slideshow-controls__thumbnails-container {
     overflow: hidden auto;
+    @media screen and (max-width: 749px) {
+      overflow: auto hidden;
+    }
   }
 
   &:not([controls-on-media]) {
@@ -3801,7 +3804,6 @@ slideshow-component[autoplay] slideshow-controls {
   display: flex;
   width: 100%;
   max-height: 100%;
-  overflow-x: scroll;
   scrollbar-width: none;
 }
 

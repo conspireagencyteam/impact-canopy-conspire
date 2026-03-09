@@ -325,6 +325,7 @@
     style="{% render 'spacing-style', settings: block_settings %} --thumbnail-width: {{ block_settings.thumbnail_width }}px; --thumbnail-gap: {{ block_settings.thumbnail_gap | default: 16 }}px; --thumbnail-radius: {{ block_settings.thumbnail_radius | default: 0 }}px; --media-radius: {{ block_settings.media_radius }}px;{% if block_settings.icons_style contains 'large' %} --slideshow-icon-padding: 0px;{% endif %}--image-gap: {{ block_settings.image_gap }}px;{% unless block_settings.aspect_ratio == 'adapt' %} --gallery-aspect-ratio: {{ block_settings.aspect_ratio }};{% endunless %}"
     data-presentation="{{ media_presentation }}"
     data-mobile-thumbnail-position="{{ block_settings.thumbnail_position_mobile | default: 'bottom' }}"
+    data-media-count="{{ sorted_media.size }}"
     {{ block_shopify_attributes }}
   >
     {% capture slides %}
@@ -762,6 +763,31 @@
       order: 1;
       margin-top: var(--thumbnail-gap, 16px);
       margin-bottom: 0;
+    }
+
+    /* Mobile thumbnails horizontal scroll when more than 4 items */
+    media-gallery[data-media-count]:not([data-media-count='1']):not([data-media-count='2']):not([data-media-count='3']):not([data-media-count='4']) .media-gallery__mobile-controls[thumbnails] .slideshow-controls__thumbnails-container {
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
+
+    media-gallery[data-media-count]:not([data-media-count='1']):not([data-media-count='2']):not([data-media-count='3']):not([data-media-count='4']) .media-gallery__mobile-controls[thumbnails] .slideshow-controls__thumbnails-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    media-gallery[data-media-count]:not([data-media-count='1']):not([data-media-count='2']):not([data-media-count='3']):not([data-media-count='4']) .media-gallery__mobile-controls[thumbnails] .slideshow-controls__thumbnails {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 8px;
+      padding-inline: 4px;
+    }
+
+    media-gallery[data-media-count]:not([data-media-count='1']):not([data-media-count='2']):not([data-media-count='3']):not([data-media-count='4']) .media-gallery__mobile-controls[thumbnails] .slideshow-controls__thumbnail {
+      flex-shrink: 0;
+      scroll-snap-align: start;
     }
   }
 
