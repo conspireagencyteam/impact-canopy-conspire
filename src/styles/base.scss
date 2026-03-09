@@ -995,6 +995,17 @@ body:has(.header[transparent]) #header-group > *:not(.header-section) {
   margin: auto;
   padding: 0;
   list-style: none;
+  .product-card {
+    [ref="priceContainer"] {
+      @media screen and (max-width: 749px) {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 8px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 750px) {
