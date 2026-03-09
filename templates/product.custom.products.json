@@ -537,7 +537,7 @@
               "type": "variant-picker",
               "settings": {
                 "variant_style": "buttons",
-                "style_override_options": "Frame Type",
+                "style_override_options": "Frame Type, select frame",
                 "show_swatches": true,
                 "alignment": "left",
                 "padding-block-start": 0,
@@ -865,9 +865,9 @@
                     "padding-block-end": 12,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0,
-                    "use_mobile_padding": false,
+                    "use_mobile_padding": true,
                     "padding-block-start-mobile": 0,
-                    "padding-block-end-mobile": 0,
+                    "padding-block-end-mobile": 12,
                     "padding-inline-start-mobile": 0,
                     "padding-inline-end-mobile": 0,
                     "custom_class": ""
