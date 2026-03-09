@@ -841,7 +841,7 @@
                   "type": "text",
                   "static": true,
                   "settings": {
-                    "text": "<p>Cross Sell:</p>",
+                    "text": "<p>Accessories:</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
