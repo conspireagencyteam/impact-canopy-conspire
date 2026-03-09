@@ -8092,10 +8092,10 @@
         "padding-block-end-mobile": 0
       }
     },
-    "section_7BxEVK": {
+    "section_chGAX4": {
       "type": "section",
       "blocks": {
-        "group_nNhMyx": {
+        "group_xgjVVw": {
           "type": "group",
           "name": "Header",
           "settings": {
@@ -8145,7 +8145,7 @@
             "custom_class": ""
           },
           "blocks": {
-            "group_frMetM": {
+            "group_fiWCTT": {
               "type": "group",
               "name": "t:names.group",
               "settings": {
@@ -8195,7 +8195,7 @@
                 "custom_class": ""
               },
               "blocks": {
-                "text_DWwzGn": {
+                "text_PXrNXF": {
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
@@ -8232,7 +8232,7 @@
                   },
                   "blocks": {}
                 },
-                "text_R46Rdn": {
+                "text_t63n7t": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
@@ -8271,16 +8271,16 @@
                 }
               },
               "block_order": [
-                "text_DWwzGn",
-                "text_R46Rdn"
+                "text_PXrNXF",
+                "text_t63n7t"
               ]
             }
           },
           "block_order": [
-            "group_frMetM"
+            "group_fiWCTT"
           ]
         },
-        "group_grid_carousel_MD63zq": {
+        "group_grid_carousel_x3yXk8": {
           "type": "group-grid-carousel",
           "name": "Group Grid",
           "settings": {
@@ -8312,7 +8312,7 @@
             "padding-block-end": 0
           },
           "blocks": {
-            "group_item_rDBiNt": {
+            "group_item_hbHdM3": {
               "type": "_group-item",
               "name": "Group Item",
               "settings": {
@@ -8361,7 +8361,7 @@
                 "custom_class": ""
               },
               "blocks": {
-                "group_XnVaJ3": {
+                "group_g6y4eA": {
                   "type": "group",
                   "name": "Testimonial",
                   "settings": {
@@ -8408,16 +8408,16 @@
                     "padding-block-end-mobile": 15,
                     "padding-inline-start-mobile": 15,
                     "padding-inline-end-mobile": 15,
-                    "custom_class": ""
+                    "custom_class": "testimonial-block"
                   },
                   "blocks": {
-                    "group_tYVHt4": {
+                    "group_ExQnTa": {
                       "type": "group",
                       "name": "t:names.group",
                       "settings": {
                         "display": "all",
                         "content_direction": "row",
-                        "vertical_on_mobile": true,
+                        "vertical_on_mobile": false,
                         "reverse_on_mobile": false,
                         "horizontal_alignment": "space-between",
                         "vertical_alignment": "center",
@@ -8461,7 +8461,7 @@
                         "custom_class": ""
                       },
                       "blocks": {
-                        "icon_dWGFtj": {
+                        "icon_nfkVbn": {
                           "type": "icon",
                           "name": "t:names.icon",
                           "settings": {
@@ -8473,7 +8473,7 @@
                           },
                           "blocks": {}
                         },
-                        "group_GUeiQe": {
+                        "group_JyxhQF": {
                           "type": "group",
                           "name": "review",
                           "settings": {
@@ -8481,7 +8481,7 @@
                             "content_direction": "row",
                             "vertical_on_mobile": false,
                             "reverse_on_mobile": false,
-                            "horizontal_alignment": "center",
+                            "horizontal_alignment": "flex-start",
                             "vertical_alignment": "center",
                             "align_baseline": false,
                             "horizontal_alignment_flex_direction_column": "flex-start",
@@ -8489,10 +8489,10 @@
                             "gap": 5,
                             "width": "fit-content",
                             "custom_width": 100,
-                            "width_tablet": "fill",
+                            "width_tablet": "fit-content",
                             "custom_width_tablet": 100,
                             "width_mobile": "fit-content",
-                            "custom_width_mobile": 100,
+                            "custom_width_mobile": 29,
                             "height": "fit",
                             "custom_height": 100,
                             "inherit_color_scheme": true,
@@ -8520,22 +8520,22 @@
                             "padding-block-end-mobile": 0,
                             "padding-inline-start-mobile": 0,
                             "padding-inline-end-mobile": 0,
-                            "custom_class": ""
+                            "custom_class": "review-block"
                           },
                           "blocks": {
-                            "icon_tWFTpH": {
+                            "icon_QWdgbQ": {
                               "type": "icon",
                               "name": "t:names.icon",
                               "settings": {
                                 "icon": "price_tag",
                                 "image_upload": "shopify://shop_images/star.png",
-                                "width": 20,
+                                "width": 16,
                                 "link": "",
                                 "open_in_new_tab": false
                               },
                               "blocks": {}
                             },
-                            "text_mKnU8J": {
+                            "text_7Uhcrt": {
                               "type": "text",
                               "name": "t:names.heading",
                               "settings": {
@@ -8543,14 +8543,14 @@
                                 "width": "fit-content",
                                 "max_width": "normal",
                                 "alignment": "left",
-                                "type_preset": "h6",
-                                "font": "var(--font-body--family)",
+                                "type_preset": "custom",
+                                "font": "var(--font-heading--family)",
                                 "font_size": "1rem",
                                 "line_height": "normal",
                                 "letter_spacing": "normal",
                                 "case": "none",
                                 "wrap": "pretty",
-                                "color": "var(--color-foreground)",
+                                "color": "var(--color-primary)",
                                 "custom_color": "#000000",
                                 "use_mobile_typography": false,
                                 "font_size_mobile": "1rem",
@@ -8574,17 +8574,17 @@
                             }
                           },
                           "block_order": [
-                            "icon_tWFTpH",
-                            "text_mKnU8J"
+                            "icon_QWdgbQ",
+                            "text_7Uhcrt"
                           ]
                         }
                       },
                       "block_order": [
-                        "icon_dWGFtj",
-                        "group_GUeiQe"
+                        "icon_nfkVbn",
+                        "group_JyxhQF"
                       ]
                     },
-                    "text_mhHtLJ": {
+                    "text_aPWFnj": {
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
@@ -8621,7 +8621,7 @@
                       },
                       "blocks": {}
                     },
-                    "group_iCxX6p": {
+                    "group_CYjDE8": {
                       "type": "group",
                       "name": "Testimonial photo",
                       "settings": {
@@ -8671,7 +8671,7 @@
                         "custom_class": ""
                       },
                       "blocks": {
-                        "icon_TYtVhk": {
+                        "icon_bLwUfY": {
                           "type": "icon",
                           "name": "t:names.icon",
                           "settings": {
@@ -8683,7 +8683,7 @@
                           },
                           "blocks": {}
                         },
-                        "group_xAHKKJ": {
+                        "group_U9Xjxx": {
                           "type": "group",
                           "name": "t:names.group",
                           "settings": {
@@ -8733,7 +8733,7 @@
                             "custom_class": ""
                           },
                           "blocks": {
-                            "text_7WMJEm": {
+                            "text_JMRJrw": {
                               "type": "text",
                               "name": "t:names.heading",
                               "settings": {
@@ -8770,7 +8770,7 @@
                               },
                               "blocks": {}
                             },
-                            "text_PUkz8t": {
+                            "text_98e7Vi": {
                               "type": "text",
                               "name": "t:names.text",
                               "settings": {
@@ -8809,29 +8809,29 @@
                             }
                           },
                           "block_order": [
-                            "text_7WMJEm",
-                            "text_PUkz8t"
+                            "text_JMRJrw",
+                            "text_98e7Vi"
                           ]
                         }
                       },
                       "block_order": [
-                        "icon_TYtVhk",
-                        "group_xAHKKJ"
+                        "icon_bLwUfY",
+                        "group_U9Xjxx"
                       ]
                     }
                   },
                   "block_order": [
-                    "group_tYVHt4",
-                    "text_mhHtLJ",
-                    "group_iCxX6p"
+                    "group_ExQnTa",
+                    "text_aPWFnj",
+                    "group_CYjDE8"
                   ]
                 }
               },
               "block_order": [
-                "group_XnVaJ3"
+                "group_g6y4eA"
               ]
             },
-            "group_item_DBLEmK": {
+            "group_item_ahhy64": {
               "type": "_group-item",
               "name": "Group Item",
               "settings": {
@@ -8880,7 +8880,7 @@
                 "custom_class": ""
               },
               "blocks": {
-                "group_m7V63j": {
+                "group_3fDiFb": {
                   "type": "group",
                   "name": "Testimonial",
                   "settings": {
@@ -8927,16 +8927,16 @@
                     "padding-block-end-mobile": 15,
                     "padding-inline-start-mobile": 15,
                     "padding-inline-end-mobile": 15,
-                    "custom_class": ""
+                    "custom_class": "testimonial-block"
                   },
                   "blocks": {
-                    "group_9rrgdP": {
+                    "group_KKM7rB": {
                       "type": "group",
                       "name": "t:names.group",
                       "settings": {
                         "display": "all",
                         "content_direction": "row",
-                        "vertical_on_mobile": true,
+                        "vertical_on_mobile": false,
                         "reverse_on_mobile": false,
                         "horizontal_alignment": "space-between",
                         "vertical_alignment": "center",
@@ -8980,7 +8980,7 @@
                         "custom_class": ""
                       },
                       "blocks": {
-                        "icon_AGY6W6": {
+                        "icon_dRj7AF": {
                           "type": "icon",
                           "name": "t:names.icon",
                           "settings": {
@@ -8992,7 +8992,7 @@
                           },
                           "blocks": {}
                         },
-                        "group_9GJgQL": {
+                        "group_EbLxJH": {
                           "type": "group",
                           "name": "review",
                           "settings": {
@@ -9039,10 +9039,10 @@
                             "padding-block-end-mobile": 0,
                             "padding-inline-start-mobile": 0,
                             "padding-inline-end-mobile": 0,
-                            "custom_class": ""
+                            "custom_class": "review-block"
                           },
                           "blocks": {
-                            "icon_aKpnPf": {
+                            "icon_RyabEx": {
                               "type": "icon",
                               "name": "t:names.icon",
                               "settings": {
@@ -9054,7 +9054,7 @@
                               },
                               "blocks": {}
                             },
-                            "text_UC6xNj": {
+                            "text_xxHNJd": {
                               "type": "text",
                               "name": "t:names.heading",
                               "settings": {
@@ -9069,7 +9069,7 @@
                                 "letter_spacing": "normal",
                                 "case": "none",
                                 "wrap": "pretty",
-                                "color": "var(--color-foreground)",
+                                "color": "var(--color-primary)",
                                 "custom_color": "#000000",
                                 "use_mobile_typography": false,
                                 "font_size_mobile": "1rem",
@@ -9093,17 +9093,17 @@
                             }
                           },
                           "block_order": [
-                            "icon_aKpnPf",
-                            "text_UC6xNj"
+                            "icon_RyabEx",
+                            "text_xxHNJd"
                           ]
                         }
                       },
                       "block_order": [
-                        "icon_AGY6W6",
-                        "group_9GJgQL"
+                        "icon_dRj7AF",
+                        "group_EbLxJH"
                       ]
                     },
-                    "text_eEAPbE": {
+                    "text_ty8bVH": {
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
@@ -9140,7 +9140,7 @@
                       },
                       "blocks": {}
                     },
-                    "group_YVYk9N": {
+                    "group_QTAfmQ": {
                       "type": "group",
                       "name": "Testimonial photo",
                       "settings": {
@@ -9190,7 +9190,7 @@
                         "custom_class": ""
                       },
                       "blocks": {
-                        "icon_BGxCGp": {
+                        "icon_CkBExL": {
                           "type": "icon",
                           "name": "t:names.icon",
                           "settings": {
@@ -9202,7 +9202,7 @@
                           },
                           "blocks": {}
                         },
-                        "group_id3m6d": {
+                        "group_N3PQmE": {
                           "type": "group",
                           "name": "t:names.group",
                           "settings": {
@@ -9252,7 +9252,7 @@
                             "custom_class": ""
                           },
                           "blocks": {
-                            "text_LXMcN7": {
+                            "text_MegD9i": {
                               "type": "text",
                               "name": "t:names.heading",
                               "settings": {
@@ -9289,7 +9289,7 @@
                               },
                               "blocks": {}
                             },
-                            "text_QbedYK": {
+                            "text_K8GDeh": {
                               "type": "text",
                               "name": "t:names.text",
                               "settings": {
@@ -9328,29 +9328,29 @@
                             }
                           },
                           "block_order": [
-                            "text_LXMcN7",
-                            "text_QbedYK"
+                            "text_MegD9i",
+                            "text_K8GDeh"
                           ]
                         }
                       },
                       "block_order": [
-                        "icon_BGxCGp",
-                        "group_id3m6d"
+                        "icon_CkBExL",
+                        "group_N3PQmE"
                       ]
                     }
                   },
                   "block_order": [
-                    "group_9rrgdP",
-                    "text_eEAPbE",
-                    "group_YVYk9N"
+                    "group_KKM7rB",
+                    "text_ty8bVH",
+                    "group_QTAfmQ"
                   ]
                 }
               },
               "block_order": [
-                "group_m7V63j"
+                "group_3fDiFb"
               ]
             },
-            "group_item_zbfGh6": {
+            "group_item_qeNYGq": {
               "type": "_group-item",
               "name": "Group Item",
               "settings": {
@@ -9399,7 +9399,7 @@
                 "custom_class": ""
               },
               "blocks": {
-                "group_KaJLzP": {
+                "group_txWFM7": {
                   "type": "group",
                   "name": "Testimonial",
                   "settings": {
@@ -9446,16 +9446,16 @@
                     "padding-block-end-mobile": 15,
                     "padding-inline-start-mobile": 15,
                     "padding-inline-end-mobile": 15,
-                    "custom_class": ""
+                    "custom_class": "testimonial-block"
                   },
                   "blocks": {
-                    "group_WWfbWP": {
+                    "group_pJGfDJ": {
                       "type": "group",
                       "name": "t:names.group",
                       "settings": {
                         "display": "all",
                         "content_direction": "row",
-                        "vertical_on_mobile": true,
+                        "vertical_on_mobile": false,
                         "reverse_on_mobile": false,
                         "horizontal_alignment": "space-between",
                         "vertical_alignment": "center",
@@ -9499,7 +9499,7 @@
                         "custom_class": ""
                       },
                       "blocks": {
-                        "icon_XGEVbJ": {
+                        "icon_n6kgHK": {
                           "type": "icon",
                           "name": "t:names.icon",
                           "settings": {
@@ -9511,7 +9511,7 @@
                           },
                           "blocks": {}
                         },
-                        "group_FbTXYj": {
+                        "group_TKDyQT": {
                           "type": "group",
                           "name": "review",
                           "settings": {
@@ -9558,10 +9558,10 @@
                             "padding-block-end-mobile": 0,
                             "padding-inline-start-mobile": 0,
                             "padding-inline-end-mobile": 0,
-                            "custom_class": ""
+                            "custom_class": "review-block"
                           },
                           "blocks": {
-                            "icon_LgJHgx": {
+                            "icon_BaJxMX": {
                               "type": "icon",
                               "name": "t:names.icon",
                               "settings": {
@@ -9573,7 +9573,7 @@
                               },
                               "blocks": {}
                             },
-                            "text_wr86hg": {
+                            "text_wLQXEj": {
                               "type": "text",
                               "name": "t:names.heading",
                               "settings": {
@@ -9588,7 +9588,7 @@
                                 "letter_spacing": "normal",
                                 "case": "none",
                                 "wrap": "pretty",
-                                "color": "var(--color-foreground)",
+                                "color": "var(--color-primary)",
                                 "custom_color": "#000000",
                                 "use_mobile_typography": false,
                                 "font_size_mobile": "1rem",
@@ -9612,17 +9612,17 @@
                             }
                           },
                           "block_order": [
-                            "icon_LgJHgx",
-                            "text_wr86hg"
+                            "icon_BaJxMX",
+                            "text_wLQXEj"
                           ]
                         }
                       },
                       "block_order": [
-                        "icon_XGEVbJ",
-                        "group_FbTXYj"
+                        "icon_n6kgHK",
+                        "group_TKDyQT"
                       ]
                     },
-                    "text_EbgPhL": {
+                    "text_99EQgh": {
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
@@ -9659,7 +9659,7 @@
                       },
                       "blocks": {}
                     },
-                    "group_tdTtaD": {
+                    "group_AzHAaf": {
                       "type": "group",
                       "name": "Testimonial photo",
                       "settings": {
@@ -9709,7 +9709,7 @@
                         "custom_class": ""
                       },
                       "blocks": {
-                        "icon_Y3Ccg6": {
+                        "icon_KyBNy3": {
                           "type": "icon",
                           "name": "t:names.icon",
                           "settings": {
@@ -9721,7 +9721,7 @@
                           },
                           "blocks": {}
                         },
-                        "group_668e7x": {
+                        "group_iK7QXy": {
                           "type": "group",
                           "name": "t:names.group",
                           "settings": {
@@ -9771,7 +9771,7 @@
                             "custom_class": ""
                           },
                           "blocks": {
-                            "text_NbC9dH": {
+                            "text_8PFVJh": {
                               "type": "text",
                               "name": "t:names.heading",
                               "settings": {
@@ -9808,7 +9808,7 @@
                               },
                               "blocks": {}
                             },
-                            "text_UX83NF": {
+                            "text_378tby": {
                               "type": "text",
                               "name": "t:names.text",
                               "settings": {
@@ -9847,39 +9847,39 @@
                             }
                           },
                           "block_order": [
-                            "text_NbC9dH",
-                            "text_UX83NF"
+                            "text_8PFVJh",
+                            "text_378tby"
                           ]
                         }
                       },
                       "block_order": [
-                        "icon_Y3Ccg6",
-                        "group_668e7x"
+                        "icon_KyBNy3",
+                        "group_iK7QXy"
                       ]
                     }
                   },
                   "block_order": [
-                    "group_WWfbWP",
-                    "text_EbgPhL",
-                    "group_tdTtaD"
+                    "group_pJGfDJ",
+                    "text_99EQgh",
+                    "group_AzHAaf"
                   ]
                 }
               },
               "block_order": [
-                "group_KaJLzP"
+                "group_txWFM7"
               ]
             }
           },
           "block_order": [
-            "group_item_rDBiNt",
-            "group_item_DBLEmK",
-            "group_item_zbfGh6"
+            "group_item_hbHdM3",
+            "group_item_ahhy64",
+            "group_item_qeNYGq"
           ]
         }
       },
       "block_order": [
-        "group_nNhMyx",
-        "group_grid_carousel_MD63zq"
+        "group_xgjVVw",
+        "group_grid_carousel_x3yXk8"
       ],
       "name": "Block",
       "settings": {
@@ -12869,7 +12869,7 @@
     "section_pRAkNk",
     "section_wXKnfR",
     "section_YePwBA",
-    "section_7BxEVK",
+    "section_chGAX4",
     "dynamic_type_recommendation_NJrVxK",
     "section_nczTKT",
     "section_dbwrh9"
