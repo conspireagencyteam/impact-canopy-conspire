@@ -4535,7 +4535,7 @@ text-component {
   padding-left: 0;
   li {
     &::before {
-      content: '✓';
+      content: '\2713'; 
       margin-right: 6px;
     }
   }
