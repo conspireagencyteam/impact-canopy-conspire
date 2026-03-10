@@ -882,7 +882,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "View All",
-                    "link": "shopify://collections/all",
+                    "link": "{{ closest.collection.url }}",
                     "open_in_new_tab": true,
                     "style_class": "button",
                     "button_size": "default",
@@ -1018,9 +1018,13 @@
                 "type_preset": "custom",
                 "width": "100%",
                 "alignment": "center",
+                "alignment_mobile": "left",
                 "font": "var(--font-accent--family)",
                 "font_size": "1rem",
                 "compare_at_price_font_size": "",
+                "font_size_mobile": "",
+                "compare_at_price_font_size_mobile": "",
+                "save_badge_font_size_mobile": 12,
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -1896,7 +1900,7 @@
         }
       },
       "custom_css": [
-        "@media (max-width: 749px){.button--has-icon {justify-content: space-between; }}"
+        "@media (max-width: 749px) {.button--has-icon {justify-content: space-between; }}"
       ],
       "name": "t:names.custom_section",
       "settings": {
