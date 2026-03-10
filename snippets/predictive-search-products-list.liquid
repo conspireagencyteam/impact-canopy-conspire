@@ -66,9 +66,6 @@
           {% endfor %}
         {% else %}
           {% for product in products limit: limit %}
-            {%- comment %}<locksmith:8b94>{% endcomment -%}
-              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-            {%- comment %}</locksmith:8b94>{% endcomment -%}
             <li
               class="predictive-search-results__card predictive-search-results__card--product"
               ref="recentlyViewedItems[]"
@@ -98,9 +95,6 @@
         assign limit = limit | default: 8
       %}
       {% for product in products limit: limit %}
-        {%- comment %}<locksmith:c972>{% endcomment -%}
-          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-        {%- comment %}</locksmith:c972>{% endcomment -%}
         <li
           class="predictive-search-results__card predictive-search-results__card--product"
           ref="resultsItems[]"
@@ -186,6 +180,14 @@
   }
 
   .predictive-search-results__wrapper-products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-block-end: var(--padding-sm);
+    gap: var(--gap-md);
     animation-delay: 50ms;
+
+    @media screen and (max-width: 749px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 {% endstylesheet %}
