@@ -5590,7 +5590,7 @@
             "layout_type_mobile": "carousel",
             "columns": 3,
             "mobile_columns": "2",
-            "full_width_on_mobile": false,
+            "full_width_on_mobile": true,
             "columns_gap": 16,
             "rows_gap": 16,
             "autoplay": false,
