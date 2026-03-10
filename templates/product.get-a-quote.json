@@ -11882,6 +11882,57 @@
             "custom_class": ""
           },
           "blocks": {
+            "group_4z4tWJ": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "display": "all",
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "reverse_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_tablet": "fill",
+                "custom_width_tablet": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_style": "solid",
+                "overlay_color": "#00000026",
+                "overlay_gradient": "",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 85,
+                "padding-block-end": 75,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "use_mobile_padding": false,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
             "group_BNFKaR": {
               "type": "group",
               "name": "Head",
@@ -12747,6 +12798,7 @@
             }
           },
           "block_order": [
+            "group_4z4tWJ",
             "group_BNFKaR",
             "group_cCnCbU"
           ]
