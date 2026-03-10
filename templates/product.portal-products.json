@@ -2017,7 +2017,8 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "padding-block-start": 0,
-            "padding-block-end": 8
+            "padding-block-end": 8,
+            "carousel_custom_class": ""
           },
           "blocks": {
             "group_item_3UirWh": {
@@ -5714,7 +5715,8 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "padding-block-start": 0,
-            "padding-block-end": 0
+            "padding-block-end": 0,
+            "carousel_custom_class": ""
           },
           "blocks": {
             "group_item_h7bb6f": {
@@ -6938,7 +6940,8 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "padding-block-start": 0,
-            "padding-block-end": 0
+            "padding-block-end": 0,
+            "carousel_custom_class": "steps-carousel-wrapper"
           },
           "blocks": {
             "group_item_3pgyAF": {
@@ -6987,7 +6990,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "step-item-mobile"
               },
               "blocks": {
                 "group_with_title_QJn4wc": {
@@ -7209,7 +7212,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "step-item-mobile"
               },
               "blocks": {
                 "group_with_title_zL9xef": {
@@ -7431,7 +7434,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "step-item-mobile"
               },
               "blocks": {
                 "group_with_title_EEQTaD": {
@@ -8143,7 +8146,8 @@
                     "inherit_color_scheme": true,
                     "color_scheme": "",
                     "padding-block-start": 0,
-                    "padding-block-end": 0
+                    "padding-block-end": 0,
+                    "carousel_custom_class": ""
                   },
                   "blocks": {
                     "group_item_UamqNz": {
@@ -10440,7 +10444,8 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "padding-block-start": 0,
-            "padding-block-end": 0
+            "padding-block-end": 0,
+            "carousel_custom_class": ""
           },
           "blocks": {
             "group_item_hVtHwd": {
