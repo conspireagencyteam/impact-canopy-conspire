@@ -39,9 +39,7 @@
           "blocks": {}
         }
       },
-      "block_order": [
-        "breadcrumb_UEGQBi"
-      ],
+      "block_order": ["breadcrumb_UEGQBi"],
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -307,10 +305,7 @@
                   "blocks": {}
                 }
               },
-              "block_order": [
-                "text_8C6jL9",
-                "text_xrwHew"
-              ]
+              "block_order": ["text_8C6jL9", "text_xrwHew"]
             },
             "metaobject_pdp_V6FERh": {
               "type": "metaobject-pdp",
@@ -512,9 +507,7 @@
                   "block_order": []
                 }
               },
-              "block_order": [
-                "text_fNNVFb"
-              ]
+              "block_order": ["text_fNNVFb"]
             },
             "divider_VJhene": {
               "type": "_divider",
@@ -724,10 +717,7 @@
                   "blocks": {}
                 }
               },
-              "block_order": [
-                "text_aa9ihi",
-                "price_RiffPc"
-              ]
+              "block_order": ["text_aa9ihi", "price_RiffPc"]
             },
             "divider_LA6KwY": {
               "type": "_divider",
@@ -1028,9 +1018,7 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": [
-                            "icon_iWaMTa"
-                          ]
+                          "block_order": ["icon_iWaMTa"]
                         },
                         "product_card_group_iEwjpm": {
                           "type": "_product-card-group",
@@ -1293,9 +1281,7 @@
                           "block_order": []
                         }
                       },
-                      "block_order": [
-                        "buy_buttons_ywVjzF"
-                      ]
+                      "block_order": ["buy_buttons_ywVjzF"]
                     }
                   },
                   "block_order": [
@@ -1377,9 +1363,7 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "text_t8RieQ"
-                  ]
+                  "block_order": ["text_t8RieQ"]
                 },
                 "accordion_row_jMQB9i": {
                   "type": "_accordion-row",
@@ -1427,9 +1411,7 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "text_R9rqVL"
-                  ]
+                  "block_order": ["text_R9rqVL"]
                 },
                 "accordion_row_3d6xzJ": {
                   "type": "_accordion-row",
@@ -1477,9 +1459,7 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "text_qhUCbV"
-                  ]
+                  "block_order": ["text_qhUCbV"]
                 },
                 "accordion_row_qrgHAp": {
                   "type": "_accordion-row",
@@ -1527,9 +1507,7 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "text_Mypi3r"
-                  ]
+                  "block_order": ["text_Mypi3r"]
                 },
                 "accordion_row_kNVRDH": {
                   "type": "_accordion-row",
@@ -1577,9 +1555,7 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "text_GDPjcY"
-                  ]
+                  "block_order": ["text_GDPjcY"]
                 },
                 "accordion_row_gTWTFa": {
                   "type": "_accordion-row",
@@ -1627,9 +1603,7 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "text_Npfkf3"
-                  ]
+                  "block_order": ["text_Npfkf3"]
                 }
               },
               "block_order": [
@@ -1659,9 +1633,7 @@
           ]
         }
       },
-      "custom_css": [
-        ".quote-form-button-popup button {padding-block: 14px;}"
-      ],
+      "custom_css": [".quote-form-button-popup button {padding-block: 14px;}"],
       "settings": {
         "content_width": "content-center-aligned",
         "desktop_media_position": "left",
@@ -1857,10 +1829,7 @@
                   "blocks": {}
                 }
               },
-              "block_order": [
-                "text_MXAzKQ",
-                "text_BMfdGn"
-              ]
+              "block_order": ["text_MXAzKQ", "text_BMfdGn"]
             },
             "group_BdRtzk": {
               "type": "group",
@@ -1942,15 +1911,10 @@
                   "blocks": {}
                 }
               },
-              "block_order": [
-                "button_WwxJfA"
-              ]
+              "block_order": ["button_WwxJfA"]
             }
           },
-          "block_order": [
-            "group_QxTwmG",
-            "group_BdRtzk"
-          ]
+          "block_order": ["group_QxTwmG", "group_BdRtzk"]
         },
         "group_grid_carousel_6Dqwfz": {
           "type": "group-grid-carousel",
@@ -1981,7 +1945,8 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "padding-block-start": 0,
-            "padding-block-end": 8
+            "padding-block-end": 8,
+            "carousel_custom_class": ""
           },
           "blocks": {
             "group_item_Tikg8c": {
@@ -2190,16 +2155,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "image_merPCD",
-                    "text_VUVx9J",
-                    "text_e9RnVz"
-                  ]
+                  "block_order": ["image_merPCD", "text_VUVx9J", "text_e9RnVz"]
                 }
               },
-              "block_order": [
-                "group_Abzrdk"
-              ]
+              "block_order": ["group_Abzrdk"]
             },
             "group_item_paNyMC": {
               "type": "_group-item",
@@ -2407,16 +2366,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "image_GFWMfw",
-                    "text_pwhyd9",
-                    "text_iEUfbd"
-                  ]
+                  "block_order": ["image_GFWMfw", "text_pwhyd9", "text_iEUfbd"]
                 }
               },
-              "block_order": [
-                "group_DtFVcE"
-              ]
+              "block_order": ["group_DtFVcE"]
             },
             "group_item_etHcKr": {
               "type": "_group-item",
@@ -2624,16 +2577,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "image_LYAQNh",
-                    "text_Ya9YeG",
-                    "text_zUUwht"
-                  ]
+                  "block_order": ["image_LYAQNh", "text_Ya9YeG", "text_zUUwht"]
                 }
               },
-              "block_order": [
-                "group_jyXhrx"
-              ]
+              "block_order": ["group_jyXhrx"]
             },
             "group_item_pEjmRW": {
               "type": "_group-item",
@@ -2841,16 +2788,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "image_LF4y7h",
-                    "text_rNVTJn",
-                    "text_b37xHD"
-                  ]
+                  "block_order": ["image_LF4y7h", "text_rNVTJn", "text_b37xHD"]
                 }
               },
-              "block_order": [
-                "group_VdEEGp"
-              ]
+              "block_order": ["group_VdEEGp"]
             },
             "group_item_9pd4fL": {
               "type": "_group-item",
@@ -3058,16 +2999,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "image_amPAF3",
-                    "text_qH9Hwh",
-                    "text_RKpY6H"
-                  ]
+                  "block_order": ["image_amPAF3", "text_qH9Hwh", "text_RKpY6H"]
                 }
               },
-              "block_order": [
-                "group_U7MdW4"
-              ]
+              "block_order": ["group_U7MdW4"]
             },
             "group_item_fTF4xd": {
               "type": "_group-item",
@@ -3275,16 +3210,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "image_MyFwQD",
-                    "text_K6hUWA",
-                    "text_q3xNHB"
-                  ]
+                  "block_order": ["image_MyFwQD", "text_K6hUWA", "text_q3xNHB"]
                 }
               },
-              "block_order": [
-                "group_VRrtRg"
-              ]
+              "block_order": ["group_VRrtRg"]
             },
             "group_item_fypfE3": {
               "type": "_group-item",
@@ -3492,16 +3421,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "image_pG8Gfc",
-                    "text_w4T6VP",
-                    "text_GMzMU9"
-                  ]
+                  "block_order": ["image_pG8Gfc", "text_w4T6VP", "text_GMzMU9"]
                 }
               },
-              "block_order": [
-                "group_FQebCn"
-              ]
+              "block_order": ["group_FQebCn"]
             },
             "group_item_7jYfGz": {
               "type": "_group-item",
@@ -3709,16 +3632,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "image_DDUgJX",
-                    "text_GQrFhq",
-                    "text_gf4C6V"
-                  ]
+                  "block_order": ["image_DDUgJX", "text_GQrFhq", "text_gf4C6V"]
                 }
               },
-              "block_order": [
-                "group_T98x8T"
-              ]
+              "block_order": ["group_T98x8T"]
             }
           },
           "block_order": [
@@ -3812,9 +3729,7 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "button_MfdeLT"
-          ]
+          "block_order": ["button_MfdeLT"]
         }
       },
       "block_order": [
@@ -4034,15 +3949,10 @@
                   "blocks": {}
                 }
               },
-              "block_order": [
-                "text_rAK8Wa",
-                "text_LWftNi"
-              ]
+              "block_order": ["text_rAK8Wa", "text_LWftNi"]
             }
           },
-          "block_order": [
-            "group_ircH9L"
-          ]
+          "block_order": ["group_ircH9L"]
         },
         "file_downloadable_group_YRLzgj": {
           "type": "file-downloadable-group",
@@ -4433,10 +4343,7 @@
           "block_order": []
         }
       },
-      "block_order": [
-        "group_7N8i4n",
-        "file_downloadable_group_YRLzgj"
-      ],
+      "block_order": ["group_7N8i4n", "file_downloadable_group_YRLzgj"],
       "name": "Product Detail",
       "settings": {
         "content_direction": "column",
@@ -4699,10 +4606,7 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "text_aeBXpm",
-                    "text_XX7B77"
-                  ]
+                  "block_order": ["text_aeBXpm", "text_XX7B77"]
                 },
                 "group_iAbYci": {
                   "type": "group",
@@ -4784,15 +4688,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "button_m3Fjkw"
-                  ]
+                  "block_order": ["button_m3Fjkw"]
                 }
               },
-              "block_order": [
-                "group_FcLD9W",
-                "group_iAbYci"
-              ]
+              "block_order": ["group_FcLD9W", "group_iAbYci"]
             },
             "group_znWeHj": {
               "type": "group",
@@ -4873,7 +4772,8 @@
                     "inherit_color_scheme": true,
                     "color_scheme": "",
                     "padding-block-start": 0,
-                    "padding-block-end": 0
+                    "padding-block-end": 0,
+                    "carousel_custom_class": ""
                   },
                   "blocks": {
                     "group_item_9GYaCq": {
@@ -5045,15 +4945,10 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": [
-                            "image_hezLPc",
-                            "text_JVJYec"
-                          ]
+                          "block_order": ["image_hezLPc", "text_JVJYec"]
                         }
                       },
-                      "block_order": [
-                        "group_rqEe4N"
-                      ]
+                      "block_order": ["group_rqEe4N"]
                     },
                     "group_item_R8Fcwr": {
                       "type": "_group-item",
@@ -5224,15 +5119,10 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": [
-                            "image_TEA8KV",
-                            "text_chxjfH"
-                          ]
+                          "block_order": ["image_TEA8KV", "text_chxjfH"]
                         }
                       },
-                      "block_order": [
-                        "group_zPfQHQ"
-                      ]
+                      "block_order": ["group_zPfQHQ"]
                     },
                     "group_item_y4gbix": {
                       "type": "_group-item",
@@ -5403,15 +5293,10 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": [
-                            "image_aWt3LP",
-                            "text_hXQU7p"
-                          ]
+                          "block_order": ["image_aWt3LP", "text_hXQU7p"]
                         }
                       },
-                      "block_order": [
-                        "group_Bamfz9"
-                      ]
+                      "block_order": ["group_Bamfz9"]
                     },
                     "group_item_iw3rVR": {
                       "type": "_group-item",
@@ -5582,15 +5467,10 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": [
-                            "image_VNUxiB",
-                            "text_j98Epc"
-                          ]
+                          "block_order": ["image_VNUxiB", "text_j98Epc"]
                         }
                       },
-                      "block_order": [
-                        "group_RNHTMm"
-                      ]
+                      "block_order": ["group_RNHTMm"]
                     }
                   },
                   "block_order": [
@@ -5601,9 +5481,7 @@
                   ]
                 }
               },
-              "block_order": [
-                "group_grid_carousel_BcnQmY"
-              ]
+              "block_order": ["group_grid_carousel_BcnQmY"]
             },
             "group_jzfkxz": {
               "type": "group",
@@ -5685,21 +5563,13 @@
                   "blocks": {}
                 }
               },
-              "block_order": [
-                "button_8AJpxH"
-              ]
+              "block_order": ["button_8AJpxH"]
             }
           },
-          "block_order": [
-            "group_fnE3nT",
-            "group_znWeHj",
-            "group_jzfkxz"
-          ]
+          "block_order": ["group_fnE3nT", "group_znWeHj", "group_jzfkxz"]
         }
       },
-      "block_order": [
-        "group_G33haf"
-      ],
+      "block_order": ["group_G33haf"],
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -5911,10 +5781,7 @@
                   "blocks": {}
                 }
               },
-              "block_order": [
-                "text_9rAgM3",
-                "text_nMGGd6"
-              ]
+              "block_order": ["text_9rAgM3", "text_nMGGd6"]
             },
             "group_pNPRf4": {
               "type": "group",
@@ -5996,15 +5863,10 @@
                   "blocks": {}
                 }
               },
-              "block_order": [
-                "button_qaT9GG"
-              ]
+              "block_order": ["button_qaT9GG"]
             }
           },
-          "block_order": [
-            "group_RXFKRK",
-            "group_pNPRf4"
-          ]
+          "block_order": ["group_RXFKRK", "group_pNPRf4"]
         },
         "group_grid_carousel_6zViGG": {
           "type": "group-grid-carousel",
@@ -6035,7 +5897,8 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "padding-block-start": 0,
-            "padding-block-end": 0
+            "padding-block-end": 0,
+            "carousel_custom_class": ""
           },
           "blocks": {
             "group_item_dRNTPY": {
@@ -6224,16 +6087,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "icon_BUnYt8",
-                    "text_cXNpK4",
-                    "text_KLJPtA"
-                  ]
+                  "block_order": ["icon_BUnYt8", "text_cXNpK4", "text_KLJPtA"]
                 }
               },
-              "block_order": [
-                "group_tT34pC"
-              ]
+              "block_order": ["group_tT34pC"]
             },
             "group_item_zXeniQ": {
               "type": "_group-item",
@@ -6421,16 +6278,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "icon_MGMXmB",
-                    "text_YCnriQ",
-                    "text_7ieHy3"
-                  ]
+                  "block_order": ["icon_MGMXmB", "text_YCnriQ", "text_7ieHy3"]
                 }
               },
-              "block_order": [
-                "group_C3bidC"
-              ]
+              "block_order": ["group_C3bidC"]
             },
             "group_item_rGMnBg": {
               "type": "_group-item",
@@ -6618,16 +6469,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "icon_jmTG9J",
-                    "text_mCajbt",
-                    "text_Qxphtr"
-                  ]
+                  "block_order": ["icon_jmTG9J", "text_mCajbt", "text_Qxphtr"]
                 }
               },
-              "block_order": [
-                "group_Rf3Fqb"
-              ]
+              "block_order": ["group_Rf3Fqb"]
             },
             "group_item_MbmTqU": {
               "type": "_group-item",
@@ -6815,16 +6660,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "icon_ba7ACJ",
-                    "text_iNn4Ed",
-                    "text_HGcwB4"
-                  ]
+                  "block_order": ["icon_ba7ACJ", "text_iNn4Ed", "text_HGcwB4"]
                 }
               },
-              "block_order": [
-                "group_qKpeCa"
-              ]
+              "block_order": ["group_qKpeCa"]
             }
           },
           "block_order": [
@@ -6914,9 +6753,7 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "button_8wpVhB"
-          ]
+          "block_order": ["button_8wpVhB"]
         }
       },
       "block_order": [
@@ -7135,10 +6972,7 @@
                   "blocks": {}
                 }
               },
-              "block_order": [
-                "text_AcpJMK",
-                "text_JQTfiw"
-              ]
+              "block_order": ["text_AcpJMK", "text_JQTfiw"]
             },
             "group_QbDq7X": {
               "type": "group",
@@ -7220,15 +7054,10 @@
                   "blocks": {}
                 }
               },
-              "block_order": [
-                "button_V3X8PQ"
-              ]
+              "block_order": ["button_V3X8PQ"]
             }
           },
-          "block_order": [
-            "group_D36i98",
-            "group_QbDq7X"
-          ]
+          "block_order": ["group_D36i98", "group_QbDq7X"]
         },
         "group_grid_carousel_YeiTaJ": {
           "type": "group-grid-carousel",
@@ -7238,7 +7067,7 @@
             "layout_type_mobile": "carousel",
             "columns": 3,
             "mobile_columns": "2",
-            "full_width_on_mobile": false,
+            "full_width_on_mobile": true,
             "columns_gap": 16,
             "rows_gap": 16,
             "autoplay": false,
@@ -7259,7 +7088,8 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "padding-block-start": 0,
-            "padding-block-end": 0
+            "padding-block-end": 0,
+            "carousel_custom_class": "steps-carousel-wrapper"
           },
           "blocks": {
             "group_item_9rcyyQ": {
@@ -7308,7 +7138,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "step-item-mobile"
               },
               "blocks": {
                 "group_with_title_nxFUyQ": {
@@ -7474,15 +7304,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "text_WYYRyF",
-                    "text_MaNc3e"
-                  ]
+                  "block_order": ["text_WYYRyF", "text_MaNc3e"]
                 }
               },
-              "block_order": [
-                "group_with_title_nxFUyQ"
-              ]
+              "block_order": ["group_with_title_nxFUyQ"]
             },
             "group_item_zTa9zK": {
               "type": "_group-item",
@@ -7530,7 +7355,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "step-item-mobile"
               },
               "blocks": {
                 "group_with_title_Jgjhyk": {
@@ -7696,15 +7521,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "text_maRQbr",
-                    "text_b6CiRP"
-                  ]
+                  "block_order": ["text_maRQbr", "text_b6CiRP"]
                 }
               },
-              "block_order": [
-                "group_with_title_Jgjhyk"
-              ]
+              "block_order": ["group_with_title_Jgjhyk"]
             },
             "group_item_zDaJEj": {
               "type": "_group-item",
@@ -7752,7 +7572,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "step-item-mobile"
               },
               "blocks": {
                 "group_with_title_QtPpn6": {
@@ -7918,15 +7738,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "text_kMELG7",
-                    "text_qWKaJm"
-                  ]
+                  "block_order": ["text_kMELG7", "text_qWKaJm"]
                 }
               },
-              "block_order": [
-                "group_with_title_QtPpn6"
-              ]
+              "block_order": ["group_with_title_QtPpn6"]
             }
           },
           "block_order": [
@@ -8015,9 +7830,7 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "button_HpEUxE"
-          ]
+          "block_order": ["button_HpEUxE"]
         }
       },
       "block_order": [
@@ -8025,9 +7838,7 @@
         "group_grid_carousel_YeiTaJ",
         "group_L8RLYD"
       ],
-      "custom_css": [
-        "::marker {color: #490e67;}"
-      ],
+      "custom_css": ["::marker {color: #490e67;}"],
       "name": "Step",
       "settings": {
         "content_direction": "column",
@@ -8239,15 +8050,10 @@
                   "blocks": {}
                 }
               },
-              "block_order": [
-                "text_PXrNXF",
-                "text_t63n7t"
-              ]
+              "block_order": ["text_PXrNXF", "text_t63n7t"]
             }
           },
-          "block_order": [
-            "group_fiWCTT"
-          ]
+          "block_order": ["group_fiWCTT"]
         },
         "group_grid_carousel_x3yXk8": {
           "type": "group-grid-carousel",
@@ -8278,7 +8084,8 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "padding-block-start": 0,
-            "padding-block-end": 0
+            "padding-block-end": 0,
+            "carousel_custom_class": ""
           },
           "blocks": {
             "group_item_hbHdM3": {
@@ -8542,16 +8349,10 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": [
-                            "icon_QWdgbQ",
-                            "text_7Uhcrt"
-                          ]
+                          "block_order": ["icon_QWdgbQ", "text_7Uhcrt"]
                         }
                       },
-                      "block_order": [
-                        "icon_nfkVbn",
-                        "group_JyxhQF"
-                      ]
+                      "block_order": ["icon_nfkVbn", "group_JyxhQF"]
                     },
                     "text_aPWFnj": {
                       "type": "text",
@@ -8777,28 +8578,16 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": [
-                            "text_JMRJrw",
-                            "text_98e7Vi"
-                          ]
+                          "block_order": ["text_JMRJrw", "text_98e7Vi"]
                         }
                       },
-                      "block_order": [
-                        "icon_bLwUfY",
-                        "group_U9Xjxx"
-                      ]
+                      "block_order": ["icon_bLwUfY", "group_U9Xjxx"]
                     }
                   },
-                  "block_order": [
-                    "group_ExQnTa",
-                    "text_aPWFnj",
-                    "group_CYjDE8"
-                  ]
+                  "block_order": ["group_ExQnTa", "text_aPWFnj", "group_CYjDE8"]
                 }
               },
-              "block_order": [
-                "group_g6y4eA"
-              ]
+              "block_order": ["group_g6y4eA"]
             },
             "group_item_ahhy64": {
               "type": "_group-item",
@@ -9061,16 +8850,10 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": [
-                            "icon_RyabEx",
-                            "text_xxHNJd"
-                          ]
+                          "block_order": ["icon_RyabEx", "text_xxHNJd"]
                         }
                       },
-                      "block_order": [
-                        "icon_dRj7AF",
-                        "group_EbLxJH"
-                      ]
+                      "block_order": ["icon_dRj7AF", "group_EbLxJH"]
                     },
                     "text_ty8bVH": {
                       "type": "text",
@@ -9296,28 +9079,16 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": [
-                            "text_MegD9i",
-                            "text_K8GDeh"
-                          ]
+                          "block_order": ["text_MegD9i", "text_K8GDeh"]
                         }
                       },
-                      "block_order": [
-                        "icon_CkBExL",
-                        "group_N3PQmE"
-                      ]
+                      "block_order": ["icon_CkBExL", "group_N3PQmE"]
                     }
                   },
-                  "block_order": [
-                    "group_KKM7rB",
-                    "text_ty8bVH",
-                    "group_QTAfmQ"
-                  ]
+                  "block_order": ["group_KKM7rB", "text_ty8bVH", "group_QTAfmQ"]
                 }
               },
-              "block_order": [
-                "group_3fDiFb"
-              ]
+              "block_order": ["group_3fDiFb"]
             },
             "group_item_qeNYGq": {
               "type": "_group-item",
@@ -9580,16 +9351,10 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": [
-                            "icon_BaJxMX",
-                            "text_wLQXEj"
-                          ]
+                          "block_order": ["icon_BaJxMX", "text_wLQXEj"]
                         }
                       },
-                      "block_order": [
-                        "icon_n6kgHK",
-                        "group_TKDyQT"
-                      ]
+                      "block_order": ["icon_n6kgHK", "group_TKDyQT"]
                     },
                     "text_99EQgh": {
                       "type": "text",
@@ -9815,28 +9580,16 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": [
-                            "text_8PFVJh",
-                            "text_378tby"
-                          ]
+                          "block_order": ["text_8PFVJh", "text_378tby"]
                         }
                       },
-                      "block_order": [
-                        "icon_KyBNy3",
-                        "group_iK7QXy"
-                      ]
+                      "block_order": ["icon_KyBNy3", "group_iK7QXy"]
                     }
                   },
-                  "block_order": [
-                    "group_pJGfDJ",
-                    "text_99EQgh",
-                    "group_AzHAaf"
-                  ]
+                  "block_order": ["group_pJGfDJ", "text_99EQgh", "group_AzHAaf"]
                 }
               },
-              "block_order": [
-                "group_txWFM7"
-              ]
+              "block_order": ["group_txWFM7"]
             }
           },
           "block_order": [
@@ -9846,10 +9599,7 @@
           ]
         }
       },
-      "block_order": [
-        "group_xgjVVw",
-        "group_grid_carousel_x3yXk8"
-      ],
+      "block_order": ["group_xgjVVw", "group_grid_carousel_x3yXk8"],
       "name": "Block",
       "settings": {
         "content_direction": "column",
@@ -10321,9 +10071,7 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "collection_title_AxLYKt"
-          ]
+          "block_order": ["collection_title_AxLYKt"]
         }
       },
       "name": "Dynamic Type Recommend",
@@ -10694,20 +10442,13 @@
                   "blocks": {}
                 }
               },
-              "block_order": [
-                "group_7w6wH8",
-                "quote_form_button_6Vdjxj"
-              ]
+              "block_order": ["group_7w6wH8", "quote_form_button_6Vdjxj"]
             }
           },
-          "block_order": [
-            "group_jkQc6m"
-          ]
+          "block_order": ["group_jkQc6m"]
         }
       },
-      "block_order": [
-        "group_V3Lw9L"
-      ],
+      "block_order": ["group_V3Lw9L"],
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -10936,14 +10677,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "image_hfeHjA"
-                  ]
+                  "block_order": ["image_hfeHjA"]
                 }
               },
-              "block_order": [
-                "group_kznnkq"
-              ]
+              "block_order": ["group_kznnkq"]
             },
             "marquee_item_nNw7CU": {
               "type": "_marquee-item",
@@ -11035,14 +10772,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "image_k8PzEJ"
-                  ]
+                  "block_order": ["image_k8PzEJ"]
                 }
               },
-              "block_order": [
-                "group_DDjkjr"
-              ]
+              "block_order": ["group_DDjkjr"]
             },
             "marquee_item_qPJqRL": {
               "type": "_marquee-item",
@@ -11134,14 +10867,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "image_yJNUX3"
-                  ]
+                  "block_order": ["image_yJNUX3"]
                 }
               },
-              "block_order": [
-                "group_aNWEL3"
-              ]
+              "block_order": ["group_aNWEL3"]
             },
             "marquee_item_hrnic8": {
               "type": "_marquee-item",
@@ -11233,14 +10962,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "image_VYQarp"
-                  ]
+                  "block_order": ["image_VYQarp"]
                 }
               },
-              "block_order": [
-                "group_izYPDE"
-              ]
+              "block_order": ["group_izYPDE"]
             },
             "marquee_item_RKTpiL": {
               "type": "_marquee-item",
@@ -11332,14 +11057,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "image_NiQk8j"
-                  ]
+                  "block_order": ["image_NiQk8j"]
                 }
               },
-              "block_order": [
-                "group_J6gwtK"
-              ]
+              "block_order": ["group_J6gwtK"]
             },
             "marquee_item_B4tqXr": {
               "type": "_marquee-item",
@@ -11431,14 +11152,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "image_yVRJWw"
-                  ]
+                  "block_order": ["image_yVRJWw"]
                 }
               },
-              "block_order": [
-                "group_LLNKhF"
-              ]
+              "block_order": ["group_LLNKhF"]
             },
             "marquee_item_6diAWq": {
               "type": "_marquee-item",
@@ -11530,14 +11247,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "image_MtmTXb"
-                  ]
+                  "block_order": ["image_MtmTXb"]
                 }
               },
-              "block_order": [
-                "group_rrUkNF"
-              ]
+              "block_order": ["group_rrUkNF"]
             }
           },
           "block_order": [
@@ -11551,11 +11264,7 @@
           ]
         }
       },
-      "block_order": [
-        "text_Ge7nC6",
-        "text_Hd6dwc",
-        "marquee_blur_TxjVG9"
-      ],
+      "block_order": ["text_Ge7nC6", "text_Hd6dwc", "marquee_blur_TxjVG9"],
       "name": "Trusted Brands",
       "settings": {
         "content_direction": "column",
