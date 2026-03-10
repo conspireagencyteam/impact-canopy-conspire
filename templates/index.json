@@ -8072,7 +8072,7 @@
                                     "type_preset": "h6",
                                     "width": "100%",
                                     "alignment": "center",
-                                    "alignment_mobile": "left",
+                                    "alignment_mobile": "center",
                                     "font": "var(--font-body--family)",
                                     "font_size": "1rem",
                                     "compare_at_price_font_size": "",
