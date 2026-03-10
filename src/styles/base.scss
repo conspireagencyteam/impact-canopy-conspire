@@ -4740,6 +4740,17 @@ text-component {
   }
 }
 
+.list-check-updated ul {
+  list-style: none;
+  padding-left: 0;
+  li {
+    &::before {
+      content: '\2713'; 
+      margin-right: 6px;
+    }
+  }
+}
+
 .block-hidden:has(.block-hidden) {
   display: none;
 }
