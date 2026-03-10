@@ -1464,7 +1464,8 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "padding-block-start": 0,
-            "padding-block-end": 0
+            "padding-block-end": 0,
+            "carousel_custom_class": ""
           },
           "blocks": {
             "group_item_VxhKAG": {
@@ -2856,7 +2857,7 @@
                 "type_preset": "h6",
                 "width": "100%",
                 "alignment": "center",
-                "alignment_mobile": "left",
+                "alignment_mobile": "center",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "compare_at_price_font_size": "",
@@ -3395,7 +3396,7 @@
                 "type_preset": "h6",
                 "width": "100%",
                 "alignment": "center",
-                "alignment_mobile": "left",
+                "alignment_mobile": "center",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "compare_at_price_font_size": "",
@@ -3790,7 +3791,8 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "padding-block-start": 0,
-            "padding-block-end": 8
+            "padding-block-end": 8,
+            "carousel_custom_class": ""
           },
           "blocks": {
             "group_item_ddJk8p": {
@@ -6067,7 +6069,8 @@
                     "inherit_color_scheme": true,
                     "color_scheme": "",
                     "padding-block-start": 0,
-                    "padding-block-end": 0
+                    "padding-block-end": 0,
+                    "carousel_custom_class": ""
                   },
                   "blocks": {
                     "group_item_edbVH3": {
@@ -7373,7 +7376,7 @@
                 "type_preset": "h6",
                 "width": "100%",
                 "alignment": "center",
-                "alignment_mobile": "left",
+                "alignment_mobile": "center",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "compare_at_price_font_size": "",
@@ -7869,7 +7872,8 @@
                     "inherit_color_scheme": true,
                     "color_scheme": "",
                     "padding-block-start": 0,
-                    "padding-block-end": 0
+                    "padding-block-end": 0,
+                    "carousel_custom_class": ""
                   },
                   "blocks": {
                     "group_item_aUkXjJ": {
@@ -11215,7 +11219,8 @@
                     "inherit_color_scheme": true,
                     "color_scheme": "",
                     "padding-block-start": 0,
-                    "padding-block-end": 0
+                    "padding-block-end": 0,
+                    "carousel_custom_class": ""
                   },
                   "blocks": {
                     "group_item_tQR7wC": {
