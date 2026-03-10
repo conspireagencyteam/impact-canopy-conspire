@@ -9541,41 +9541,10 @@
                 "text_bCc7Vw",
                 "text_CaHdhL"
               ]
-            },
-            "button_jDC83b": {
-              "type": "button",
-              "name": "t:names.button",
-              "disabled": true,
-              "settings": {
-                "label": "Download Full Spec Sheet",
-                "link": "https://cdn.shopify.com/s/files/1/0260/9522/2843/files/18_FT_AIR_DANCER.pdf?v=1768928335",
-                "open_in_new_tab": true,
-                "style_class": "button",
-                "button_size": "default",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_tablet": "fit-content",
-                "custom_width_tablet": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100,
-                "font_desktop": "default",
-                "font_size_desktop": 16,
-                "font_mobile": "default",
-                "font_size_mobile": 14,
-                "show_underline": false,
-                "underline_thickness": 1,
-                "underline_offset": 2,
-                "icon": "pdf",
-                "icon_size": 20,
-                "icon_position": "right",
-                "justify_space_between": false
-              },
-              "blocks": {}
             }
           },
           "block_order": [
-            "group_VAzBHK",
-            "button_jDC83b"
+            "group_VAzBHK"
           ]
         },
         "file_downloadable_group_cadqUE": {
@@ -9632,14 +9601,14 @@
               "static": true,
               "settings": {
                 "content_direction": "row",
-                "vertical_on_mobile": false,
+                "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
                 "horizontal_alignment": "space-between",
                 "vertical_alignment": "center",
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
+                "gap": 15,
                 "width": "fill",
                 "custom_width": 100,
                 "width_tablet": "fill",
@@ -9744,14 +9713,14 @@
               "static": true,
               "settings": {
                 "content_direction": "row",
-                "vertical_on_mobile": false,
+                "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
                 "horizontal_alignment": "space-between",
                 "vertical_alignment": "center",
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
+                "gap": 15,
                 "width": "fill",
                 "custom_width": 100,
                 "width_tablet": "fill",
@@ -9856,14 +9825,14 @@
               "static": true,
               "settings": {
                 "content_direction": "row",
-                "vertical_on_mobile": false,
+                "vertical_on_mobile": true,
                 "reverse_on_mobile": false,
                 "horizontal_alignment": "space-between",
                 "vertical_alignment": "center",
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
+                "gap": 15,
                 "width": "fill",
                 "custom_width": 100,
                 "width_tablet": "fill",
