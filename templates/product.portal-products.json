@@ -305,11 +305,48 @@
                     "custom_class": ""
                   },
                   "blocks": {}
+                },
+                "sku_HWra9M": {
+                  "type": "sku",
+                  "name": "SKU",
+                  "settings": {
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-subheading--family)",
+                    "font_size": "0.75rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "custom_color": "#000000",
+                    "use_mobile_typography": false,
+                    "font_size_mobile": "1rem",
+                    "line_height_mobile": "normal",
+                    "letter_spacing_mobile": "normal",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "use_mobile_padding": false,
+                    "padding-block-start-mobile": 0,
+                    "padding-block-end-mobile": 0,
+                    "padding-inline-start-mobile": 0,
+                    "padding-inline-end-mobile": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
                 "text_HcgEan",
-                "text_zwkamc"
+                "text_zwkamc",
+                "sku_HWra9M"
               ]
             },
             "metaobject_pdp_zHGkH9": {
