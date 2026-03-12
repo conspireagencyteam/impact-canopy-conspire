@@ -2027,7 +2027,7 @@
                       "type": "image",
                       "name": "t:names.image",
                       "settings": {
-                        "image": "shopify://shop_images/IMPACT_FRAME_GRAPHICS_DS.jpg",
+                        "image": "shopify://shop_images/IMPACT_FRAME_GRAPHICS_DS_4ecf5209-6c25-4d08-9758-857fcc413e8e.jpg",
                         "link": "",
                         "image_ratio": "adapt",
                         "image_ratio_mobile": "same",
@@ -2678,7 +2678,7 @@
                       "type": "image",
                       "name": "t:names.image",
                       "settings": {
-                        "image": "shopify://shop_images/IMPACT_FRAME_GRAPHICS_M.jpg",
+                        "image": "shopify://shop_images/IMPACT_FRAME_GRAPHICS_M_1dd25848-f78e-4e9e-8242-8e1cc8f86e85.jpg",
                         "link": "",
                         "image_ratio": "adapt",
                         "image_ratio_mobile": "same",
