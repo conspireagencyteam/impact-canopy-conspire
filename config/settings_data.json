@@ -102,6 +102,15 @@
         "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
         "disabled": false,
         "settings": {}
+      },
+      "13392549970259155148": {
+        "type": "shopify://apps/xo-insert-code/blocks/insert-code-header/72017b12-3679-442e-b23c-5c62460717f5",
+        "disabled": false,
+        "settings": {
+          "custom_liquid": "<script src=\"https://ta.gaconnector.com/gaconnector.js\" type=\"text/javascript\"></script>\n<script type=\"text/javascript\">gaconnector2.track(\"c68f16d10d594938a981ba08def1526e\");</script>",
+          "custom_css": "",
+          "custom_js": ""
+        }
       }
     },
     "color_schemes": {
