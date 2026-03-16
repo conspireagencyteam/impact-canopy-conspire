@@ -9,7 +9,7 @@
   <div class="frame-card__right">
     <div class="frame-card__stats">
       {% content_for 'block', type: 'text', id: 'staticText', fallback_text: item.name %}
-      {% content_for 'block', type: '_progress-bar', id: 'progressBar', label: 'Frame Warranty', value: item.frame_warranty %}
+      {% content_for 'block', type: '_progress-bar', id: 'progressBar', label: 'Ease of Use', value: item.frame_warranty %}
       {% content_for 'block', type: '_progress-bar', id: 'progressBar2', label: 'Frame Strength', value: item.frame_strength %}
       {% content_for 'block', type: '_progress-bar', id: 'progressBar3', label: 'Popularity', value: item.popularity %}
       {% content_for 'block', type: '_progress-bar', id: 'progressBar4', label: 'Product Weight', value: item.product_weight %}
