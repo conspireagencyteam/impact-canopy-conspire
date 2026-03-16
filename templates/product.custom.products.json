@@ -902,7 +902,7 @@
                   "type": "quote-form-button",
                   "static": true,
                   "settings": {
-                    "button_type": "default",
+                    "button_type": "popup",
                     "popup_behavior": "default",
                     "popup_heading": "Get Sales Assistance",
                     "label": "Get Free Mockup",
