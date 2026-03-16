@@ -858,83 +858,6 @@
               },
               "block_order": []
             },
-            "buy_buttons_8rp6AB": {
-              "type": "buy-buttons",
-              "settings": {
-                "stacking": true,
-                "show_pickup_availability": false,
-                "gift_card_form": true,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0,
-                "use_mobile_padding": false,
-                "padding-block-start-mobile": 0,
-                "padding-block-end-mobile": 0,
-                "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
-              },
-              "blocks": {
-                "quantity": {
-                  "type": "quantity",
-                  "disabled": true,
-                  "static": true,
-                  "settings": {},
-                  "blocks": {}
-                },
-                "add-to-cart": {
-                  "type": "add-to-cart",
-                  "disabled": true,
-                  "static": true,
-                  "settings": {
-                    "style_class": "button"
-                  },
-                  "blocks": {}
-                },
-                "accelerated-checkout": {
-                  "type": "accelerated-checkout",
-                  "disabled": true,
-                  "static": true,
-                  "settings": {},
-                  "blocks": {}
-                },
-                "accelerated-quote": {
-                  "type": "quote-form-button",
-                  "static": true,
-                  "settings": {
-                    "button_type": "popup",
-                    "popup_behavior": "default",
-                    "popup_heading": "Get Sales Assistance",
-                    "label": "Get Free Mockup",
-                    "link": "",
-                    "custom_liquid": true,
-                    "liquid_code": "<script src=\"https://www.powr.io/powr.js?platform=shopify\"></script><div class=\"powr-form-builder\" id=\"62717d27_1739472799\"></div>",
-                    "open_in_new_tab": false,
-                    "style_class": "button-secondary",
-                    "button_size": "default",
-                    "width": "custom",
-                    "custom_width": 100,
-                    "width_tablet": "fill",
-                    "custom_width_tablet": 100,
-                    "width_mobile": "custom",
-                    "custom_width_mobile": 100,
-                    "font_desktop": "heading",
-                    "font_size_desktop": 16,
-                    "font_mobile": "default",
-                    "font_size_mobile": 14,
-                    "show_underline": false,
-                    "underline_thickness": 1,
-                    "underline_offset": 2,
-                    "icon": "none",
-                    "icon_size": 20,
-                    "icon_position": "left",
-                    "justify_space_between": false
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": []
-            },
             "cross_sell_NaXebJ": {
               "type": "cross-sell",
               "name": "Cross Sell",
@@ -1768,7 +1691,6 @@
             "group_TwRDna",
             "divider_LA6KwY",
             "buy_buttons_eYQEYi",
-            "buy_buttons_8rp6AB",
             "cross_sell_NaXebJ",
             "accordion_QBrT7f"
           ]
@@ -3970,6 +3892,22 @@
         "use_mobile_padding": false,
         "padding-block-start-mobile": 0,
         "padding-block-end-mobile": 0
+      }
+    },
+    "custom_liquid_cn6ptQ": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<script src=\"https://www.powr.io/powr.js?platform=shopify\"></script><div class=\"powr-form-builder\" id=\"62717d27_1739472799\"></div>\n<script>\ndocument.addEventListener(\"DOMContentLoaded\", function () {\n  function setUrl() {\n    var url = window.location.href;\n\n    // Find POWR form field by label or name\n    var inputs = document.querySelectorAll(\"input, textarea\");\n\n    inputs.forEach(function(input) {\n      if (input.name && input.name.toLowerCase().includes(\"last page url\")) {\n        input.value = url;\n      }\n    });\n  }\n\n  // Run multiple times in case POWR loads async\n  setTimeout(setUrl, 1000);\n  setTimeout(setUrl, 2000);\n});\n</script>",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0,
+        "use_mobile_padding": false,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0,
+        "padding-inline-start-mobile": 0,
+        "padding-inline-end-mobile": 0
       }
     },
     "section_nwWj7G": {
@@ -11766,6 +11704,7 @@
     "section_gJxWX4",
     "main",
     "custom_product_frame_section_EL7zxw",
+    "custom_liquid_cn6ptQ",
     "section_nwWj7G",
     "dynamic_type_recommendation_NJrVxK",
     "section_pRAkNk",
