@@ -3898,7 +3898,7 @@
       "type": "custom-liquid",
       "name": "t:names.custom_liquid",
       "settings": {
-        "custom_liquid": "<script src=\"https://www.powr.io/powr.js?platform=shopify\"></script><div class=\"powr-form-builder\" id=\"62717d27_1739472799\"></div>\n<script>\ndocument.addEventListener(\"DOMContentLoaded\", function () {\n  function setUrl() {\n    var url = window.location.href;\n\n    // Find POWR form field by label or name\n    var inputs = document.querySelectorAll(\"input, textarea\");\n\n    inputs.forEach(function(input) {\n      if (input.name && input.name.toLowerCase().includes(\"last page url\")) {\n        input.value = url;\n      }\n    });\n  }\n\n  // Run multiple times in case POWR loads async\n  setTimeout(setUrl, 1000);\n  setTimeout(setUrl, 2000);\n});\n</script>",
+        "custom_liquid": "<script src=\"https://www.powr.io/powr.js?platform=shopify\"></script><div class=\"powr-form-builder\" id=\"62717d27_1739472799\"></div>",
         "color_scheme": "",
         "section_width": "page-width",
         "padding-block-start": 0,
