@@ -905,7 +905,7 @@
                     "button_type": "popup",
                     "popup_behavior": "default",
                     "popup_heading": "Get Sales Assistance",
-                    "label": "Get Mockup",
+                    "label": "Request Custom Mockup",
                     "link": "",
                     "custom_liquid": true,
                     "liquid_code": "<script src=\"https://www.powr.io/powr.js?platform=shopify\"></script><div class=\"powr-form-builder\" id=\"62717d27_1739472799\"></div>",
