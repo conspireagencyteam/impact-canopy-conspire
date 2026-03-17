@@ -908,7 +908,7 @@
                     "label": "Get Mockup",
                     "link": "",
                     "custom_liquid": true,
-                    "liquid_code": "",
+                    "liquid_code": "<script src=\"https://www.powr.io/powr.js?platform=shopify\"></script><div class=\"powr-form-builder\" id=\"62717d27_1739472799\"></div>",
                     "open_in_new_tab": false,
                     "style_class": "button-secondary",
                     "button_size": "default",
