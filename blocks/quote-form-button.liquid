@@ -101,7 +101,7 @@
         {{ block_settings.popup_heading }}
       </h2>
       <div class="custom-quote-form custom-quote-form-wo-recaptcha">
-        {% if block_settings.settinngs.custom_liquid %}
+        {% if block_settings.custom_liquid %}
           {{ block_settings.liquid_code }}
         {% else %}
           {{ shop.metafields.custom.sales_quote }}
@@ -118,6 +118,28 @@
       </button>
     </dialog>
   </dialog-component>
+  {% elsif block_settings.button_type == 'powr_popup' %}
+  <button
+    type="button"
+    class="
+      size-style
+      {{ block_settings.style_class }}
+      button--{{ block_settings.button_size }}
+    "
+    style="{% render 'size-style', settings: block_settings %}"
+    onclick="openPowrForm{{ block.id }}()"
+  >
+    <span class="button__label">{{ block_settings.label }}</span>
+  </button>
+
+  <script>
+    function openPowrForm{{ block.id }}() {
+      const powrButton = document.querySelector('.powr-popup-trigger');
+      if (powrButton) {
+        powrButton.click();
+      }
+    }
+  </script>
 {% else %}
   {% render 'button', link: block_settings.link %}
 {% endif %}
@@ -255,6 +277,9 @@
         {
           "value": "popup",
           "label": "Popup (Contact form)"
+        },
+        {"value": "powr_popup",
+          "label": "POWR Popup"
         }
       ],
       "default": "popup"
