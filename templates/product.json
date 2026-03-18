@@ -633,27 +633,6 @@
                 "featured_product": "{{product}}"
               }
             },
-            "static_form_field_7DEbKB": {
-              "type": "_static-form-field",
-              "name": "Static Form Field",
-              "disabled": true,
-              "settings": {
-                "show_textarea": true,
-                "textarea_label": "Comments about design",
-                "textarea_placeholder": "Enter your design comments here...",
-                "textarea_name": "Design",
-                "textarea_rows": 5,
-                "textarea_required": false,
-                "show_checkbox": true,
-                "checkbox_label": "I have an event",
-                "checkbox_name": "",
-                "checkbox_required": false,
-                "calendar_label": "Event Date",
-                "calendar_name": "Event Date",
-                "calendar_required": true
-              },
-              "blocks": {}
-            },
             "divider_ephR9K": {
               "type": "_divider",
               "name": "t:names.divider",
@@ -1797,7 +1776,6 @@
             "divider_VJhene",
             "variant_picker_R3rGDr",
             "uploadly_file_upload_app_block_xMeyUi",
-            "static_form_field_7DEbKB",
             "divider_ephR9K",
             "group_ph4zJ9",
             "divider_LA6KwY",
