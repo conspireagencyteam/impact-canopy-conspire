@@ -7525,7 +7525,7 @@
                       "name": "t:names.button",
                       "settings": {
                         "label": "Build your Kit",
-                        "link": "shopify://collections",
+                        "link": "shopify://collections/custom-canopy-kits",
                         "open_in_new_tab": false,
                         "style_class": "button-tertiary",
                         "button_size": "default",
