@@ -329,11 +329,39 @@
         });
       }
 
+      // iOS height detection for dialog
+      function handleIOSDialogHeight_{{ block.id | replace: '-', '_' }}() {
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+                      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+        if (!isIOS) return;
+
+        const dialog = document.querySelector('.contact-form-button-popup__dialog');
+        if (!dialog) return;
+
+        function checkHeight() {
+          const viewportHeight = window.innerHeight;
+          if (viewportHeight < 780) {
+            dialog.classList.add('incontact-form-button-popup__dialog');
+          } else {
+            dialog.classList.remove('incontact-form-button-popup__dialog');
+          }
+        }
+
+        checkHeight();
+        window.addEventListener('resize', checkHeight);
+        window.addEventListener('orientationchange', checkHeight);
+      }
+
       // Initialize on DOMContentLoaded or immediately if already loaded
       if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initContactFormPopup_{{ block.id | replace: '-', '_' }});
+        document.addEventListener('DOMContentLoaded', function() {
+          initContactFormPopup_{{ block.id | replace: '-', '_' }}();
+          handleIOSDialogHeight_{{ block.id | replace: '-', '_' }}();
+        });
       } else {
         initContactFormPopup_{{ block.id | replace: '-', '_' }}();
+        handleIOSDialogHeight_{{ block.id | replace: '-', '_' }}();
       }
     })();
   </script>
