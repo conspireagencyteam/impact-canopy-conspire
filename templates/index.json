@@ -29,7 +29,7 @@
             "gap": 12,
             "inherit_color_scheme": true,
             "color_scheme": "",
-            "toggle_overlay": true,
+            "toggle_overlay": false,
             "overlay_style": "gradient",
             "overlay_color": "#000000d1",
             "overlay_gradient": "linear-gradient(0deg, rgba(73, 14, 103, 1), rgba(0, 0, 0, 0.28) 100%)",
