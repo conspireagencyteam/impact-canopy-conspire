@@ -16,6 +16,7 @@
           "type": "group",
           "name": "t:names.header",
           "settings": {
+            "display": "all",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "reverse_on_mobile": false,
@@ -27,6 +28,8 @@
             "gap": 12,
             "width": "fill",
             "custom_width": 100,
+            "width_tablet": "fill",
+            "custom_width_tablet": 100,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
             "height": "fit",
@@ -191,12 +194,13 @@
       "settings": {
         "custom_collections": [
           "canopies",
-          "canopy-accessories",
           "custom-flags",
           "custom-signs-banners",
-          "tables-chairs-and-umbrellas",
           "carports-sheds-more-for-storage-galore",
+          "canopy-accessories",
+          "tables-chairs-and-umbrellas",
           "flag-accessories",
+          "instant-canopy-frames",
           "replacement-parts"
         ],
         "layout_type": "grid",
