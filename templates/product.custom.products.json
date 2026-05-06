@@ -8173,7 +8173,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Review & Approve Your Mockup</p>",
+                        "text": "<p>Review & Finalize & Approve Your Mockup</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -8210,7 +8210,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<ul><li>Request changes until you're completely satisfied</li><li>Zero production risk - we only start after your approval</li><li>Collaborate with our design team on revisions</li><li>Your dedicated rep guides you through every decision</li></ul>",
+                        "text": "<ul><li>Request changes until you're completely satisfied</li><li>Zero production risk - we only start production after your approval</li><li>Collaborate with our in house design team on revisions</li><li>Your dedicated rep guides you through every decision: call, text, and email communication available </li></ul>",
                         "width": "100%",
                         "max_width": "none",
                         "alignment": "left",
@@ -8432,7 +8432,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<ul><li>[VERIFY: Standard production timeline] after approval</li><li>Professional-grade printing and assembly</li><li>Package tracking automatically sent when shipped</li><li>Quality guaranteed - built to perform at real events</li></ul>",
+                        "text": "<ul><li>After your order is paid for standard production is 8-10 business days, then shipping</li><li>Shipping time will vary based on location </li><li>Package tracking is automatically sent when shipped</li><li>If you have an event date sooner than 14 days. Please communicate that with our team asap, we will try and make it happen</li></ul>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
