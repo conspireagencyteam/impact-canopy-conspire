@@ -5773,7 +5773,7 @@
                               "type": "text",
                               "name": "t:names.text",
                               "settings": {
-                                "text": "<p>Weighted bases</p>",
+                                "text": "<p>Custom Signs</p>",
                                 "width": "fit-content",
                                 "max_width": "normal",
                                 "alignment": "left",
