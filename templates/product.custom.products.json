@@ -7951,7 +7951,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Submit Your Order & Artwork</p>",
+                        "text": "<p>Submit Your Mockup Request or Order</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -7988,7 +7988,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<ul><li>Upload your files through our secure submission system</li><li>Include design goals, event details, and timeline</li><li>Complete payment to begin the design process</li><li>Receive professional digital rendering within 48 hours</li></ul>",
+                        "text": "<ul><li>Click the free custom mockup button on the above listing </li><li>Our design team will send you your free design along with all your order information within 24 hr</li><li>Want to place your order today? No problem </li><li>Attach your artwork and design goals. Our team will share all art designs with you for approval before entering production </li></ul>",
                         "width": "fit-content",
                         "max_width": "none",
                         "alignment": "left",
