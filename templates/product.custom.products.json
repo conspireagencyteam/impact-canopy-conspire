@@ -7777,6 +7777,7 @@
                 "button_V3X8PQ": {
                   "type": "button",
                   "name": "t:names.button",
+                  "disabled": true,
                   "settings": {
                     "label": "Start Your Custom Order",
                     "link": "shopify://collections/all",
