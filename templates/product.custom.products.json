@@ -5952,7 +5952,7 @@
                               "type": "text",
                               "name": "t:names.text",
                               "settings": {
-                                "text": "<p>Sidewalls</p>",
+                                "text": "<p>Custom Sidewalls</p>",
                                 "width": "fit-content",
                                 "max_width": "normal",
                                 "alignment": "left",
