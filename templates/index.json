@@ -8435,7 +8435,7 @@
                             "overlay_style": "solid",
                             "overlay_color": "#00000026",
                             "overlay_gradient": "",
-                            "link": "shopify://products/custom-10x10-canopy-team-kit-copy",
+                            "link": "shopify://products/custom-10x10-canopy-team-kit-presentation",
                             "open_in_new_tab": false,
                             "placeholder": "",
                             "padding-block-start": 16,
@@ -8454,7 +8454,7 @@
                               "type": "product-card",
                               "name": "t:names.product_card",
                               "settings": {
-                                "product": "custom-10x10-canopy-team-kit-copy",
+                                "product": "custom-10x10-canopy-team-kit-presentation",
                                 "layout_orientation": "column",
                                 "product_card_gap": 10,
                                 "inherit_color_scheme": true,
