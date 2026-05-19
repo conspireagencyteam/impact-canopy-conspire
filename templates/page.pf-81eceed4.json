@@ -1,0 +1,34 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pf-81eceed4": {
+      "type": "pf-81eceed4",
+      "settings": {
+        "pf_f43de0d2_value": "<span style=\"font-weight: bold;\">Impact Canopy Canada BC<br></span>1371 Kebet Way<br>Port Coquitlam, BC V3C 6G1<br><br>Phone: (604) 464-1371\n<br>Fax: (604) 464-1372\n<br>Toll Free: (877) 776-6655\n<br>\n<br>Monday to Friday:\n<br>8:00AM - 5:00PM\n<br>Saturday to Sunday Closed<br><br>",
+        "pf_7c9814f8_value": "<span style=\"font-weight: bold;\">Impact Canopy Canada ON<br></span>1050 Brevik Place<br>Mississauga, ON L4W 3V9<br><br>Phone: (905) 282-1850\n<br>Fax: (905) 282-1846\n<br>Toll Free: (877) 776-6655\n<br>\n<br>Monday to Friday:\n<br>8:30AM - 5:00PM\n<br>Saturday to Sunday Closed",
+        "pf_56c58b07_value": "<span style=\"font-weight: bold;\">Impact Canopies USA<br></span>22600 Temescal Canyon Rd Corona, CA 92883<br><br>Phone: (951) 674-1441<br>Fax: (951) 674-1443<br>Toll Free: (877) 840-3524<br><br>Monday to Friday:\n<br>8:00AM - 5:00PM\n<br>Saturday to Sunday Closed<br>",
+        "pf_987be054_value": "Please feel free to connect with us. <br>Our working hours are from 8:00AM to 5:00PM from Monday to Friday (except holidays and weekends).<br><br>",
+        "pf_2c33bb42_value": "<span style=\"font-style: italic; font-weight: bold;\">Will Call / Pick Up hours may vary.&nbsp; Please call your location to confirm.</span>",
+        "pf_0653c1c4_value": "<span style=\"color: rgb(255, 255, 255);\">CONTACT IMPACT CANOPY</span>",
+        "pf_84aaee51_value": "<span style=\"color: rgb(73, 14, 103);\">Contact Impact Canopy</span>",
+        "pf_568d93fe_value": "<span style=\"color: rgb(73, 14, 103);\">Contact Us</span>&nbsp;",
+        "pf_31952100_value": "<span style=\"color: rgb(73, 14, 103);\">Address</span>",
+        "pf_6ce8d98d_value": "<span style=\"color: rgb(73, 14, 103);\">Phone</span>",
+        "pf_558c3805_value": "Need support for an existing order?",
+        "pf_a4f86ea7_value": "Need a product expert?",
+        "pf_45a2a8b9_value": "Open Hours"
+      }
+    }
+  },
+  "order": [
+    "pf-81eceed4"
+  ]
+}
