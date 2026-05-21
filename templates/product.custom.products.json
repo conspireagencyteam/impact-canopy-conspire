@@ -599,7 +599,7 @@
                   "settings": {
                     "button_type": "popup",
                     "popup_behavior": "default",
-                    "popup_heading": "Let's begin your custom order",
+                    "popup_heading": "Let's begin your design process",
                     "label": "Request Free Custom Mockup",
                     "link": "",
                     "custom_liquid": true,
