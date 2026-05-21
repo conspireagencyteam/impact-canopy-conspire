@@ -600,7 +600,7 @@
                     "button_type": "popup",
                     "popup_behavior": "default",
                     "popup_heading": "Let's begin your design process",
-                    "label": "Get Your Free Custom Mockup or Quote",
+                    "label": "Get Your Free Custom Mockup and Quote",
                     "link": "",
                     "custom_liquid": true,
                     "liquid_code": "<script src=\"https://www.powr.io/powr.js?platform=shopify\"></script><div class=\"powr-form-builder\" id=\"62717d27_1739472799\"></div>",
