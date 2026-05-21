@@ -676,7 +676,7 @@
                   "settings": {
                     "button_type": "popup",
                     "popup_behavior": "default",
-                    "popup_heading": "Let's begin your design process",
+                    "popup_heading": "Let's begin your custom order",
                     "label": "Get Personalized Quote",
                     "link": "",
                     "custom_liquid": false,
