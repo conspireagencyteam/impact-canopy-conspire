@@ -1,0 +1,33 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pf-59513ae3": {
+      "type": "pf-59513ae3",
+      "settings": {
+        "pf_f53322cc_value": "<br><span style=\"color: rgb(255, 255, 255);\">Impact has teamed up with ALBION SC to bring you exclusive prices on high-quality field branding with the ease of online ordering.<br></span><br><span style=\"color: rgb(0, 0, 0); font-weight: bold;\">It’s easy as 1-2-3:&nbsp;<br></span> <br><span style=\"color: rgb(0, 0, 0); text-decoration-line: underline;\">1. Select Your Shop:</span><br><span style=\"color: rgb(0, 0, 0);\">Click on your club logo below to navigate to your club specific shop.&nbsp; These links are special codes that allow you access to your store. The store is only accessible by this link. For quick and easy access, bookmark the link in your browser.&nbsp;</span><br><br><span style=\"color: rgb(0, 0, 0); text-decoration-line: underline;\">2. Choose Your Products:\n</span><br><span style=\"color: rgb(0, 0, 0);\">Each store is club specific. This means all products are catered to your club. Choose between packages and a-la-cart products. Add desired products by selecting the product, the desired variant (color, frame type, size, etc.), and adding to your cart.&nbsp;&nbsp;</span><br><br><span style=\"color: rgb(0, 0, 0); text-decoration-line: underline;\">3. Check out:\n</span><br><span style=\"color: rgb(0, 0, 0);\">To complete your order, navigate to your cart icon to check out. Follow the steps to enter billing and shipping information.</span><br><br><span style=\"color: rgb(0, 0, 0); font-weight: bold;\">Get ready to look like champions on and off the field - visit your club shop today.</span><br><br>\n",
+        "pf_45bee2cd_value": "Impact Canopy, the #1 Field Branding Specialists in North America, has teamed up with ALBION SC to bring you exclusive products at affordable prices without sacrificing quality. Experience the Impact Difference.&nbsp;",
+        "pf_e1f68d39_value": "Our North American facilities, in-house printing, and vast on-hand inventory allow  for fast, reliable product delivery. ",
+        "pf_1cd6c40b_value": "Our award-winning graphics crew, talented production team, and high-quality inventory ensure premium products.   ",
+        "pf_459c8dd4_value": "Our dedicated and responsive team of dynamic sales specialists, and service technicians are here to assist you. ",
+        "pf_77d951f4_value": "<span style=\"font-weight: bold; color: rgb(255, 255, 255);\">Welcome to the ALBION SC Online Store</span>",
+        "pf_bf2dab6a_value": "Find and select your club logo to be taken to your exclusive shop.",
+        "pf_2b8b4136_value": "<span style=\"color: rgb(255, 255, 255);\">ABOUT US</span>",
+        "pf_bfb2a1bd_value": "FIND YOUR CLUB CHAPTER",
+        "pf_0db8580a_value": "Customer Service",
+        "pf_70e5b45d_value": "Quick Turnaround",
+        "pf_9a62a6a1_value": "Quality Products"
+      }
+    }
+  },
+  "order": [
+    "pf-59513ae3"
+  ]
+}
