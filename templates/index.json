@@ -7991,7 +7991,7 @@
             "background_media": "image",
             "video_position": "cover",
             "background_image": "shopify://shop_images/BLOW-OUT-SALE-06.26-COLLECTION-BACKGROUND-LOUD.jpg",
-            "background_image_position": "fit",
+            "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
