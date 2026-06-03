@@ -8251,7 +8251,7 @@
                       "name": "t:names.button",
                       "settings": {
                         "label": "Shop Blow-Out Sale",
-                        "link": "shopify://collections/on-the-shelf-blow-out-sale",
+                        "link": "shopify://collections/summer-must-haves-blow-out-sale",
                         "open_in_new_tab": false,
                         "style_class": "button-tertiary",
                         "button_size": "default",
