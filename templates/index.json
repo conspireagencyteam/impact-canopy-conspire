@@ -8156,7 +8156,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Get ready for your summer adventures with incredible savings on your favorite every-day-use products, perfect for your next outing!</p>",
+                        "text": "<p>Get ready for your summer adventures with incredible savings on your favorite items, perfect for your next outing!</p>",
                         "width": "fit-content",
                         "max_width": "wide",
                         "alignment": "left",
