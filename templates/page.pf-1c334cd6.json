@@ -1,0 +1,30 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pf-1c334cd6": {
+      "type": "pf-1c334cd6",
+      "settings": {
+        "pf_f4986892_value": "Keep your Ducati products in top shape with our high-quality replacement parts from Impact Canopy. Whether you need a new canopy top, frame components, or accessories, we offer a full range of durable, reliable parts designed to seamlessly fit and restore your equipment. Easy to order and built to last, our replacement parts ensure your setup stays strong, secure, and ready for any event. Keep your gear performing at its best—<a href=\"https://impactcanopy.com/pages/replacement-parts\" target=\"_blank\">shop Impact Canopy replacement parts today</a>!",
+        "pf_daf4155b_value": "<strong>Artwork Note:</strong> If you’re ordering multiple products with the same logo and design, you only need to upload your artwork to one of the products in your cart.&nbsp;<br><br>Want to discuss designs in detail? Please feel free to <second-sel><a href=\"mailto:justinp%40impactcanopy.com?subject=Ducati%20Design&amp;body=\">email Impact</a></second-sel> to discuss the details.",
+        "pf_bd4bf499_value": "We've Got You Covered. From custom inflatables to custom covers and beyond, we have the unique solutions you need to make your dealership stand out.<br><br><span style=\"color: rgb(0, 0, 0);\"><strong>Discover the possibilities - Get in touch today!&nbsp;</strong></span>",
+        "pf_ae31a607_value": "Check out our Look book for creative ideas and see how our custom solutions can transform your dealership.",
+        "pf_b32b93b8_value": "<strong>Looking For Something Unique?</strong>",
+        "pf_cad378c0_value": "<strong>Need Replacement Parts?</strong>",
+        "pf_7a1e02c5_value": "NEED INSPIRATION?",
+        "pf_922d8ec0_value": "Contact Us",
+        "pf_4a307880_value": "LOOK BOOK"
+      }
+    }
+  },
+  "order": [
+    "pf-1c334cd6"
+  ]
+}
