@@ -8,6 +8,7 @@
   lang="{{ request.locale.iso_code }}"
 >
   <head>
+ {%- capture ecom_header_content -%}{%- render 'ecom_header' -%}{%- endcapture -%}{%- unless ecom_header_content contains 'Liquid error' -%}{{ ecom_header_content }}{%- endunless -%}
     {{ locksmith_initializations }}
     {%- if settings.favicon != blank -%}
       <link
@@ -75,5 +76,5 @@
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/245238516.js"></script>
     <!-- End of HubSpot Embed Code -->
 
-  </body>
+  {%- capture ecom_footer_content -%}{%- render 'ecom_footer' -%}{%- endcapture -%}{%- unless ecom_footer_content contains 'Liquid error' -%}{{ ecom_footer_content }}{%- endunless -%}</body>
 </html>
