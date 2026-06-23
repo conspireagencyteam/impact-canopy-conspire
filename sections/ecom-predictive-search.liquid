@@ -172,6 +172,9 @@
               </li>
             {%- endfor -%}
             {%- for collection in predictive_search.resources.collections -%}
+              {%- comment %}<locksmith:dfbf>{% endcomment -%}
+                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: collection, subject_parent: predictive_search.resources, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+              {%- comment %}</locksmith:dfbf>{% endcomment -%}
               <li class="ecom-predictive-search__list-item">
                 <a href="{{ collection.url }}" class="ecom-predictive-search__item" tabindex="-1">
                   <div class="ecom-predictive-search__item-content">
@@ -217,6 +220,9 @@
           <h2 class="ecom-predictive-search__heading">Products</h2>
           <ul class="ecom-predictive-search__results-list">
             {%- for product in predictive_search.resources.products -%}
+              {%- comment %}<locksmith:6145>{% endcomment -%}
+                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: predictive_search.resources, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+              {%- comment %}</locksmith:6145>{% endcomment -%}
               <li class="ecom-predictive-search__list-item">
                 <a href="{{ product.url }}" class="ecom-predictive-search__item ecom-predictive-search__product" tabindex="-1">
                   {%- if product.featured_media != blank -%}
