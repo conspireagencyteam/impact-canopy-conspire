@@ -1,0 +1,26 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pf-64e53a87": {
+      "type": "pf-64e53a87",
+      "settings": {
+        "pf_52eb0006_value": "Impact Canopies’ fabric materials meet or exceed the minimum requirements of flame resistance established by the California State Fire Marshal for products identified in Section 13115, California Health and Safety Code.<br><br>This certifies the fabrics used in the manufacturing of Impact Canopies meet the CPAI 84 / ULC S109 Flame Retardancy Standards, based on testing data from QAI Laboratories.",
+        "pf_e7f3ba70_value": "View &amp; Print Out The Fire Certificate",
+        "pf_7db1c7e7_value": "<strong>FIRE CERTIFICATE</strong>",
+        "pf_3ad6a412_alt": "Impact Canopies Fire Label",
+        "pf_3ad6a412_title": "Impact Canopy Fire Label"
+      }
+    }
+  },
+  "order": [
+    "pf-64e53a87"
+  ]
+}
