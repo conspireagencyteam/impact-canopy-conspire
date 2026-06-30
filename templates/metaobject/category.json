@@ -1865,8 +1865,8 @@
                     "popup_heading": "Contact Us",
                     "label": "Schedule a Call",
                     "link": "",
-                    "custom_liquid": false,
-                    "liquid_code": "",
+                    "custom_liquid": true,
+                    "liquid_code": "<script src=\"https://js-na2.hsforms.net/forms/embed/245238516.js\" defer></script>\n<div class=\"hs-form-frame\" data-region=\"na2\" data-form-id=\"9d695075-43bc-4415-bec3-965646b65a16\" data-portal-id=\"245238516\"></div>",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "button_size": "default",
@@ -1934,22 +1934,6 @@
         "padding-block-start-mobile": 0,
         "padding-block-end-mobile": 0
       }
-    },
-    "custom_liquid_xtX4ri": {
-      "type": "custom-liquid",
-      "name": "t:names.custom_liquid",
-      "settings": {
-        "custom_liquid": "<script>\n      document.addEventListener('DOMContentLoaded', function () {\n        const formContainers = document.querySelectorAll('.custom-sale-group-form-modified');\n          formContainers.forEach(function (formContainer) {\n            const saleTitle = formContainer.querySelector('.sale-title');\n            const selectlabel = formContainer.querySelector('label[for=\"selectyourrep\"]');     \n            const select = formContainer.querySelector('select[title=\"Select Your Sales Rep\"]');\n\n            if (!select) return;\n\n            const hiddenInput = document.createElement('input');\n            hiddenInput.type = 'hidden';\n            hiddenInput.id = select.id;\n            hiddenInput.name = select.name;\n            hiddenInput.value = saleTitle.textContent.trim();\n\n            select.parentNode.insertBefore(hiddenInput, select);\n            select.remove();\n            if (selectlabel) selectlabel.remove();\n          });\n      });\n    </script>",
-        "color_scheme": "",
-        "section_width": "page-width",
-        "padding-block-start": 0,
-        "padding-block-end": 0,
-        "use_mobile_padding": false,
-        "padding-block-start-mobile": 0,
-        "padding-block-end-mobile": 0,
-        "padding-inline-start-mobile": 0,
-        "padding-inline-end-mobile": 0
-      }
     }
   },
   "order": [
@@ -1957,7 +1941,6 @@
     "section_KD9pgN",
     "product_list_wAarnp",
     "image_collage_pgPCFQ",
-    "section_category_profile_list_YwjyCQ",
-    "custom_liquid_xtX4ri"
+    "section_category_profile_list_YwjyCQ"
   ]
 }
