@@ -1858,6 +1858,7 @@
                 },
                 "staticNewCat": {
                   "type": "_quote-form-sale-button",
+                  "disabled": true,
                   "static": true,
                   "settings": {
                     "button_type": "popup",
@@ -1865,8 +1866,8 @@
                     "popup_heading": "Contact Us",
                     "label": "Schedule a Call",
                     "link": "",
-                    "custom_liquid": true,
-                    "liquid_code": "<script src=\"https://js-na2.hsforms.net/forms/embed/245238516.js\" defer></script>\n<div class=\"hs-form-frame\" data-region=\"na2\" data-form-id=\"9d695075-43bc-4415-bec3-965646b65a16\" data-portal-id=\"245238516\"></div>",
+                    "custom_liquid": false,
+                    "liquid_code": "",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "button_size": "default",
