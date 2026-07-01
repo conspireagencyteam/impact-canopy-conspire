@@ -1935,6 +1935,22 @@
         "padding-block-start-mobile": 0,
         "padding-block-end-mobile": 0
       }
+    },
+    "custom_liquid_yigrTz": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<script src=\"https://js-na2.hsforms.net/forms/embed/245238516.js\" defer></script>\n<div class=\"hs-form-frame\" data-region=\"na2\" data-form-id=\"9d695075-43bc-4415-bec3-965646b65a16\" data-portal-id=\"245238516\"></div>",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0,
+        "use_mobile_padding": false,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0,
+        "padding-inline-start-mobile": 0,
+        "padding-inline-end-mobile": 0
+      }
     }
   },
   "order": [
@@ -1942,6 +1958,7 @@
     "section_KD9pgN",
     "product_list_wAarnp",
     "image_collage_pgPCFQ",
-    "section_category_profile_list_YwjyCQ"
+    "section_category_profile_list_YwjyCQ",
+    "custom_liquid_yigrTz"
   ]
 }
