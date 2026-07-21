@@ -1610,7 +1610,7 @@
                   "type": "_accordion-row",
                   "name": "t:names.accordion_row",
                   "settings": {
-                    "heading": "Warranty Information",
+                    "heading": "Shipping Information",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
