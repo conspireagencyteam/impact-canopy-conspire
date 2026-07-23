@@ -309,7 +309,7 @@
                   "type": "icon",
                   "name": "t:names.icon",
                   "settings": {
-                    "icon": "chat",
+                    "icon": "question_mark",
                     "width": 20,
                     "link": "shopify://pages/support",
                     "open_in_new_tab": false
