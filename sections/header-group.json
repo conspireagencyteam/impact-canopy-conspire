@@ -310,7 +310,7 @@
                   "name": "t:names.icon",
                   "settings": {
                     "icon": "question_mark",
-                    "width": 20,
+                    "width": 30,
                     "link": "shopify://pages/support",
                     "open_in_new_tab": false
                   },
