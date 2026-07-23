@@ -240,6 +240,7 @@
                 "button_WqgM3b": {
                   "type": "button",
                   "name": "t:names.button",
+                  "disabled": true,
                   "settings": {
                     "label": "RESOURCES",
                     "link": "shopify://pages/support",
@@ -307,7 +308,6 @@
                 "icon_7bxU7T": {
                   "type": "icon",
                   "name": "t:names.icon",
-                  "disabled": true,
                   "settings": {
                     "icon": "chat",
                     "width": 20,
