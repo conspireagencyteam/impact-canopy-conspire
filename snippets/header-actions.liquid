@@ -286,6 +286,11 @@ header-actions {
       justify-content: center;
     }
   }
+  header-actions > *:has(.header-actions__cart-icon)::after,
+header-actions > *:has(.header-actions__cart-icon) + *::before {
+  content: none !important;
+  display: none !important;
+}
 
   .header-actions__cart-icon .cart-bubble {
     position: absolute;
