@@ -420,7 +420,7 @@
         }
       },
       "custom_css": [
-        "@media screen and (min-width: 1024px) {.header__row.header-contain {background-color: #eef0f2; } .header__actions {gap: 16px !important; } .header__actions a, .header__actions button {margin: 0 !important; } .header__icon--cart {display: flex !important; align-items: center !important; justify-content: center !important; padding: 0 !important; }}"
+        "@media screen and (min-width: 1024px) {.header__row.header-contain {background-color: #eef0f2; }}"
       ],
       "settings": {
         "logo_position": "left",
