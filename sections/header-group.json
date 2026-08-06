@@ -420,8 +420,7 @@
         }
       },
       "custom_css": [
-        "@media screen and (min-width: 1024px) {.header__row.header-contain {background: #eef0f2; }}",
-        ".header-actions__cart-icon .cart-bubble:has(.cart-bubble__text-count:empty) {display: none !important;}"
+        "@media screen and (min-width: 1024px) {.header__row.header-contain {background: #eef0f2; }}"
       ],
       "settings": {
         "logo_position": "left",
