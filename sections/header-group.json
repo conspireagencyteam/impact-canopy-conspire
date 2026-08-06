@@ -248,7 +248,7 @@
                     "button_background_color": "#ed7625",
                     "button_text_color": "#ffffff",
                     "button_size": "default",
-                    "width": "custom",
+                    "width": "fit-content",
                     "custom_width": 100,
                     "width_tablet": "fit-content",
                     "custom_width_tablet": 100,
