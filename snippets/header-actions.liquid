@@ -286,11 +286,13 @@ header-actions {
       justify-content: center;
     }
   }
-  
-  header-actions > *:has(.header-actions__cart-icon)::after,
-header-actions > *:has(.header-actions__cart-icon) + *::before {
-  content: none !important;
-  display: none !important;
+
+@media screen and (min-width: 1024px) {
+  .header-icons-group > *:first-child::before,
+  .header-icons-group::before {
+    content: none !important;
+    display: none !important;
+  }
 }
 
   .header-actions__cart-icon .cart-bubble {
