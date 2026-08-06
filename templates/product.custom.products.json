@@ -602,7 +602,7 @@
                     "popup_heading": "Let's begin your design process",
                     "label": "Get Your Free Custom Mockup and Quote",
                     "link": "",
-                    "custom_liquid": true,
+                    "custom_liquid": false,
                     "liquid_code": "<powr-form-builder u=\"62717d27_1739472799\"></powr-form-builder><script src=\"https://view.powr.io/assets/loader.js\"></script>",
                     "open_in_new_tab": false,
                     "style_class": "button-secondary",
