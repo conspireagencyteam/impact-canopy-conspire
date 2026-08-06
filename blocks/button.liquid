@@ -1,4 +1,29 @@
-{% render 'button', link: block.settings.link, fallback_link: fallback_link, fallback_label: fallback_label %}
+<div class="custom-button-color-{{ block.id }}">
+  {% render 'button', link: block.settings.link, fallback_link: fallback_link, fallback_label: fallback_label %}
+</div>
+
+{% if block.settings.button_background_color != blank or block.settings.button_text_color != blank %}
+  <style>
+    {% if block.settings.button_background_color != blank %}
+      .custom-button-color-{{ block.id }} .button,
+      .custom-button-color-{{ block.id }} .button-secondary,
+      .custom-button-color-{{ block.id }} .button-tertiary {
+        background-color: {{ block.settings.button_background_color }} !important;
+      }
+    {% endif %}
+
+    {% if block.settings.button_text_color != blank %}
+      .custom-button-color-{{ block.id }} .button,
+      .custom-button-color-{{ block.id }} .button-secondary,
+      .custom-button-color-{{ block.id }} .button-tertiary,
+      .custom-button-color-{{ block.id }} .button *,
+      .custom-button-color-{{ block.id }} .button-secondary *,
+      .custom-button-color-{{ block.id }} .button-tertiary * {
+        color: {{ block.settings.button_text_color }} !important;
+      }
+    {% endif %}
+  </style>
+{% endif %}
 
 {% schema %}
 {
@@ -46,6 +71,22 @@
       ],
       "default": "button"
     },
+    {
+  "type": "header",
+  "content": "Button Colors"
+},
+{
+  "type": "color",
+  "id": "button_background_color",
+  "label": "Button Color",
+  "default": "#ED7625"
+},
+{
+  "type": "color",
+  "id": "button_text_color",
+  "label": "Button Text Color",
+  "default": "#FFFFFF"
+},
     {
       "type": "select",
       "id": "button_size",
