@@ -209,7 +209,7 @@
                     "link": "shopify://pages/quote-mock-up-request",
                     "open_in_new_tab": false,
                     "style_class": "button",
-                    "button_background_color": "#490E67",
+                    "button_background_color": "#490e67",
                     "button_text_color": "#ffffff",
                     "button_size": "default",
                     "width": "fit-content",
@@ -10360,7 +10360,7 @@
                                     "letter_spacing": "normal",
                                     "case": "none",
                                     "wrap": "pretty",
-                                    "color": "var(--color-foreground)",
+                                    "color": "var(--color-primary)",
                                     "use_mobile_typography": false,
                                     "font_size_mobile": "1rem",
                                     "line_height_mobile": "normal",
@@ -10383,6 +10383,7 @@
                                 "price_mCb8Wn": {
                                   "type": "price",
                                   "name": "t:names.product_price",
+                                  "disabled": true,
                                   "settings": {
                                     "show_sale_price_first": true,
                                     "show_installments": false,
@@ -10596,7 +10597,7 @@
                                     "letter_spacing": "normal",
                                     "case": "none",
                                     "wrap": "pretty",
-                                    "color": "var(--color-foreground)",
+                                    "color": "var(--color-primary)",
                                     "use_mobile_typography": false,
                                     "font_size_mobile": "1rem",
                                     "line_height_mobile": "normal",
@@ -10619,6 +10620,7 @@
                                 "price_YEiBkf": {
                                   "type": "price",
                                   "name": "t:names.product_price",
+                                  "disabled": true,
                                   "settings": {
                                     "show_sale_price_first": true,
                                     "show_installments": false,
@@ -10832,7 +10834,7 @@
                                     "letter_spacing": "normal",
                                     "case": "none",
                                     "wrap": "pretty",
-                                    "color": "var(--color-foreground)",
+                                    "color": "var(--color-primary)",
                                     "use_mobile_typography": false,
                                     "font_size_mobile": "1rem",
                                     "line_height_mobile": "normal",
@@ -10855,6 +10857,7 @@
                                 "price_JUNHmh": {
                                   "type": "price",
                                   "name": "t:names.product_price",
+                                  "disabled": true,
                                   "settings": {
                                     "show_sale_price_first": true,
                                     "show_installments": false,
@@ -11068,7 +11071,7 @@
                                     "letter_spacing": "normal",
                                     "case": "none",
                                     "wrap": "pretty",
-                                    "color": "var(--color-foreground)",
+                                    "color": "var(--color-primary)",
                                     "use_mobile_typography": false,
                                     "font_size_mobile": "1rem",
                                     "line_height_mobile": "normal",
@@ -11091,6 +11094,7 @@
                                 "price_VQpdwf": {
                                   "type": "price",
                                   "name": "t:names.product_price",
+                                  "disabled": true,
                                   "settings": {
                                     "show_sale_price_first": true,
                                     "show_installments": false,
