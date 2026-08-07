@@ -934,7 +934,7 @@
                         "border_width": 1,
                         "border_opacity": 100,
                         "border_radius": 0,
-                        "custom_class": "",
+                        "custom_class": "hide-accessory-uploads",
                         "toggle_overlay": false,
                         "overlay_style": "solid",
                         "overlay_color": "#00000026",
