@@ -242,7 +242,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "Get A Quote",
-                    "link": "shopify://pages/quote-mock-up-request-old",
+                    "link": "shopify://pages/quote-mock-up-request",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "button_background_color": "#ed7625",
