@@ -206,7 +206,7 @@
                   "type": "button",
                   "settings": {
                     "label": "Get A Quote",
-                    "link": "shopify://pages/quote-mock-up-request",
+                    "link": "shopify://pages/quote-mock-up-request-old",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "button_background_color": "#490e67",
@@ -12202,7 +12202,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "Get expert help!",
-                    "link": "shopify://pages/quote-mock-up-request",
+                    "link": "shopify://pages/quote-mock-up-request-old",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "button_background_color": "#490E67",
