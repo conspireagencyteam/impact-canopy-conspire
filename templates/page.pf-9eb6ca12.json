@@ -1,0 +1,44 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pf-9eb6ca12": {
+      "type": "pf-9eb6ca12",
+      "settings": {
+        "pf_419b700d_value": "Impact Canopy, the #1 Field Branding Specialists in North America, has teamed up with Surf Club to bring you exclusive products at affordable prices without sacrificing quality. Experience the Impact Difference.&nbsp;",
+        "pf_2b7a8265_value": "Our North American facilities, in-house printing, and vast on-hand inventory allow  for fast, reliable product delivery. ",
+        "pf_c65310cc_value": "<span style=\"color: rgb(0, 152, 167);\">Find and select your club name&nbsp;to be taken to your exclusive shop.</span>",
+        "pf_8bb1ee06_value": "Our award-winning graphics crew, talented production team, and high-quality inventory ensure premium products.   ",
+        "pf_45343d52_value": "Our dedicated and responsive team of dynamic sales specialists, and service technicians are here to assist you. ",
+        "pf_bfbad75c_value": "<span style=\"color: rgb(35, 55, 71);\"><span style=\"color: rgb(35, 55, 71);\">FIND YOUR CLUB&nbsp;</span></span>",
+        "pf_cff1054d_value": "<span style=\"color: rgb(255, 255, 255);\">Girl's Academy Aspire&nbsp;- Southwest Conference</span>",
+        "pf_fb074725_value": "<span style=\"color: rgb(255, 255, 255);\">ABOUT US</span>",
+        "pf_6b38f2a3_value": "Flyte Soccer Club Inland Empire (Rancho Cucamonga, CA)",
+        "pf_22f030ab_value": "California Football Academy (Laguna Hills, CA)",
+        "pf_d0a751e5_value": "West Coast FC (San Juan Capistrano, CA)",
+        "pf_2787e29a_value": "City SC Los Angeles (Los Angeles, CA)",
+        "pf_c1aa6a85_value": "LA Surf Soccer Club (Los Angeles, CA)",
+        "pf_30ab2787_value": "Santa Barbara SC (Santa Barbara, CA)",
+        "pf_a18f7cce_value": "Albion SC San Diego (San Diego, CA)",
+        "pf_684aae32_value": "SoCal Reds FC (Irvine, CA)",
+        "pf_d1a90319_value": "Rangers FC (Fullerton, CA)",
+        "pf_7cced0a7_value": "SDSC Surf (San Diego, CA)",
+        "pf_e29a51f1_value": "FRAM SC (Torrance, CA)",
+        "pf_8532a18f_value": "City SC (Carlsbad, CA)",
+        "pf_5102b516_value": "Customer Service",
+        "pf_43534d97_value": "Quick Turnaround",
+        "pf_18c18a99_value": "Quality Products"
+      }
+    }
+  },
+  "order": [
+    "pf-9eb6ca12"
+  ]
+}
