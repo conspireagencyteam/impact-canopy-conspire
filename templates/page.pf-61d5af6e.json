@@ -1,0 +1,41 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pf-61d5af6e": {
+      "type": "pf-61d5af6e",
+      "settings": {
+        "pf_fd47ed33_value": "Impact Canopy, the #1 Field Branding Specialists in North America, has teamed up with Surf Club to bring you exclusive products at affordable prices without sacrificing quality. Experience the Impact Difference.&nbsp;",
+        "pf_8f1548ee_value": "Our North American facilities, in-house printing, and vast on-hand inventory allow  for fast, reliable product delivery. ",
+        "pf_4a2b46e2_value": "<span style=\"color: rgb(0, 152, 167);\">Find and select your club name&nbsp;to be taken to your exclusive shop.</span>",
+        "pf_fb1e61ff_value": "Our award-winning graphics crew, talented production team, and high-quality inventory ensure premium products.   ",
+        "pf_7dc9c5b9_value": "Our dedicated and responsive team of dynamic sales specialists, and service technicians are here to assist you. ",
+        "pf_29c55bc7_value": "<span style=\"color: rgb(35, 55, 71);\"><span style=\"color: rgb(35, 55, 71);\">FIND YOUR CLUB&nbsp;</span></span>",
+        "pf_d9418169_value": "<span style=\"color: rgb(255, 255, 255);\">Girl's Academy Aspire&nbsp;- New England&nbsp;Conference</span>",
+        "pf_0dfa361c_value": "<span style=\"color: rgb(255, 255, 255);\">ABOUT US</span>",
+        "pf_e92095ca_value": "Seacoast United Massachusetts (Weymouth, MA)",
+        "pf_fc5553cb_value": "Western United Pioneers FC (Ludlow, MA)",
+        "pf_f4c77afd_value": "Seacoast UNited NH (Hampton, NH)",
+        "pf_4023c20a_value": "New England Force (Pembroke, MA)",
+        "pf_97f645a2_value": "FC Boston Bolts (Boston, MA)",
+        "pf_e7b76593_value": "FC North (East Windsor, CT)",
+        "pf_406ce609_value": "Ginga FC (Woodbridge, CT)",
+        "pf_32fc010b_value": "NEFC (Mendon, MA)",
+        "pf_424ffa55_value": "IFA (Boston, MA)",
+        "pf_ed96ec9d_value": "Customer Service",
+        "pf_0f76dc1e_value": "Quick Turnaround",
+        "pf_c1cc2018_value": "Quality Products"
+      }
+    }
+  },
+  "order": [
+    "pf-61d5af6e"
+  ]
+}
