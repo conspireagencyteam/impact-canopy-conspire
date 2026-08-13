@@ -1,0 +1,44 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pf-b14058ba": {
+      "type": "pf-b14058ba",
+      "settings": {
+        "pf_6d284c3b_value": "Impact Canopy, the #1 Field Branding Specialists in North America, has teamed up with Surf Club to bring you exclusive products at affordable prices without sacrificing quality. Experience the Impact Difference.&nbsp;",
+        "pf_16ef90f5_value": "Our North American facilities, in-house printing, and vast on-hand inventory allow  for fast, reliable product delivery. ",
+        "pf_a3853ac0_value": "<span style=\"color: rgb(0, 152, 167);\">Find and select your club name&nbsp;to be taken to your exclusive shop.</span>",
+        "pf_9a001635_value": "Our award-winning graphics crew, talented production team, and high-quality inventory ensure premium products.   ",
+        "pf_e1b794d1_value": "Our dedicated and responsive team of dynamic sales specialists, and service technicians are here to assist you. ",
+        "pf_29c42ca9_value": "<span style=\"color: rgb(255, 255, 255);\">Girl's Academy Aspire&nbsp;- Pacific Northwest&nbsp;Conference</span>",
+        "pf_4a9adfc7_value": "<span style=\"color: rgb(35, 55, 71);\"><span style=\"color: rgb(35, 55, 71);\">FIND YOUR CLUB&nbsp;</span></span>",
+        "pf_de58957d_value": "<span style=\"color: rgb(255, 255, 255);\">ABOUT US</span>",
+        "pf_ce711d54_value": "Washington East Surg - Columbia Basin (Pasco, WA)",
+        "pf_7441ce9d_value": "Western Washington Surf (Bellevue, WA)",
+        "pf_720a6dd7_value": "Washington East Surf SC (Spokane, WA)",
+        "pf_1cefde79_value": "Columbia Premier SC (Vancouver, WA)",
+        "pf_00159161_value": "Seattle Reigh Academy (Seattle, WA)",
+        "pf_54ab4b86_value": "Harbor Soccer Club (Gig Harbor, WA)",
+        "pf_95d82a4d_value": "ALBION SC Washington (Bellevue, WA)",
+        "pf_91d124d1_value": "Sting SC (Couer d'Alene, ID)",
+        "pf_d93ec677_value": "Spokane Shadow (Spokane, WA)",
+        "pf_4c81b2ff_value": "Seattle Celtic (Seattle, WA)",
+        "pf_ed2a6e93_value": "Sound FC (Woodinville, WA)",
+        "pf_6b7a3f2b_value": "Mt. Rainier (Buckley, WA)",
+        "pf_7dc8a2c7_value": "Customer Service",
+        "pf_af98d9e6_value": "Quick Turnaround",
+        "pf_caca9fb4_value": "Quality Products"
+      }
+    }
+  },
+  "order": [
+    "pf-b14058ba"
+  ]
+}
