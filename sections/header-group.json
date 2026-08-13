@@ -18,7 +18,7 @@
           "type": "_announcement",
           "name": "t:names.announcement",
           "settings": {
-            "text": "<strong>IMPORTANT</strong> [8/13/2026 1:00pm PST]: Our mail servers are currently experiencing an outage due to a data center issue in Phoenix, AZ. Please call us at <strong>+1 (877) 840-3524 </strong>for immediate assistance. We apologize for any inconvenience and are all hands on deck to assist your calls!",
+            "text": "⚠️<strong>IMPORTANT</strong>⚠️ [8/13/2026 1:00pm PST]: Our mail servers are currently experiencing an outage due to a data center issue in Phoenix, AZ. Please call us at <strong>+1 (877) 840-3524 </strong>for immediate assistance. We apologize for any inconvenience and are all hands on deck to assist your calls!",
             "link": "",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
@@ -37,7 +37,7 @@
       "settings": {
         "speed": 5,
         "section_width": "page-width",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-0b89a542-75f7-4dfb-95f3-38a06a9e9784",
         "divider_width": 0,
         "padding-block-start": 12,
         "padding-block-end": 0,
