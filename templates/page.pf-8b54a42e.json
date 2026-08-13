@@ -1,0 +1,39 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pf-8b54a42e": {
+      "type": "pf-8b54a42e",
+      "settings": {
+        "pf_00c7b1f6_value": "Impact Canopy, the #1 Field Branding Specialists in North America, has teamed up with Surf Club to bring you exclusive products at affordable prices without sacrificing quality. Experience the Impact Difference.&nbsp;",
+        "pf_73424606_value": "Our North American facilities, in-house printing, and vast on-hand inventory allow  for fast, reliable product delivery. ",
+        "pf_83ebf93a_value": "<span style=\"color: rgb(0, 152, 167);\">Find and select your club name&nbsp;to be taken to your exclusive shop.</span>",
+        "pf_a53f3fec_value": "Our award-winning graphics crew, talented production team, and high-quality inventory ensure premium products.   ",
+        "pf_3a425ea6_value": "Our dedicated and responsive team of dynamic sales specialists, and service technicians are here to assist you. ",
+        "pf_9f6e4bf3_value": "<span style=\"color: rgb(35, 55, 71);\"><span style=\"color: rgb(35, 55, 71);\">FIND YOUR CLUB&nbsp;</span></span>",
+        "pf_4c086693_value": "<span style=\"color: rgb(255, 255, 255);\">Girl's Academy Aspire&nbsp;- Colorado&nbsp;Conference</span>",
+        "pf_68a901e6_value": "<span style=\"color: rgb(255, 255, 255);\">ABOUT US</span>",
+        "pf_c939b42a_value": "Grand Junction Soccer Club (Grand Junction, CO)",
+        "pf_e8fa1d28_value": "Broomfield Soccer Club (Broomfield, CO)",
+        "pf_797dbf6b_value": "CO Elevation FC (Highlands Ranch, CO)",
+        "pf_4366acde_value": "ALBION SC Boulder (Boulder, CO)",
+        "pf_46c3791c_value": "Colorado United (Littleton, CO)",
+        "pf_f1a3f81f_value": "ALBION SC Denver (Denver, CO)",
+        "pf_f36b5258_value": "City SC NOCO ( Windsor, CO)",
+        "pf_aa43d7ec_value": "Customer Service",
+        "pf_49f85464_value": "Quick Turnaround",
+        "pf_820b4f87_value": "Quality Products"
+      }
+    }
+  },
+  "order": [
+    "pf-8b54a42e"
+  ]
+}
