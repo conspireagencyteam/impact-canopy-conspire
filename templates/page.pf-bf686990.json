@@ -1,0 +1,40 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pf-bf686990": {
+      "type": "pf-bf686990",
+      "settings": {
+        "pf_d682584d_value": "Impact Canopy, the #1 Field Branding Specialists in North America, has teamed up with Surf Club to bring you exclusive products at affordable prices without sacrificing quality. Experience the Impact Difference.&nbsp;",
+        "pf_85e20c74_value": "Our North American facilities, in-house printing, and vast on-hand inventory allow  for fast, reliable product delivery. ",
+        "pf_5a17bdf4_value": "<span style=\"color: rgb(0, 152, 167);\">Find and select your club name&nbsp;to be taken to your exclusive shop.</span>",
+        "pf_8c12430a_value": "Our award-winning graphics crew, talented production team, and high-quality inventory ensure premium products.   ",
+        "pf_0130984d_value": "Our dedicated and responsive team of dynamic sales specialists, and service technicians are here to assist you. ",
+        "pf_abb51fb8_value": "<span style=\"color: rgb(35, 55, 71);\"><span style=\"color: rgb(35, 55, 71);\">FIND YOUR CLUB&nbsp;</span></span>",
+        "pf_cfcd7047_value": "<span style=\"color: rgb(255, 255, 255);\">Girl's Academy Aspire&nbsp;- Mid-America&nbsp;Conference</span>",
+        "pf_ce3c4e49_value": "<span style=\"color: rgb(255, 255, 255);\">ABOUT US</span>",
+        "pf_8d8e73a8_value": "Sporting Columbus United (Lewis Center, OH)",
+        "pf_67373fc1_value": "Fort Wayne United FC (Fort Wayne, IN)",
+        "pf_4fbb1eab_value": "Kings Hammer SC NKY (Cincinnati, OH)",
+        "pf_6f9ec70d_value": "Kings Hammer SC TN (Nashville, TN)",
+        "pf_9c52f66e_value": "Cincinnati UNited (Cincinnati, OH)",
+        "pf_56cf514f_value": "Indy Premier SC (Noblesville, IN)",
+        "pf_2b528169_value": "Javanon FC (Louisville, KY)",
+        "pf_3ab7362b_value": "Club Ohio (Dublin, OH)",
+        "pf_e51bcf6b_value": "Customer Service",
+        "pf_8cf43d48_value": "Quick Turnaround",
+        "pf_77e19135_value": "Quality Products"
+      }
+    }
+  },
+  "order": [
+    "pf-bf686990"
+  ]
+}
