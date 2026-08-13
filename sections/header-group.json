@@ -32,6 +32,7 @@
       "block_order": [
         "announcement_CVWmDV"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "t:names.announcement_bar",
       "settings": {
