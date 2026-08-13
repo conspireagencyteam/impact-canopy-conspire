@@ -1,0 +1,47 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pf-2a765e7c": {
+      "type": "pf-2a765e7c",
+      "settings": {
+        "pf_59d3d370_value": "<span style=\"color: rgb(19, 32, 49);\"></span><a href=\"https://impactcanopy.com/pages/elite-academy-league-mid-america-south-conference\" target=\"_self\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(35, 55, 71);\"><u>MID-ATLANTIC NORTH<br>CONFERENCE</u></span></span><span style=\"color: rgb(0, 0, 0);\"></span></a><a href=\"https://impactcanopy.com/pages/elite-academy-league-mid-america-south-conference\" target=\"_self\"></a><a href=\"https://impactcanopy.com/pages/elite-academy-league-mid-america-south-conference\" target=\"_self\"></a><a href=\"https://impactcanopy.com/pages/elite-academy-league-mid-america-south-conference\" target=\"_self\"></a><a href=\"https://impactcanopy.com/pages/elite-academy-league-mid-america-south-conference\" target=\"_self\"></a>",
+        "pf_d2ddde12_value": "<a href=\"https://impactcanopy.com/pages/elite-academy-league-northeast-conference\" target=\"_self\"><span style=\"color: rgb(146, 25, 28);\"></span><span style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(146, 25, 28);\"></span><span style=\"color: rgb(146, 25, 28);\"></span><span style=\"color: rgb(146, 25, 28);\"><u><span style=\"color: rgb(0, 152, 167);\"></span></u><span style=\"color: rgb(0, 152, 167);\"><u>MID-ATLANTIC<br>SOUTH</u></span></span></span></a><br><a href=\"https://impactcanopy.com/pages/elite-academy-league-northeast-conference\" target=\"_self\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(146, 25, 28);\"><span style=\"color: rgb(0, 152, 167);\"><u>CONFERENCE</u></span></span><span style=\"color: rgb(146, 25, 28);\"></span></span></a>",
+        "pf_081ffe01_value": "<a href=\"https://impactcanopy.com/pages/elite-academy-league-southeast-conference\" target=\"_self\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(146, 25, 28);\"><span style=\"color: rgb(0, 152, 167);\"><u>MOUNTAIN WEST</u></span></span></span></a><br><a href=\"https://impactcanopy.com/pages/elite-academy-league-southeast-conference\" target=\"_self\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(146, 25, 28);\"><span style=\"color: rgb(0, 152, 167);\"><u>CONFERENCE</u></span></span></span></a>",
+        "pf_fd363601_value": "<a href=\"https://impactcanopy.com/pages/elite-academy-league-southeast-conference\" target=\"_self\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(146, 25, 28);\"><span style=\"color: rgb(0, 152, 167);\"><u>COLORADO</u></span></span></span></a><br><a href=\"https://impactcanopy.com/pages/elite-academy-league-southeast-conference\" target=\"_self\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(146, 25, 28);\"><span style=\"color: rgb(0, 152, 167);\"><u>CONFERENCE</u></span></span></span></a>",
+        "pf_a563f819_value": "<a href=\"https://impactcanopy.com/pages/elite-academy-league-southwest-desert-conference\" target=\"_self\"><span style=\"color: rgb(19, 32, 49);\"><u><span style=\"color: rgb(35, 55, 71);\"></span></u><span style=\"color: rgb(35, 55, 71);\"><u>PACIFIC NORTHWEST</u></span></span></a><br><a href=\"https://impactcanopy.com/pages/elite-academy-league-southwest-desert-conference\" target=\"_self\"><span style=\"color: rgb(19, 32, 49);\"><span style=\"color: rgb(35, 55, 71);\"><u>CONFERENCE</u></span></span></a>",
+        "pf_e95df0fd_value": "<a href=\"https://impactcanopy.com/pages/elite-academy-league-southwest-desert-conference\" target=\"_self\"><span style=\"color: rgb(19, 32, 49);\"><u><span style=\"color: rgb(35, 55, 71);\"></span></u><span style=\"color: rgb(35, 55, 71);\"><u>MIDWEST</u></span></span></a><br><a href=\"https://impactcanopy.com/pages/elite-academy-league-southwest-desert-conference\" target=\"_self\"><span style=\"color: rgb(19, 32, 49);\"><span style=\"color: rgb(35, 55, 71);\"><u>CONFERENCE</u></span></span></a>",
+        "pf_8de6d52c_value": "<a href=\"https://impactcanopy.com/pages/elite-academy-league-northwest-nor-cal-conference\" target=\"_self\"><span style=\"color: rgb(19, 32, 49);\"></span><span style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(35, 55, 71);\"><u>FRONTIER</u></span></span></a><br><a href=\"https://impactcanopy.com/pages/elite-academy-league-northwest-nor-cal-conference\" target=\"_self\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(35, 55, 71);\"><u>CONFERENCE</u></span></span></a>",
+        "pf_01ae2e50_value": "<a href=\"https://impactcanopy.com/pages/elite-academy-league-northwest-nor-cal-conference\" target=\"_self\"><span style=\"color: rgb(19, 32, 49);\"></span><span style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(35, 55, 71);\"><u>FLORIDA</u></span></span></a><br><a href=\"https://impactcanopy.com/pages/elite-academy-league-northwest-nor-cal-conference\" target=\"_self\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(35, 55, 71);\"><u>CONFERENCE</u></span></span></a>",
+        "pf_6965cdd6_value": "<a href=\"https://impactcanopy.com/pages/elite-academy-league-northwest-pacific-conference\" target=\"_self\"><span style=\"color: rgb(19, 32, 49);\"><span style=\"color: rgb(35, 55, 71);\"><u>MID-AMERICA</u></span></span></a><br><a href=\"https://impactcanopy.com/pages/elite-academy-league-northwest-pacific-conference\" target=\"_self\"><span style=\"color: rgb(19, 32, 49);\"><span style=\"color: rgb(35, 55, 71);\"><u>CONFERENCE</u></span></span></a>",
+        "pf_0bef9fe9_value": "<a href=\"https://impactcanopy.com/pages/elite-academy-league-southwest-conference\" target=\"_blank\"><span style=\"color: rgb(146, 25, 28);\"></span><span style=\"color: rgb(0, 152, 167);\"><u>SOUTHEAST</u></span></a><br><a href=\"https://impactcanopy.com/pages/elite-academy-league-southwest-conference\" target=\"_blank\"><span style=\"color: rgb(0, 152, 167);\"><u>CONFERENCE</u></span><span style=\"color: rgb(146, 25, 28);\"></span></a>",
+        "pf_7fd47f6a_value": "<span style=\"color: rgb(146, 25, 28);\"></span><a href=\"https://impactcanopy.com/pages/elite-academy-league-mid-america-north-conference\" target=\"_self\"><span style=\"color: rgb(146, 25, 28);\"></span><span style=\"color: rgb(146, 25, 28);\"><u><span style=\"color: rgb(0, 152, 167);\"></span></u><span style=\"color: rgb(0, 152, 167);\"><u>NEW ENGLAND<br>CONFERENCE</u></span></span></a>",
+        "pf_98d23fb8_value": "<a href=\"/pages/elite-academy-league-ea2\" target=\"_self\"><span style=\"color: rgb(0, 0, 0);\"></span><span style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(35, 55, 71);\"></span></span></a><span style=\"color: rgb(35, 55, 71);\"><a href=\"/pages/elite-academy-league-ea2\" target=\"_self\"><span style=\"color: rgb(35, 55, 71);\"><u>NORTHEAST</u></span></a><br><u>CONFERENCE</u></span>",
+        "pf_4346f9ae_value": "<a href=\"https://impactcanopy.com/pages/elite-academy-league-southwest-conference\" target=\"_blank\"><span style=\"color: rgb(146, 25, 28);\"></span><span style=\"color: rgb(0, 152, 167);\"><u><second-sel>SOUTHWEST CONFERENCE</second-sel></u></span><span style=\"color: rgb(146, 25, 28);\"></span></a>",
+        "pf_2b73bc23_value": "<a href=\"/pages/elite-academy-league-texas-conference\" target=\"_self\"><span style=\"color: rgb(146, 25, 28);\"></span><span style=\"color: rgb(146, 25, 28);\"></span><span style=\"color: rgb(0, 152, 167);\"><u>GREAT LAKES<br>CONFERENCE</u></span><span style=\"color: rgb(146, 25, 28);\"></span></a>",
+        "pf_507624bb_value": "<a href=\"/pages/elite-academy-league-texas-conference\" target=\"_self\"><span style=\"color: rgb(146, 25, 28);\"></span><span style=\"color: rgb(146, 25, 28);\"></span><span style=\"color: rgb(0, 152, 167);\"><u>NORCAL<br>CONFERENCE</u></span><span style=\"color: rgb(146, 25, 28);\"></span></a>",
+        "pf_69af5d76_value": "Impact Canopy, the #1 Field Branding Specialists in North America, has teamed up with Elite Academy to bring you exclusive products at affordable prices without sacrificing quality. Experience the Impact Difference.&nbsp;",
+        "pf_3bc0fee5_value": "Our North American facilities, in-house printing, and vast on-hand inventory allow  for fast, reliable product delivery. ",
+        "pf_e4557cd5_value": "Our award-winning graphics crew, talented production team, and high-quality inventory ensure premium products.   ",
+        "pf_9f87046b_value": "Our dedicated and responsive team of dynamic sales specialists, and service technicians are here to assist you. ",
+        "pf_b9dd1d10_value": "<span style=\"color: rgb(255, 255, 255);\">GIRL'S ACADEMY ASPIRE&nbsp;PORTAL</span>",
+        "pf_b06910f0_value": "<strong></strong>Select your conference to be taken to your conference page.",
+        "pf_4784713d_value": "<span style=\"color: rgb(35, 55, 71);\">FIND YOUR CONFERENCE</span>",
+        "pf_aecf56d4_value": "<span style=\"color: rgb(255, 255, 255);\">ABOUT US</span>",
+        "pf_deafb548_value": "Customer Service",
+        "pf_028f0da5_value": "Quick Turnaround",
+        "pf_78b0afdb_value": "Quality Products"
+      }
+    }
+  },
+  "order": [
+    "pf-2a765e7c"
+  ]
+}
