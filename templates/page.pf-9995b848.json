@@ -1,0 +1,44 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pf-9995b848": {
+      "type": "pf-9995b848",
+      "settings": {
+        "pf_116c4524_value": "Impact Canopy, the #1 Field Branding Specialists in North America, has teamed up with Surf Club to bring you exclusive products at affordable prices without sacrificing quality. Experience the Impact Difference.&nbsp;",
+        "pf_99d4e4d9_value": "Our North American facilities, in-house printing, and vast on-hand inventory allow  for fast, reliable product delivery. ",
+        "pf_7ca8ab99_value": "<span style=\"color: rgb(0, 152, 167);\">Find and select your club name&nbsp;to be taken to your exclusive shop.</span>",
+        "pf_21939202_value": "Our award-winning graphics crew, talented production team, and high-quality inventory ensure premium products.   ",
+        "pf_5fbe6d2b_value": "Our dedicated and responsive team of dynamic sales specialists, and service technicians are here to assist you. ",
+        "pf_45efc9dd_value": "<span style=\"color: rgb(255, 255, 255);\">Girl's Academy Aspire&nbsp;- Mid-Atlantic South&nbsp;Conference</span>",
+        "pf_1733beb6_value": "<span style=\"color: rgb(35, 55, 71);\"><span style=\"color: rgb(35, 55, 71);\">FIND YOUR CLUB&nbsp;</span></span>",
+        "pf_b41cd69a_value": "<span style=\"color: rgb(255, 255, 255);\">ABOUT US</span>",
+        "pf_1d9bbb89_value": "Northern Virginia Alliance (Manassas, VA)",
+        "pf_391fd5a5_value": "Springfield SYC Soccer (Springfield, VA)",
+        "pf_09ee1b90_value": "Virginia Revolution SC (Leesburg, VA)",
+        "pf_e77b8ac6_value": "Carolina Velocity FC (Raleigh, NC)",
+        "pf_e0ab4fb2_value": "VA Rush SC (Virginia Beach, VA)",
+        "pf_de1e7448_value": "Carolina Core (High Point, NC)",
+        "pf_e20bb8e2_value": "Alexandria SA (Alexandria, VA)",
+        "pf_879a1735_value": "TSJ Virginia (Springfield, VA)",
+        "pf_ac4061fe_value": "Wake FC (Holly Springs, NC)",
+        "pf_8d579487_value": "FC Richmond (Richmond, VA)",
+        "pf_3cb22d63_value": "Loudoun SC (Leesburg, VA)",
+        "pf_2b216273_value": "McLean YS (McLean, VA)",
+        "pf_776028fc_value": "Customer Service",
+        "pf_4c4c76c4_value": "Quick Turnaround",
+        "pf_baaa5351_value": "Quality Products"
+      }
+    }
+  },
+  "order": [
+    "pf-9995b848"
+  ]
+}
