@@ -46,11 +46,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     {{ content_for_header }}
 
-    <style>
-  /* Force the Google reCAPTCHA challenge above popups */
-  body > div[style*="z-index: 2000000000"],
-  body > div[style*="z-index: 2000000000"] iframe,
-  iframe[title="recaptcha challenge"] {
+  <style>
+  body > div[style*="z-index"] iframe[title="recaptcha challenge"] {
+    position: fixed !important;
+    z-index: 2147483647 !important;
+  }
+
+  body > div:has(iframe[title="recaptcha challenge"]) {
     z-index: 2147483647 !important;
   }
 </style>
