@@ -45,6 +45,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {% endif %}
 
     {{ content_for_header }}
+
+    <style>
+  /* Force the Google reCAPTCHA challenge above popups */
+  body > div[style*="z-index: 2000000000"],
+  body > div[style*="z-index: 2000000000"] iframe,
+  iframe[title="recaptcha challenge"] {
+    z-index: 2147483647 !important;
+  }
+</style>
+
   {% include 'pagefly-app-header' %}</head>
 
   <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
