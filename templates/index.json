@@ -14167,7 +14167,7 @@
       "type": "custom-liquid",
       "name": "t:names.custom_liquid",
       "settings": {
-        "custom_liquid": "<script async src=\"https://t.contentsquare.net/uxa/0394d13b4d94a.js\"></script>",
+        "custom_liquid": "",
         "color_scheme": "",
         "section_width": "page-width",
         "padding-block-start": 0,
