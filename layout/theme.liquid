@@ -45,18 +45,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {% endif %}
 
     {{ content_for_header }}
-
-  <style>
-  body > div[style*="z-index"] iframe[title="recaptcha challenge"] {
-    position: fixed !important;
-    z-index: 2147483647 !important;
-  }
-
-  body > div:has(iframe[title="recaptcha challenge"]) {
-    z-index: 2147483647 !important;
-  }
-</style>
-
   {% include 'pagefly-app-header' %}</head>
 
   <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
