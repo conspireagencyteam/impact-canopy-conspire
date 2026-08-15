@@ -45,68 +45,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {% endif %}
 
     {{ content_for_header }}
-
-    <style>
-  iframe[src*="/recaptcha/api2/bframe"],
-  iframe[src*="/recaptcha/enterprise/bframe"] {
-    z-index: 2147483647 !important;
-  }
-</style>
-
-<script>
-  (function () {
-    function raiseRecaptcha() {
-      var frames = document.querySelectorAll(
-        'iframe[src*="/recaptcha/api2/bframe"], iframe[src*="/recaptcha/enterprise/bframe"]'
-      );
-
-      frames.forEach(function (frame) {
-        var element = frame;
-
-        while (element && element !== document.body) {
-          element.style.setProperty(
-            'z-index',
-            '2147483647',
-            'important'
-          );
-
-          element.style.setProperty(
-            'visibility',
-            'visible',
-            'important'
-          );
-
-          if (element.parentElement === document.body) {
-            element.style.setProperty(
-              'z-index',
-              '2147483647',
-              'important'
-            );
-            break;
-          }
-
-          element = element.parentElement;
-        }
-      });
-    }
-
-    new MutationObserver(raiseRecaptcha).observe(
-      document.documentElement,
-      {
-        childList: true,
-        subtree: true,
-        attributes: true
-      }
-    );
-
-    document.addEventListener('click', function () {
-      setTimeout(raiseRecaptcha, 100);
-      setTimeout(raiseRecaptcha, 500);
-      setTimeout(raiseRecaptcha, 1000);
-    });
-  })();
-</script>
-
   {% include 'pagefly-app-header' %}</head>
 
   <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
