@@ -1,10 +1,5 @@
 {% assign block_settings = block.settings %}
 {% if block_settings.button_type == 'popup' %}
-  <script
-    src="{{ 'dialog.js' | asset_url }}"
-    type="module"
-  ></script>
-
   {% liquid
     # Typography variables
     assign font_desktop = block_settings.font_desktop | default: 'default'
@@ -31,7 +26,6 @@
     # Build custom style string
     assign custom_style = ''
 
-    # Add typography styles
     if font_desktop != 'default'
       assign custom_style = custom_style | append: '--font-family-override-desktop: var(--font-' | append: font_desktop | append: '); '
       if font_size_desktop
@@ -46,19 +40,18 @@
       endif
     endif
 
-    # Add underline styles
     if show_underline and block_settings.style_class == 'link'
       assign custom_style = custom_style | append: '--underline-thickness: ' | append: underline_thickness | append: 'px; '
       assign custom_style = custom_style | append: '--underline-offset: ' | append: underline_offset | append: 'px; '
     endif
   %}
-  <dialog-component
+
+  <div
     class="contact-form-button-popup quote-form-button-popup"
     {{ block.shopify_attributes }}
   >
     <button
       type="button"
-      on:click="/showDialog"
       class="
         size-style
         {{ block_settings.style_class }}
@@ -68,6 +61,9 @@
         {% if has_icon %}button--has-icon button--icon-{{ icon_position }}{% endif %}
       "
       style="{% render 'size-style', settings: block_settings %}{{ custom_style }}"
+      aria-haspopup="dialog"
+      aria-controls="quote-popup-{{ block.id }}"
+      onclick="openQuotePopup{{ block.id | replace: '-', '_' }}()"
     >
       {%- if has_icon and icon_position == 'left' -%}
         {% render 'icon-or-image',
@@ -88,37 +84,98 @@
       {%- endif -%}
     </button>
 
-    <dialog
-      ref="dialog"
-      class="contact-form-button-popup__dialog dialog-modal color-{{ settings.popover_color_scheme }}{% if block_settings.popup_behavior == 'drawer' %} contact-form-button-popup__dialog--drawer dialog-drawer{% endif %}"
-      scroll-lock
-      aria-labelledby="contact-form-dialog-heading-{{ block.id }}"
+    <div
+      id="quote-popup-{{ block.id }}"
+      class="contact-form-button-popup__overlay"
+      role="presentation"
+      hidden
+      onclick="closeQuotePopupFromBackdrop{{ block.id | replace: '-', '_' }}(event)"
     >
-      <h2
-        id="contact-form-dialog-heading-{{ block.id }}"
-        class="contact-form-button-popup__heading h3"
+      <div
+        class="contact-form-button-popup__dialog color-{{ settings.popover_color_scheme }}{% if block_settings.popup_behavior == 'drawer' %} contact-form-button-popup__dialog--drawer{% endif %}"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contact-form-dialog-heading-{{ block.id }}"
+        tabindex="-1"
       >
-        {{ block_settings.popup_heading }}
-      </h2>
-      <div class="custom-quote-form custom-quote-form-wo-recaptcha">
-        {% if block_settings.custom_liquid %}
-          {{ block_settings.liquid_code }}
-        {% else %}
-          {{ shop.metafields.custom.sales_quote }}
-        {% endif %} 
+        <div class="contact-form-button-popup__scroll-area">
+          <h2
+            id="contact-form-dialog-heading-{{ block.id }}"
+            class="contact-form-button-popup__heading h3"
+          >
+            {{ block_settings.popup_heading }}
+          </h2>
+
+          <div class="custom-quote-form custom-quote-form-wo-recaptcha">
+            {% if block_settings.custom_liquid %}
+              {{ block_settings.liquid_code }}
+            {% else %}
+              {{ shop.metafields.custom.sales_quote }}
+            {% endif %}
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="button button-unstyled close-button contact-form-button-popup__close"
+          aria-label="{{ 'accessibility.close_dialog' | t }}"
+          onclick="closeQuotePopup{{ block.id | replace: '-', '_' }}()"
+        >
+          {{- 'icon-close.svg' | inline_asset_content -}}
+        </button>
       </div>
-      
-      <button
-        ref="closeButton"
-        on:click="/closeDialog"
-        class="button button-unstyled close-button contact-form-button-popup__close"
-        aria-label="{{ 'accessibility.close_dialog' | t }}"
-      >
-        {{- 'icon-close.svg' | inline_asset_content -}}
-      </button>
-    </dialog>
-  </dialog-component>
-<script>    (function() {      // iOS height detection for dialog      function handleIOSDialogHeight_{{ block.id | replace: '-', '_' }}() {        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||                      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);        if (!isIOS) return;        const dialog = document.querySelector('.contact-form-button-popup__dialog');        if (!dialog) return;        function checkHeight() {          const viewportHeight = window.innerHeight;          if (viewportHeight < 780) {            dialog.classList.add('incontact-form-button-popup__dialog');          } else {            dialog.classList.remove('incontact-form-button-popup__dialog');          }        }        checkHeight();        window.addEventListener('resize', checkHeight);        window.addEventListener('orientationchange', checkHeight);      }      // Initialize on DOMContentLoaded or immediately if already loaded      if (document.readyState === 'loading') {        document.addEventListener('DOMContentLoaded', handleIOSDialogHeight_{{ block.id | replace: '-', '_' }});      } else {        handleIOSDialogHeight_{{ block.id | replace: '-', '_' }}();      }    })();  </script>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const popupId = 'quote-popup-{{ block.id }}';
+      let previouslyFocusedElement = null;
+
+      window.openQuotePopup{{ block.id | replace: '-', '_' }} = function () {
+        const overlay = document.getElementById(popupId);
+        if (!overlay) return;
+
+        previouslyFocusedElement = document.activeElement;
+        overlay.hidden = false;
+        document.body.classList.add('quote-popup-open');
+
+        const dialog = overlay.querySelector('.contact-form-button-popup__dialog');
+        if (dialog) {
+          requestAnimationFrame(function () {
+            dialog.focus();
+          });
+        }
+      };
+
+      window.closeQuotePopup{{ block.id | replace: '-', '_' }} = function () {
+        const overlay = document.getElementById(popupId);
+        if (!overlay) return;
+
+        overlay.hidden = true;
+        document.body.classList.remove('quote-popup-open');
+
+        if (previouslyFocusedElement && typeof previouslyFocusedElement.focus === 'function') {
+          previouslyFocusedElement.focus();
+        }
+      };
+
+      window.closeQuotePopupFromBackdrop{{ block.id | replace: '-', '_' }} = function (event) {
+        if (event.target && event.target.id === popupId) {
+          window.closeQuotePopup{{ block.id | replace: '-', '_' }}();
+        }
+      };
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key !== 'Escape') return;
+
+        const overlay = document.getElementById(popupId);
+        if (overlay && !overlay.hidden) {
+          window.closeQuotePopup{{ block.id | replace: '-', '_' }}();
+        }
+      });
+    })();
+  </script>
   {% elsif block_settings.button_type == 'powr_popup' %}
   <button
     type="button"
@@ -151,58 +208,87 @@
     width: 100%;
     display: block;
   }
+
+  .contact-form-button-popup__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: rgb(0 0 0 / 45%);
+    overflow: visible;
+  }
+
+  .contact-form-button-popup__overlay[hidden] {
+    display: none !important;
+  }
+
+  body.quote-popup-open {
+    overflow: hidden;
+  }
+
   .contact-form-button-popup__dialog {
-    --modal-max-height: 100dvh;
+    --modal-max-height: 90dvh;
+    position: relative;
+    z-index: 1000000;
     box-shadow: var(--shadow-popover);
     border: var(--style-border-popover);
     border-radius: var(--style-border-radius-popover);
     background-color: var(--color-background);
-    padding: var(--padding-4xl) var(--padding-xl) var(--padding-xl);
     max-width: var(--normal-content-width);
+    width: min(100%, var(--normal-content-width));
     max-height: var(--modal-max-height);
-    width: 100%;
-
-    @media screen and (min-width: 750px) {
-      padding: var(--padding-5xl);
-      min-width: 500px;
-      --modal-max-height: 90dvh;
-    }
-  }
-
-  .contact-form-button-popup__dialog[open] {
+    overflow: visible;
+    outline: none;
     animation: modalSlideInTop var(--animation-speed) var(--animation-easing) forwards;
   }
 
-  .contact-form-button-popup__dialog.dialog-closing {
-    animation: modalSlideOutTop var(--animation-speed) var(--animation-easing) forwards;
+  .contact-form-button-popup__scroll-area {
+    max-height: var(--modal-max-height);
+    padding: var(--padding-4xl) var(--padding-xl) var(--padding-xl);
+    overflow-y: auto;
+    overflow-x: visible;
+    overscroll-behavior: contain;
+  }
+
+  @media screen and (min-width: 750px) {
+    .contact-form-button-popup__dialog {
+      min-width: 500px;
+    }
+
+    .contact-form-button-popup__scroll-area {
+      padding: var(--padding-5xl);
+    }
   }
 
   .contact-form-button-popup__dialog--drawer {
     position: fixed;
-    border-radius: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
     width: var(--sidebar-width);
     max-width: 95vw;
-    height: 100%;
-    margin: 0 0 0 auto;
+    max-height: 100dvh;
+    border-radius: 0;
   }
 
-  .contact-form-button-popup__dialog--drawer:modal {
+  .contact-form-button-popup__dialog--drawer .contact-form-button-popup__scroll-area {
     max-height: 100dvh;
   }
 
   .contact-form-button-popup__close {
+    position: absolute;
     top: var(--margin-2xs);
     right: var(--margin-2xs);
+    z-index: 2;
     opacity: 0.8;
     animation: none;
   }
 
   .contact-form-button-popup__heading {
     margin-bottom: var(--margin-lg);
-  }
-
-  .contact-form-button-popup__inner {
-    overflow-y: auto;
   }
 
   .contact-form-button-popup__submit {
@@ -233,7 +319,7 @@
     color: green;
   }
 
-  .quote-form-button-popup input[type="submit"]{
+  .quote-form-button-popup input[type="submit"] {
     border: 1px solid #EE7623;
   }
 
@@ -255,7 +341,23 @@
     height: 20px;
     flex-shrink: 0;
   }
-/* iOS-specific styles for small height screens */  @media screen and (min-width: 750px) {    .incontact-form-button-popup__dialog .custom-quote-form:not(.custom-quote-form-pdp) form {      gap: 8px;    }    .incontact-form-button-popup__dialog .custom-quote-form:not(.custom-quote-form-pdp) form textarea {      rows: 1;      min-height: unset;      height: auto;    }  }
+
+  /* Keep Google's reCAPTCHA challenge above this custom popup. */
+  body > div:has(iframe[src*="/recaptcha/api2/bframe"]),
+  body > div:has(iframe[src*="/recaptcha/enterprise/bframe"]) {
+    z-index: 2147483647 !important;
+  }
+
+  @media screen and (min-width: 750px) {
+    .incontact-form-button-popup__dialog .custom-quote-form:not(.custom-quote-form-pdp) form {
+      gap: 8px;
+    }
+
+    .incontact-form-button-popup__dialog .custom-quote-form:not(.custom-quote-form-pdp) form textarea {
+      min-height: unset;
+      height: auto;
+    }
+  }
 {% endstylesheet %}
 
 {% schema %}
