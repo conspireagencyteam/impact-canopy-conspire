@@ -88,11 +88,11 @@
       {%- endif -%}
     </button>
 
-    <div
-  ref="dialog"
-  class="contact-form-button-popup__dialog dialog-modal color-{{ settings.popover_color_scheme }}{% if block_settings.popup_behavior == 'drawer' %} contact-form-button-popup__dialog--drawer dialog-drawer{% endif %}"
-  aria-labelledby="contact-form-dialog-heading-{{ block.id }}"
-  hidden
+    <dialog
+      ref="dialog"
+      class="contact-form-button-popup__dialog dialog-modal color-{{ settings.popover_color_scheme }}{% if block_settings.popup_behavior == 'drawer' %} contact-form-button-popup__dialog--drawer dialog-drawer{% endif %}"
+      scroll-lock
+      aria-labelledby="contact-form-dialog-heading-{{ block.id }}"
     >
       <h2
         id="contact-form-dialog-heading-{{ block.id }}"
@@ -116,9 +116,8 @@
       >
         {{- 'icon-close.svg' | inline_asset_content -}}
       </button>
-    </div>
+    </dialog>
   </dialog-component>
-<script>    (function() {      // iOS height detection for dialog      function handleIOSDialogHeight_{{ block.id | replace: '-', '_' }}() {        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||                      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);        if (!isIOS) return;        const dialog = document.querySelector('.contact-form-button-popup__dialog');        if (!dialog) return;        function checkHeight() {          const viewportHeight = window.innerHeight;          if (viewportHeight < 780) {            dialog.classList.add('incontact-form-button-popup__dialog');          } else {            dialog.classList.remove('incontact-form-button-popup__dialog');          }        }        checkHeight();        window.addEventListener('resize', checkHeight);        window.addEventListener('orientationchange', checkHeight);      }      // Initialize on DOMContentLoaded or immediately if already loaded      if (document.readyState === 'loading') {        document.addEventListener('DOMContentLoaded', handleIOSDialogHeight_{{ block.id | replace: '-', '_' }});      } else {        handleIOSDialogHeight_{{ block.id | replace: '-', '_' }}();      }    })();  </script>
   {% elsif block_settings.button_type == 'powr_popup' %}
   <button
     type="button"
@@ -255,7 +254,6 @@
     height: 20px;
     flex-shrink: 0;
   }
-/* iOS-specific styles for small height screens */  @media screen and (min-width: 750px) {    .incontact-form-button-popup__dialog .custom-quote-form:not(.custom-quote-form-pdp) form {      gap: 8px;    }    .incontact-form-button-popup__dialog .custom-quote-form:not(.custom-quote-form-pdp) form textarea {      rows: 1;      min-height: unset;      height: auto;    }  }
 {% endstylesheet %}
 
 {% schema %}
@@ -903,4 +901,3 @@
   ]
 }
 {% endschema %}
-
