@@ -2553,7 +2553,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h2>Great Deal! 50% Off Now Only</h2>",
+                        "text": "<h2>Great Deal!</h2>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
