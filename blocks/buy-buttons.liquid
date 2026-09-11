@@ -65,12 +65,14 @@
           value="{{ product.selected_or_first_available_variant.id }}"
         >
 
-          {% if product.metafields.custom.rendering.value %}
-  <input
-    type="hidden"
-    name="properties[_Production File]"
-    value="{{ product.metafields.custom.rendering.value.url }}"
-  >
+ {% if product.metafields.custom.production_rendering.value %}
+  {% for file in product.metafields.custom.production_rendering.value %}
+    <input
+      type="hidden"
+      name="properties[_Production Rendering {{ forloop.index }}]"
+      value="{{ file.url }}"
+    >
+  {% endfor %}
 {% endif %}
         {%- if block_settings.gift_card_form and product.gift_card? -%}
           {%- render 'gift-card-recipient-form', product: product, form: form, section: section, block: block -%}
