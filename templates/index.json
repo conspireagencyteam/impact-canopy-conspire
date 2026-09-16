@@ -3073,7 +3073,7 @@
                 "border_radius": 16,
                 "toggle_overlay": true,
                 "overlay_style": "solid",
-                "overlay_color": "#FFFFFF",
+                "overlay_color": "#ffffff",
                 "overlay_gradient": "",
                 "link": "shopify://products/new-custom-brand-bar",
                 "open_in_new_tab": false,
@@ -3193,7 +3193,7 @@
                         "case": "none",
                         "wrap": "pretty",
                         "color": "custom",
-                        "custom_color": "#27292D",
+                        "custom_color": "#27292d",
                         "use_mobile_typography": false,
                         "font_size_mobile": "1rem",
                         "line_height_mobile": "normal",
@@ -3230,7 +3230,7 @@
                         "case": "none",
                         "wrap": "pretty",
                         "color": "custom",
-                        "custom_color": "#490E67",
+                        "custom_color": "#490e67",
                         "use_mobile_typography": false,
                         "font_size_mobile": "1rem",
                         "line_height_mobile": "normal",
@@ -3267,7 +3267,7 @@
                         "case": "none",
                         "wrap": "pretty",
                         "color": "custom",
-                        "custom_color": "#27292D",
+                        "custom_color": "#27292d",
                         "use_mobile_typography": false,
                         "font_size_mobile": "1rem",
                         "line_height_mobile": "normal",
@@ -3436,6 +3436,7 @@
       "block_order": [
         "group_d8EtLV"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "row",
