@@ -290,7 +290,7 @@ Title and Description
 {%- endcomment -%}
 {%- if ba_secondary_market -%}
   {%- comment -%} Secondary market: serve the native translated description untouched, unless the theme already emits its own. {%- endcomment -%}
-  {%- unless booster_config.theme_has_native_desc -%}<meta name="description" content="{{ page_description | strip | strip_newlines | escape_once }}" />{%- endunless -%}
+  {%- unless booster_config.theme_has_native_desc -%}{%- comment %}<locksmith:af68>{% endcomment -%}{%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="description" content="{{ page_description | strip | strip_newlines | escape_once }}" />{% endif -%}{%- comment %}original: <meta name="description" content="{{ page_description | strip | strip_newlines | escape_once }}" />{%- endcomment %}{%- comment %}</locksmith:af68>{% endcomment -%}{%- endunless -%}
 {%- elsif booster_desc != blank -%}
   {%- assign formatted_price = product.variants[0].price | money -%}
   {%- assign booster_desc = booster_desc | replace: "[description]", booster_item.description -%}
@@ -303,10 +303,13 @@ Title and Description
   {%- assign booster_desc = booster_desc | replace: "[author]", booster_item.author -%}
   {%- assign booster_desc = booster_desc | strip_html | truncate: 250  -%}
   {%- assign booster_desc = booster_desc | replace : "[shopify_seo_description]", page_description | strip | strip_newlines | escape_once -%}
-  <meta name="description" content="{{ booster_desc | strip | strip_newlines | escape_once }}" />
+  {%- comment %}<locksmith:1130>{% endcomment -%}
+    {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="description" content="{{ booster_desc | strip | strip_newlines | escape_once }}" />{% endif -%}
+    {%- comment %}original: <meta name="description" content="{{ booster_desc | strip | strip_newlines | escape_once }}" />{%- endcomment %}
+  {%- comment %}</locksmith:1130>{% endcomment -%}
 {%- else -%}
   {%- comment -%} No Booster-managed description (meta off): emit the default only when the theme is not already outputting its own. {%- endcomment -%}
-  {%- unless booster_config.theme_has_native_desc -%}<meta name="description" content="{{ page_description | strip | strip_newlines | escape_once }}" />{%- endunless -%}
+  {%- unless booster_config.theme_has_native_desc -%}{%- comment %}<locksmith:af25>{% endcomment -%}{%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="description" content="{{ page_description | strip | strip_newlines | escape_once }}" />{% endif -%}{%- comment %}original: <meta name="description" content="{{ page_description | strip | strip_newlines | escape_once }}" />{%- endcomment %}{%- comment %}</locksmith:af25>{% endcomment -%}{%- endunless -%}
 {%- endif -%}
 {%- comment -%}booster:desc:end{%- endcomment -%}
 
@@ -803,13 +806,19 @@ Collection (CollectionPage + ItemList) and Breadcrumb Schema Markup
       "@type": "ItemList",
       "numberOfItems": {{ collection.products_count }},
       "itemListElement": [
+        {%- comment %}<locksmith:1974>{% endcomment -%}
+          {%- assign locksmith_acf6_forloop__size = 0 %}{%- for product in collection.products limit: 50 -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_acf6_forloop__size = locksmith_acf6_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_acf6_forloop__index = nil -%}
+        {%- comment %}</locksmith:1974>{% endcomment -%}
         {%- for product in collection.products limit: 50 -%}
+        {%- comment %}<locksmith:7ac3>{% endcomment -%}
+          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_acf6_forloop__index == nil %}{% assign locksmith_acf6_forloop__index = 1 %}{% assign locksmith_acf6_forloop__index0 = 0 %}{% else %}{% assign locksmith_acf6_forloop__index = locksmith_acf6_forloop__index | plus: 1 %}{% assign locksmith_acf6_forloop__index0 = locksmith_acf6_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_acf6_forloop__index == 1 %}{% assign locksmith_acf6_forloop__first = true %}{% else %}{% assign locksmith_acf6_forloop__first = false %}{% endif %}{% if locksmith_acf6_forloop__index == locksmith_acf6_forloop__size %}{% assign locksmith_acf6_forloop__last = true %}{% else %}{% assign locksmith_acf6_forloop__last = false %}{% endif %}{% assign locksmith_acf6_forloop__rindex = locksmith_acf6_forloop__size | minus: locksmith_acf6_forloop__index | minus: 1 %}{% assign locksmith_acf6_forloop__rindex0 = locksmith_acf6_forloop__size | minus: locksmith_acf6_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+        {%- comment %}</locksmith:7ac3>{% endcomment -%}
         {
           "@type": "ListItem",
-          "position": {{ forloop.index }},
+          "position": {{ locksmith_acf6_forloop__index }},
           "name": {{ product.title | json }},
           "url": "{{ shop.secure_url }}{{ product.url }}"
-        }{%- unless forloop.last -%},{%- endunless -%}
+        }{%- unless locksmith_acf6_forloop__last -%},{%- endunless -%}
         {%- endfor -%}
       ]
     }
