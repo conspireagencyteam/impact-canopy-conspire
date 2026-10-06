@@ -11185,7 +11185,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "Shop Replacement Frames",
-                    "link": "{{ closest.collection.url }}",
+                    "link": "shopify://pages/replacement-parts",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "button_background_color": "#490e67",
