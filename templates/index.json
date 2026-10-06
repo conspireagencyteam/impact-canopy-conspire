@@ -11054,7 +11054,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Need a replacement top?</h2>",
+                    "text": "<h2>Need a replacement frame?</h2>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -11091,7 +11091,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Quickly replace worn or damaged canopies with tops designed to fit your existing Impact canopy.</p>",
+                    "text": "<p>Quickly replace worn or damaged canopies with built to last frame options.</p>",
                     "width": "fit-content",
                     "max_width": "wide",
                     "alignment": "left",
