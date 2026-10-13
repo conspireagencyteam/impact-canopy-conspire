@@ -214,8 +214,37 @@ if (!Shopify.customerPrivacy.marketingAllowed()) {
 })();
 </script>
 <!-- End Facebook Campaign Attribution Tracking -->
-</head>
+{% if customer and customer.email != blank %}
+<script>
+(function () {
+  if (!window.Shopify || !Shopify.loadFeatures) return;
 
+  Shopify.loadFeatures(
+    [{ name: 'consent-tracking-api', version: '0.1' }],
+    function(error) {
+      if (error || !Shopify.customerPrivacy) return;
+
+      // Only identify visitors when analytics tracking is allowed.
+      if (!Shopify.customerPrivacy.analyticsProcessingAllowed()) return;
+
+      window._hsq = window._hsq || [];
+
+      window._hsq.push([
+        'identify',
+        {
+          email: {{ customer.email | json }}
+        }
+      ]);
+
+      window._hsq.push(['trackPageView']);
+
+      console.log('HubSpot customer identification sent');
+    }
+  );
+})();
+</script>
+{% endif %}
+</head>
   <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
     {% render 'skip-to-content-link', href: '#MainContent', text: 'accessibility.skip_to_text' %}
     <div id="header-group">
