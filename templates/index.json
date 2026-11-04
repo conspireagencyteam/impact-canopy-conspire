@@ -715,9 +715,9 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/m-frame-replacement-part-banner.png",
+            "image_1": "shopify://shop_images/m-frame-replacement-part-banner_da0c0b74-7adc-41a7-8b29-39a7ed467f1f.png",
             "video_1": "shopify://files/videos/Impact-Canopy-Gatorade-2.mp4",
-            "image_1_mobile": "shopify://shop_images/M_FRAME_HERO_IMAGE-08.jpg",
+            "image_1_mobile": "shopify://shop_images/m-frame-replacement-part-banner.png",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
