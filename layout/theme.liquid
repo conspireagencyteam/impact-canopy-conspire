@@ -51,21 +51,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {{ content_for_header }}
   {% include 'pagefly-app-header' %}
 
-    <!-- Facebook Campaign Attribution Tracking -->
+
+<!-- Facebook Campaign Attribution Tracking -->
 <script>
 (function () {
+  'use strict';
+
   var FIRST_KEY = 'impact_fb_first_campaign';
   var LATEST_KEY = 'impact_fb_latest_campaign';
   var MAX_AGE = 30 * 24 * 60 * 60 * 1000;
+  var syncing = false;
+  var lastSync = 0;
+
+  function storageAllowed() {
+    return !!(
+      window.Shopify &&
+      Shopify.customerPrivacy &&
+      Shopify.customerPrivacy.marketingAllowed()
+    );
+  }
 
   function readCampaign(key) {
     try {
-      var saved = localStorage.getItem(key);
-      if (!saved) return null;
+      var raw = localStorage.getItem(key);
+      if (!raw) return null;
 
-      var data = JSON.parse(saved);
-      var timestamp = Date.parse(data.captured_at || '');
-      var age = Date.now() - timestamp;
+      var data = JSON.parse(raw);
+      var age = Date.now() - Date.parse(data.captured_at);
 
       if (!Number.isFinite(age) || age < 0 || age > MAX_AGE) {
         localStorage.removeItem(key);
@@ -73,147 +85,182 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
 
       return data;
-    } catch (error) {
-      localStorage.removeItem(key);
+    } catch (e) {
       return null;
     }
   }
 
-  async function updateCart(attributes) {
-    var response = await fetch(
-      window.Shopify.routes.root + 'cart/update.js',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ attributes: attributes })
-      }
-    );
+  function captureCampaign() {
+    var params = new URLSearchParams(location.search);
+    var source = (params.get('utm_source') || '').toLowerCase();
+    var fbclid = params.get('fbclid');
 
-    if (!response.ok) {
-      throw new Error('Cart update failed');
-    }
-  }
+    var isFacebook =
+      ['facebook', 'fb', 'instagram', 'ig', 'meta'].includes(source) ||
+      !!fbclid;
 
-  async function runTracking() {
+    if (!isFacebook) return;
+
+    var campaign = {
+      campaign: params.get('utm_campaign') || 'Facebook - Unknown Campaign',
+      campaign_id: params.get('utm_id') || '',
+      source: source || 'facebook',
+      medium: params.get('utm_medium') || '',
+      captured_at: new Date().toISOString()
+    };
+
     try {
-if (!Shopify.customerPrivacy.marketingAllowed()) {
-  localStorage.removeItem(FIRST_KEY);
-  localStorage.removeItem(LATEST_KEY);
+      if (!readCampaign(FIRST_KEY)) {
+        localStorage.setItem(FIRST_KEY, JSON.stringify(campaign));
+      }
 
-  var cartResponse = await fetch(
-    window.Shopify.routes.root + 'cart.js'
-  );
-
-  if (cartResponse.ok) {
-    var cart = await cartResponse.json();
-    var attributes = cart.attributes || {};
-
-    if (
-      attributes['Facebook Campaign'] ||
-      attributes['Facebook Campaign ID'] ||
-      attributes['Facebook Campaign Date']
-    ) {
-      await updateCart({
-        'Facebook Campaign': '',
-        'Facebook Campaign ID': '',
-        'Facebook Campaign Date': ''
-      });
+      localStorage.setItem(LATEST_KEY, JSON.stringify(campaign));
+    } catch (e) {
+      console.warn('Facebook campaign storage unavailable', e);
     }
   }
 
-  return;
-}
+  async function syncCart(force) {
+    if (!storageAllowed() || syncing) return;
 
-      var params = new URLSearchParams(window.location.search);
-      var source = (params.get('utm_source') || '').toLowerCase();
-      var campaign = params.get('utm_campaign');
-      var fbclid = params.get('fbclid');
+    if (!force && Date.now() - lastSync < 3000) return;
 
-      var isFacebook = [
-        'facebook', 'fb', 'instagram', 'ig', 'meta'
-      ].includes(source) || !!fbclid;
+    syncing = true;
 
-      var first = readCampaign(FIRST_KEY);
-      var latest = readCampaign(LATEST_KEY);
+    try {
+      var campaign = readCampaign(LATEST_KEY);
 
-      if (isFacebook && campaign) {
-        var attribution = {
-          campaign: campaign,
-          campaign_id: params.get('utm_id') || '',
-          source: source || 'facebook',
-          medium: params.get('utm_medium') || '',
-          captured_at: new Date().toISOString()
-        };
+      if (!campaign) return;
 
-        if (!first) {
-          localStorage.setItem(
-            FIRST_KEY,
-            JSON.stringify(attribution)
-          );
-        }
+      var root = (window.Shopify.routes &&
+        window.Shopify.routes.root) || '/';
 
-        localStorage.setItem(
-          LATEST_KEY,
-          JSON.stringify(attribution)
-        );
+      var response = await fetch(root + 'cart.js', {
+        credentials: 'same-origin'
+      });
 
-        latest = attribution;
-      }
+      if (!response.ok) throw new Error('Cart read failed');
 
-      var cartResponse = await fetch(
-        window.Shopify.routes.root + 'cart.js'
-      );
-
-      if (!cartResponse.ok) return;
-
-      var cart = await cartResponse.json();
-      var attributes = cart.attributes || {};
+      var cart = await response.json();
+      var existing = cart.attributes || {};
 
       var desired = {
-        'Facebook Campaign': latest ? latest.campaign : '',
-        'Facebook Campaign ID': latest ? latest.campaign_id : '',
-        'Facebook Campaign Date': latest ? latest.captured_at : ''
+        'Facebook Campaign': campaign.campaign,
+        'Facebook Campaign ID': campaign.campaign_id,
+        'Facebook Campaign Date': campaign.captured_at
       };
 
       if (
-        attributes['Facebook Campaign'] === desired['Facebook Campaign'] &&
-        (attributes['Facebook Campaign ID'] || '') === desired['Facebook Campaign ID'] &&
-        (attributes['Facebook Campaign Date'] || '') === desired['Facebook Campaign Date']
+        existing['Facebook Campaign'] === desired['Facebook Campaign'] &&
+        (existing['Facebook Campaign ID'] || '') === desired['Facebook Campaign ID'] &&
+        existing['Facebook Campaign Date'] === desired['Facebook Campaign Date']
       ) {
         return;
       }
 
-      await updateCart(desired);
+      var update = await fetch(root + 'cart/update.js', {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ attributes: desired })
+      });
 
-    } catch (error) {
-      console.warn('Facebook attribution error:', error);
+      if (!update.ok) throw new Error('Cart update failed');
+
+      lastSync = Date.now();
+    } catch (e) {
+      console.warn('Facebook attribution sync error:', e);
+    } finally {
+      syncing = false;
     }
   }
 
-  function initializeTracking() {
+  function clearTracking() {
+    try {
+      localStorage.removeItem(FIRST_KEY);
+      localStorage.removeItem(LATEST_KEY);
+    } catch (e) {}
+
+    var root = (window.Shopify && Shopify.routes &&
+      Shopify.routes.root) || '/';
+
+    fetch(root + 'cart/update.js', {
+      method: 'POST',
+      credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        attributes: {
+          'Facebook Campaign': '',
+          'Facebook Campaign ID': '',
+          'Facebook Campaign Date': ''
+        }
+      })
+    }).catch(function () {});
+  }
+
+  function run() {
+    if (!storageAllowed()) {
+      clearTracking();
+      return;
+    }
+
+    captureCampaign();
+    syncCart(true);
+  }
+
+  function initialize() {
     if (!window.Shopify || !Shopify.loadFeatures) return;
 
     Shopify.loadFeatures(
       [{ name: 'consent-tracking-api', version: '0.1' }],
-      function(error) {
+      function (error) {
         if (error || !Shopify.customerPrivacy) return;
-        runTracking();
+
+        run();
       }
     );
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeTracking);
+    document.addEventListener('DOMContentLoaded', initialize);
   } else {
-    initializeTracking();
+    initialize();
   }
 
-  document.addEventListener('visitorConsentCollected', initializeTracking);
+  document.addEventListener('visitorConsentCollected', run);
+
+  document.addEventListener('click', function (event) {
+    var target = event.target;
+    if (!target || !target.closest) return;
+
+    var button = target.closest(
+      'button[name="add"], form[action*="/cart/add"] button'
+    );
+
+    if (button) {
+      setTimeout(function () { syncCart(true); }, 1200);
+    }
+  });
+
+  document.addEventListener('submit', function (event) {
+    var form = event.target;
+    if (form && form.matches &&
+        form.matches('form[action*="/cart/add"]')) {
+      setTimeout(function () { syncCart(true); }, 1200);
+    }
+  });
+
+  window.addEventListener('pageshow', function () {
+    initialize();
+  });
+
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden) syncCart(false);
+  });
 })();
 </script>
 <!-- End Facebook Campaign Attribution Tracking -->
+
 {% if customer and customer.email != blank %}
 <script>
 (function () {
