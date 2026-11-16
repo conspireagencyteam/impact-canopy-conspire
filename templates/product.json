@@ -763,7 +763,6 @@
             },
             "uploadly_file_upload_app_block_xMeyUi": {
               "type": "shopify://apps/uploadly-file-upload/blocks/app-block/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
-              "disabled": true,
               "settings": {
                 "featured_product": "{{product}}"
               }
