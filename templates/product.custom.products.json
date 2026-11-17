@@ -922,23 +922,6 @@
               },
               "blocks": {}
             },
-            "divider_ephR9K": {
-              "type": "_divider",
-              "name": "t:names.divider",
-              "settings": {
-                "thickness": 1,
-                "corner_radius": "square",
-                "width_percent": 100,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "use_mobile_padding": false,
-                "padding-block-start-mobile": 0,
-                "padding-block-end-mobile": 0,
-                "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
-              },
-              "blocks": {}
-            },
             "divider_LA6KwY": {
               "type": "_divider",
               "name": "t:names.divider",
@@ -1864,7 +1847,6 @@
             "variant_picker_R3rGDr",
             "uploadly_file_upload_app_block_M7kmj7",
             "static_form_field_7DEbKB",
-            "divider_ephR9K",
             "divider_LA6KwY",
             "buy_buttons_eYQEYi",
             "cross_sell_NaXebJ",
