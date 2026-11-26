@@ -97,7 +97,7 @@
                   "type": "button",
                   "settings": {
                     "label": "SHOP BLACK FRIDAY CYBER MONDAY",
-                    "link": "shopify://collections/replacement-parts",
+                    "link": "shopify://pages/black-friday-cyber-monday26",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "button_background_color": "#EE7625",
